@@ -18,6 +18,7 @@ book:
   comments:
     giscus:
       repo: hugotseixas/tica-book
+      category: Announcements
   chapters:
     - index.qmd
     - 01_introduction.qmd
