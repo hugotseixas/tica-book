@@ -20,7 +20,6 @@ book:
       repo: hugotseixas/tica-book
       category: "Announcements"
       category-id: "DIC_kwDOJMlNNs4CVCYq"
-      theme: "dark"
   chapters:
     - index.qmd
     - 01_introduction.qmd
