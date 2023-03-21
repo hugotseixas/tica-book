@@ -1,0 +1,38 @@
+project:
+  type: book
+  output-dir: _book
+
+book:
+  title: "TICA: Dimensions of land transitions impacts in the Cerrado and Amazon"
+  author:
+  - name: Hugo Tameirão Seixas
+    email: seixas.hugo@protonmail.com
+    url: hugotseixas.com
+    affiliations:
+      - name: State University of Campinas
+  date: "3/21/2023"
+  license: CC BY-NC-ND 4.0
+  sidebar:
+    search: true
+    logo: logo.png
+  comments:
+    giscus:
+      repo: hugotseixas/lct-se-ac
+  chapters:
+    - index.qmd
+    - 01_introduction.qmd
+    - 02_objectives.qmd
+    - 03_methods.qmd
+    - 04_results.qmd
+    - 05_discussion.qmd
+    - 06_conclusions.qmd
+    - references.qmd
+  appendices:
+    - 11_model.qmd
+
+bibliography: references.bib
+
+format:
+  html:
+    theme: lux
+
