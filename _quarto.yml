@@ -17,7 +17,7 @@ book:
     logo: logo.png
   comments:
     giscus:
-      repo: hugotseixas/lct-se-ac
+      repo: hugotseixas/tica-book
   chapters:
     - index.qmd
     - 01_introduction.qmd
