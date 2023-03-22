@@ -5,7 +5,6 @@
 #| include: false
 
 library(gt)
-library(DiagrammeR)
 library(lubridate)
 library(tidyverse)
 
@@ -22,50 +21,20 @@ To achieve the proposed goal, I will divide the work into four major parts:
 
 4.  Future projections;
 
-```{r}
-#| label: method-diagram
-#| echo: false
+```{mermaid}
+%%| fig-responsive: true
+%%{init: {'theme': 'neutral' } }%%
 
-grViz(
-  "digraph {
-  
-  graph [layout = dot, 
-         rankdir = TD, 
-         nodesep = 1.2, 
-         ranksep = 0.8,
-         tooltip = ' ']
-  
-  node [shape = box,
-        fontname = Helvetica,
-        style = filled,
-        fontcolor = '#343a40'
-        fillcolor = '#f7f7f9'
-        penwidth = 2.5,
-        width = 3,
-        height = 1.2,
-        fontsize = 25,
-        tooltip = ' ']
-
-  edge [penwidth = 2.5, 
-        arrowsize = 2,
-        tooltip = ' ']
-
-  a [label = 'Literature \n Review', xlabel = '1']
-  b [label = 'Experts Survey', xlabel = '1']
-  c [label = 'Available Data', xlabel = '2']
-  d [label = 'Database \n Structuring', xlabel = '2']
-  e [label = 'Models \n Development', xlabel = '3']
-  f [label = 'Projections \n Scenarios', xlabel = '4']
-  g [label = 'Projections \n Estimations', xlabel = '4']
-  
-  a -> c a -> d
-  c -> d b -> d
-  b -> e b -> f
-  e -> g f -> g
-  d -> e
-  
-  }"
-)
+flowchart TD
+    A[Literature Review] --> B[Available Data]
+    A[Literature Review] --> C[Database structuring]
+    B[Available Data] --> C[Database structuring]
+    D[Experts Survey] --> C[Database structuring]
+    C[Database structuring] --> E[Models Development]
+    D[Experts Survey] --> E[Models Development]
+    D[Experts Survey] --> F[Projection Scenarios]
+    E[Models Development] --> G[Projection Estimations]
+    F[Projection Scenarios] --> G[Projection Estimations]
 
 ```
 
@@ -87,7 +56,6 @@ For all of them, I will adopt a hybrid approach of database searches combined wi
 
 ```{mermaid}
 %%| fig-responsive: true
-%%| fig-width: 100%
 %%{init: {'theme': 'neutral' } }%%
 
 flowchart TD
@@ -123,14 +91,11 @@ The process to create the database will consist of accessing the data sources, d
 
 ```{mermaid}
 %%| fig-responsive: true
-%%| fig-width: 100%
 %%{init: {'theme': 'neutral' } }%%
 
 flowchart TD
     A[Data Source] --> E[Pre Processing]
-    B[Data Source] --> E[Pre Processing]
-    C[Data Source] --> E[Pre Processing]
-    D[Data Source] --> E[Pre Processing]
+    B[Base Grid] --> E[Pre Processing]
     E[Pre Processing] --> F[Gridded Data]
     F[Gridded Data] --> G[Database]
 
@@ -189,59 +154,25 @@ Each model will be responsible to predict a single environmental or social outco
 
 Each model will follow the standard approach to develop supervised models.
 
-```{r}
-#| label: model-diagram
-#| echo: false
-#| message: false
+```{mermaid}
+%%| fig-responsive: true
+%%{init: {'theme': 'neutral' } }%%
 
-grViz(
-  height = 800,
-  "digraph {
-  
-  graph [layout = dot, 
-         overlap = false,
-         rankdir = TD, 
-         nodesep = 1.8, 
-         ranksep = 0.5,
-         tooltip = ' ']
-  
-  node [shape = box,
-        fontname = Helvetica,
-        style = filled,
-        fontcolor = '#343a40'
-        fillcolor = '#f7f7f9'
-        penwidth = 2.5,
-        width = 3,
-        height = 1.2,
-        fontsize = 25,
-        tooltip = ' ']
-
-  edge [penwidth = 2.5, 
-        arrowsize = 2,
-        tooltip = ' ']
-
-  a [label = 'Database']
-  b [label = 'Variables \n Selection']
-  c [label = 'Data Split']
-  d [label = 'Training Data']
-  e [label = 'Validation \n Data']
-  f [label = 'Test Data']
-  g [label = 'Pre Processing']
-  h [label = 'Initial \n Model Fit']
-  i [label = 'Parameters \n Adjustments']
-  j [label = 'Final \n Model Fit']
-  k [label = 'Model \n Assessment']
-  l [label = 'Model \n Interpretation']
-  
-  a -> b b -> c
-  c -> d c -> e c -> f 
-  d -> g g -> h 
-  h -> i e -> i
-  i -> j j -> k f -> k
-  j -> l k -> l
-  
-  }"
-)
+flowchart TD
+    A[Database] --> B[Variables Selection]
+    B[Variables Selection] --> C[Data Split]
+    C[Data Split] --> D[Training Data]
+    D[Training Data] --> E[Pre Processing]
+    E[Pre Processing] --> F[Initial Model Fit]
+    C[Data Split] --> G[Validation Data]
+    C[Data Split] --> H[Test Data]
+    F[Initial Model Fit] --> I[Parameters Adjustments]
+    G[Validation Data] --> I[Parameters Adjustments]
+    I[Parameters Adjustments] --> J[Final Model Fit]
+    H[Test Data] --> K[Model Assessment]
+    J[Final Model Fit] --> K[Model Assessment]
+    J[Final Model Fit] --> L[Model Interpretation]
+    K[Model Assessment] --> L[Model Interpretation]
 
 ```
 
