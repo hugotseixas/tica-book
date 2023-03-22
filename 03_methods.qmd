@@ -151,50 +151,15 @@ Only pixels that contained natural vegetation in the first year of the analysis 
 
 The process to create the database will consist of accessing the data sources, downloading the data to the local environment, transforming and organizing the data to the grid (if the data source provides any pre-processing tool before downloading the data, it should be done that way), and store in the local environment.
 
-```{r}
-#| label: database-diagram
-#| echo: false
-#| message: false
+```{mermaid}
 
-grViz(
-  "digraph {
-  
-  graph [layout = dot, 
-         overlap = false,
-         rankdir = TB, 
-         nodesep = 1.4, 
-         ranksep = 0.8,
-         tooltip = ' ']
-  
-  node [shape = box,
-        fontname = Helvetica,
-        style = filled,
-        fontcolor = '#343a40'
-        fillcolor = '#f7f7f9'
-        penwidth = 2.5,
-        width = 3,
-        height = 1.2,
-        fontsize = 25,
-        tooltip = ' ']
-
-  edge [penwidth = 2.5, 
-        arrowsize = 2,
-        tooltip = ' ']
-
-  a [label = 'Data Source']
-  b [label = 'Data Source']
-  c [label = 'Data Source']
-  d [label = 'Data Source']
-  e [label = 'Pre Processing']
-  f [label = 'Gridded Data']
-  g [label = 'Database']
-  
-  a -> e b -> e
-  c -> e d -> e
-  e -> f f -> g
-  
-  }"
-)
+flowchart TD
+    A[Data Source] --> E(Pre Processing)
+    B[Data Source] --> E(Pre Processing)
+    C[Data Source] --> E(Pre Processing)
+    D[Data Source] --> E(Pre Processing)
+    E(Pre Processing) --> F(Gridded Data)
+    F(Gridded Data) --> G(Database)
 
 ```
 
