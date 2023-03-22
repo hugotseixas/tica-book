@@ -62,6 +62,7 @@ grid <-
     .by = "code_biome"
   ) %>%
   mutate(
+    value = if_else(code_biome == 3, (value - 44) * -1, value),
     value = log(value),
     value = if_else(code_biome == 1, value * -1, value)
   )
@@ -83,9 +84,9 @@ grid <-
       expand = 15
     ) +
     scale_fill_gradient2(
-      low = "#c78e17",
-      mid = "#ffffff",
-      high = "#bf4300"
+      low = "#3c5143",
+      mid = "#d4d2bd",
+      high = "#ad7f42"
     ) +
     theme_void() +
     theme(
