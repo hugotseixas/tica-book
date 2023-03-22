@@ -1,2 +1,21 @@
 # Preface {.unnumbered}
 
+This project is an effort to develop an interdisciplinary approach to modelling land use and land cover transitions and their impact to social and environmental dimensions. 
+This document is a register of a modelling exercise that will not only select the most important variables, fine tune model parameters, and find the algorithms that return the best accuracy metrics. It will also be a journey to understand the sociological dynamics of land use changes, and hopefully will establish evidence to support natural resources governance.
+
+I will explore two Brazilian biomes, the Amazon, which is a very common topic when talking about the environment, the whole world pays attention to this important forest. 
+And the Cerrado, an equally important ecosystem, but often neglected.
+
+The Amazon is the largest rainforest in the world, covering an area of approximately 6.7 million square kilometers, and is home to an estimated 10% of the world's known species of plants and animals.
+It is characterized by its dense forests, towering trees, and rich biodiversity. It is home to numerous species of mammals, birds, reptiles, and insects.
+The Amazon biome is facing significant threats from deforestation, climate change, and illegal activities such as logging, mining, and agriculture. 
+
+![Amazon Rainforest, Amazonas, Brazil. Source: Antonio Campoy, CC BY 2.0, via Wikimedia Commons](https://upload.wikimedia.org/wikipedia/commons/4/4d/Amazon_Rainforest.jpg){width=1000 .margin-caption}
+
+The Cerrado is the second-largest biome in Brazil, and it is characterized by its diverse flora and fauna, as well as its unique landscape of rolling hills, plateaus, and plains.
+It is also an important area for agriculture, with large areas of the region being used for soybean, corn, and cattle production. 
+However, the rapid expansion of agriculture in the region has also led to deforestation and habitat destruction, threatening the unique biodiversity of the biome.
+
+![Vegetation of Cerrado, Paraíba, Brazil. Source: Alison José da Silva, CC BY-SA 4.0, via Wikimedia Commons](https://upload.wikimedia.org/wikipedia/commons/b/b5/Cerrado_em_Marca%C3%A7%C3%A3o_-_PB.jpg){width=1000 .margin-caption}
+
+
