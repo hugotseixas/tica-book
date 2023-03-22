@@ -203,8 +203,8 @@ ul.task-list li input[type="checkbox"] {
 </ol>
 <div class="cell">
 <div class="cell-output-display">
-<div class="grViz html-widget html-fill-item-overflow-hidden html-fill-item" id="htmlwidget-387ad87b0b7bbc6b1c03" style="width:100%;height:464px;"></div>
-<script type="application/json" data-for="htmlwidget-387ad87b0b7bbc6b1c03">{"x":{"diagram":"digraph {\n  \n  graph [layout = dot, \n         rankdir = TD, \n         nodesep = 1.2, \n         ranksep = 0.8,\n         tooltip = \" \"]\n  \n  node [shape = box,\n        fontname = Helvetica,\n        style = filled,\n        fontcolor = \"#343a40\"\n        fillcolor = \"#f7f7f9\"\n        penwidth = 2.5,\n        width = 3,\n        height = 1.2,\n        fontsize = 25,\n        tooltip = \" \"]\n\n  edge [penwidth = 2.5, \n        arrowsize = 2,\n        tooltip = \" \"]\n\n  a [label = \"Literature \n Review\", xlabel = \"1\"]\n  b [label = \"Experts Survey\", xlabel = \"1\"]\n  c [label = \"Available Data\", xlabel = \"2\"]\n  d [label = \"Database \n Structuring\", xlabel = \"2\"]\n  e [label = \"Models \n Development\", xlabel = \"3\"]\n  f [label = \"Projections \n Scenarios\", xlabel = \"4\"]\n  g [label = \"Projections \n Estimations\", xlabel = \"4\"]\n  \n  a -> c a -> d\n  c -> d b -> d\n  b -> e b -> f\n  e -> g f -> g\n  d -> e\n  \n  }","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
+<div class="grViz html-widget html-fill-item-overflow-hidden html-fill-item" id="htmlwidget-3c6c8fdf17575eb99fce" style="width:100%;height:464px;"></div>
+<script type="application/json" data-for="htmlwidget-3c6c8fdf17575eb99fce">{"x":{"diagram":"digraph {\n  \n  graph [layout = dot, \n         rankdir = TD, \n         nodesep = 1.2, \n         ranksep = 0.8,\n         tooltip = \" \"]\n  \n  node [shape = box,\n        fontname = Helvetica,\n        style = filled,\n        fontcolor = \"#343a40\"\n        fillcolor = \"#f7f7f9\"\n        penwidth = 2.5,\n        width = 3,\n        height = 1.2,\n        fontsize = 25,\n        tooltip = \" \"]\n\n  edge [penwidth = 2.5, \n        arrowsize = 2,\n        tooltip = \" \"]\n\n  a [label = \"Literature \n Review\", xlabel = \"1\"]\n  b [label = \"Experts Survey\", xlabel = \"1\"]\n  c [label = \"Available Data\", xlabel = \"2\"]\n  d [label = \"Database \n Structuring\", xlabel = \"2\"]\n  e [label = \"Models \n Development\", xlabel = \"3\"]\n  f [label = \"Projections \n Scenarios\", xlabel = \"4\"]\n  g [label = \"Projections \n Estimations\", xlabel = \"4\"]\n  \n  a -> c a -> d\n  c -> d b -> d\n  b -> e b -> f\n  e -> g f -> g\n  d -> e\n  \n  }","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
 </div>
 </div>
 <p><br>
@@ -218,8 +218,32 @@ ul.task-list li input[type="checkbox"] {
 <p>The literature review will address different topics. For all of them, I will adopt a hybrid approach of database searches combined with snowball searches.</p>
 <div class="cell">
 <div class="cell-output-display">
-<div class="grViz html-widget html-fill-item-overflow-hidden html-fill-item" id="htmlwidget-0dab0f4368b6f179fbfa" style="width:100%;height:464px;"></div>
-<script type="application/json" data-for="htmlwidget-0dab0f4368b6f179fbfa">{"x":{"diagram":"digraph {\n  \n  graph [layout = dot, \n         overlap = false,\n         rankdir = TB, \n         nodesep = 5, \n         ranksep = 0.4,\n         tooltip = \" \"]\n  \n  node [shape = box,\n        fontname = Helvetica,\n        style = filled,\n        fontcolor = \"#343a40\"\n        fillcolor = \"#f7f7f9\"\n        penwidth = 2.5,\n        width = 3,\n        height = 1.2,\n        fontsize = 25,\n        tooltip = \" \"]\n\n  edge [penwidth = 2.5, \n        arrowsize = 2,\n        tooltip = \" \"]\n\n  a [label = \"Specific \n Questions\"]\n  b [label = \"Query \n Development\"]\n  c [label = \"Database Search\"]\n  d [label = \"Documents \n Screening\"]\n  e [label = \"Documents \n Collection\"]\n  f [label = \"Forward Snowball \n Search\"]\n  g [label = \"Final Collection\"]\n  \n  a -> b a -> d\n  b -> c c -> d\n  d -> e e -> f\n  f -> d e -> g\n  \n  }","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
+<div>
+<p>
+</p><pre class="mermaid mermaid-js" data-tooltip-selector="#mermaid-tooltip-1">%%{init: {'theme': 'neutral' } }%%
+
+flowchart TD
+    A[Specific Questions] --&gt; B[Query Development]
+    A[Specific Questions] --&gt; C[Documents Screening]
+    B[Query Development] --&gt; D[Database Search]
+    D[Database Search] --&gt; C[Documents Screening]
+    C[Documents Screening] --&gt; E[Documents Collection]
+    E[Documents Collection] --&gt; F[Forward Snowball Search]
+    F[Forward Snowball Search] --&gt; C[Documents Screening]
+    E[Documents Collection] -- G[Final Collection]
+
+</pre>
+<div id="mermaid-tooltip-1" class="mermaidTooltip">
+
+</div>
+<p></p>
+</div>
+</div>
+</div>
+<div class="cell">
+<div class="cell-output-display">
+<div class="grViz html-widget html-fill-item-overflow-hidden html-fill-item" id="htmlwidget-14b9c67588bfa5308ccc" style="width:100%;height:464px;"></div>
+<script type="application/json" data-for="htmlwidget-14b9c67588bfa5308ccc">{"x":{"diagram":"digraph {\n  \n  graph [layout = dot, \n         overlap = false,\n         rankdir = TB, \n         nodesep = 5, \n         ranksep = 0.4,\n         tooltip = \" \"]\n  \n  node [shape = box,\n        fontname = Helvetica,\n        style = filled,\n        fontcolor = \"#343a40\"\n        fillcolor = \"#f7f7f9\"\n        penwidth = 2.5,\n        width = 3,\n        height = 1.2,\n        fontsize = 25,\n        tooltip = \" \"]\n\n  edge [penwidth = 2.5, \n        arrowsize = 2,\n        tooltip = \" \"]\n\n  a [label = \"Specific \n Questions\"]\n  b [label = \"Query \n Development\"]\n  c [label = \"Database Search\"]\n  d [label = \"Documents \n Screening\"]\n  e [label = \"Documents \n Collection\"]\n  f [label = \"Forward Snowball \n Search\"]\n  g [label = \"Final Collection\"]\n  \n  a -> b a -> d\n  b -> c c -> d\n  d -> e e -> f\n  f -> d e -> g\n  \n  }","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
 </div>
 </div>
 <p><br>
@@ -237,11 +261,11 @@ ul.task-list li input[type="checkbox"] {
 </div>
 <p>Each grid cell will contain an observation, for each year, for all the variables. Only pixels that contained natural vegetation in the first year of the analysis will be considered valid.</p>
 <p>The process to create the database will consist of accessing the data sources, downloading the data to the local environment, transforming and organizing the data to the grid (if the data source provides any pre-processing tool before downloading the data, it should be done that way), and store in the local environment.</p>
-<div class="cell" data-fig-width="7.5">
+<div class="cell">
 <div class="cell-output-display">
 <div>
 <p>
-</p><pre class="mermaid mermaid-js" data-tooltip-selector="#mermaid-tooltip-1">%%{init: {'theme': 'neutral' } }%%
+</p><pre class="mermaid mermaid-js" data-tooltip-selector="#mermaid-tooltip-2">%%{init: {'theme': 'neutral' } }%%
 
 flowchart TD
     A[Data Source] --&gt; E[Pre Processing]
@@ -252,7 +276,7 @@ flowchart TD
     F[Gridded Data] --&gt; G[Database]
 
 </pre>
-<div id="mermaid-tooltip-1" class="mermaidTooltip">
+<div id="mermaid-tooltip-2" class="mermaidTooltip">
 
 </div>
 <p></p>
@@ -267,12 +291,12 @@ flowchart TD
 <div class="cell">
 <div class="cell-output-display">
 
-<div id="hjelguckns" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<div id="hofgfzdsfy" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
 <style>html {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', 'Fira Sans', 'Droid Sans', Arial, sans-serif;
 }
 
-:where(#hjelguckns) .gt_table {
+:where(#hofgfzdsfy) .gt_table {
   display: table;
   border-collapse: collapse;
   margin-left: auto;
@@ -297,7 +321,7 @@ flowchart TD
   border-left-color: #D3D3D3;
 }
 
-:where(#hjelguckns) .gt_heading {
+:where(#hofgfzdsfy) .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -309,12 +333,12 @@ flowchart TD
   border-right-color: #D3D3D3;
 }
 
-:where(#hjelguckns) .gt_caption {
+:where(#hofgfzdsfy) .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-:where(#hjelguckns) .gt_title {
+:where(#hofgfzdsfy) .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -326,7 +350,7 @@ flowchart TD
   border-bottom-width: 0;
 }
 
-:where(#hjelguckns) .gt_subtitle {
+:where(#hofgfzdsfy) .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -338,13 +362,13 @@ flowchart TD
   border-top-width: 0;
 }
 
-:where(#hjelguckns) .gt_bottom_border {
+:where(#hofgfzdsfy) .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-:where(#hjelguckns) .gt_col_headings {
+:where(#hofgfzdsfy) .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -359,7 +383,7 @@ flowchart TD
   border-right-color: #D3D3D3;
 }
 
-:where(#hjelguckns) .gt_col_heading {
+:where(#hofgfzdsfy) .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -379,7 +403,7 @@ flowchart TD
   overflow-x: hidden;
 }
 
-:where(#hjelguckns) .gt_column_spanner_outer {
+:where(#hofgfzdsfy) .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -391,15 +415,15 @@ flowchart TD
   padding-right: 4px;
 }
 
-:where(#hjelguckns) .gt_column_spanner_outer:first-child {
+:where(#hofgfzdsfy) .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-:where(#hjelguckns) .gt_column_spanner_outer:last-child {
+:where(#hofgfzdsfy) .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-:where(#hjelguckns) .gt_column_spanner {
+:where(#hofgfzdsfy) .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -411,7 +435,7 @@ flowchart TD
   width: 100%;
 }
 
-:where(#hjelguckns) .gt_group_heading {
+:where(#hofgfzdsfy) .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -437,7 +461,7 @@ flowchart TD
   text-align: left;
 }
 
-:where(#hjelguckns) .gt_empty_group_heading {
+:where(#hofgfzdsfy) .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -452,15 +476,15 @@ flowchart TD
   vertical-align: middle;
 }
 
-:where(#hjelguckns) .gt_from_md > :first-child {
+:where(#hofgfzdsfy) .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-:where(#hjelguckns) .gt_from_md > :last-child {
+:where(#hofgfzdsfy) .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-:where(#hjelguckns) .gt_row {
+:where(#hofgfzdsfy) .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -479,7 +503,7 @@ flowchart TD
   overflow-x: hidden;
 }
 
-:where(#hjelguckns) .gt_stub {
+:where(#hofgfzdsfy) .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -492,7 +516,7 @@ flowchart TD
   padding-right: 5px;
 }
 
-:where(#hjelguckns) .gt_stub_row_group {
+:where(#hofgfzdsfy) .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -506,11 +530,11 @@ flowchart TD
   vertical-align: top;
 }
 
-:where(#hjelguckns) .gt_row_group_first td {
+:where(#hofgfzdsfy) .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-:where(#hjelguckns) .gt_summary_row {
+:where(#hofgfzdsfy) .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -520,16 +544,16 @@ flowchart TD
   padding-right: 5px;
 }
 
-:where(#hjelguckns) .gt_first_summary_row {
+:where(#hofgfzdsfy) .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-:where(#hjelguckns) .gt_first_summary_row.thick {
+:where(#hofgfzdsfy) .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-:where(#hjelguckns) .gt_last_summary_row {
+:where(#hofgfzdsfy) .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -539,7 +563,7 @@ flowchart TD
   border-bottom-color: #D3D3D3;
 }
 
-:where(#hjelguckns) .gt_grand_summary_row {
+:where(#hofgfzdsfy) .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -549,7 +573,7 @@ flowchart TD
   padding-right: 5px;
 }
 
-:where(#hjelguckns) .gt_first_grand_summary_row {
+:where(#hofgfzdsfy) .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -559,11 +583,11 @@ flowchart TD
   border-top-color: #D3D3D3;
 }
 
-:where(#hjelguckns) .gt_striped {
+:where(#hofgfzdsfy) .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-:where(#hjelguckns) .gt_table_body {
+:where(#hofgfzdsfy) .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -572,7 +596,7 @@ flowchart TD
   border-bottom-color: #D3D3D3;
 }
 
-:where(#hjelguckns) .gt_footnotes {
+:where(#hofgfzdsfy) .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -586,7 +610,7 @@ flowchart TD
   border-right-color: #D3D3D3;
 }
 
-:where(#hjelguckns) .gt_footnote {
+:where(#hofgfzdsfy) .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-left: 4px;
@@ -595,7 +619,7 @@ flowchart TD
   padding-right: 5px;
 }
 
-:where(#hjelguckns) .gt_sourcenotes {
+:where(#hofgfzdsfy) .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -609,7 +633,7 @@ flowchart TD
   border-right-color: #D3D3D3;
 }
 
-:where(#hjelguckns) .gt_sourcenote {
+:where(#hofgfzdsfy) .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -617,64 +641,64 @@ flowchart TD
   padding-right: 5px;
 }
 
-:where(#hjelguckns) .gt_left {
+:where(#hofgfzdsfy) .gt_left {
   text-align: left;
 }
 
-:where(#hjelguckns) .gt_center {
+:where(#hofgfzdsfy) .gt_center {
   text-align: center;
 }
 
-:where(#hjelguckns) .gt_right {
+:where(#hofgfzdsfy) .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-:where(#hjelguckns) .gt_font_normal {
+:where(#hofgfzdsfy) .gt_font_normal {
   font-weight: normal;
 }
 
-:where(#hjelguckns) .gt_font_bold {
+:where(#hofgfzdsfy) .gt_font_bold {
   font-weight: bold;
 }
 
-:where(#hjelguckns) .gt_font_italic {
+:where(#hofgfzdsfy) .gt_font_italic {
   font-style: italic;
 }
 
-:where(#hjelguckns) .gt_super {
+:where(#hofgfzdsfy) .gt_super {
   font-size: 65%;
 }
 
-:where(#hjelguckns) .gt_footnote_marks {
+:where(#hofgfzdsfy) .gt_footnote_marks {
   font-style: italic;
   font-weight: normal;
   font-size: 75%;
   vertical-align: 0.4em;
 }
 
-:where(#hjelguckns) .gt_asterisk {
+:where(#hofgfzdsfy) .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-:where(#hjelguckns) .gt_indent_1 {
+:where(#hofgfzdsfy) .gt_indent_1 {
   text-indent: 5px;
 }
 
-:where(#hjelguckns) .gt_indent_2 {
+:where(#hofgfzdsfy) .gt_indent_2 {
   text-indent: 10px;
 }
 
-:where(#hjelguckns) .gt_indent_3 {
+:where(#hofgfzdsfy) .gt_indent_3 {
   text-indent: 15px;
 }
 
-:where(#hjelguckns) .gt_indent_4 {
+:where(#hofgfzdsfy) .gt_indent_4 {
   text-indent: 20px;
 }
 
-:where(#hjelguckns) .gt_indent_5 {
+:where(#hofgfzdsfy) .gt_indent_5 {
   text-indent: 25px;
 }
 </style>
@@ -707,8 +731,8 @@ flowchart TD
 <p>Each model will follow the standard approach to develop supervised models.</p>
 <div class="cell">
 <div class="cell-output-display">
-<div id="htmlwidget-293d192b25a4e9e52380" style="width:100%;height:773px;" class="grViz html-widget "></div>
-<script type="application/json" data-for="htmlwidget-293d192b25a4e9e52380">{"x":{"diagram":"digraph {\n  \n  graph [layout = dot, \n         overlap = false,\n         rankdir = TD, \n         nodesep = 1.8, \n         ranksep = 0.5,\n         tooltip = \" \"]\n  \n  node [shape = box,\n        fontname = Helvetica,\n        style = filled,\n        fontcolor = \"#343a40\"\n        fillcolor = \"#f7f7f9\"\n        penwidth = 2.5,\n        width = 3,\n        height = 1.2,\n        fontsize = 25,\n        tooltip = \" \"]\n\n  edge [penwidth = 2.5, \n        arrowsize = 2,\n        tooltip = \" \"]\n\n  a [label = \"Database\"]\n  b [label = \"Variables \n Selection\"]\n  c [label = \"Data Split\"]\n  d [label = \"Training Data\"]\n  e [label = \"Validation \n Data\"]\n  f [label = \"Test Data\"]\n  g [label = \"Pre Processing\"]\n  h [label = \"Initial \n Model Fit\"]\n  i [label = \"Parameters \n Adjustments\"]\n  j [label = \"Final \n Model Fit\"]\n  k [label = \"Model \n Assessment\"]\n  l [label = \"Model \n Interpretation\"]\n  \n  a -> b b -> c\n  c -> d c -> e c -> f \n  d -> g g -> h \n  h -> i e -> i\n  i -> j j -> k f -> k\n  j -> l k -> l\n  \n  }","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-80d80d5da4856498cf9b" style="width:100%;height:773px;" class="grViz html-widget "></div>
+<script type="application/json" data-for="htmlwidget-80d80d5da4856498cf9b">{"x":{"diagram":"digraph {\n  \n  graph [layout = dot, \n         overlap = false,\n         rankdir = TD, \n         nodesep = 1.8, \n         ranksep = 0.5,\n         tooltip = \" \"]\n  \n  node [shape = box,\n        fontname = Helvetica,\n        style = filled,\n        fontcolor = \"#343a40\"\n        fillcolor = \"#f7f7f9\"\n        penwidth = 2.5,\n        width = 3,\n        height = 1.2,\n        fontsize = 25,\n        tooltip = \" \"]\n\n  edge [penwidth = 2.5, \n        arrowsize = 2,\n        tooltip = \" \"]\n\n  a [label = \"Database\"]\n  b [label = \"Variables \n Selection\"]\n  c [label = \"Data Split\"]\n  d [label = \"Training Data\"]\n  e [label = \"Validation \n Data\"]\n  f [label = \"Test Data\"]\n  g [label = \"Pre Processing\"]\n  h [label = \"Initial \n Model Fit\"]\n  i [label = \"Parameters \n Adjustments\"]\n  j [label = \"Final \n Model Fit\"]\n  k [label = \"Model \n Assessment\"]\n  l [label = \"Model \n Interpretation\"]\n  \n  a -> b b -> c\n  c -> d c -> e c -> f \n  d -> g g -> h \n  h -> i e -> i\n  i -> j j -> k f -> k\n  j -> l k -> l\n  \n  }","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
 </div>
 </div>
 <p><br>

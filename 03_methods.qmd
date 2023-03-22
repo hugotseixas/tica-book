@@ -85,6 +85,21 @@ Future projections will serve as a bridge to discuss public policy planning to m
 The literature review will address different topics. 
 For all of them, I will adopt a hybrid approach of database searches combined with snowball searches.
 
+```{mermaid}
+%%{init: {'theme': 'neutral' } }%%
+
+flowchart TD
+    A[Specific Questions] --> B[Query Development]
+    A[Specific Questions] --> C[Documents Screening]
+    B[Query Development] --> D[Database Search]
+    D[Database Search] --> C[Documents Screening]
+    C[Documents Screening] --> E[Documents Collection]
+    E[Documents Collection] --> F[Forward Snowball Search]
+    F[Forward Snowball Search] --> C[Documents Screening]
+    E[Documents Collection] -- G[Final Collection]
+
+```
+
 ```{r}
 #| label: lit-review-diagram
 #| echo: false
@@ -152,7 +167,6 @@ Only pixels that contained natural vegetation in the first year of the analysis 
 The process to create the database will consist of accessing the data sources, downloading the data to the local environment, transforming and organizing the data to the grid (if the data source provides any pre-processing tool before downloading the data, it should be done that way), and store in the local environment.
 
 ```{mermaid}
-%%| fig-width: 7.5
 %%{init: {'theme': 'neutral' } }%%
 
 flowchart TD
