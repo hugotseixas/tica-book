@@ -60,6 +60,9 @@ ul.task-list li input[type="checkbox"] {
     "search-submit-button-title": "Submit"
   }
 }</script>
+<script src="site_libs/quarto-diagram/mermaid.min.js"></script>
+<script src="site_libs/quarto-diagram/mermaid-init.js"></script>
+<link href="site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
 <script src="site_libs/htmlwidgets-1.6.1/htmlwidgets.js"></script>
 <script src="site_libs/viz-1.8.2/viz.js"></script>
 <link href="site_libs/DiagrammeR-styles-0.2/styles.css" rel="stylesheet">
@@ -199,8 +202,8 @@ ul.task-list li input[type="checkbox"] {
 </ol>
 <div class="cell">
 <div class="cell-output-display">
-<div class="grViz html-widget html-fill-item-overflow-hidden html-fill-item" id="htmlwidget-64476a8db7e1e69a49e5" style="width:100%;height:464px;"></div>
-<script type="application/json" data-for="htmlwidget-64476a8db7e1e69a49e5">{"x":{"diagram":"digraph {\n  \n  graph [layout = dot, \n         rankdir = TD, \n         nodesep = 1.2, \n         ranksep = 0.8,\n         tooltip = \" \"]\n  \n  node [shape = box,\n        fontname = Helvetica,\n        style = filled,\n        fontcolor = \"#343a40\"\n        fillcolor = \"#f7f7f9\"\n        penwidth = 2.5,\n        width = 3,\n        height = 1.2,\n        fontsize = 25,\n        tooltip = \" \"]\n\n  edge [penwidth = 2.5, \n        arrowsize = 2,\n        tooltip = \" \"]\n\n  a [label = \"Literature \n Review\", xlabel = \"1\"]\n  b [label = \"Experts Survey\", xlabel = \"1\"]\n  c [label = \"Available Data\", xlabel = \"2\"]\n  d [label = \"Database \n Structuring\", xlabel = \"2\"]\n  e [label = \"Models \n Development\", xlabel = \"3\"]\n  f [label = \"Projections \n Scenarios\", xlabel = \"4\"]\n  g [label = \"Projections \n Estimations\", xlabel = \"4\"]\n  \n  a -> c a -> d\n  c -> d b -> d\n  b -> e b -> f\n  e -> g f -> g\n  d -> e\n  \n  }","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
+<div class="grViz html-widget html-fill-item-overflow-hidden html-fill-item" id="htmlwidget-b110ba39613a27790281" style="width:100%;height:464px;"></div>
+<script type="application/json" data-for="htmlwidget-b110ba39613a27790281">{"x":{"diagram":"digraph {\n  \n  graph [layout = dot, \n         rankdir = TD, \n         nodesep = 1.2, \n         ranksep = 0.8,\n         tooltip = \" \"]\n  \n  node [shape = box,\n        fontname = Helvetica,\n        style = filled,\n        fontcolor = \"#343a40\"\n        fillcolor = \"#f7f7f9\"\n        penwidth = 2.5,\n        width = 3,\n        height = 1.2,\n        fontsize = 25,\n        tooltip = \" \"]\n\n  edge [penwidth = 2.5, \n        arrowsize = 2,\n        tooltip = \" \"]\n\n  a [label = \"Literature \n Review\", xlabel = \"1\"]\n  b [label = \"Experts Survey\", xlabel = \"1\"]\n  c [label = \"Available Data\", xlabel = \"2\"]\n  d [label = \"Database \n Structuring\", xlabel = \"2\"]\n  e [label = \"Models \n Development\", xlabel = \"3\"]\n  f [label = \"Projections \n Scenarios\", xlabel = \"4\"]\n  g [label = \"Projections \n Estimations\", xlabel = \"4\"]\n  \n  a -> c a -> d\n  c -> d b -> d\n  b -> e b -> f\n  e -> g f -> g\n  d -> e\n  \n  }","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
 </div>
 </div>
 <p><br>
@@ -214,8 +217,8 @@ ul.task-list li input[type="checkbox"] {
 <p>The literature review will address different topics. For all of them, I will adopt a hybrid approach of database searches combined with snowball searches.</p>
 <div class="cell">
 <div class="cell-output-display">
-<div class="grViz html-widget html-fill-item-overflow-hidden html-fill-item" id="htmlwidget-8a7c41f1b4408bc0a486" style="width:100%;height:464px;"></div>
-<script type="application/json" data-for="htmlwidget-8a7c41f1b4408bc0a486">{"x":{"diagram":"digraph {\n  \n  graph [layout = dot, \n         overlap = false,\n         rankdir = TB, \n         nodesep = 5, \n         ranksep = 0.4,\n         tooltip = \" \"]\n  \n  node [shape = box,\n        fontname = Helvetica,\n        style = filled,\n        fontcolor = \"#343a40\"\n        fillcolor = \"#f7f7f9\"\n        penwidth = 2.5,\n        width = 3,\n        height = 1.2,\n        fontsize = 25,\n        tooltip = \" \"]\n\n  edge [penwidth = 2.5, \n        arrowsize = 2,\n        tooltip = \" \"]\n\n  a [label = \"Specific \n Questions\"]\n  b [label = \"Query \n Development\"]\n  c [label = \"Database Search\"]\n  d [label = \"Documents \n Screening\"]\n  e [label = \"Documents \n Collection\"]\n  f [label = \"Forward Snowball \n Search\"]\n  g [label = \"Final Collection\"]\n  \n  a -> b a -> d\n  b -> c c -> d\n  d -> e e -> f\n  f -> d e -> g\n  \n  }","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
+<div class="grViz html-widget html-fill-item-overflow-hidden html-fill-item" id="htmlwidget-1d05c3ce50b58a07bd23" style="width:100%;height:464px;"></div>
+<script type="application/json" data-for="htmlwidget-1d05c3ce50b58a07bd23">{"x":{"diagram":"digraph {\n  \n  graph [layout = dot, \n         overlap = false,\n         rankdir = TB, \n         nodesep = 5, \n         ranksep = 0.4,\n         tooltip = \" \"]\n  \n  node [shape = box,\n        fontname = Helvetica,\n        style = filled,\n        fontcolor = \"#343a40\"\n        fillcolor = \"#f7f7f9\"\n        penwidth = 2.5,\n        width = 3,\n        height = 1.2,\n        fontsize = 25,\n        tooltip = \" \"]\n\n  edge [penwidth = 2.5, \n        arrowsize = 2,\n        tooltip = \" \"]\n\n  a [label = \"Specific \n Questions\"]\n  b [label = \"Query \n Development\"]\n  c [label = \"Database Search\"]\n  d [label = \"Documents \n Screening\"]\n  e [label = \"Documents \n Collection\"]\n  f [label = \"Forward Snowball \n Search\"]\n  g [label = \"Final Collection\"]\n  \n  a -> b a -> d\n  b -> c c -> d\n  d -> e e -> f\n  f -> d e -> g\n  \n  }","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
 </div>
 </div>
 <p><br>
@@ -235,8 +238,22 @@ ul.task-list li input[type="checkbox"] {
 <p>The process to create the database will consist of accessing the data sources, downloading the data to the local environment, transforming and organizing the data to the grid (if the data source provides any pre-processing tool before downloading the data, it should be done that way), and store in the local environment.</p>
 <div class="cell">
 <div class="cell-output-display">
-<div class="grViz html-widget html-fill-item-overflow-hidden html-fill-item" id="htmlwidget-db824488a8bbf250f737" style="width:100%;height:464px;"></div>
-<script type="application/json" data-for="htmlwidget-db824488a8bbf250f737">{"x":{"diagram":"digraph {\n  \n  graph [layout = dot, \n         overlap = false,\n         rankdir = TB, \n         nodesep = 1.4, \n         ranksep = 0.8,\n         tooltip = \" \"]\n  \n  node [shape = box,\n        fontname = Helvetica,\n        style = filled,\n        fontcolor = \"#343a40\"\n        fillcolor = \"#f7f7f9\"\n        penwidth = 2.5,\n        width = 3,\n        height = 1.2,\n        fontsize = 25,\n        tooltip = \" \"]\n\n  edge [penwidth = 2.5, \n        arrowsize = 2,\n        tooltip = \" \"]\n\n  a [label = \"Data Source\"]\n  b [label = \"Data Source\"]\n  c [label = \"Data Source\"]\n  d [label = \"Data Source\"]\n  e [label = \"Pre Processing\"]\n  f [label = \"Gridded Data\"]\n  g [label = \"Database\"]\n  \n  a -> e b -> e\n  c -> e d -> e\n  e -> f f -> g\n  \n  }","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
+<div>
+<p>
+</p><pre class="mermaid mermaid-js" data-tooltip-selector="#mermaid-tooltip-1">flowchart TD
+    A[Data Source] --&gt; E(Pre Processing)
+    B[Data Source] --&gt; E(Pre Processing)
+    C[Data Source] --&gt; E(Pre Processing)
+    D[Data Source] --&gt; E(Pre Processing)
+    E(Pre Processing) --&gt; F(Gridded Data)
+    F(Gridded Data) --&gt; G(Database)
+
+</pre>
+<div id="mermaid-tooltip-1" class="mermaidTooltip">
+
+</div>
+<p></p>
+</div>
 </div>
 </div>
 <p>The data will be stored in a nested directories database with hive-style partitioning. The database will be composed of a collection of parquet files, a format with high compression, that facilitates processing large volumes of data. The main partition will be the variables, which means that each variable will be stored in a separate directory. If necessary, the data will be partitioned by further variables (as a rule of thumb, each parquet file should not be smaller than 20MB and not bigger than 2GB).</p>
@@ -247,12 +264,12 @@ ul.task-list li input[type="checkbox"] {
 <div class="cell">
 <div class="cell-output-display">
 
-<div id="fflgqgwwst" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<div id="jeqabawyii" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
 <style>html {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', 'Fira Sans', 'Droid Sans', Arial, sans-serif;
 }
 
-:where(#fflgqgwwst) .gt_table {
+:where(#jeqabawyii) .gt_table {
   display: table;
   border-collapse: collapse;
   margin-left: auto;
@@ -277,7 +294,7 @@ ul.task-list li input[type="checkbox"] {
   border-left-color: #D3D3D3;
 }
 
-:where(#fflgqgwwst) .gt_heading {
+:where(#jeqabawyii) .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -289,12 +306,12 @@ ul.task-list li input[type="checkbox"] {
   border-right-color: #D3D3D3;
 }
 
-:where(#fflgqgwwst) .gt_caption {
+:where(#jeqabawyii) .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-:where(#fflgqgwwst) .gt_title {
+:where(#jeqabawyii) .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -306,7 +323,7 @@ ul.task-list li input[type="checkbox"] {
   border-bottom-width: 0;
 }
 
-:where(#fflgqgwwst) .gt_subtitle {
+:where(#jeqabawyii) .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -318,13 +335,13 @@ ul.task-list li input[type="checkbox"] {
   border-top-width: 0;
 }
 
-:where(#fflgqgwwst) .gt_bottom_border {
+:where(#jeqabawyii) .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-:where(#fflgqgwwst) .gt_col_headings {
+:where(#jeqabawyii) .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -339,7 +356,7 @@ ul.task-list li input[type="checkbox"] {
   border-right-color: #D3D3D3;
 }
 
-:where(#fflgqgwwst) .gt_col_heading {
+:where(#jeqabawyii) .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -359,7 +376,7 @@ ul.task-list li input[type="checkbox"] {
   overflow-x: hidden;
 }
 
-:where(#fflgqgwwst) .gt_column_spanner_outer {
+:where(#jeqabawyii) .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -371,15 +388,15 @@ ul.task-list li input[type="checkbox"] {
   padding-right: 4px;
 }
 
-:where(#fflgqgwwst) .gt_column_spanner_outer:first-child {
+:where(#jeqabawyii) .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-:where(#fflgqgwwst) .gt_column_spanner_outer:last-child {
+:where(#jeqabawyii) .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-:where(#fflgqgwwst) .gt_column_spanner {
+:where(#jeqabawyii) .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -391,7 +408,7 @@ ul.task-list li input[type="checkbox"] {
   width: 100%;
 }
 
-:where(#fflgqgwwst) .gt_group_heading {
+:where(#jeqabawyii) .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -417,7 +434,7 @@ ul.task-list li input[type="checkbox"] {
   text-align: left;
 }
 
-:where(#fflgqgwwst) .gt_empty_group_heading {
+:where(#jeqabawyii) .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -432,15 +449,15 @@ ul.task-list li input[type="checkbox"] {
   vertical-align: middle;
 }
 
-:where(#fflgqgwwst) .gt_from_md > :first-child {
+:where(#jeqabawyii) .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-:where(#fflgqgwwst) .gt_from_md > :last-child {
+:where(#jeqabawyii) .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-:where(#fflgqgwwst) .gt_row {
+:where(#jeqabawyii) .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -459,7 +476,7 @@ ul.task-list li input[type="checkbox"] {
   overflow-x: hidden;
 }
 
-:where(#fflgqgwwst) .gt_stub {
+:where(#jeqabawyii) .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -472,7 +489,7 @@ ul.task-list li input[type="checkbox"] {
   padding-right: 5px;
 }
 
-:where(#fflgqgwwst) .gt_stub_row_group {
+:where(#jeqabawyii) .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -486,11 +503,11 @@ ul.task-list li input[type="checkbox"] {
   vertical-align: top;
 }
 
-:where(#fflgqgwwst) .gt_row_group_first td {
+:where(#jeqabawyii) .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-:where(#fflgqgwwst) .gt_summary_row {
+:where(#jeqabawyii) .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -500,16 +517,16 @@ ul.task-list li input[type="checkbox"] {
   padding-right: 5px;
 }
 
-:where(#fflgqgwwst) .gt_first_summary_row {
+:where(#jeqabawyii) .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-:where(#fflgqgwwst) .gt_first_summary_row.thick {
+:where(#jeqabawyii) .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-:where(#fflgqgwwst) .gt_last_summary_row {
+:where(#jeqabawyii) .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -519,7 +536,7 @@ ul.task-list li input[type="checkbox"] {
   border-bottom-color: #D3D3D3;
 }
 
-:where(#fflgqgwwst) .gt_grand_summary_row {
+:where(#jeqabawyii) .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -529,7 +546,7 @@ ul.task-list li input[type="checkbox"] {
   padding-right: 5px;
 }
 
-:where(#fflgqgwwst) .gt_first_grand_summary_row {
+:where(#jeqabawyii) .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -539,11 +556,11 @@ ul.task-list li input[type="checkbox"] {
   border-top-color: #D3D3D3;
 }
 
-:where(#fflgqgwwst) .gt_striped {
+:where(#jeqabawyii) .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-:where(#fflgqgwwst) .gt_table_body {
+:where(#jeqabawyii) .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -552,7 +569,7 @@ ul.task-list li input[type="checkbox"] {
   border-bottom-color: #D3D3D3;
 }
 
-:where(#fflgqgwwst) .gt_footnotes {
+:where(#jeqabawyii) .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -566,7 +583,7 @@ ul.task-list li input[type="checkbox"] {
   border-right-color: #D3D3D3;
 }
 
-:where(#fflgqgwwst) .gt_footnote {
+:where(#jeqabawyii) .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-left: 4px;
@@ -575,7 +592,7 @@ ul.task-list li input[type="checkbox"] {
   padding-right: 5px;
 }
 
-:where(#fflgqgwwst) .gt_sourcenotes {
+:where(#jeqabawyii) .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -589,7 +606,7 @@ ul.task-list li input[type="checkbox"] {
   border-right-color: #D3D3D3;
 }
 
-:where(#fflgqgwwst) .gt_sourcenote {
+:where(#jeqabawyii) .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -597,64 +614,64 @@ ul.task-list li input[type="checkbox"] {
   padding-right: 5px;
 }
 
-:where(#fflgqgwwst) .gt_left {
+:where(#jeqabawyii) .gt_left {
   text-align: left;
 }
 
-:where(#fflgqgwwst) .gt_center {
+:where(#jeqabawyii) .gt_center {
   text-align: center;
 }
 
-:where(#fflgqgwwst) .gt_right {
+:where(#jeqabawyii) .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-:where(#fflgqgwwst) .gt_font_normal {
+:where(#jeqabawyii) .gt_font_normal {
   font-weight: normal;
 }
 
-:where(#fflgqgwwst) .gt_font_bold {
+:where(#jeqabawyii) .gt_font_bold {
   font-weight: bold;
 }
 
-:where(#fflgqgwwst) .gt_font_italic {
+:where(#jeqabawyii) .gt_font_italic {
   font-style: italic;
 }
 
-:where(#fflgqgwwst) .gt_super {
+:where(#jeqabawyii) .gt_super {
   font-size: 65%;
 }
 
-:where(#fflgqgwwst) .gt_footnote_marks {
+:where(#jeqabawyii) .gt_footnote_marks {
   font-style: italic;
   font-weight: normal;
   font-size: 75%;
   vertical-align: 0.4em;
 }
 
-:where(#fflgqgwwst) .gt_asterisk {
+:where(#jeqabawyii) .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-:where(#fflgqgwwst) .gt_indent_1 {
+:where(#jeqabawyii) .gt_indent_1 {
   text-indent: 5px;
 }
 
-:where(#fflgqgwwst) .gt_indent_2 {
+:where(#jeqabawyii) .gt_indent_2 {
   text-indent: 10px;
 }
 
-:where(#fflgqgwwst) .gt_indent_3 {
+:where(#jeqabawyii) .gt_indent_3 {
   text-indent: 15px;
 }
 
-:where(#fflgqgwwst) .gt_indent_4 {
+:where(#jeqabawyii) .gt_indent_4 {
   text-indent: 20px;
 }
 
-:where(#fflgqgwwst) .gt_indent_5 {
+:where(#jeqabawyii) .gt_indent_5 {
   text-indent: 25px;
 }
 </style>
@@ -687,8 +704,8 @@ ul.task-list li input[type="checkbox"] {
 <p>Each model will follow the standard approach to develop supervised models.</p>
 <div class="cell">
 <div class="cell-output-display">
-<div id="htmlwidget-f5eb774d8f8b2f2a5b68" style="width:100%;height:773px;" class="grViz html-widget "></div>
-<script type="application/json" data-for="htmlwidget-f5eb774d8f8b2f2a5b68">{"x":{"diagram":"digraph {\n  \n  graph [layout = dot, \n         overlap = false,\n         rankdir = TD, \n         nodesep = 1.8, \n         ranksep = 0.5,\n         tooltip = \" \"]\n  \n  node [shape = box,\n        fontname = Helvetica,\n        style = filled,\n        fontcolor = \"#343a40\"\n        fillcolor = \"#f7f7f9\"\n        penwidth = 2.5,\n        width = 3,\n        height = 1.2,\n        fontsize = 25,\n        tooltip = \" \"]\n\n  edge [penwidth = 2.5, \n        arrowsize = 2,\n        tooltip = \" \"]\n\n  a [label = \"Database\"]\n  b [label = \"Variables \n Selection\"]\n  c [label = \"Data Split\"]\n  d [label = \"Training Data\"]\n  e [label = \"Validation \n Data\"]\n  f [label = \"Test Data\"]\n  g [label = \"Pre Processing\"]\n  h [label = \"Initial \n Model Fit\"]\n  i [label = \"Parameters \n Adjustments\"]\n  j [label = \"Final \n Model Fit\"]\n  k [label = \"Model \n Assessment\"]\n  l [label = \"Model \n Interpretation\"]\n  \n  a -> b b -> c\n  c -> d c -> e c -> f \n  d -> g g -> h \n  h -> i e -> i\n  i -> j j -> k f -> k\n  j -> l k -> l\n  \n  }","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-a144ceaad9634802e9ed" style="width:100%;height:773px;" class="grViz html-widget "></div>
+<script type="application/json" data-for="htmlwidget-a144ceaad9634802e9ed">{"x":{"diagram":"digraph {\n  \n  graph [layout = dot, \n         overlap = false,\n         rankdir = TD, \n         nodesep = 1.8, \n         ranksep = 0.5,\n         tooltip = \" \"]\n  \n  node [shape = box,\n        fontname = Helvetica,\n        style = filled,\n        fontcolor = \"#343a40\"\n        fillcolor = \"#f7f7f9\"\n        penwidth = 2.5,\n        width = 3,\n        height = 1.2,\n        fontsize = 25,\n        tooltip = \" \"]\n\n  edge [penwidth = 2.5, \n        arrowsize = 2,\n        tooltip = \" \"]\n\n  a [label = \"Database\"]\n  b [label = \"Variables \n Selection\"]\n  c [label = \"Data Split\"]\n  d [label = \"Training Data\"]\n  e [label = \"Validation \n Data\"]\n  f [label = \"Test Data\"]\n  g [label = \"Pre Processing\"]\n  h [label = \"Initial \n Model Fit\"]\n  i [label = \"Parameters \n Adjustments\"]\n  j [label = \"Final \n Model Fit\"]\n  k [label = \"Model \n Assessment\"]\n  l [label = \"Model \n Interpretation\"]\n  \n  a -> b b -> c\n  c -> d c -> e c -> f \n  d -> g g -> h \n  h -> i e -> i\n  i -> j j -> k f -> k\n  j -> l k -> l\n  \n  }","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
 </div>
 </div>
 <p><br>
