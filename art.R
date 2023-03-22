@@ -24,7 +24,7 @@ conflicts_prefer(dplyr::filter)
 #
 
 # Size of the grid cell in degrees
-resolution <- 3
+resolution <- 4
 
 # Create grid with cells that are fully within the biomes?
 full_cells <- FALSE
