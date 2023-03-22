@@ -1,3 +1,7 @@
+---
+toc: false
+---
+
 # Preface {.unnumbered}
 
 This project is an effort to develop an interdisciplinary approach to modelling land use and land cover transitions and their impact to social and environmental dimensions. 
