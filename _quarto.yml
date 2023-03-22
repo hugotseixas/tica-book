@@ -12,6 +12,7 @@ book:
       - name: State University of Campinas
   date: "3/21/2023"
   license: CC BY-NC-ND 4.0
+  favicon: logo.png
   sidebar:
     search: true
     logo: logo.png
