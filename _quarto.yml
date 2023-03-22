@@ -21,6 +21,7 @@ book:
       repo: hugotseixas/tica-book
       category: "Announcements"
       category-id: "DIC_kwDOJMlNNs4CVCYq"
+      reactions-enabled: false
   chapters:
     - index.qmd
     - 01_introduction.qmd
