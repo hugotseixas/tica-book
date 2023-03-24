@@ -8,9 +8,11 @@
 # LIBRARIES -------------------------------------------------------------------
 #
 library(conflicted)
+library(sf)
 library(arrow)
 library(glue)
 library(scales)
+library(scico)
 library(tidyverse)
 #
 # CONFLICTS -------------------------------------------------------------------
@@ -26,6 +28,8 @@ conflicts_prefer(dplyr::filter)
 # LOAD DATA -------------------------------------------------------------------
 
 defo <- read_parquet("data/deforestation.parquet")
+
+base_grid <- read_sf("data/base_grid.fgb")
 
 # EXPLORE DATA ----------------------------------------------------------------
 
@@ -58,7 +62,7 @@ defo <- read_parquet("data/deforestation.parquet")
     ) +
     theme_minimal() +
     theme(
-      text = element_text(size = 20),
+      text = element_text(size = 18),
       axis.text.y = element_blank(),
       axis.title.y = element_blank(),
       panel.grid.major.y = element_blank(),
@@ -66,7 +70,7 @@ defo <- read_parquet("data/deforestation.parquet")
     )
 )
 
-# Create Cumulative Plot ----
+## Create Cumulative Plot ----
 
 # Calculate some percentiles
 quantile_table <- defo %>%
@@ -110,6 +114,10 @@ cumsum_values <- defo %>%
     mutate(area = area * 0.0001) %>%
     arrange(area) %>%
     mutate(cumulative = cumsum(area/sum(area))) %>%
+    filter(
+      # Remove deforestation smaller than 0.1 ha to improve visualization
+      area > 1
+    ) %>%
     ggplot(aes(x = area, y = cumulative)) +
     geom_step() +
     labs(
@@ -124,11 +132,12 @@ cumsum_values <- defo %>%
     geom_label(
       data = cumsum_values,
       aes(label = glue("{quant}th")),
-      alpha = 0.9
+      alpha = 0.9,
+      size = 3
     ) +
     scale_x_log10(
       breaks = c(cumsum_values$area),
-      labels = label_number(accuracy = 10),
+      labels = label_number(accuracy = 1),
       guide = guide_axis(angle = 55)
     ) +
     scale_y_continuous(
@@ -138,11 +147,73 @@ cumsum_values <- defo %>%
     ) +
     theme_minimal() +
     theme(
-      text = element_text(size = 20),
+      text = element_text(size = 15),
       panel.grid.minor = element_blank(),
       panel.grid.major.x = element_blank()
     )
 )
+
+## Create Map Plot ----
+
+
+(
+  map_plot <- defo %>%
+    drop_na() %>%
+    summarise(
+      area = sum(area),
+      .by = "cell_id"
+    ) %>%
+    mutate(area = area * 0.0001) %>%
+    left_join(
+      base_grid,
+      by = join_by(cell_id)
+    ) %>%
+    ggplot() +
+    geom_sf(
+      aes(geometry = geometry, fill = area),
+      color = "transparent"
+    ) +
+    scale_fill_scico(
+      palette = "bilbao",
+      labels = label_number(),
+      trans = "log10"
+    ) +
+    labs(
+      title = "Total Deforestation Area (2000 - 2021)",
+      fill = "Total Area (ha)"
+    ) +
+    theme_void() +
+    theme(
+      text = element_text(size = 15)
+    )
+)
+
+## Create Time Series Plot ----
+
+defo %>%
+  drop_na() %>%
+  mutate(date = ymd(year, truncated = 2)) %>%
+  summarise(
+    area = sum(area),
+    .by = "date"
+  ) %>%
+  ggplot() +
+  geom_col(
+    aes(
+      x = date,
+      y = area,
+      fill = area
+    )
+  ) +
+  scale_fill_scico(
+    palette = "bilbao",
+    labels = label_number(),
+    trans = "log10"
+  ) +
+  theme_minimal() +
+  theme(
+    text = element_text(size = 15)
+  )
 
 # SAVE PLOTS ------------------------------------------------------------------
 
@@ -160,10 +231,21 @@ ggsave(
 # Save cumulative plot
 ggsave(
   filename = "./figs/deforestation_cumsum.png",
-  plot = hist_plot,
+  plot = cumsum_plot,
   device = ragg::agg_png,
   width = 15,
-  height = 10,
+  height = 11,
+  units = "cm",
+  dpi = 300
+)
+
+# Save map plot
+ggsave(
+  filename = "./figs/deforestation_map.png",
+  plot = map_plot,
+  device = ragg::agg_png,
+  width = 15,
+  height = 15,
   units = "cm",
   dpi = 300
 )
