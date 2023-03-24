@@ -58,3 +58,13 @@ magick::image_read("./figs/deforestation_hist.png")
 
 ```
 
+
+
+```{r}
+#| label: fig-deforestation-cumsum
+#| fig-cap: "Cumulative percent of the deforestation area."
+#| echo: false
+
+magick::image_read("./figs/deforestation_cumsum.png")
+
+```
