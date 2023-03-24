@@ -12,10 +12,10 @@ book:
       - name: State University of Campinas
   date: "3/21/2023"
   license: CC BY-NC-ND 4.0
-  favicon: /figs/logo.png
+  favicon: /figs/art/logo.png
   sidebar:
     search: true
-    logo: /figs/logo.png
+    logo: /figs/art/logo.png
   comments:
     giscus:
       repo: hugotseixas/tica-book
