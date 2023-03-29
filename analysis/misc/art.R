@@ -1,7 +1,8 @@
 # HEADER ----------------------------------------------------------------------
 #
-# Title:          Create project logo
-# Description:    This script creates a logo
+# Title:          Create art designs
+# Description:    This script creates two art designs to be used to represent
+#                 the Cerrado and Amazon biomes.
 #
 # Notes:
 #
@@ -10,6 +11,8 @@
 library(conflicted)
 library(sf)
 library(geobr)
+library(glue)
+library(fs)
 library(ggfx)
 library(ggpattern)
 library(tidyverse)
@@ -43,59 +46,77 @@ biomes <-
   ) %>%
   filter(name_biome %in% c("Amazônia", "Cerrado"))
 
-img <-
-  read_table("figs/art/amazon_url.txt", col_names = FALSE) %>%
-  pull(X1)
-
 # CREATE AND SAVE GRID --------------------------------------------------------
 
 # Create grid based on biomes polygons
-grid <-
+full_grid <-
   st_make_grid(
     x = biomes,
     square = FALSE,
     cellsize = resolution # Resolution of the grid cell (check options above)
   ) %>%
-  st_as_sf() %>%
-  st_join(
-    y = biomes,
-    left = FALSE,
-    join = if (full_cells) {st_within} else {st_intersects}
-  ) %>%
-  filter(code_biome == 1)
+  st_as_sf()
 
 # CREATE AND SAVE PLOT --------------------------------------------------------
 
-# Plot grid and biome limits
-grid_plot <- ggplot() +
-  with_outer_glow(
-    geom_sf_pattern(
-      data = grid %>% slice_head(n = length(img)),
-      pattern_filename = img,
-      pattern = 'image',
-      pattern_type = "expand"
-    ),
-    sigma = 10,
-    expand = 15
-  ) +
-  geom_sf(
-    data = grid,
-    color = "#ffffff",
-    fill = "transparent",
-    lwd = 1
-  ) +
-  theme_void() +
-  theme(
-    legend.position = ""
-  )
+walk2(
+  .x = biomes$code_biome,
+  .y = c("amazon", "cerrado"),
+  .f = ~ {
 
-# Save plot
-ggsave(
-  filename = "figs/art_amazon.png",
-  plot = grid_plot,
-  device = ragg::agg_png,
-  width = 15,
-  height = 10,
-  units = "cm",
-  dpi = 300
+    biome <- biomes %>%
+      filter(code_biome == .x)
+
+    grid <- full_grid %>%
+      st_filter(
+        y = biome,
+        .predicate = if (full_cells) {st_within} else {st_intersects}
+      )
+
+    img <-
+      read_table(
+        file = glue("./figs/art/url_{.y}.txt"),
+        col_names = FALSE,
+        col_types = "c"
+      ) %>%
+      slice_sample(
+        n = nrow(grid)
+      ) %>%
+      pull(X1)
+
+    # Plot grid and biome limits
+    grid_plot <- ggplot() +
+      with_outer_glow(
+        geom_sf_pattern(
+          data = grid,
+          pattern_filename = img,
+          pattern = 'image',
+          pattern_type = "expand"
+        ),
+        sigma = 10,
+        expand = 15
+      ) +
+      geom_sf(
+        data = grid,
+        color = "#ffffff",
+        fill = "transparent",
+        lwd = 1
+      ) +
+      theme_void() +
+      theme(
+        legend.position = ""
+      )
+
+    # Save plot
+    ggsave(
+      filename = glue("./figs/art/art_{.y}.png"),
+      plot = grid_plot,
+      device = ragg::agg_png,
+      width = 15,
+      height = 10,
+      units = "cm",
+      dpi = 300
+    )
+
+  }
 )
