@@ -11,9 +11,11 @@ library(tidyverse)
 ```
 
 The study will rely on available data to develop regression and classification models to predict native vegetation suppression and its impacts. 
-To achieve the proposed goal, I will divide the work into four major parts:
+To achieve the proposed goal, I will divide the work into five major parts:
 
 1.  Literature overview of the main drivers of the expected outcomes (vegetation suppression, land cover transition, social and environmental variables);
+
+2.  Experts survey;
 
 2.  Screening for available data and development of structured data collection;
 
@@ -75,6 +77,8 @@ flowchart TD
 The literature review will answer questions about variables to be predicted in this project. 
 For each variable, I want to explore the main drivers that cause them, how they relate to each other, and the methods used to estimate the effects and interactions. 
 
+## Experts Survey
+
 ## Database Structuring
 
 The database will contain data from different domains, which can be available in diverse formats and structures.
@@ -105,6 +109,12 @@ The data will be stored in a nested directories database with hive-style partiti
 The database will be composed of a collection of parquet files, a format with high compression, that facilitates processing large volumes of data.
 The main partition will be the variables, which means that each variable will be stored in a separate directory.
 If necessary, the data will be partitioned by further variables (as a rule of thumb, each parquet file should not be smaller than 20MB and not bigger than 2GB).
+
+### Variables
+
+#### Deforestation
+
+The deforestation variable is derived from the MapBiomas land use and land cover collection.
 
 ## Model Development
 
@@ -182,3 +192,5 @@ To understand and interpret the predictions made by the models, I will employ a 
 These methods are model-agnostic, meaning they can be applied to any regression or classification model, regardless of its underlying structure or parameters.
 By using these techniques, I aim to gain a deeper understanding of the relationships between the variables and how they contribute to the predictions.
 This information will enable assessing the reliability of the models and validity of their results.
+
+## Future Projections
