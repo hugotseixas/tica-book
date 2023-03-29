@@ -23,14 +23,6 @@ conflicts_prefer(dplyr::filter)
 # OPTIONS ---------------------------------------------------------------------
 #
 
-# Size of the grid cell in degrees
-resolution <- 0.2
-
-# Create grid with cells that are fully within the biomes?
-full_cells <- TRUE
-# If TRUE, st_within is called as predicate for spatial filter
-# If FALSE, st_intersects is called as predicate for spatial filter
-
 #
 # LOAD BIOME DATA -------------------------------------------------------------
 
@@ -43,11 +35,11 @@ biomes <-
   ) %>%
   filter(name_biome %in% c("Amazônia", "Cerrado"))
 
-# CREATE  AND SAVE GRID -------------------------------------------------------
+# CREATE AND SAVE GRID --------------------------------------------------------
 
 base_grid <-
   create_grid(
-    resolution = 0.2,
+    resolution = 0.5,
     full_cells = TRUE
   )
 
