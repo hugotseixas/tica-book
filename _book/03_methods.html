@@ -165,8 +165,13 @@ ul.task-list li input[type="checkbox"] {
    
   <ul>
   <li><a href="#literature-review" id="toc-literature-review" class="nav-link active" data-scroll-target="#literature-review"><span class="toc-section-number">3.1</span>  Literature Review</a></li>
-  <li><a href="#database-structuring" id="toc-database-structuring" class="nav-link" data-scroll-target="#database-structuring"><span class="toc-section-number">3.2</span>  Database Structuring</a></li>
-  <li><a href="#model-development" id="toc-model-development" class="nav-link" data-scroll-target="#model-development"><span class="toc-section-number">3.3</span>  Model Development</a></li>
+  <li><a href="#experts-survey" id="toc-experts-survey" class="nav-link" data-scroll-target="#experts-survey"><span class="toc-section-number">3.2</span>  Experts Survey</a></li>
+  <li><a href="#database-structuring" id="toc-database-structuring" class="nav-link" data-scroll-target="#database-structuring"><span class="toc-section-number">3.3</span>  Database Structuring</a>
+  <ul class="collapse">
+  <li><a href="#variables" id="toc-variables" class="nav-link" data-scroll-target="#variables"><span class="toc-section-number">3.3.1</span>  Variables</a></li>
+  </ul></li>
+  <li><a href="#model-development" id="toc-model-development" class="nav-link" data-scroll-target="#model-development"><span class="toc-section-number">3.4</span>  Model Development</a></li>
+  <li><a href="#future-projections" id="toc-future-projections" class="nav-link" data-scroll-target="#future-projections"><span class="toc-section-number">3.5</span>  Future Projections</a></li>
   </ul>
 </nav>
     </div>
@@ -190,9 +195,10 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<p>The study will rely on available data to develop regression and classification models to predict native vegetation suppression and its impacts. To achieve the proposed goal, I will divide the work into four major parts:</p>
+<p>The study will rely on available data to develop regression and classification models to predict native vegetation suppression and its impacts. To achieve the proposed goal, I will divide the work into five major parts:</p>
 <ol type="1">
 <li><p>Literature overview of the main drivers of the expected outcomes (vegetation suppression, land cover transition, social and environmental variables);</p></li>
+<li><p>Experts survey;</p></li>
 <li><p>Screening for available data and development of structured data collection;</p></li>
 <li><p>Development of models;</p></li>
 <li><p>Future projections;</p></li>
@@ -259,8 +265,11 @@ flowchart TD
 </p>
 <p>The literature review will answer questions about variables to be predicted in this project. For each variable, I want to explore the main drivers that cause them, how they relate to each other, and the methods used to estimate the effects and interactions.</p>
 </section>
-<section id="database-structuring" class="level2" data-number="3.2">
-<h2 data-number="3.2" class="anchored" data-anchor-id="database-structuring"><span class="header-section-number">3.2</span> Database Structuring</h2>
+<section id="experts-survey" class="level2" data-number="3.2">
+<h2 data-number="3.2" class="anchored" data-anchor-id="experts-survey"><span class="header-section-number">3.2</span> Experts Survey</h2>
+</section>
+<section id="database-structuring" class="level2" data-number="3.3">
+<h2 data-number="3.3" class="anchored" data-anchor-id="database-structuring"><span class="header-section-number">3.3</span> Database Structuring</h2>
 <p>The database will contain data from different domains, which can be available in diverse formats and structures. To make the modeling process more efficient and transparent, all variables of interest must be organized coherently. To structure a collection of data that presents different natures, I will transform all the variables into a standard grid system. The grid system will be composed of 0.2 degrees cells (40km x 40km), which should be a balanced compromise between detail and computational cost.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -291,19 +300,26 @@ flowchart TD
 </div>
 </div>
 <p>The data will be stored in a nested directories database with hive-style partitioning. The database will be composed of a collection of parquet files, a format with high compression, that facilitates processing large volumes of data. The main partition will be the variables, which means that each variable will be stored in a separate directory. If necessary, the data will be partitioned by further variables (as a rule of thumb, each parquet file should not be smaller than 20MB and not bigger than 2GB).</p>
+<section id="variables" class="level3" data-number="3.3.1">
+<h3 data-number="3.3.1" class="anchored" data-anchor-id="variables"><span class="header-section-number">3.3.1</span> Variables</h3>
+<section id="deforestation" class="level4" data-number="3.3.1.1">
+<h4 data-number="3.3.1.1" class="anchored" data-anchor-id="deforestation"><span class="header-section-number">3.3.1.1</span> Deforestation</h4>
+<p>The deforestation variable is derived from the MapBiomas land use and land cover collection.</p>
 </section>
-<section id="model-development" class="level2" data-number="3.3">
-<h2 data-number="3.3" class="anchored" data-anchor-id="model-development"><span class="header-section-number">3.3</span> Model Development</h2>
+</section>
+</section>
+<section id="model-development" class="level2" data-number="3.4">
+<h2 data-number="3.4" class="anchored" data-anchor-id="model-development"><span class="header-section-number">3.4</span> Model Development</h2>
 <p>The models will follow a sequential order. The output of a model will serve as a feature of the next model.</p>
 <div class="cell">
 <div class="cell-output-display">
 
-<div id="xeknfgeqea" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<div id="jawbksvhzv" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
 <style>html {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', 'Fira Sans', 'Droid Sans', Arial, sans-serif;
 }
 
-:where(#xeknfgeqea) .gt_table {
+:where(#jawbksvhzv) .gt_table {
   display: table;
   border-collapse: collapse;
   margin-left: auto;
@@ -328,7 +344,7 @@ flowchart TD
   border-left-color: #D3D3D3;
 }
 
-:where(#xeknfgeqea) .gt_heading {
+:where(#jawbksvhzv) .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -340,12 +356,12 @@ flowchart TD
   border-right-color: #D3D3D3;
 }
 
-:where(#xeknfgeqea) .gt_caption {
+:where(#jawbksvhzv) .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-:where(#xeknfgeqea) .gt_title {
+:where(#jawbksvhzv) .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -357,7 +373,7 @@ flowchart TD
   border-bottom-width: 0;
 }
 
-:where(#xeknfgeqea) .gt_subtitle {
+:where(#jawbksvhzv) .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -369,13 +385,13 @@ flowchart TD
   border-top-width: 0;
 }
 
-:where(#xeknfgeqea) .gt_bottom_border {
+:where(#jawbksvhzv) .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-:where(#xeknfgeqea) .gt_col_headings {
+:where(#jawbksvhzv) .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -390,7 +406,7 @@ flowchart TD
   border-right-color: #D3D3D3;
 }
 
-:where(#xeknfgeqea) .gt_col_heading {
+:where(#jawbksvhzv) .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -410,7 +426,7 @@ flowchart TD
   overflow-x: hidden;
 }
 
-:where(#xeknfgeqea) .gt_column_spanner_outer {
+:where(#jawbksvhzv) .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -422,15 +438,15 @@ flowchart TD
   padding-right: 4px;
 }
 
-:where(#xeknfgeqea) .gt_column_spanner_outer:first-child {
+:where(#jawbksvhzv) .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-:where(#xeknfgeqea) .gt_column_spanner_outer:last-child {
+:where(#jawbksvhzv) .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-:where(#xeknfgeqea) .gt_column_spanner {
+:where(#jawbksvhzv) .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -442,7 +458,7 @@ flowchart TD
   width: 100%;
 }
 
-:where(#xeknfgeqea) .gt_group_heading {
+:where(#jawbksvhzv) .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -468,7 +484,7 @@ flowchart TD
   text-align: left;
 }
 
-:where(#xeknfgeqea) .gt_empty_group_heading {
+:where(#jawbksvhzv) .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -483,15 +499,15 @@ flowchart TD
   vertical-align: middle;
 }
 
-:where(#xeknfgeqea) .gt_from_md > :first-child {
+:where(#jawbksvhzv) .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-:where(#xeknfgeqea) .gt_from_md > :last-child {
+:where(#jawbksvhzv) .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-:where(#xeknfgeqea) .gt_row {
+:where(#jawbksvhzv) .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -510,7 +526,7 @@ flowchart TD
   overflow-x: hidden;
 }
 
-:where(#xeknfgeqea) .gt_stub {
+:where(#jawbksvhzv) .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -523,7 +539,7 @@ flowchart TD
   padding-right: 5px;
 }
 
-:where(#xeknfgeqea) .gt_stub_row_group {
+:where(#jawbksvhzv) .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -537,11 +553,11 @@ flowchart TD
   vertical-align: top;
 }
 
-:where(#xeknfgeqea) .gt_row_group_first td {
+:where(#jawbksvhzv) .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-:where(#xeknfgeqea) .gt_summary_row {
+:where(#jawbksvhzv) .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -551,16 +567,16 @@ flowchart TD
   padding-right: 5px;
 }
 
-:where(#xeknfgeqea) .gt_first_summary_row {
+:where(#jawbksvhzv) .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-:where(#xeknfgeqea) .gt_first_summary_row.thick {
+:where(#jawbksvhzv) .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-:where(#xeknfgeqea) .gt_last_summary_row {
+:where(#jawbksvhzv) .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -570,7 +586,7 @@ flowchart TD
   border-bottom-color: #D3D3D3;
 }
 
-:where(#xeknfgeqea) .gt_grand_summary_row {
+:where(#jawbksvhzv) .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -580,7 +596,7 @@ flowchart TD
   padding-right: 5px;
 }
 
-:where(#xeknfgeqea) .gt_first_grand_summary_row {
+:where(#jawbksvhzv) .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -590,11 +606,11 @@ flowchart TD
   border-top-color: #D3D3D3;
 }
 
-:where(#xeknfgeqea) .gt_striped {
+:where(#jawbksvhzv) .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-:where(#xeknfgeqea) .gt_table_body {
+:where(#jawbksvhzv) .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -603,7 +619,7 @@ flowchart TD
   border-bottom-color: #D3D3D3;
 }
 
-:where(#xeknfgeqea) .gt_footnotes {
+:where(#jawbksvhzv) .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -617,7 +633,7 @@ flowchart TD
   border-right-color: #D3D3D3;
 }
 
-:where(#xeknfgeqea) .gt_footnote {
+:where(#jawbksvhzv) .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-left: 4px;
@@ -626,7 +642,7 @@ flowchart TD
   padding-right: 5px;
 }
 
-:where(#xeknfgeqea) .gt_sourcenotes {
+:where(#jawbksvhzv) .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -640,7 +656,7 @@ flowchart TD
   border-right-color: #D3D3D3;
 }
 
-:where(#xeknfgeqea) .gt_sourcenote {
+:where(#jawbksvhzv) .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -648,64 +664,64 @@ flowchart TD
   padding-right: 5px;
 }
 
-:where(#xeknfgeqea) .gt_left {
+:where(#jawbksvhzv) .gt_left {
   text-align: left;
 }
 
-:where(#xeknfgeqea) .gt_center {
+:where(#jawbksvhzv) .gt_center {
   text-align: center;
 }
 
-:where(#xeknfgeqea) .gt_right {
+:where(#jawbksvhzv) .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-:where(#xeknfgeqea) .gt_font_normal {
+:where(#jawbksvhzv) .gt_font_normal {
   font-weight: normal;
 }
 
-:where(#xeknfgeqea) .gt_font_bold {
+:where(#jawbksvhzv) .gt_font_bold {
   font-weight: bold;
 }
 
-:where(#xeknfgeqea) .gt_font_italic {
+:where(#jawbksvhzv) .gt_font_italic {
   font-style: italic;
 }
 
-:where(#xeknfgeqea) .gt_super {
+:where(#jawbksvhzv) .gt_super {
   font-size: 65%;
 }
 
-:where(#xeknfgeqea) .gt_footnote_marks {
+:where(#jawbksvhzv) .gt_footnote_marks {
   font-style: italic;
   font-weight: normal;
   font-size: 75%;
   vertical-align: 0.4em;
 }
 
-:where(#xeknfgeqea) .gt_asterisk {
+:where(#jawbksvhzv) .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-:where(#xeknfgeqea) .gt_indent_1 {
+:where(#jawbksvhzv) .gt_indent_1 {
   text-indent: 5px;
 }
 
-:where(#xeknfgeqea) .gt_indent_2 {
+:where(#jawbksvhzv) .gt_indent_2 {
   text-indent: 10px;
 }
 
-:where(#xeknfgeqea) .gt_indent_3 {
+:where(#jawbksvhzv) .gt_indent_3 {
   text-indent: 15px;
 }
 
-:where(#xeknfgeqea) .gt_indent_4 {
+:where(#jawbksvhzv) .gt_indent_4 {
   text-indent: 20px;
 }
 
-:where(#xeknfgeqea) .gt_indent_5 {
+:where(#jawbksvhzv) .gt_indent_5 {
   text-indent: 25px;
 }
 </style>
@@ -769,6 +785,9 @@ flowchart TD
 <p><br>
 </p>
 <p>To understand and interpret the predictions made by the models, I will employ a variety of methods. They may include surrogate models, feature interactions, permutation feature importance, counterfactual explanations, and Shapley values. These methods are model-agnostic, meaning they can be applied to any regression or classification model, regardless of its underlying structure or parameters. By using these techniques, I aim to gain a deeper understanding of the relationships between the variables and how they contribute to the predictions. This information will enable assessing the reliability of the models and validity of their results.</p>
+</section>
+<section id="future-projections" class="level2" data-number="3.5">
+<h2 data-number="3.5" class="anchored" data-anchor-id="future-projections"><span class="header-section-number">3.5</span> Future Projections</h2>
 
 
 </section>
