@@ -116,6 +116,14 @@ If necessary, the data will be partitioned by further variables (as a rule of th
 
 The deforestation variable is derived from the MapBiomas land use and land cover collection.
 
+The downloaded data was cropped to the extent of the Cerrado and Amazon biomes.
+Than the raster data was aggregated to a coarser spatial resolution, from 30 to 300 meters, assigning the value of the most frequent class to the new pixel (the mode of the 100 pixels that will be aggregated to the 300 meters pixels).
+This was done to reduce the amount of observations, which would be unfeasible to process, since the original data consists of hundreds of billions pixels.
+
+#### Conservation Units
+
+The conservation units are downloaded from IBGE.
+
 ## Model Development
 
 The models will follow a sequential order.
