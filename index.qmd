@@ -20,3 +20,4 @@ The Cerrado is the second-largest biome in Brazil, and it is characterized by it
 It is also an important area for agriculture, with large areas of the region being used for soybean, corn, and cattle production. 
 However, the rapid expansion of agriculture in the region has also led to deforestation and habitat destruction, threatening the unique biodiversity of the biome.
 
+![](figs/art/art_cerrado.png){width=1000 .margin-caption}
