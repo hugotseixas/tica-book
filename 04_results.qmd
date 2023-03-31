@@ -94,3 +94,9 @@ magick::image_read("./figs/deforestation_hist.png")
 magick::image_read("./figs/deforestation_cumsum.png")
 
 ```
+
+### Conservation Units
+
+
+### Indigenous Lands
+
