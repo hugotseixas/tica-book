@@ -9,7 +9,6 @@
 #
 library(conflicted)
 library(arrow)
-library(tidyverse)
 library(tica)
 #
 # CONFLICTS -------------------------------------------------------------------
@@ -25,10 +24,7 @@ conflicts_prefer(dplyr::filter)
 # PROCESS AND SAVE UC DATA ----------------------------------------------------
 
 conservation_units_grid <-
-  process_conservation_units(
-    base_grid_path = "data/base_grid.fgb",
-    timespan = 1985:2021
-  )
+  process_conservation_units()
 
 # Save grid polygons as FlatGeobuf file
 write_parquet(
@@ -36,4 +32,3 @@ write_parquet(
   sink = "data/conservation_units.parquet",
   version = "latest"
 )
-
