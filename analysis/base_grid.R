@@ -37,11 +37,7 @@ biomes <-
 
 # CREATE AND SAVE GRID --------------------------------------------------------
 
-base_grid <-
-  create_grid(
-    resolution = 0.5,
-    full_cells = TRUE
-  )
+base_grid <- create_grid(resolution = 1)
 
 # Save grid polygons as FlatGeobuf file
 write_sf(
@@ -68,7 +64,7 @@ grid_plot <- ggplot() +
 
 # Save plot
 ggsave(
-  filename = ".//figs/grid_cells.png",
+  filename = "./figs/grid_cells.png",
   plot = grid_plot,
   device = ragg::agg_png,
   width = 15,
