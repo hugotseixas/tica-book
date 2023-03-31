@@ -112,6 +112,8 @@ If necessary, the data will be partitioned by further variables (as a rule of th
 
 ### Variables
 
+#### Biomes
+
 #### Deforestation
 
 The deforestation variable is derived from the MapBiomas land use and land cover collection.
@@ -122,7 +124,9 @@ This was done to reduce the amount of observations, which would be unfeasible to
 
 #### Conservation Units
 
-The conservation units are downloaded from IBGE.
+The limits of the Conservation Units (UC) are provided by the Ministry of Environment and Climate Change. These are the conservation units that finished the registration process at the National Register of Conservation Units (CNUC). However, the data used in this project is accessed by the Institute for Applied Economic Research (IPEA), which organizes data in a standard attributes and spatial projection. The data is represented as spatial vectors.
+
+The UC vectors are intersected to the base grid, and the area of each UC inside each cell is calculated. 
 
 ## Model Development
 
