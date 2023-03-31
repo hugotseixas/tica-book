@@ -39,6 +39,9 @@ bibliography: references.bib
 format:
   html:
     theme: lux
+    toc: true
+    toc-depth: 3
+    toc-title: Content
 
 execute:
   freeze: auto
