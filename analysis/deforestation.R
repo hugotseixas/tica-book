@@ -1,19 +1,15 @@
 # HEADER ----------------------------------------------------------------------
 #
-# Title:          EDA for deforestation variable
-# Description:    This script explores deforestation data from PRODES
+# Title:          Process Deforestation Data
+# Description:    This process Deforestation data to fit the base grid
 #
 # Notes:
 #
 # LIBRARIES -------------------------------------------------------------------
 #
 library(conflicted)
-library(sf)
 library(arrow)
-library(glue)
-library(scales)
-library(scico)
-library(tidyverse)
+library(tica)
 #
 # CONFLICTS -------------------------------------------------------------------
 #
@@ -25,227 +21,14 @@ conflicts_prefer(dplyr::filter)
 #
 
 #
-# LOAD DATA -------------------------------------------------------------------
+# PROCESS AND SAVE UC DATA ----------------------------------------------------
 
-defo <- read_parquet("data/deforestation.parquet")
+deforestation_grid <-
+  process_land_use()
 
-base_grid <- read_sf("data/base_grid.fgb")
-
-# EXPLORE DATA ----------------------------------------------------------------
-
-## Create Histogram Plot ----
-
-# Create plot
-(
-  hist_plot <- defo %>%
-    drop_na() %>%
-    mutate(area = area * 0.0001) %>%
-    filter(
-      # Remove deforestation smaller than 0.1 ha to improve visualization
-      area > 0.1
-    ) %>%
-    ggplot() +
-    geom_histogram(
-      aes(x = area, y = after_stat(count)),
-      color = "#000000",
-      fill = "#e8e8e8",
-      bins = 50
-    ) +
-    scale_x_log10(
-      breaks = log_breaks(6),
-      labels = label_number(accuracy = 1),
-      expand = c(0, 0)
-    ) +
-    labs(
-      title = "Deforestation Histogram",
-      x = "Area (ha)"
-    ) +
-    theme_minimal() +
-    theme(
-      text = element_text(size = 18),
-      axis.text.y = element_blank(),
-      axis.title.y = element_blank(),
-      panel.grid.major.y = element_blank(),
-      panel.grid.minor.y = element_blank()
-    )
-)
-
-## Create Cumulative Plot ----
-
-# Calculate some percentiles
-quantile_table <- defo %>%
-  drop_na() %>%
-  mutate(area = area * 0.0001) %>%
-  summarise(
-    q01 = quantile(area, 0.01),
-    q05 = quantile(area, 0.05),
-    q25 = quantile(area, 0.25),
-    q50 = quantile(area, 0.5),
-    q75 = quantile(area, 0.75),
-    q95 = quantile(area, 0.95),
-    q99 = quantile(area, 0.99),
-    q100 = quantile(area, 1)
-  )
-
-# Get cumulative sum for each percentile
-cumsum_values <- defo %>%
-  drop_na() %>%
-  mutate(area = area * 0.0001) %>%
-  arrange(area) %>%
-  mutate(cumulative = cumsum(area/sum(area))) %>%
-  inner_join(
-    quantile_table %>%
-      pivot_longer(everything()),
-    by = join_by(closest(area >= value))
-  ) %>%
-  mutate(dif = area - value) %>%
-  slice_min(order_by = dif, by = name) %>%
-  mutate(
-    cumulative = round(cumulative, digits = 2),
-    area = round(area),
-    quant = as.numeric(str_remove(name, "q"))
-  ) %>%
-  distinct(cumulative, area, quant)
-
-# Create plot
-(
-  cumsum_plot <- defo %>%
-    drop_na() %>%
-    mutate(area = area * 0.0001) %>%
-    arrange(area) %>%
-    mutate(cumulative = cumsum(area/sum(area))) %>%
-    filter(
-      # Remove deforestation smaller than 0.1 ha to improve visualization
-      area > 1
-    ) %>%
-    ggplot(aes(x = area, y = cumulative)) +
-    geom_step() +
-    labs(
-      title = "Cumulative Deforestation Area",
-      x = "Area (ha)",
-      y = "Cumulative Percentage"
-    ) +
-    geom_vline(
-      xintercept = flatten_dbl(select(quantile_table, q01:q100)),
-      linetype = 2
-    ) +
-    geom_label(
-      data = cumsum_values,
-      aes(label = glue("{quant}th")),
-      alpha = 0.9,
-      size = 3
-    ) +
-    scale_x_log10(
-      breaks = c(cumsum_values$area),
-      labels = label_number(accuracy = 1),
-      guide = guide_axis(angle = 55)
-    ) +
-    scale_y_continuous(
-      labels = label_percent(),
-      breaks = c(cumsum_values$cumulative, 1),
-      guide = guide_axis(check.overlap = TRUE)
-    ) +
-    theme_minimal() +
-    theme(
-      text = element_text(size = 15),
-      panel.grid.minor = element_blank(),
-      panel.grid.major.x = element_blank()
-    )
-)
-
-## Create Map Plot ----
-
-
-(
-  map_plot <- defo %>%
-    drop_na() %>%
-    summarise(
-      area = sum(area),
-      .by = "cell_id"
-    ) %>%
-    mutate(area = area * 0.0001) %>%
-    left_join(
-      base_grid,
-      by = join_by(cell_id)
-    ) %>%
-    ggplot() +
-    geom_sf(
-      aes(geometry = geometry, fill = area),
-      color = "transparent"
-    ) +
-    scale_fill_scico(
-      palette = "bilbao",
-      labels = label_number(),
-      trans = "log10"
-    ) +
-    labs(
-      title = "Total Deforestation Area (2000 - 2021)",
-      fill = "Total Area (ha)"
-    ) +
-    theme_void() +
-    theme(
-      text = element_text(size = 15)
-    )
-)
-
-## Create Time Series Plot ----
-
-defo %>%
-  drop_na() %>%
-  mutate(date = ymd(year, truncated = 2)) %>%
-  summarise(
-    area = sum(area),
-    .by = "date"
-  ) %>%
-  ggplot() +
-  geom_col(
-    aes(
-      x = date,
-      y = area,
-      fill = area
-    )
-  ) +
-  scale_fill_scico(
-    palette = "bilbao",
-    labels = label_number(),
-    trans = "log10"
-  ) +
-  theme_minimal() +
-  theme(
-    text = element_text(size = 15)
-  )
-
-# SAVE PLOTS ------------------------------------------------------------------
-
-# Save histogram plot
-ggsave(
-  filename = "./figs/deforestation_hist.png",
-  plot = hist_plot,
-  device = ragg::agg_png,
-  width = 15,
-  height = 7,
-  units = "cm",
-  dpi = 300
-)
-
-# Save cumulative plot
-ggsave(
-  filename = "./figs/deforestation_cumsum.png",
-  plot = cumsum_plot,
-  device = ragg::agg_png,
-  width = 15,
-  height = 11,
-  units = "cm",
-  dpi = 300
-)
-
-# Save map plot
-ggsave(
-  filename = "./figs/deforestation_map.png",
-  plot = map_plot,
-  device = ragg::agg_png,
-  width = 15,
-  height = 15,
-  units = "cm",
-  dpi = 300
+# Save grid polygons as FlatGeobuf file
+write_parquet(
+  x = deforestation_grid,
+  sink = "data/deforestation.parquet",
+  version = "latest"
 )
