@@ -37,7 +37,7 @@ biomes <-
 
 # CREATE AND SAVE GRID --------------------------------------------------------
 
-base_grid <- create_grid(resolution = 1)
+base_grid <- create_grid(resolution = 0.5)
 
 # Save grid polygons as FlatGeobuf file
 write_sf(
