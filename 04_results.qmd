@@ -45,10 +45,11 @@ So the figures and tables do not show distributions of the raw observations/esti
 ```{r}
 #| label: fig-base-grid
 #| fig-cap: "Model grid, in which variables were transformed to"
-#| column: margin
 #| echo: false
 
-magick::image_read("./figs/grid_cells.png")
+load("./figs/base_grid.rdata")
+
+viz_grid
 
 ```
 
@@ -77,10 +78,11 @@ READ:
 ```{r}
 #| label: fig-deforestation-hist
 #| fig-cap: "Distribution of deforestation in the Amazon and Cerrado. The horizontal scale is transformed to base 10 log."
-#| column: margin
 #| echo: false
 
-magick::image_read("./figs/deforestation_hist.png")
+load("./figs/deforestation_hist.rdata")
+
+viz_hist
 
 ```
 
@@ -91,7 +93,23 @@ magick::image_read("./figs/deforestation_hist.png")
 #| fig-cap: "Cumulative percent of the deforestation area."
 #| echo: false
 
-magick::image_read("./figs/deforestation_cumsum.png")
+load("./figs/deforestation_cumulative.rdata")
+
+viz_cumulative
+
+```
+
+
+
+```{r}
+#| label: fig-deforestation-spatial-distribution
+#| fig-cap: "Spatial distribution of the deforestation area."
+#| fig-asp: 1
+#| echo: false
+
+load("./figs/deforestation_spatial_distribution.rdata")
+
+viz_spatial_distribution
 
 ```
 
