@@ -51,7 +51,7 @@ write_sf(
 # CREATE AND SAVE PLOT --------------------------------------------------------
 
 # Plot grid and biome limits
-grid_plot <- ggplot() +
+viz_grid <- ggplot() +
   geom_sf(
     data = biomes,
     fill = "transparent"
@@ -62,14 +62,5 @@ grid_plot <- ggplot() +
   ) +
   theme_void()
 
-# Save plot
-ggsave(
-  filename = "./figs/grid_cells.png",
-  plot = grid_plot,
-  device = ragg::agg_png,
-  width = 15,
-  height = 15,
-  units = "cm",
-  dpi = 300
-)
+save(viz_grid, file = "./figs/base_grid.rdata")
 
