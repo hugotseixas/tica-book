@@ -1,0 +1,16 @@
+{
+  "hash": "ef6322039857546ba419d35915bb6266",
+  "result": {
+    "markdown": "---\ntoc: false\n---\n\n\n# Preface {.unnumbered}\n\nThis project is an effort to develop an interdisciplinary approach to modelling land use and land cover transitions and their impact to social and environmental dimensions. \nThis document is a register of a modelling exercise that will not only select the most important variables, fine tune model parameters, and find the algorithms that return the best accuracy metrics. It will also be a journey to understand the sociological dynamics of land use changes, and hopefully will establish evidence to support natural resources governance.\n\nI will explore two Brazilian biomes, the Amazon, which is a very common topic when talking about the environment, the whole world pays attention to this important forest. \nAnd the Cerrado, an equally important ecosystem, but often neglected.\n\nThe Amazon is the largest rainforest in the world, covering an area of approximately 6.7 million square kilometers, and is home to an estimated 10% of the world's known species of plants and animals.\nIt is characterized by its dense forests, towering trees, and rich biodiversity. It is home to numerous species of mammals, birds, reptiles, and insects.\nThe Amazon biome is facing significant threats from deforestation, climate change, and illegal activities such as logging, mining, and agriculture. \n\n\n::: {.cell}\n::: {.cell-output-display}\n![](figs/art/art_amazon.png){width=886}\n:::\n:::\n\n\nThe Cerrado is the second-largest biome in Brazil, and it is characterized by its diverse flora and fauna, as well as its unique landscape of rolling hills, plateaus, and plains.\nIt is also an important area for agriculture, with large areas of the region being used for soybean, corn, and cattle production. \n\n\n::: {.cell}\n::: {.cell-output-display}\n![](figs/art/art_cerrado.png){width=886}\n:::\n:::\n\n\nHowever, the rapid expansion of agriculture in the region has also led to deforestation and habitat destruction, threatening the unique biodiversity of the biome.\n\n\n\n\n\n",
+    "supporting": [
+      "index_files"
+    ],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}
