@@ -45,11 +45,12 @@ So the figures and tables do not show distributions of the raw observations/esti
 ```{r}
 #| label: fig-base-grid
 #| fig-cap: "Model grid, in which variables were transformed to"
+#| fig-asp: 1
 #| echo: false
 
-load("./figs/base_grid.rdata")
+load("./figs/base_grid_area.rdata")
 
-viz_grid
+viz_grid_area
 
 ```
 
