@@ -33,6 +33,13 @@ conflicts_prefer(dplyr::filter)
 
 aoi <- read_sf("data/external/aoi/aoi.fgb")
 
+aoi <-
+  smoothr::smooth(
+    st_simplify(aoi, dTolerance = 5000),
+    method = "ksmooth",
+    smoothness = 3
+  )
+
 defo <- read_parquet("data/deforestation.parquet")
 
 base_grid <- read_sf("data/base_grid.fgb")
@@ -44,7 +51,7 @@ defo <- defo |>
     base_grid,
     by = join_by(cell_id)
   ) |>
-  mutate(deforestation_area = deforestation_area * 0.001)
+  mutate(deforestation_area = deforestation_area * 0.0001)
 
 # EXPLORE DATA ----------------------------------------------------------------
 
@@ -176,14 +183,6 @@ viz_cumulative <-
     size = 13
   )
 
-ggsave(
-  filename = "./figs/deforestation_cumulative.png",
-  plot = viz_cumulative,
-  width = 15,
-  height = 15,
-  units = "cm"
-)
-
 save(viz_cumulative, file = "./figs/deforestation_cumulative.rdata")
 
 ## Spatial distribution ----
@@ -231,14 +230,6 @@ viz_spatial_distribution <-
     scale = 0.9
   )
 
-ggsave(
-  filename = "./figs/deforestation_spatial_distribution.png",
-  plot = viz_spatial_distribution,
-  width = 15,
-  height = 15,
-  units = "cm"
-)
-
 save(
   viz_spatial_distribution,
   file = "./figs/deforestation_spatial_distribution.rdata"
@@ -257,10 +248,10 @@ save(
 # Save histogram plot
 ggsave(
   filename = "./figs/deforestation_hist.png",
-  plot = hist_plot,
+  plot = viz_hist,
   device = ragg::agg_png,
   width = 15,
-  height = 10,
+  height = 14,
   units = "cm",
   dpi = 300
 )
@@ -268,10 +259,10 @@ ggsave(
 # Save cumulative plot
 ggsave(
   filename = "./figs/deforestation_cumsum.png",
-  plot = cumsum_plot,
+  plot = viz_cumulative,
   device = ragg::agg_png,
   width = 15,
-  height = 11,
+  height = 14,
   units = "cm",
   dpi = 300
 )
@@ -279,7 +270,7 @@ ggsave(
 # Save map plot
 ggsave(
   filename = "./figs/deforestation_map.png",
-  plot = map_plot,
+  plot = viz_spatial_distribution,
   device = ragg::agg_png,
   width = 15,
   height = 15,
