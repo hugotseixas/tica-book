@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.2.335">
+<meta name="generator" content="quarto-1.3.313">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -17,7 +17,7 @@ div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
   width: 0.8em;
-  margin: 0 0.8em 0.2em -1.6em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
 </style>
@@ -61,6 +61,7 @@ ul.task-list li input[type="checkbox"] {
     "search-submit-button-title": "Submit"
   }
 }</script>
+<meta name="mermaid-theme" content="neutral">
 <script src="site_libs/quarto-diagram/mermaid.min.js"></script>
 <script src="site_libs/quarto-diagram/mermaid-init.js"></script>
 <link href="site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
@@ -72,11 +73,16 @@ ul.task-list li input[type="checkbox"] {
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
-  <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
-    <div class="container-fluid d-flex justify-content-between">
-      <h1 class="quarto-secondary-nav-title"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Methods</span></h1>
-      <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
-        <i class="bi bi-chevron-right"></i>
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./03_methods.html"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Methods</span></a></li></ol></nav>
+      <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+      </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
       </button>
     </div>
   </nav>
@@ -84,7 +90,7 @@ ul.task-list li input[type="checkbox"] {
 <!-- content -->
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse sidebar-navigation floating overflow-auto">
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation floating overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header sidebar-header-stacked">
       <a href="./index.html" class="sidebar-logo-link">
       <img src="./figs/art/logo.png" alt="" class="sidebar-logo py-0 d-lg-inline d-none">
@@ -93,64 +99,74 @@ ul.task-list li input[type="checkbox"] {
       <a href="./">TICA: Dimensions of land transitions impacts in the Cerrado and Amazon</a> 
     </div>
       </div>
-      <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="mt-2 flex-shrink-0 align-items-center">
         <div class="sidebar-search">
         <div id="quarto-search" class="" title="Search"></div>
         </div>
-      </div>
+        </div>
     <div class="sidebar-menu-container"> 
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./index.html" class="sidebar-item-text sidebar-link">Preface</a>
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Preface</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./01_introduction.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introduction</span></a>
+  <a href="./01_introduction.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introduction</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./02_objectives.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Objectives</span></a>
+  <a href="./02_objectives.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Objectives</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./03_methods.html" class="sidebar-item-text sidebar-link active"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Methods</span></a>
+  <a href="./03_methods.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Methods</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./04_results.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Results</span></a>
+  <a href="./04_results.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Results</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./05_discussion.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Discussion</span></a>
+  <a href="./05_discussion.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Discussion</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./06_conclusions.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Conclusions</span></a>
+  <a href="./06_conclusions.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Conclusions</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./references.html" class="sidebar-item-text sidebar-link">References</a>
+  <a href="./references.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">References</span></a>
   </div>
 </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">Appendices</a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">
+ <span class="menu-text">Appendices</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./11_model.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">A</span>&nbsp; <span class="chapter-title">Model</span></a>
+  <a href="./11_model.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">A</span>&nbsp; <span class="chapter-title">Model</span></span></a>
   </div>
 </li>
       </ul>
@@ -158,20 +174,21 @@ ul.task-list li input[type="checkbox"] {
     </ul>
     </div>
 </nav>
+<div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         <nav id="TOC" role="doc-toc" class="toc-active">
     <h2 id="toc-title">Content</h2>
    
   <ul>
-  <li><a href="#literature-review" id="toc-literature-review" class="nav-link active" data-scroll-target="#literature-review"><span class="toc-section-number">3.1</span>  Literature Review</a></li>
-  <li><a href="#experts-survey" id="toc-experts-survey" class="nav-link" data-scroll-target="#experts-survey"><span class="toc-section-number">3.2</span>  Experts Survey</a></li>
-  <li><a href="#database-structuring" id="toc-database-structuring" class="nav-link" data-scroll-target="#database-structuring"><span class="toc-section-number">3.3</span>  Database Structuring</a>
+  <li><a href="#literature-review" id="toc-literature-review" class="nav-link active" data-scroll-target="#literature-review"><span class="header-section-number">3.1</span> Literature Review</a></li>
+  <li><a href="#experts-survey" id="toc-experts-survey" class="nav-link" data-scroll-target="#experts-survey"><span class="header-section-number">3.2</span> Experts Survey</a></li>
+  <li><a href="#database-structuring" id="toc-database-structuring" class="nav-link" data-scroll-target="#database-structuring"><span class="header-section-number">3.3</span> Database Structuring</a>
   <ul class="collapse">
-  <li><a href="#variables" id="toc-variables" class="nav-link" data-scroll-target="#variables"><span class="toc-section-number">3.3.1</span>  Variables</a></li>
+  <li><a href="#variables" id="toc-variables" class="nav-link" data-scroll-target="#variables"><span class="header-section-number">3.3.1</span> Variables</a></li>
   </ul></li>
-  <li><a href="#model-development" id="toc-model-development" class="nav-link" data-scroll-target="#model-development"><span class="toc-section-number">3.4</span>  Model Development</a></li>
-  <li><a href="#future-projections" id="toc-future-projections" class="nav-link" data-scroll-target="#future-projections"><span class="toc-section-number">3.5</span>  Future Projections</a></li>
+  <li><a href="#model-development" id="toc-model-development" class="nav-link" data-scroll-target="#model-development"><span class="header-section-number">3.4</span> Model Development</a></li>
+  <li><a href="#future-projections" id="toc-future-projections" class="nav-link" data-scroll-target="#future-projections"><span class="header-section-number">3.5</span> Future Projections</a></li>
   </ul>
 </nav>
     </div>
@@ -180,7 +197,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title d-none d-lg-block"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Methods</span></h1>
+<h1 class="title"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Methods</span></h1>
 </div>
 
 
@@ -203,13 +220,12 @@ ul.task-list li input[type="checkbox"] {
 <li><p>Development of models;</p></li>
 <li><p>Future projections;</p></li>
 </ol>
-<div class="cell" data-fig-responsive="true">
+<div class="cell" data-fig-responsive="true" data-layout-align="center">
 <div class="cell-output-display">
+<div id="fig-method-diagram" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
 <div>
-<p>
-</p><pre class="mermaid mermaid-js" data-tooltip-selector="#mermaid-tooltip-1">%%{init: {'theme': 'neutral' } }%%
-
-flowchart TD
+<pre class="mermaid mermaid-js" data-label="fig-method-diagram">flowchart TD
     A[Literature Review] --&gt; B[Available Data]
     A[Literature Review] --&gt; C[Database structuring]
     B[Available Data] --&gt; C[Database structuring]
@@ -221,10 +237,9 @@ flowchart TD
     F[Projection Scenarios] --&gt; G[Projection Estimations]
 
 </pre>
-<div id="mermaid-tooltip-1" class="mermaidTooltip">
-
 </div>
-<p></p>
+<p></p><figcaption class="figure-caption">Figure&nbsp;3.1: Mermaid diagram</figcaption><p></p>
+</figure>
 </div>
 </div>
 </div>
@@ -237,13 +252,12 @@ flowchart TD
 <section id="literature-review" class="level2" data-number="3.1">
 <h2 data-number="3.1" class="anchored" data-anchor-id="literature-review"><span class="header-section-number">3.1</span> Literature Review</h2>
 <p>The literature review will address different topics. For all of them, I will adopt a hybrid approach of database searches combined with snowball searches.</p>
-<div class="cell" data-fig-responsive="true">
+<div class="cell" data-fig-responsive="true" data-layout-align="center">
 <div class="cell-output-display">
+<div id="fig-review-diagram" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
 <div>
-<p>
-</p><pre class="mermaid mermaid-js" data-tooltip-selector="#mermaid-tooltip-2">%%{init: {'theme': 'neutral' } }%%
-
-flowchart TD
+<pre class="mermaid mermaid-js" data-label="fig-review-diagram">flowchart TD
     A[Specific Questions] --&gt; B[Query Development]
     A[Specific Questions] --&gt; C[Documents Screening]
     B[Query Development] --&gt; D[Database Search]
@@ -254,10 +268,9 @@ flowchart TD
     E[Documents Collection] --&gt; G[Final Collection]
 
 </pre>
-<div id="mermaid-tooltip-2" class="mermaidTooltip">
-
 </div>
-<p></p>
+<p></p><figcaption class="figure-caption">Figure&nbsp;3.2: Mermaid diagram</figcaption><p></p>
+</figure>
 </div>
 </div>
 </div>
@@ -271,31 +284,33 @@ flowchart TD
 <section id="database-structuring" class="level2" data-number="3.3">
 <h2 data-number="3.3" class="anchored" data-anchor-id="database-structuring"><span class="header-section-number">3.3</span> Database Structuring</h2>
 <p>The database will contain data from different domains, which can be available in diverse formats and structures. To make the modeling process more efficient and transparent, all variables of interest must be organized coherently. To structure a collection of data that presents different natures, I will transform all the variables into a standard grid system. The grid system will be composed of 0.2 degrees cells (40km x 40km), which should be a balanced compromise between detail and computational cost.</p>
-<div class="quarto-figure quarto-figure-center">
+<div class="cell" data-fig.asp="1">
+<div class="cell-output-display">
+<div id="fig-base-grid" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
-<p><img src="figs/grid_cells.png" class="img-fluid figure-img"></p>
-<p></p><figcaption class="figure-caption">Representation of the spatial grid that will be used to store the data from different sources.</figcaption><p></p>
+<p><img src="03_methods_files/figure-html/fig-base-grid-1.png" class="img-fluid figure-img" width="672"></p>
+<p></p><figcaption class="figure-caption">Figure&nbsp;3.3: Model grid, in which variables were transformed to</figcaption><p></p>
 </figure>
+</div>
+</div>
 </div>
 <p>Each grid cell will contain an observation, for each year, for all the variables. Only pixels that contained natural vegetation in the first year of the analysis will be considered valid.</p>
 <p>The process to create the database will consist of accessing the data sources, downloading the data to the local environment, transforming and organizing the data to the grid (if the data source provides any pre-processing tool before downloading the data, it should be done that way), and store in the local environment.</p>
-<div class="cell" data-fig-responsive="true">
+<div class="cell" data-fig-responsive="true" data-layout-align="center">
 <div class="cell-output-display">
+<div id="fig-data-diagram" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
 <div>
-<p>
-</p><pre class="mermaid mermaid-js" data-tooltip-selector="#mermaid-tooltip-3">%%{init: {'theme': 'neutral' } }%%
-
-flowchart TD
+<pre class="mermaid mermaid-js" data-label="fig-data-diagram">flowchart TD
     A[Data Source] --&gt; E[Pre Processing]
     B[Base Grid] --&gt; E[Pre Processing]
     E[Pre Processing] --&gt; F[Gridded Data]
     F[Gridded Data] --&gt; G[Database]
 
 </pre>
-<div id="mermaid-tooltip-3" class="mermaidTooltip">
-
 </div>
-<p></p>
+<p></p><figcaption class="figure-caption">Figure&nbsp;3.4: Mermaid diagram</figcaption><p></p>
+</figure>
 </div>
 </div>
 </div>
@@ -323,12 +338,12 @@ flowchart TD
 <div class="cell">
 <div class="cell-output-display">
 
-<div id="ogbbhdcaso" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<div id="jcotpscvad" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
 <style>html {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', 'Fira Sans', 'Droid Sans', Arial, sans-serif;
 }
 
-:where(#ogbbhdcaso) .gt_table {
+#jcotpscvad .gt_table {
   display: table;
   border-collapse: collapse;
   margin-left: auto;
@@ -353,7 +368,7 @@ flowchart TD
   border-left-color: #D3D3D3;
 }
 
-:where(#ogbbhdcaso) .gt_heading {
+#jcotpscvad .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -365,12 +380,12 @@ flowchart TD
   border-right-color: #D3D3D3;
 }
 
-:where(#ogbbhdcaso) .gt_caption {
+#jcotpscvad .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-:where(#ogbbhdcaso) .gt_title {
+#jcotpscvad .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -382,7 +397,7 @@ flowchart TD
   border-bottom-width: 0;
 }
 
-:where(#ogbbhdcaso) .gt_subtitle {
+#jcotpscvad .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -394,13 +409,13 @@ flowchart TD
   border-top-width: 0;
 }
 
-:where(#ogbbhdcaso) .gt_bottom_border {
+#jcotpscvad .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-:where(#ogbbhdcaso) .gt_col_headings {
+#jcotpscvad .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -415,7 +430,7 @@ flowchart TD
   border-right-color: #D3D3D3;
 }
 
-:where(#ogbbhdcaso) .gt_col_heading {
+#jcotpscvad .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -435,7 +450,7 @@ flowchart TD
   overflow-x: hidden;
 }
 
-:where(#ogbbhdcaso) .gt_column_spanner_outer {
+#jcotpscvad .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -447,15 +462,15 @@ flowchart TD
   padding-right: 4px;
 }
 
-:where(#ogbbhdcaso) .gt_column_spanner_outer:first-child {
+#jcotpscvad .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-:where(#ogbbhdcaso) .gt_column_spanner_outer:last-child {
+#jcotpscvad .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-:where(#ogbbhdcaso) .gt_column_spanner {
+#jcotpscvad .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -467,7 +482,7 @@ flowchart TD
   width: 100%;
 }
 
-:where(#ogbbhdcaso) .gt_group_heading {
+#jcotpscvad .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -493,7 +508,7 @@ flowchart TD
   text-align: left;
 }
 
-:where(#ogbbhdcaso) .gt_empty_group_heading {
+#jcotpscvad .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -508,15 +523,15 @@ flowchart TD
   vertical-align: middle;
 }
 
-:where(#ogbbhdcaso) .gt_from_md > :first-child {
+#jcotpscvad .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-:where(#ogbbhdcaso) .gt_from_md > :last-child {
+#jcotpscvad .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-:where(#ogbbhdcaso) .gt_row {
+#jcotpscvad .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -535,7 +550,7 @@ flowchart TD
   overflow-x: hidden;
 }
 
-:where(#ogbbhdcaso) .gt_stub {
+#jcotpscvad .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -548,7 +563,7 @@ flowchart TD
   padding-right: 5px;
 }
 
-:where(#ogbbhdcaso) .gt_stub_row_group {
+#jcotpscvad .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -562,11 +577,11 @@ flowchart TD
   vertical-align: top;
 }
 
-:where(#ogbbhdcaso) .gt_row_group_first td {
+#jcotpscvad .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-:where(#ogbbhdcaso) .gt_summary_row {
+#jcotpscvad .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -576,16 +591,16 @@ flowchart TD
   padding-right: 5px;
 }
 
-:where(#ogbbhdcaso) .gt_first_summary_row {
+#jcotpscvad .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-:where(#ogbbhdcaso) .gt_first_summary_row.thick {
+#jcotpscvad .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-:where(#ogbbhdcaso) .gt_last_summary_row {
+#jcotpscvad .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -595,7 +610,7 @@ flowchart TD
   border-bottom-color: #D3D3D3;
 }
 
-:where(#ogbbhdcaso) .gt_grand_summary_row {
+#jcotpscvad .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -605,7 +620,7 @@ flowchart TD
   padding-right: 5px;
 }
 
-:where(#ogbbhdcaso) .gt_first_grand_summary_row {
+#jcotpscvad .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -615,11 +630,11 @@ flowchart TD
   border-top-color: #D3D3D3;
 }
 
-:where(#ogbbhdcaso) .gt_striped {
+#jcotpscvad .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-:where(#ogbbhdcaso) .gt_table_body {
+#jcotpscvad .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -628,7 +643,7 @@ flowchart TD
   border-bottom-color: #D3D3D3;
 }
 
-:where(#ogbbhdcaso) .gt_footnotes {
+#jcotpscvad .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -642,7 +657,7 @@ flowchart TD
   border-right-color: #D3D3D3;
 }
 
-:where(#ogbbhdcaso) .gt_footnote {
+#jcotpscvad .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-left: 4px;
@@ -651,7 +666,7 @@ flowchart TD
   padding-right: 5px;
 }
 
-:where(#ogbbhdcaso) .gt_sourcenotes {
+#jcotpscvad .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -665,7 +680,7 @@ flowchart TD
   border-right-color: #D3D3D3;
 }
 
-:where(#ogbbhdcaso) .gt_sourcenote {
+#jcotpscvad .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -673,86 +688,87 @@ flowchart TD
   padding-right: 5px;
 }
 
-:where(#ogbbhdcaso) .gt_left {
+#jcotpscvad .gt_left {
   text-align: left;
 }
 
-:where(#ogbbhdcaso) .gt_center {
+#jcotpscvad .gt_center {
   text-align: center;
 }
 
-:where(#ogbbhdcaso) .gt_right {
+#jcotpscvad .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-:where(#ogbbhdcaso) .gt_font_normal {
+#jcotpscvad .gt_font_normal {
   font-weight: normal;
 }
 
-:where(#ogbbhdcaso) .gt_font_bold {
+#jcotpscvad .gt_font_bold {
   font-weight: bold;
 }
 
-:where(#ogbbhdcaso) .gt_font_italic {
+#jcotpscvad .gt_font_italic {
   font-style: italic;
 }
 
-:where(#ogbbhdcaso) .gt_super {
+#jcotpscvad .gt_super {
   font-size: 65%;
 }
 
-:where(#ogbbhdcaso) .gt_footnote_marks {
+#jcotpscvad .gt_footnote_marks {
   font-style: italic;
   font-weight: normal;
   font-size: 75%;
   vertical-align: 0.4em;
 }
 
-:where(#ogbbhdcaso) .gt_asterisk {
+#jcotpscvad .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-:where(#ogbbhdcaso) .gt_indent_1 {
+#jcotpscvad .gt_indent_1 {
   text-indent: 5px;
 }
 
-:where(#ogbbhdcaso) .gt_indent_2 {
+#jcotpscvad .gt_indent_2 {
   text-indent: 10px;
 }
 
-:where(#ogbbhdcaso) .gt_indent_3 {
+#jcotpscvad .gt_indent_3 {
   text-indent: 15px;
 }
 
-:where(#ogbbhdcaso) .gt_indent_4 {
+#jcotpscvad .gt_indent_4 {
   text-indent: 20px;
 }
 
-:where(#ogbbhdcaso) .gt_indent_5 {
+#jcotpscvad .gt_indent_5 {
   text-indent: 25px;
 }
 </style>
-<table class="gt_table">
-  
-  <thead class="gt_col_headings">
-    <tr>
-      <th class="gt_col_heading gt_columns_bottom_border gt_center" rowspan="1" colspan="1" scope="col" id="Vegetation suppression probability">Vegetation suppression probability</th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_center" rowspan="1" colspan="1" scope="col" id="Vegetation suppression area">Vegetation suppression area</th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_center" rowspan="1" colspan="1" scope="col" id="Land cover transitions">Land cover transitions</th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_center" rowspan="1" colspan="1" scope="col" id="Transitions impacts">Transitions impacts</th>
-    </tr>
-  </thead>
-  <tbody class="gt_table_body">
-    <tr><td headers="Vegetation suppression probability" class="gt_row gt_center">Classification</td>
-<td headers="Vegetation suppression area" class="gt_row gt_center">Regression</td>
-<td headers="Land cover transitions" class="gt_row gt_center">Classification</td>
-<td headers="Transitions impacts" class="gt_row gt_center">Regression</td></tr>
-  </tbody>
-  
-  
+
+<table class="gt_table table table-sm table-striped small" data-quarto-postprocess="true">
+<thead class="gt_col_headings">
+<tr class="header">
+<th id="Vegetation suppression probability" class="gt_col_heading gt_columns_bottom_border gt_center" data-quarto-table-cell-role="th" scope="col">Vegetation suppression probability</th>
+<th id="Vegetation suppression area" class="gt_col_heading gt_columns_bottom_border gt_center" data-quarto-table-cell-role="th" scope="col">Vegetation suppression area</th>
+<th id="Land cover transitions" class="gt_col_heading gt_columns_bottom_border gt_center" data-quarto-table-cell-role="th" scope="col">Land cover transitions</th>
+<th id="Transitions impacts" class="gt_col_heading gt_columns_bottom_border gt_center" data-quarto-table-cell-role="th" scope="col">Transitions impacts</th>
+</tr>
+</thead>
+<tbody class="gt_table_body">
+<tr class="odd">
+<td class="gt_row gt_center" headers="Vegetation suppression probability">Classification</td>
+<td class="gt_row gt_center" headers="Vegetation suppression area">Regression</td>
+<td class="gt_row gt_center" headers="Land cover transitions">Classification</td>
+<td class="gt_row gt_center" headers="Transitions impacts">Regression</td>
+</tr>
+</tbody>
 </table>
+
 </div>
 </div>
 </div>
@@ -761,13 +777,12 @@ flowchart TD
 <p>The third model will predict the predominant land use transitions of the areas that suffered native vegetation suppression.</p>
 <p>The fourth model will be a set of models. Each model will be responsible to predict a single environmental or social outcome.</p>
 <p>Each model will follow the standard approach to develop supervised models.</p>
-<div class="cell" data-fig-responsive="true">
+<div class="cell" data-fig-responsive="true" data-layout-align="center">
 <div class="cell-output-display">
+<div id="fig-model-diagram" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
 <div>
-<p>
-</p><pre class="mermaid mermaid-js" data-tooltip-selector="#mermaid-tooltip-4">%%{init: {'theme': 'neutral' } }%%
-
-flowchart TD
+<pre class="mermaid mermaid-js" data-label="fig-model-diagram">flowchart TD
     A[Database] --&gt; B[Variables Selection]
     B[Variables Selection] --&gt; C[Data Split]
     C[Data Split] --&gt; D[Training Data]
@@ -784,10 +799,9 @@ flowchart TD
     K[Model Assessment] --&gt; L[Model Interpretation]
 
 </pre>
-<div id="mermaid-tooltip-4" class="mermaidTooltip">
-
 </div>
-<p></p>
+<p></p><figcaption class="figure-caption">Figure&nbsp;3.5: Mermaid diagram</figcaption><p></p>
+</figure>
 </div>
 </div>
 </div>
@@ -829,9 +843,23 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     icon: icon
   };
   anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
   const clipboard = new window.ClipboardJS('.code-copy-button', {
-    target: function(trigger) {
-      return trigger.previousElementSibling;
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
     }
   });
   clipboard.on('success', function(e) {
@@ -896,6 +924,92 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       return note.innerHTML;
     });
   }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
   const findCites = (el) => {
     const parentEl = el.parentElement;
     if (parentEl) {

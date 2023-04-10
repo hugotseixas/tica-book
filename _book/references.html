@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.2.335">
+<meta name="generator" content="quarto-1.3.313">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -17,14 +17,15 @@ div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
   width: 0.8em;
-  margin: 0 0.8em 0.2em -1.6em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for citations */
 div.csl-bib-body { }
 div.csl-entry {
   clear: both;
 }
-.hanging div.csl-entry {
+.hanging-indent div.csl-entry {
   margin-left:2em;
   text-indent:-2em;
 }
@@ -38,8 +39,7 @@ div.csl-right-inline {
 }
 div.csl-indent {
   margin-left: 2em;
-}
-</style>
+}</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -88,11 +88,16 @@ div.csl-indent {
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
-  <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
-    <div class="container-fluid d-flex justify-content-between">
-      <h1 class="quarto-secondary-nav-title">References</h1>
-      <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
-        <i class="bi bi-chevron-right"></i>
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./references.html">References</a></li></ol></nav>
+      <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+      </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
       </button>
     </div>
   </nav>
@@ -100,7 +105,7 @@ div.csl-indent {
 <!-- content -->
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse sidebar-navigation floating overflow-auto">
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation floating overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header sidebar-header-stacked">
       <a href="./index.html" class="sidebar-logo-link">
       <img src="./figs/art/logo.png" alt="" class="sidebar-logo py-0 d-lg-inline d-none">
@@ -109,64 +114,74 @@ div.csl-indent {
       <a href="./">TICA: Dimensions of land transitions impacts in the Cerrado and Amazon</a> 
     </div>
       </div>
-      <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="mt-2 flex-shrink-0 align-items-center">
         <div class="sidebar-search">
         <div id="quarto-search" class="" title="Search"></div>
         </div>
-      </div>
+        </div>
     <div class="sidebar-menu-container"> 
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./index.html" class="sidebar-item-text sidebar-link">Preface</a>
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Preface</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./01_introduction.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introduction</span></a>
+  <a href="./01_introduction.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introduction</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./02_objectives.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Objectives</span></a>
+  <a href="./02_objectives.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Objectives</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./03_methods.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Methods</span></a>
+  <a href="./03_methods.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Methods</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./04_results.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Results</span></a>
+  <a href="./04_results.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Results</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./05_discussion.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Discussion</span></a>
+  <a href="./05_discussion.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Discussion</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./06_conclusions.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Conclusions</span></a>
+  <a href="./06_conclusions.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Conclusions</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./references.html" class="sidebar-item-text sidebar-link active">References</a>
+  <a href="./references.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">References</span></a>
   </div>
 </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">Appendices</a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">
+ <span class="menu-text">Appendices</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./11_model.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">A</span>&nbsp; <span class="chapter-title">Model</span></a>
+  <a href="./11_model.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">A</span>&nbsp; <span class="chapter-title">Model</span></span></a>
   </div>
 </li>
       </ul>
@@ -174,6 +189,7 @@ div.csl-indent {
     </ul>
     </div>
 </nav>
+<div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         
@@ -183,7 +199,7 @@ div.csl-indent {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title d-none d-lg-block">References</h1>
+<h1 class="title">References</h1>
 </div>
 
 
@@ -198,67 +214,67 @@ div.csl-indent {
 
 </header>
 
-<div id="refs" class="references csl-bib-body hanging-indent" role="doc-bibliography">
-<div id="ref-bowman-2016" class="csl-entry" role="doc-biblioentry">
+<div id="refs" class="references csl-bib-body hanging-indent" role="list">
+<div id="ref-bowman-2016" class="csl-entry" role="listitem">
 Bowman, Maria S. 2016. <span>“Impact of Foot-and-Mouth Disease Status on
 Deforestation in Brazilian Amazon and Cerrado Municipalities Between
 2000 and 2010.”</span> <em>Journal of Environmental Economics and
 Management</em> 75 (January). <a href="https://doi.org/10.1016/j.jeem.2015.08.003">https://doi.org/10.1016/j.jeem.2015.08.003</a>.
 </div>
-<div id="ref-cattaneo-2001" class="csl-entry" role="doc-biblioentry">
+<div id="ref-cattaneo-2001" class="csl-entry" role="listitem">
 Cattaneo, Andrea. 2001. <span>“Deforestation in the Brazilian Amazon:
 Comparing the Impacts of Macroeconomic Shocks, Land Tenure, and
 Technological Change.”</span> <em>Land Economics</em> 77 (2). <a href="https://doi.org/10.2307/3147091">https://doi.org/10.2307/3147091</a>.
 </div>
-<div id="ref-cavalcante-2019" class="csl-entry" role="doc-biblioentry">
+<div id="ref-cavalcante-2019" class="csl-entry" role="listitem">
 Cavalcante, R. B. L., P. R. M. Pontes, P. W. M. Souza-Filho, and E. B.
 Souza. 2019. <span>“Opposite Effects of Climate and Land Use Changes on
 the Annual Water Balance in the Amazon Arc of Deforestation.”</span>
 <em>Water Resources Research</em> 55 (4). <a href="https://doi.org/10.1029/2019wr025083">https://doi.org/10.1029/2019wr025083</a>.
 </div>
-<div id="ref-dias-2022" class="csl-entry" role="doc-biblioentry">
+<div id="ref-dias-2022" class="csl-entry" role="listitem">
 Dias, Fabiane Pereira Machado, Wilson Mozena Leandro, Paulo Marçal
 Fernandes, and Francisco Alisson da Silva Xavier. 2022. <span>“Impact of
 Short-Term Land-Use Change on Soil Organic Carbon Dynamics in
 Transitional Agro-Ecosystems: A Case Study in the Brazilian
 Cerrado.”</span> <em>Carbon Management</em> 13 (1). <a href="https://doi.org/10.1080/17583004.2022.2074313">https://doi.org/10.1080/17583004.2022.2074313</a>.
 </div>
-<div id="ref-gestich-2021" class="csl-entry" role="doc-biblioentry">
+<div id="ref-gestich-2021" class="csl-entry" role="listitem">
 Gestich, Carla C., Víctor Arroyo-Rodríguez, Bruno H. Saranholi, Rogério
 G. T. da Cunha, Eleonore Z. F. Setz, and Milton C. Ribeiro. 2021.
 <span>“Forest Loss and Fragmentation Can Promote the Crowding Effect in
 a Forest-Specialist Primate.”</span> <em>Landscape Ecology</em> 37 (1).
 <a href="https://doi.org/10.1007/s10980-021-01336-1">https://doi.org/10.1007/s10980-021-01336-1</a>.
 </div>
-<div id="ref-hargrave-2012" class="csl-entry" role="doc-biblioentry">
+<div id="ref-hargrave-2012" class="csl-entry" role="listitem">
 Hargrave, Jorge, and Krisztina Kis-Katos. 2012. <span>“Economic Causes
 of Deforestation in the Brazilian Amazon: A Panel Data Analysis for the
 2000s.”</span> <em>Environmental and Resource Economics</em> 54 (4). <a href="https://doi.org/10.1007/s10640-012-9610-2">https://doi.org/10.1007/s10640-012-9610-2</a>.
 </div>
-<div id="ref-jusys-2016" class="csl-entry" role="doc-biblioentry">
+<div id="ref-jusys-2016" class="csl-entry" role="listitem">
 Jusys, Tomas. 2016. <span>“Fundamental Causes and Spatial Heterogeneity
 of Deforestation in Legal Amazon.”</span> <em>Applied Geography</em> 75
 (October). <a href="https://doi.org/10.1016/j.apgeog.2016.08.015">https://doi.org/10.1016/j.apgeog.2016.08.015</a>.
 </div>
-<div id="ref-oca-2021" class="csl-entry" role="doc-biblioentry">
+<div id="ref-oca-2021" class="csl-entry" role="listitem">
 Oca, Ana Isabel Fernández-Montes de, José Alberto Gallardo-Cruz, Adrián
 Ghilardi, Edith Kauffer, Jonathan Vidal Solórzano, and Víctor
 Sánchez-Cordero. 2021. <span>“An Integrated Framework for Harmonizing
 Definitions of Deforestation.”</span> <em>Environmental Science and
 Policy</em> 115 (January): 71–78. <a href="https://doi.org/10.1016/j.envsci.2020.10.007">https://doi.org/10.1016/j.envsci.2020.10.007</a>.
 </div>
-<div id="ref-pfaff-2015" class="csl-entry" role="doc-biblioentry">
+<div id="ref-pfaff-2015" class="csl-entry" role="listitem">
 Pfaff, Alexander, Juan Robalino, Diego Herrera, and Catalina Sandoval.
 2015. <span>“Protected Areas’ Impacts on Brazilian Amazon Deforestation:
 Examining Conservation - Development Interactions to Inform
 Planning.”</span> <em>PLOS ONE</em> 10 (7). <a href="https://doi.org/10.1371/journal.pone.0129460">https://doi.org/10.1371/journal.pone.0129460</a>.
 </div>
-<div id="ref-santos-2018" class="csl-entry" role="doc-biblioentry">
+<div id="ref-santos-2018" class="csl-entry" role="listitem">
 Santos, Augusto Seabra, and Alexandre N. Almeida. 2018. <span>“The
 Impact of Deforestation on Malaria Infections in the Brazilian
 Amazon.”</span> <em>Ecological Economics</em> 154 (December). <a href="https://doi.org/10.1016/j.ecolecon.2018.08.005">https://doi.org/10.1016/j.ecolecon.2018.08.005</a>.
 </div>
-<div id="ref-silva-2023" class="csl-entry" role="doc-biblioentry">
+<div id="ref-silva-2023" class="csl-entry" role="listitem">
 Silva, Richarde Marques da, Aricson Garcia Lopes, and Celso Augusto
 Guimarães Santos. 2023. <span>“Deforestation and Fires in the Brazilian
 Amazon from 2001 to 2020: Impacts on Rainfall Variability and Land
@@ -297,9 +313,23 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     icon: icon
   };
   anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
   const clipboard = new window.ClipboardJS('.code-copy-button', {
-    target: function(trigger) {
-      return trigger.previousElementSibling;
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
     }
   });
   clipboard.on('success', function(e) {
@@ -364,6 +394,92 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       return note.innerHTML;
     });
   }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
   const findCites = (el) => {
     const parentEl = el.parentElement;
     if (parentEl) {
