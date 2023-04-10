@@ -1,5 +1,16 @@
 # Results
 
+```{r}
+#| label: results-load
+#| include: false
+
+file_names <- list.files("figs/eda/", pattern = "rdata", full.names = TRUE)
+
+lapply(file_names, load, .GlobalEnv)
+
+```
+
+
 The results will be organized by sections and subsections:
 
 1. Exploratory Analysis of the model variables;
@@ -48,8 +59,6 @@ So the figures and tables do not show distributions of the raw observations/esti
 #| fig-asp: 1
 #| echo: false
 
-load("./figs/base_grid_area.rdata")
-
 viz_grid_area
 
 ```
@@ -79,11 +88,10 @@ READ:
 ```{r}
 #| label: fig-deforestation-hist
 #| fig-cap: "Distribution of deforestation in the Amazon and Cerrado. The horizontal scale is transformed to base 10 log."
+#| fig-asp: 0.70
 #| echo: false
 
-load("./figs/deforestation_hist.rdata")
-
-viz_hist
+deforestation_histogram
 
 ```
 
@@ -92,11 +100,10 @@ viz_hist
 ```{r}
 #| label: fig-deforestation-cumsum
 #| fig-cap: "Cumulative percent of the deforestation area."
+#| fig-asp: 0.70
 #| echo: false
 
-load("./figs/deforestation_cumulative.rdata")
-
-viz_cumulative
+deforestation_cumulative
 
 ```
 
@@ -108,9 +115,18 @@ viz_cumulative
 #| fig-asp: 1
 #| echo: false
 
-load("./figs/deforestation_spatial_distribution.rdata")
+deforestation_spatial
 
-viz_spatial_distribution
+```
+
+```{r}
+#| label: fig-deforestation-timeseries
+#| fig-cap: "Time series of deforestation area."
+#| fig-alt: "Time series."
+#| fig-asp: 0.70
+#| echo: false
+
+deforestation_timeseries
 
 ```
 
