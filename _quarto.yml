@@ -42,6 +42,8 @@ format:
     toc: true
     toc-depth: 3
     toc-title: Content
+    mermaid:
+      theme: neutral
 
 execute:
   freeze: auto
