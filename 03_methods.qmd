@@ -24,8 +24,10 @@ To achieve the proposed goal, I will divide the work into five major parts:
 4.  Future projections;
 
 ```{mermaid}
+%%| label: fig-method-diagram
+%%| fig-cap: Mermaid diagram
 %%| fig-responsive: true
-%%{init: {'theme': 'neutral' } }%%
+%%| fig-align: center
 
 flowchart TD
     A[Literature Review] --> B[Available Data]
@@ -57,8 +59,10 @@ The literature review will address different topics.
 For all of them, I will adopt a hybrid approach of database searches combined with snowball searches.
 
 ```{mermaid}
+%%| label: fig-review-diagram
+%%| fig-cap: Mermaid diagram
 %%| fig-responsive: true
-%%{init: {'theme': 'neutral' } }%%
+%%| fig-align: center
 
 flowchart TD
     A[Specific Questions] --> B[Query Development]
@@ -86,7 +90,17 @@ To make the modeling process more efficient and transparent, all variables of in
 To structure a collection of data that presents different natures, I will transform all the variables into a standard grid system.
 The grid system will be composed of 0.2 degrees cells (40km x 40km), which should be a balanced compromise between detail and computational cost.
 
-![Representation of the spatial grid that will be used to store the data from different sources.](figs/grid_cells.png)
+```{r}
+#| label: fig-base-grid
+#| fig-cap: "Model grid, in which variables were transformed to"
+#| fig-asp: 1
+#| echo: false
+
+load("./figs/eda/base_grid.rdata")
+
+viz_grid
+
+```
 
 Each grid cell will contain an observation, for each year, for all the variables. 
 Only pixels that contained natural vegetation in the first year of the analysis will be considered valid.
@@ -94,8 +108,10 @@ Only pixels that contained natural vegetation in the first year of the analysis 
 The process to create the database will consist of accessing the data sources, downloading the data to the local environment, transforming and organizing the data to the grid (if the data source provides any pre-processing tool before downloading the data, it should be done that way), and store in the local environment.
 
 ```{mermaid}
+%%| label: fig-data-diagram
+%%| fig-cap: Mermaid diagram
 %%| fig-responsive: true
-%%{init: {'theme': 'neutral' } }%%
+%%| fig-align: center
 
 flowchart TD
     A[Data Source] --> E[Pre Processing]
@@ -177,8 +193,10 @@ Each model will be responsible to predict a single environmental or social outco
 Each model will follow the standard approach to develop supervised models.
 
 ```{mermaid}
+%%| label: fig-model-diagram
+%%| fig-cap: Mermaid diagram
 %%| fig-responsive: true
-%%{init: {'theme': 'neutral' } }%%
+%%| fig-align: center
 
 flowchart TD
     A[Database] --> B[Variables Selection]
