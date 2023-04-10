@@ -26,8 +26,6 @@ conflicts_prefer(dplyr::filter)
 # OPTIONS ---------------------------------------------------------------------
 #
 
-conflicts_prefer(dplyr::filter)
-
 #
 # LOAD DATA -------------------------------------------------------------------
 
@@ -47,233 +45,101 @@ base_grid <- read_sf("data/base_grid.fgb")
 # PROCESS DATA ---------------------------------------------------------------
 
 defo <- defo |>
+  filter(year > 1986, year < 2021) |>
   left_join(
     base_grid,
     by = join_by(cell_id)
   ) |>
-  mutate(deforestation_area = deforestation_area * 0.0001)
-
-# EXPLORE DATA ----------------------------------------------------------------
-
-## Create Histogram Visualization ----
-viz_list <-
-  map(
-    c(3, 1),
-    \(region) {
-
-      viz <- defo |>
-        filter(region_code == region) |>
-        summarise(
-          deforestation_area = sum(deforestation_area),
-          .by = c("cell_id", "region_name", "year")
-        ) |>
-        eda_histogram(
-          variable = deforestation_area,
-          n_bins = 50,
-          scale_transform = "log",
-          xlim = c(70, 600000)
-        ) +
-        facet_wrap(facets = vars(region_name)) +
-        theme(
-          strip.text = element_text()
-        )
-
-      if (region == 1) {
-
-        viz <- viz +
-          labs(x = "Deforestation Area (ha)") +
-          theme(
-            axis.title.x = element_text(),
-            axis.text.x = element_text(size = 10)
-          )
-
-      }
-
-      return(viz)
-
-    }
-  )
-
-title <- ggdraw() +
-  draw_label(
-    "Deforestation Histogram",
-    fontface = 'bold',
-    x = 0,
-    hjust = 0
-  ) +
-  theme(
-    plot.margin = margin(0, 0, 0, 0)
-  )
-
-viz_hist <-
-  plot_grid(
-    title,
-    plotlist =  viz_list,
-    ncol = 1,
-    scale = 0.9,
-    rel_heights = c(0.1, 1, 1)
-  )
-
-save(viz_hist, file = "./figs/deforestation_hist.rdata")
-
-## Create Cumulative Visualization ----
-viz_list <-
-  map(
-    c(3, 1),
-    \(region) {
-
-      viz <- defo |>
-        filter(region_code == region) |>
-        summarise(
-          deforestation_area = sum(deforestation_area),
-          .by = c("cell_id", "region_name", "year")
-        ) |>
-        eda_cumulative_distribution(
-          variable = deforestation_area,
-          quantiles_list = c(0.005, 0.25, 0.5, 0.75, 0.95, 0.99, 1),
-          scale_transform = "log"
-        ) +
-        facet_wrap(facets = vars(region_name)) +
-        theme(
-          strip.text = element_text(),
-          axis.text = element_text(size = 10),
-          panel.grid.major.y = element_line(
-            color = "#999999",
-            linewidth = 0.1
-          ),
-          plot.margin = unit(c(-0.3, 0, 0, 0), "cm")
-        )
-
-      return(viz)
-
-    }
-  )
-
-title <- ggdraw() +
-  draw_label(
-    "Cumulative Percentage of Deforestation",
-    fontface = 'bold',
-    x = 0,
-    hjust = 0
-  ) +
-  theme(
-    plot.margin = margin(0, 0, 8, 0)
-  )
-
-viz_cumulative <-
-  plot_grid(
-    title,
-    plotlist =  viz_list,
-    ncol = 1,
-    rel_heights = c(0.1, 1, 1),
-    scale = 0.9
-  ) +
-  draw_label(
-    "Cumulative Deforestation Percentage (%)",
-    x = 0, y = 0.5,
-    vjust = 1.5,
-    angle = 90,
-    size = 13
-  ) +
-  draw_label(
-    "Deforestation Area (ha)",
-    x = 0.5, y = 0,
-    vjust = -0.2,
-    angle = 0,
-    size = 13
-  )
-
-save(viz_cumulative, file = "./figs/deforestation_cumulative.rdata")
-
-## Spatial distribution ----
-viz <- defo |>
-  filter(year %in% c(2020)) |>
-  st_as_sf() |>
+  select(!c(geometry, cell_area)) |>
+  mutate(deforestation_area = deforestation_area * 0.0001) |>
   summarise(
     deforestation_area = sum(deforestation_area),
-    .by = c("cell_id", "year", "geometry")
+    .by = c("cell_id", "region_name", "year")
+  )
+
+# EXPLORE DATA ----------------------------------------------------------------
+create_visualizations(
+  f = eda_histogram,
+  data = defo,
+  variable = deforestation_area,
+  group_variable = region_name,
+  group_facet = TRUE,
+  viz_title = "Deforestation Histogram",
+  x_title = "Deforestation Area (ha)",
+  y_title = "",
+  scale_transform = "log",
+  n_bins = 50,
+  x_lim = NULL,
+  out_filename = "deforestation_histogram",
+  out_path = "figs/eda/"
+)
+
+## Create Cumulative Visualization ----
+create_visualizations(
+  f = eda_cumulative_distribution,
+  data = select(defo, c(region_name, deforestation_area)),
+  variable = deforestation_area,
+  group_variable = region_name,
+  group_facet = TRUE,
+  viz_title = "Cumulative Deforestation Area",
+  x_title = "Deforestation Area (ha)",
+  y_title = "Cumulative Percentage (%)",
+  quantiles_list = c(0.05, 0.25, 0.5, 0.75, 0.95, 0.99, 1),
+  scale_transform = "log",
+  out_filename = "deforestation_cumulative",
+  out_path = "figs/eda/"
+)
+
+## Spatial distribution ----
+viz_data <- defo |>
+  summarise(
+    deforestation_area = sum(deforestation_area),
+    .by = c("cell_id")
   ) |>
-  filter(deforestation_area > 800) |>
-  eda_spatial_distribution(
-    variable = deforestation_area,
-    base_map = aoi
-  ) +
-  labs(fill = "Deforestation Area (ha)") +
-  facet_wrap(facets = vars(year)) +
-  theme(
-    strip.text = element_text(),
-    legend.position = "bottom",
-    legend.key.height = unit(2, 'mm'),
-    legend.key.width = unit(25, 'mm'),
-    legend.justification = c(0.5, 0.5),
-    plot.margin = unit(c(0, 0, 0, 0), "cm")
-  ) +
-  guides(fill = guide_colourbar(title.position = "top", title.hjust = 0.5))
+  left_join(
+    base_grid,
+    by = join_by(cell_id)
+  ) |>
+  st_as_sf() |>
+  select(deforestation_area)
 
-title <- ggdraw() +
-  draw_label(
-    "Spatial Distribution of Deforestation",
-    fontface = 'bold',
-    x = 0,
-    hjust = 0
-  ) +
-  theme(
-    plot.margin = margin(0, 0, 0, 0)
-  )
-
-viz_spatial_distribution <-
-  plot_grid(
-    title,
-    viz,
-    ncol = 1,
-    rel_heights = c(0.1, 1),
-    scale = 0.9
-  )
-
-save(
-  viz_spatial_distribution,
-  file = "./figs/deforestation_spatial_distribution.rdata"
+create_visualizations(
+  f = eda_spatial_distribution,
+  data = viz_data,
+  variable = deforestation_area,
+  variable_label = "Deforestation Area (ha)",
+  group_variable = NULL,
+  viz_title = "Spatial Distribution of Deforestation",
+  x_title = "",
+  y_title = "",
+  base_map = aoi,
+  out_filename = "deforestation_spatial",
+  out_path = "figs/eda/",
+  out_width = 15,
+  out_height = 15
 )
 
 ## Create Time Series Plot ----
+viz_data <- defo |>
+  summarise(
+    deforestation_area = sum(deforestation_area),
+    .by = c("region_name", "year")
+  ) |>
+  rename(date = year)
 
-
-
-## Create sum plot ----
-
-
-
-# SAVE PLOTS ------------------------------------------------------------------
-
-# Save histogram plot
-ggsave(
-  filename = "./figs/deforestation_hist.png",
-  plot = viz_hist,
-  device = ragg::agg_png,
-  width = 15,
-  height = 14,
-  units = "cm",
-  dpi = 300
+create_visualizations(
+  f = eda_time_series,
+  data = viz_data,
+  variable = deforestation_area,
+  group_facet = TRUE,
+  group_variable = region_name,
+  viz_title = "Deforestation Time Series",
+  x_title = "Year",
+  y_title = "Deforestation Area (ha)",
+  ts_type = "line",
+  out_filename = "deforestation_timeseries",
+  out_path = "figs/eda/"
 )
 
-# Save cumulative plot
-ggsave(
-  filename = "./figs/deforestation_cumsum.png",
-  plot = viz_cumulative,
-  device = ragg::agg_png,
-  width = 15,
-  height = 14,
-  units = "cm",
-  dpi = 300
-)
+## Create Sum plot ----
 
-# Save map plot
-ggsave(
-  filename = "./figs/deforestation_map.png",
-  plot = viz_spatial_distribution,
-  device = ragg::agg_png,
-  width = 15,
-  height = 15,
-  units = "cm",
-  dpi = 300
-)
