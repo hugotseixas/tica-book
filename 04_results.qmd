@@ -83,7 +83,14 @@ READ:
 
 :::
 
+```{r}
+#| label: tbl-deforestation_summary
+#| tbl-cap: "Summary table of deforestation.."
+#| echo: false
 
+htmltools::includeHTML("./figs/eda/deforestation_table.html")
+
+```
 
 ```{r}
 #| label: fig-deforestation-hist
@@ -127,6 +134,28 @@ deforestation_spatial
 #| echo: false
 
 deforestation_timeseries
+
+```
+
+```{r}
+#| label: fig-deforestation-colsum-natural
+#| fig-cap: "Time series of deforestation area."
+#| fig-alt: "Time series."
+#| fig-asp: 0.70
+#| echo: false
+
+deforestation_colsum_natural
+
+```
+
+```{r}
+#| label: fig-deforestation-colsum-human
+#| fig-cap: "Time series of deforestation area."
+#| fig-alt: "Time series."
+#| fig-asp: 0.70
+#| echo: false
+
+deforestation_colsum_human
 
 ```
 
