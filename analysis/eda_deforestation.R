@@ -142,4 +142,66 @@ create_visualizations(
 )
 
 ## Create Sum plot ----
+viz_data <- read_parquet("data/deforestation.parquet") |>
+  filter(year > 1986, year < 2021) |>
+  left_join(
+    base_grid,
+    by = join_by(cell_id)
+  ) |>
+  mutate(deforestation_area = deforestation_area * 0.0001) |>
+  summarise(
+    deforestation_area = sum(deforestation_area),
+    .by = c("region_name", "natural_class")
+  )
 
+create_visualizations(
+  f = eda_colsum,
+  data = viz_data,
+  variable = deforestation_area,
+  group_facet = TRUE,
+  group_variable = region_name,
+  cat_variable = natural_class,
+  scale_transform = "log",
+  viz_title = "Deforested Areas Classes",
+  x_title = "LULC",
+  y_title = "Deforestation Area (ha)",
+  out_filename = "deforestation_colsum_natural",
+  out_path = "figs/eda/"
+)
+
+viz_data <- read_parquet("data/deforestation.parquet") |>
+  filter(year > 1986, year < 2021) |>
+  left_join(
+    base_grid,
+    by = join_by(cell_id)
+  ) |>
+  mutate(deforestation_area = deforestation_area * 0.0001) |>
+  summarise(
+    deforestation_area = sum(deforestation_area),
+    .by = c("region_name", "human_class")
+  )
+
+create_visualizations(
+  f = eda_colsum,
+  data = viz_data,
+  variable = deforestation_area,
+  group_facet = TRUE,
+  group_variable = region_name,
+  cat_variable = human_class,
+  scale_transform = "log",
+  viz_title = "Deforested Areas Classes",
+  x_title = "LULC",
+  y_title = "Deforestation Area (ha)",
+  out_filename = "deforestation_colsum_human",
+  out_path = "figs/eda/"
+)
+
+## Create summary table ----
+eda_summary_table(
+  data = defo,
+  variable = deforestation_area,
+  rowname_variable = region_name,
+  viz_title = "Deforestation Area (ha)",
+  out_path = "./figs/eda/",
+  out_filename = "deforestation_table"
+)
