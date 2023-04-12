@@ -12,6 +12,7 @@ library(conflicted)
 library(sf)
 library(geobr)
 library(cowplot)
+library(scales)
 library(tidyverse)
 library(tica)
 #
@@ -84,6 +85,38 @@ cell_area <- base_grid |>
     by = join_by(key)
   ) |>
   mutate(percentage_area = cell_area * percentage)
+
+color_scale <-
+  tibble(x = rep(NA, 2), y = rep(NA, 2), fill = 0:1) |>
+  ggplot(aes(x = x, y = y, fill = fill)) +
+  geom_point(alpha = 0) +
+  scico::scale_fill_scico(
+    breaks = c(0, 1),
+    labels = c("Minimum","Maximum"),
+    guide = guide_colorbar(
+      frame.colour = "#000000",
+      frame.linewidth = 1/.pt,
+      ticks.colour = "transparent"
+    )
+  ) +
+  theme_nothing() +
+  theme(
+    legend.position = c(0.5, 0.5), # move the legend to the center
+    legend.title = element_blank(),
+    legend.text = element_text(size = 13, face = "bold"),
+    legend.key = element_rect(fill = 'NA'),
+    legend.key.height = ggplot2::unit(6, 'mm'),
+    legend.key.width = ggplot2::unit(30, 'mm'),
+    legend.text.align = c(0, 1),
+    legend.direction = "horizontal"
+  )
+
+ggsave2(
+  "./figs/color_scale.png",
+  plot = color_scale
+)
+
+save(color_scale, file = "./figs/color_scale.rdata")
 
 sub_cell_area <-
   map_df(
