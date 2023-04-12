@@ -4,7 +4,13 @@
 #| label: results-load
 #| include: false
 
-file_names <- list.files("figs/eda/", pattern = "rdata", full.names = TRUE)
+file_names <- 
+  list.files(
+    path = "figs", 
+    pattern = "rdata", 
+    full.names = TRUE,
+    recursive = TRUE
+  )
 
 lapply(file_names, load, .GlobalEnv)
 
@@ -60,6 +66,16 @@ So the figures and tables do not show distributions of the raw observations/esti
 #| echo: false
 
 viz_grid_area
+
+```
+
+```{r}
+#| label: fig-color-scale
+#| fig-cap: "Model grid, in which variables were transformed to"
+#| fig-asp: 0.2
+#| echo: false
+
+color_scale
 
 ```
 
