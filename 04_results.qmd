@@ -16,6 +16,7 @@ lapply(file_names, load, .GlobalEnv)
 
 ```
 
+## How to read
 
 The results will be organized by sections and subsections:
 
@@ -53,6 +54,16 @@ Furthermore, based on my confidence in the models and their results, I will make
 This will allow me to go beyond the mere presentation of the predictions and offer insights into the relationships between the variables, the causes of the observed patterns, and the implications of the results for the environment and human well-being. 
 However, it is important to note that I will only take this step if I feel confident in the models and their results, as making inferences requires a strong foundation of knowledge and understanding.
 
+```{r}
+#| label: fig-color-scale
+#| fig-cap: "Model grid, in which variables were transformed to"
+#| fig-asp: 0.2
+#| echo: false
+
+color_scale
+
+```
+
 ## Modelling variables
 
 In this section I will analyse each variable of my model. 
@@ -66,16 +77,6 @@ So the figures and tables do not show distributions of the raw observations/esti
 #| echo: false
 
 viz_grid_area
-
-```
-
-```{r}
-#| label: fig-color-scale
-#| fig-cap: "Model grid, in which variables were transformed to"
-#| fig-asp: 0.2
-#| echo: false
-
-color_scale
 
 ```
 
