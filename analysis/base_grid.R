@@ -13,6 +13,7 @@ library(sf)
 library(geobr)
 library(cowplot)
 library(scales)
+library(gt)
 library(tidyverse)
 library(tica)
 #
@@ -186,3 +187,18 @@ ggsave2(
 )
 
 save(color_scale, file = "./figs/color_scale.rdata")
+
+read_csv("data/variables_table.csv") |>
+  gt() |>
+  sub_missing() |>
+  cols_label(
+    variable = gt::md("**Variable**"),
+    source = gt::md("**Source**"),
+    creator = gt::md("**Creator**"),
+    license = gt::md("**License**")
+  ) |>
+  tab_options(
+    table.font.size = 14
+  ) |>
+  opt_stylize(style = 1, color = "gray") |>
+  gtsave("figs/variables_table.html")

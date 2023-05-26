@@ -29,13 +29,6 @@ conflicts_prefer(dplyr::filter)
 
 aoi <- read_sf("data/external/aoi/aoi.fgb")
 
-aoi <-
-  smoothr::smooth(
-    st_simplify(aoi, dTolerance = 5000),
-    method = "ksmooth",
-    smoothness = 3
-  )
-
 base_grid <- read_sf("data/base_grid.fgb")
 
 uc <-
