@@ -1,10 +1,10 @@
 # Introduction
 
-The suppression of native vegetation in the Cerrado and Amazon biomes is a matter of great concern due to its potential impact on the environment and human well-being. 
-Understanding the drivers and effects of this phenomenon is crucial to guide policies to avoid natural vegetation suppression and mitigate negative impacts.
+The suppression of native vegetation in the Amazon and Cerrado biomes is a matter of great concern due to its potential impact on the environment and human well-being. 
+Understanding the drivers and effects of this phenomenon is crucial to guide policies to avoid further natural vegetation suppression and mitigate negative impacts.
 However, this is a challenging task since the factors involved in this phenomenon are diverse, heterogeneous, and can even be contradictory. 
 Existing literature suggests that native vegetation suppression is caused by economic fluctuations [@hargrave-2012], conservation policies [@pfaff-2015], population distribution [@jusys-2016], land tenure [@cattaneo-2001], livestock and crop productions [@bowman-2016].
-On the other side, vegetation removal may impact human health [@santos-2018], climate regime [@silva-2023], regional hydrology [@cavalcante-2019], soil properties [@dias-2022], biodiversity [@gestich-2021].
+On the other side, vegetation removal may impact human health [@santos-2018], climate regime [@silva-2023], regional hydrology [@cavalcante-2019], soil properties [@dias-2022] and biodiversity [@gestich-2021].
 
 Unfortunately, much of the research in this area tends to focus on only a few dimensions of the problem, rather than taking a holistic approach.
 This narrow focus often fails to capture the full extent of the issue and can lead to oversimplifications or misdirection in efforts to solve it.
@@ -13,7 +13,7 @@ This project aims to predict and understand the causes and impacts of native veg
 The results will provide a deeper understanding of the relationships between land use changes, environmental factors, and social dynamics related to native vegetation suppression.
 
 Regression and classification models will be applied to existing data on land use changes, environmental factors, and social variables in the Cerrado and Amazon biomes. 
-The models will be used to identify patterns and relationships between these variables and to predict future trends.
+The models will be used to identify patterns and relationships between these variables.
 
 The results of this project will contribute to a better understanding of the causes and impacts of native vegetation suppression in the Cerrado and Amazon biomes. 
 This knowledge will inform the development of effective conservation and management strategies that will help to protect these vital and unique ecosystems.

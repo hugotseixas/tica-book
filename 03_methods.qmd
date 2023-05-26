@@ -96,7 +96,7 @@ The grid system will be composed of 0.2 degrees cells (40km x 40km), which shoul
 #| fig-asp: 1
 #| echo: false
 
-load("./figs/eda/base_grid.rdata")
+load("./figs/base_grid.rdata")
 
 viz_grid
 
@@ -128,7 +128,18 @@ If necessary, the data will be partitioned by further variables (as a rule of th
 
 ### Variables
 
+```{r}
+#| label: tbl-variables
+#| tbl-cap: "Variables used in this project."
+#| echo: false
+
+htmltools::includeHTML("./figs/variables_table.html")
+
+```
+
 #### Biomes
+
+
 
 #### Deforestation
 
@@ -142,7 +153,11 @@ This was done to reduce the amount of observations, which would be unfeasible to
 
 The limits of the Conservation Units (UC) are provided by the Ministry of Environment and Climate Change. These are the conservation units that finished the registration process at the National Register of Conservation Units (CNUC). However, the data used in this project is accessed by the Institute for Applied Economic Research (IPEA), which organizes data in a standard attributes and spatial projection. The data is represented as spatial vectors.
 
-The UC vectors are intersected to the base grid, and the area of each UC inside each cell is calculated. 
+The UC vectors are intersected to the base grid, and the area of each UC inside each cell is calculated.
+
+#### Indigenous Lands
+
+
 
 ## Model Development
 
