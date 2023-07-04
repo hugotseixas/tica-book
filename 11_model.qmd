@@ -1,2 +1,16 @@
 # Model
 
+The modelling methodology should be appropriate to deal with spatiotemporal dynamics.
+
+There will be two exercises: create a model to optimize prediction of deforestation; create a model to estimate causal effect of a treatment.
+
+The first algorithm on the list of possibilities is the Bayesian Additive Regression Trees (BART).
+
+::: {.callout-important collapse="true"}
+
+READ:
+
+- https://doi.org/10.3390/ijgi10090600
+- https://doi.org/10.1007/s00168-021-01101-x
+
+:::
