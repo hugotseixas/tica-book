@@ -15,17 +15,17 @@ To achieve the proposed goal, I will divide the work into five major parts:
 
 1.  Literature overview of the main drivers of the expected outcomes (vegetation suppression, land cover transition, social and environmental variables);
 
-2.  Experts survey;
+2.  Experts interviews;
 
 2.  Screening for available data and development of structured data collection;
 
 3.  Development of models;
 
-4.  Future projections;
+4.  Models interpretations;
 
 ```{mermaid}
 %%| label: fig-method-diagram
-%%| fig-cap: Mermaid diagram
+%%| fig-cap: Workflow of the project
 %%| fig-responsive: true
 %%| fig-align: center
 
@@ -33,12 +33,11 @@ flowchart TD
     A[Literature Review] --> B[Available Data]
     A[Literature Review] --> C[Database structuring]
     B[Available Data] --> C[Database structuring]
-    D[Experts Survey] --> C[Database structuring]
+    D[Experts interviews] --> C[Database structuring]
     C[Database structuring] --> E[Models Development]
-    D[Experts Survey] --> E[Models Development]
-    D[Experts Survey] --> F[Projection Scenarios]
-    E[Models Development] --> G[Projection Estimations]
-    F[Projection Scenarios] --> G[Projection Estimations]
+    A[Literature Review] --> E[Models Development]
+    D[Experts interviews] --> E[Models Development]
+    E[Models Development] --> G[Models Interpretations]
 
 ```
 
@@ -51,7 +50,7 @@ The database structuring will store all the relevant data in a single file struc
 
 The modeling process will follow standard procedures and libraries, with the possibility to implement different techniques.
 
-Future projections will serve as a bridge to discuss public policy planning to mitigate the negative impacts of native vegetation suppression in the Amazon and Cerrado.
+Models interpretation will be performed to understand the importance of the variables and their interactions, and to discuss public policy planning to mitigate the negative impacts of native vegetation suppression in the Amazon and Cerrado.
 
 ## Literature Review
 
@@ -60,7 +59,7 @@ For all of them, I will adopt a hybrid approach of database searches combined wi
 
 ```{mermaid}
 %%| label: fig-review-diagram
-%%| fig-cap: Mermaid diagram
+%%| fig-cap: Workflow of literature review
 %%| fig-responsive: true
 %%| fig-align: center
 
@@ -81,29 +80,41 @@ flowchart TD
 The literature review will answer questions about variables to be predicted in this project. 
 For each variable, I want to explore the main drivers that cause them, how they relate to each other, and the methods used to estimate the effects and interactions. 
 
-## Experts Survey
+## Experts Interviews
+
+The objective of the interviews is to explore a diverse range of possible causes of deforestation, and its impacts on the environment and society.
+
+The target participants are researchers with past experience on analyzing deforestation in the Amazon or Cerrado biomes.
+
+The prospection of potential participants will be done by snowball sampling.
+
+The interviews will consist of open questions and an interactive activity of building a Directed Acyclic Graph (DAG) with the participants.
+
+### Questions
+
+The open questions will serve to develop a context of the participant experience and perspectives on deforestation:
+
+ - What were your past experiences on deforestation?
+ 
+ - What were the regions that you developed projects related to deforestation?
+ 
+ - What is your perspective on deforestation, taking in account sustainability and human development?
+ 
+ - Based on your experience, what are the main conditions that facilitate the occurrence of deforestation?
+ 
+### Interactive activity
+
+The objective of developing DAGs with different participants is to explore a diversity of possibilities to model deforestation. 
+The use of DAGs before any modelling exercise (such as feature selection) is useful to reflect about the phenomena, explore potential variables, look for possible confounders, colliders and mediators, and finally choose an appropriate model.
+
+It is also possible to compare DAGs (since they are graphs!), so it will open an opportunity to explore convergences and divergences between participants.
+
+The DAGs will be create during the interview with the use of a interactive tool.
 
 ## Database Structuring
 
 The database will contain data from different domains, which can be available in diverse formats and structures.
 To make the modeling process more efficient and transparent, all variables of interest must be organized coherently.
-To structure a collection of data that presents different natures, I will transform all the variables into a standard grid system.
-The grid system will be composed of 0.2 degrees cells (40km x 40km), which should be a balanced compromise between detail and computational cost.
-
-```{r}
-#| label: fig-base-grid
-#| fig-cap: "Model grid, in which variables were transformed to"
-#| fig-asp: 1
-#| echo: false
-
-load("./figs/base_grid.rdata")
-
-viz_grid
-
-```
-
-Each grid cell will contain an observation, for each year, for all the variables. 
-Only pixels that contained natural vegetation in the first year of the analysis will be considered valid.
 
 The process to create the database will consist of accessing the data sources, downloading the data to the local environment, transforming and organizing the data to the grid (if the data source provides any pre-processing tool before downloading the data, it should be done that way), and store in the local environment.
 
@@ -126,11 +137,35 @@ The database will be composed of a collection of parquet files, a format with hi
 The main partition will be the variables, which means that each variable will be stored in a separate directory.
 If necessary, the data will be partitioned by further variables (as a rule of thumb, each parquet file should not be smaller than 20MB and not bigger than 2GB).
 
+### Base grid
+
+To structure a collection of data that presents different natures, I will transform all the variables into a standard grid system.
+The grid system will be composed of 0.2 degrees cells (40km x 40km), which should be a balanced compromise between detail and computational cost.
+
+```{r}
+#| label: fig-base-grid
+#| fig-cap: "Model grid, in which variables were transformed to"
+#| fig-asp: 1
+#| echo: false
+
+load("./figs/base_grid.rdata")
+
+viz_grid
+
+```
+
+Each grid cell will contain an observation, for each year, for all the variables. 
+Only pixels that contained natural vegetation in the first year of the analysis will be considered valid.
+
 ### Variables
+
+The variables used in this project will serve to predict deforestation and its impacts on social and environmental dimensions.
+The variables may present diverse nature, such as quantitative and qualitative.
+A major part of this project will be figuring out the most appropriate way to translate these variables in an organized matrix that will be supplied to the models.
 
 ```{r}
 #| label: tbl-variables
-#| tbl-cap: "Variables used in this project."
+#| tbl-cap: Variables used in this project.
 #| echo: false
 
 htmltools::includeHTML("./figs/variables_table.html")
@@ -139,7 +174,10 @@ htmltools::includeHTML("./figs/variables_table.html")
 
 #### Biomes
 
+The biomes limits are provided by IBGE.
+The extent of the biomes have been changing over the years, and since we are working on a time series, the extent will dependent on the year.
 
+The downloaded data was filtered to contain only the limits of the Amazon and Cerrado biomes.
 
 #### Deforestation
 
@@ -157,7 +195,7 @@ The UC vectors are intersected to the base grid, and the area of each UC inside 
 
 #### Indigenous Lands
 
-
+The limits of Indigenous Lands (IL) inside the Amazon and Cerrado are provided by FUNAI.
 
 ## Model Development
 
@@ -237,5 +275,3 @@ To understand and interpret the predictions made by the models, I will employ a 
 These methods are model-agnostic, meaning they can be applied to any regression or classification model, regardless of its underlying structure or parameters.
 By using these techniques, I aim to gain a deeper understanding of the relationships between the variables and how they contribute to the predictions.
 This information will enable assessing the reliability of the models and validity of their results.
-
-## Future Projections
