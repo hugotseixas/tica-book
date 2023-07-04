@@ -1,20 +1,11 @@
 # Objectives
 
-The present work is composed of three main objectives, accompanied by related questions:
+The main objective of this project is to develop a framework to model deforestation and its impacts, using variables of different dimensions (environment and society) to predict quantitative estimations of deforestation and its social and environmental impacts. The main objective will be composed of related questions:
 
-1.  Predict probability and area of native vegetation suppression in the Amazon and Cerrado;
-    a.  What are the main drivers of native vegetation suppression?
-    b.  How do drivers interact among them?
-2.  Predict land cover transition trajectories after native vegetation suppression;
-    a.  What are the main drivers of land cover dynamics after native vegetation suppression?
-    b.  How do drivers interact among them?
-    c.  What are the main patterns for future projections in the Amazon and Cerrado?
-3.  Predict the impact of land cover transitions over environmental and social variables;
-    a.  What is the importance of land cover transitions in predicting environmental and social variables?
-    b.  Does land-use transitions interact with other drivers of environmental and social variables?
-    c.  What are the expected social and environmental projections in different land-cover trajectories for the near future?
-    d.  Do predictions from both biomes show a relation between each other? 
+(1) What are the qualitative and quantitative variables that are associated with deforestation and its impacts?
 
-The three objectives, in conjunction, will provide an in-depth analysis of how to avoid native vegetation suppression and mitigate its negative impacts.
+(2) What are the possibilities and challenges to translate these variables in a common format to provide information to the models?
 
+(3) What are the importance of the variables, and how do they interact between one another, according to the models?
 
+(4) What inferences can be made about the model results and policies being applied to curb deforestation?
