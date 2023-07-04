@@ -32,6 +32,7 @@ book:
     - 06_conclusions.qmd
     - references.qmd
   appendices:
+    - 12_interviews.qmd
     - 11_model.qmd
 
 bibliography: references.bib
