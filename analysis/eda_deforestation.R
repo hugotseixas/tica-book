@@ -31,13 +31,6 @@ conflicts_prefer(dplyr::filter)
 
 aoi <- read_sf("data/external/aoi/aoi.fgb")
 
-aoi <-
-  smoothr::smooth(
-    st_simplify(aoi, dTolerance = 5000),
-    method = "ksmooth",
-    smoothness = 3
-  )
-
 defo <- read_parquet("data/deforestation.parquet")
 
 base_grid <- read_sf("data/base_grid.fgb")
@@ -84,7 +77,7 @@ create_visualizations(
   viz_title = "Cumulative Deforestation Area",
   x_title = "Deforestation Area (ha)",
   y_title = "Cumulative Percentage (%)",
-  quantiles_list = c(0.05, 0.25, 0.5, 0.75, 0.95, 0.99, 1),
+  quantiles_list = c(0.05, 0.25, 0.5, 0.75, 0.95, 1),
   scale_transform = "log",
   out_filename = "deforestation_cumulative",
   out_path = "figs/eda/"
@@ -152,6 +145,14 @@ viz_data <- read_parquet("data/deforestation.parquet") |>
   summarise(
     deforestation_area = sum(deforestation_area),
     .by = c("region_name", "natural_class")
+  ) |>
+  mutate(
+    natural_class = case_when(
+      natural_class == 100 ~ "Forest",
+      natural_class == 200 ~ "Savanna",
+      natural_class == 300 ~ "Wetland",
+      natural_class == 400 ~ "Grassland"
+    )
   )
 
 create_visualizations(
@@ -179,6 +180,15 @@ viz_data <- read_parquet("data/deforestation.parquet") |>
   summarise(
     deforestation_area = sum(deforestation_area),
     .by = c("region_name", "human_class")
+  ) |>
+  mutate(
+    human_class = case_when(
+      human_class == 1 ~ "Pasture",
+      human_class == 2 ~ "Temporary Crops",
+      human_class == 3 ~ "Perennial Crops",
+      human_class == 4 ~ "Forest Plantantion",
+      human_class == 5 ~ "Mosaic of Uses",
+    )
   )
 
 create_visualizations(
