@@ -42,7 +42,7 @@ The results will be organized by sections and subsections:
         - Test explanations;
     b) Land use transition model;
     c) ...
-4. Future Projection results;
+4. Model interpretation;
 
 The study will present three main quantitative results based on quantitative data: predictions on vegetation suppression, land use transitions, and social and environmental variables. 
 Our predictions on vegetation suppression will show the likelihood and extent of removal events, serving as a basis for predicting the land use changes of the affected grid cells. 
@@ -54,16 +54,6 @@ Furthermore, based on my confidence in the models and their results, I will make
 This will allow me to go beyond the mere presentation of the predictions and offer insights into the relationships between the variables, the causes of the observed patterns, and the implications of the results for the environment and human well-being. 
 However, it is important to note that I will only take this step if I feel confident in the models and their results, as making inferences requires a strong foundation of knowledge and understanding.
 
-```{r}
-#| label: fig-color-scale
-#| fig-cap: "Model grid, in which variables were transformed to"
-#| fig-asp: 0.2
-#| echo: false
-
-color_scale
-
-```
-
 ## Modelling variables
 
 In this section I will analyse each variable of my model. 
@@ -72,11 +62,23 @@ So the figures and tables do not show distributions of the raw observations/esti
 
 ```{r}
 #| label: fig-base-grid
-#| fig-cap: "Model grid, in which variables were transformed to"
+#| fig-cap: Model grid, in which variables were transformed into.
 #| fig-asp: 1
 #| echo: false
 
 viz_grid_area
+
+```
+
+All visualizations about the variables will follow a common color scale, to facilitate their interpretation along the document (@fig-color-scale). The minimum values will be represented by light grey color, values close to the median will show a yellow color, and maximum values as dark red colors.
+
+```{r}
+#| label: fig-color-scale
+#| fig-cap: Color scale used to visualize the variables properties.
+#| fig-asp: 0.2
+#| echo: false
+
+color_scale
 
 ```
 
@@ -88,6 +90,7 @@ What is deforestation? Even worse, what is a forest? A recent research reviewed 
 
 TODO: 
 
+- Choose between therms: deforestation or native vegetation suppression
 - Tell in general the definitions for forests and deforestation (check the one proposed by oca-2021)
 - Discuss about the problematic of forests definitions, which can have serious negative impacts to savannas, such as a good part of the Cerrado!
 - Explain the definitions used by PRODES (INPE) to identify deforestation in the Cerrado and Amazon
@@ -102,7 +105,7 @@ READ:
 
 ```{r}
 #| label: tbl-deforestation_summary
-#| tbl-cap: "Summary table of deforestation.."
+#| tbl-cap: "Summary table of deforestation."
 #| echo: false
 
 htmltools::includeHTML("./figs/eda/deforestation_table.html")
@@ -119,8 +122,6 @@ deforestation_histogram
 
 ```
 
-
-
 ```{r}
 #| label: fig-deforestation-cumsum
 #| fig-cap: "Cumulative percent of the deforestation area."
@@ -130,8 +131,6 @@ deforestation_histogram
 deforestation_cumulative
 
 ```
-
-
 
 ```{r}
 #| label: fig-deforestation-spatial-distribution
@@ -156,7 +155,7 @@ deforestation_timeseries
 
 ```{r}
 #| label: fig-deforestation-colsum-natural
-#| fig-cap: "Time series of deforestation area."
+#| fig-cap: "Deforested area of different land cover."
 #| fig-alt: "Time series."
 #| fig-asp: 0.70
 #| echo: false
@@ -167,7 +166,7 @@ deforestation_colsum_natural
 
 ```{r}
 #| label: fig-deforestation-colsum-human
-#| fig-cap: "Time series of deforestation area."
+#| fig-cap: "Area of established LULC after deforestation."
 #| fig-alt: "Time series."
 #| fig-asp: 0.70
 #| echo: false
@@ -176,8 +175,12 @@ deforestation_colsum_human
 
 ```
 
-### Conservation Units
+::: {.callout-important collapse="true"}
 
+TODO: 
 
-### Indigenous Lands
+- Fix deforestation area
+- Set the name of LULC classes
+- Translate biomes names
 
+:::
