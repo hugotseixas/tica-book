@@ -165,8 +165,14 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="./12_interviews.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">A</span>&nbsp; <span class="chapter-title">Interviews</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="./11_model.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">A</span>&nbsp; <span class="chapter-title">Model</span></span></a>
+ <span class="menu-text"><span class="chapter-number">B</span>&nbsp; <span class="chapter-title">Model</span></span></a>
   </div>
 </li>
       </ul>
@@ -182,13 +188,17 @@ ul.task-list li input[type="checkbox"] {
    
   <ul>
   <li><a href="#literature-review" id="toc-literature-review" class="nav-link active" data-scroll-target="#literature-review"><span class="header-section-number">3.1</span> Literature Review</a></li>
-  <li><a href="#experts-survey" id="toc-experts-survey" class="nav-link" data-scroll-target="#experts-survey"><span class="header-section-number">3.2</span> Experts Survey</a></li>
+  <li><a href="#experts-interviews" id="toc-experts-interviews" class="nav-link" data-scroll-target="#experts-interviews"><span class="header-section-number">3.2</span> Experts Interviews</a>
+  <ul class="collapse">
+  <li><a href="#questions" id="toc-questions" class="nav-link" data-scroll-target="#questions"><span class="header-section-number">3.2.1</span> Questions</a></li>
+  <li><a href="#interactive-activity" id="toc-interactive-activity" class="nav-link" data-scroll-target="#interactive-activity"><span class="header-section-number">3.2.2</span> Interactive activity</a></li>
+  </ul></li>
   <li><a href="#database-structuring" id="toc-database-structuring" class="nav-link" data-scroll-target="#database-structuring"><span class="header-section-number">3.3</span> Database Structuring</a>
   <ul class="collapse">
-  <li><a href="#variables" id="toc-variables" class="nav-link" data-scroll-target="#variables"><span class="header-section-number">3.3.1</span> Variables</a></li>
+  <li><a href="#base-grid" id="toc-base-grid" class="nav-link" data-scroll-target="#base-grid"><span class="header-section-number">3.3.1</span> Base grid</a></li>
+  <li><a href="#variables" id="toc-variables" class="nav-link" data-scroll-target="#variables"><span class="header-section-number">3.3.2</span> Variables</a></li>
   </ul></li>
   <li><a href="#model-development" id="toc-model-development" class="nav-link" data-scroll-target="#model-development"><span class="header-section-number">3.4</span> Model Development</a></li>
-  <li><a href="#future-projections" id="toc-future-projections" class="nav-link" data-scroll-target="#future-projections"><span class="header-section-number">3.5</span> Future Projections</a></li>
   </ul>
 </nav>
     </div>
@@ -215,10 +225,10 @@ ul.task-list li input[type="checkbox"] {
 <p>The study will rely on available data to develop regression and classification models to predict native vegetation suppression and its impacts. To achieve the proposed goal, I will divide the work into five major parts:</p>
 <ol type="1">
 <li><p>Literature overview of the main drivers of the expected outcomes (vegetation suppression, land cover transition, social and environmental variables);</p></li>
-<li><p>Experts survey;</p></li>
+<li><p>Experts interviews;</p></li>
 <li><p>Screening for available data and development of structured data collection;</p></li>
 <li><p>Development of models;</p></li>
-<li><p>Future projections;</p></li>
+<li><p>Models interpretations;</p></li>
 </ol>
 <div class="cell" data-fig-responsive="true" data-layout-align="center">
 <div class="cell-output-display">
@@ -229,16 +239,15 @@ ul.task-list li input[type="checkbox"] {
     A[Literature Review] --&gt; B[Available Data]
     A[Literature Review] --&gt; C[Database structuring]
     B[Available Data] --&gt; C[Database structuring]
-    D[Experts Survey] --&gt; C[Database structuring]
+    D[Experts interviews] --&gt; C[Database structuring]
     C[Database structuring] --&gt; E[Models Development]
-    D[Experts Survey] --&gt; E[Models Development]
-    D[Experts Survey] --&gt; F[Projection Scenarios]
-    E[Models Development] --&gt; G[Projection Estimations]
-    F[Projection Scenarios] --&gt; G[Projection Estimations]
+    A[Literature Review] --&gt; E[Models Development]
+    D[Experts interviews] --&gt; E[Models Development]
+    E[Models Development] --&gt; G[Models Interpretations]
 
 </pre>
 </div>
-<p></p><figcaption class="figure-caption">Figure&nbsp;3.1: Mermaid diagram</figcaption><p></p>
+<p></p><figcaption class="figure-caption">Figure&nbsp;3.1: Workflow of the project</figcaption><p></p>
 </figure>
 </div>
 </div>
@@ -248,7 +257,7 @@ ul.task-list li input[type="checkbox"] {
 <p>The literature review will provide a theoretical and practical basis for the modeling section. Information about the key variables, their manipulation process, and the analysis techniques used to reach the results.</p>
 <p>The database structuring will store all the relevant data in a single file structure to facilitate the modeling process.</p>
 <p>The modeling process will follow standard procedures and libraries, with the possibility to implement different techniques.</p>
-<p>Future projections will serve as a bridge to discuss public policy planning to mitigate the negative impacts of native vegetation suppression in the Amazon and Cerrado.</p>
+<p>Models interpretation will be performed to understand the importance of the variables and their interactions, and to discuss public policy planning to mitigate the negative impacts of native vegetation suppression in the Amazon and Cerrado.</p>
 <section id="literature-review" class="level2" data-number="3.1">
 <h2 data-number="3.1" class="anchored" data-anchor-id="literature-review"><span class="header-section-number">3.1</span> Literature Review</h2>
 <p>The literature review will address different topics. For all of them, I will adopt a hybrid approach of database searches combined with snowball searches.</p>
@@ -269,7 +278,7 @@ ul.task-list li input[type="checkbox"] {
 
 </pre>
 </div>
-<p></p><figcaption class="figure-caption">Figure&nbsp;3.2: Mermaid diagram</figcaption><p></p>
+<p></p><figcaption class="figure-caption">Figure&nbsp;3.2: Workflow of literature review</figcaption><p></p>
 </figure>
 </div>
 </div>
@@ -278,23 +287,32 @@ ul.task-list li input[type="checkbox"] {
 </p>
 <p>The literature review will answer questions about variables to be predicted in this project. For each variable, I want to explore the main drivers that cause them, how they relate to each other, and the methods used to estimate the effects and interactions.</p>
 </section>
-<section id="experts-survey" class="level2" data-number="3.2">
-<h2 data-number="3.2" class="anchored" data-anchor-id="experts-survey"><span class="header-section-number">3.2</span> Experts Survey</h2>
+<section id="experts-interviews" class="level2" data-number="3.2">
+<h2 data-number="3.2" class="anchored" data-anchor-id="experts-interviews"><span class="header-section-number">3.2</span> Experts Interviews</h2>
+<p>The objective of the interviews is to explore a diverse range of possible causes of deforestation, and its impacts on the environment and society.</p>
+<p>The target participants are researchers with past experience on analyzing deforestation in the Amazon or Cerrado biomes.</p>
+<p>The prospection of potential participants will be done by snowball sampling.</p>
+<p>The interviews will consist of open questions and an interactive activity of building a Directed Acyclic Graph (DAG) with the participants.</p>
+<section id="questions" class="level3" data-number="3.2.1">
+<h3 data-number="3.2.1" class="anchored" data-anchor-id="questions"><span class="header-section-number">3.2.1</span> Questions</h3>
+<p>The open questions will serve to develop a context of the participant experience and perspectives on deforestation:</p>
+<ul>
+<li><p>What were your past experiences on deforestation?</p></li>
+<li><p>What were the regions that you developed projects related to deforestation?</p></li>
+<li><p>What is your perspective on deforestation, taking in account sustainability and human development?</p></li>
+<li><p>Based on your experience, what are the main conditions that facilitate the occurrence of deforestation?</p></li>
+</ul>
+</section>
+<section id="interactive-activity" class="level3" data-number="3.2.2">
+<h3 data-number="3.2.2" class="anchored" data-anchor-id="interactive-activity"><span class="header-section-number">3.2.2</span> Interactive activity</h3>
+<p>The objective of developing DAGs with different participants is to explore a diversity of possibilities to model deforestation. The use of DAGs before any modelling exercise (such as feature selection) is useful to reflect about the phenomena, explore potential variables, look for possible confounders, colliders and mediators, and finally choose an appropriate model.</p>
+<p>It is also possible to compare DAGs (since they are graphs!), so it will open an opportunity to explore convergences and divergences between participants.</p>
+<p>The DAGs will be create during the interview with the use of a interactive tool.</p>
+</section>
 </section>
 <section id="database-structuring" class="level2" data-number="3.3">
 <h2 data-number="3.3" class="anchored" data-anchor-id="database-structuring"><span class="header-section-number">3.3</span> Database Structuring</h2>
-<p>The database will contain data from different domains, which can be available in diverse formats and structures. To make the modeling process more efficient and transparent, all variables of interest must be organized coherently. To structure a collection of data that presents different natures, I will transform all the variables into a standard grid system. The grid system will be composed of 0.2 degrees cells (40km x 40km), which should be a balanced compromise between detail and computational cost.</p>
-<div class="cell" data-fig.asp="1">
-<div class="cell-output-display">
-<div id="fig-base-grid" class="quarto-figure quarto-figure-center anchored">
-<figure class="figure">
-<p><img src="03_methods_files/figure-html/fig-base-grid-1.png" class="img-fluid figure-img" width="672"></p>
-<p></p><figcaption class="figure-caption">Figure&nbsp;3.3: Model grid, in which variables were transformed to</figcaption><p></p>
-</figure>
-</div>
-</div>
-</div>
-<p>Each grid cell will contain an observation, for each year, for all the variables. Only pixels that contained natural vegetation in the first year of the analysis will be considered valid.</p>
+<p>The database will contain data from different domains, which can be available in diverse formats and structures. To make the modeling process more efficient and transparent, all variables of interest must be organized coherently.</p>
 <p>The process to create the database will consist of accessing the data sources, downloading the data to the local environment, transforming and organizing the data to the grid (if the data source provides any pre-processing tool before downloading the data, it should be done that way), and store in the local environment.</p>
 <div class="cell" data-fig-responsive="true" data-layout-align="center">
 <div class="cell-output-display">
@@ -309,14 +327,30 @@ ul.task-list li input[type="checkbox"] {
 
 </pre>
 </div>
-<p></p><figcaption class="figure-caption">Figure&nbsp;3.4: Mermaid diagram</figcaption><p></p>
+<p></p><figcaption class="figure-caption">Figure&nbsp;3.3: Mermaid diagram</figcaption><p></p>
 </figure>
 </div>
 </div>
 </div>
 <p>The data will be stored in a nested directories database with hive-style partitioning. The database will be composed of a collection of parquet files, a format with high compression, that facilitates processing large volumes of data. The main partition will be the variables, which means that each variable will be stored in a separate directory. If necessary, the data will be partitioned by further variables (as a rule of thumb, each parquet file should not be smaller than 20MB and not bigger than 2GB).</p>
-<section id="variables" class="level3" data-number="3.3.1">
-<h3 data-number="3.3.1" class="anchored" data-anchor-id="variables"><span class="header-section-number">3.3.1</span> Variables</h3>
+<section id="base-grid" class="level3" data-number="3.3.1">
+<h3 data-number="3.3.1" class="anchored" data-anchor-id="base-grid"><span class="header-section-number">3.3.1</span> Base grid</h3>
+<p>To structure a collection of data that presents different natures, I will transform all the variables into a standard grid system. The grid system will be composed of 0.2 degrees cells (40km x 40km), which should be a balanced compromise between detail and computational cost.</p>
+<div class="cell" data-fig.asp="1">
+<div class="cell-output-display">
+<div id="fig-base-grid" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="03_methods_files/figure-html/fig-base-grid-1.png" class="img-fluid figure-img" width="672"></p>
+<p></p><figcaption class="figure-caption">Figure&nbsp;3.4: Model grid, in which variables were transformed to</figcaption><p></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Each grid cell will contain an observation, for each year, for all the variables. Only pixels that contained natural vegetation in the first year of the analysis will be considered valid.</p>
+</section>
+<section id="variables" class="level3" data-number="3.3.2">
+<h3 data-number="3.3.2" class="anchored" data-anchor-id="variables"><span class="header-section-number">3.3.2</span> Variables</h3>
+<p>The variables used in this project will serve to predict deforestation and its impacts on social and environmental dimensions. The variables may present diverse nature, such as quantitative and qualitative. A major part of this project will be figuring out the most appropriate way to translate these variables in an organized matrix that will be supplied to the models.</p>
 <div class="cell">
 <div class="cell-output-display">
 <div id="tbl-variables" class="anchored">
@@ -330,23 +364,23 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<div id="mappbgmpnh" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-  <style>#mappbgmpnh table {
+<div id="dainwvuyok" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+  <style>#dainwvuyok table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#mappbgmpnh thead, #mappbgmpnh tbody, #mappbgmpnh tfoot, #mappbgmpnh tr, #mappbgmpnh td, #mappbgmpnh th {
+#dainwvuyok thead, #dainwvuyok tbody, #dainwvuyok tfoot, #dainwvuyok tr, #dainwvuyok td, #dainwvuyok th {
   border-style: none;
 }
 
-#mappbgmpnh p {
+#dainwvuyok p {
   margin: 0;
   padding: 0;
 }
 
-#mappbgmpnh .gt_table {
+#dainwvuyok .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -372,12 +406,12 @@ ul.task-list li input[type="checkbox"] {
   border-left-color: #D3D3D3;
 }
 
-#mappbgmpnh .gt_caption {
+#dainwvuyok .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#mappbgmpnh .gt_title {
+#dainwvuyok .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -389,7 +423,7 @@ ul.task-list li input[type="checkbox"] {
   border-bottom-width: 0;
 }
 
-#mappbgmpnh .gt_subtitle {
+#dainwvuyok .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -401,7 +435,7 @@ ul.task-list li input[type="checkbox"] {
   border-top-width: 0;
 }
 
-#mappbgmpnh .gt_heading {
+#dainwvuyok .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -413,13 +447,13 @@ ul.task-list li input[type="checkbox"] {
   border-right-color: #D3D3D3;
 }
 
-#mappbgmpnh .gt_bottom_border {
+#dainwvuyok .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #5F5F5F;
 }
 
-#mappbgmpnh .gt_col_headings {
+#dainwvuyok .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #5F5F5F;
@@ -434,7 +468,7 @@ ul.task-list li input[type="checkbox"] {
   border-right-color: #D3D3D3;
 }
 
-#mappbgmpnh .gt_col_heading {
+#dainwvuyok .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -454,7 +488,7 @@ ul.task-list li input[type="checkbox"] {
   overflow-x: hidden;
 }
 
-#mappbgmpnh .gt_column_spanner_outer {
+#dainwvuyok .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -466,15 +500,15 @@ ul.task-list li input[type="checkbox"] {
   padding-right: 4px;
 }
 
-#mappbgmpnh .gt_column_spanner_outer:first-child {
+#dainwvuyok .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#mappbgmpnh .gt_column_spanner_outer:last-child {
+#dainwvuyok .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#mappbgmpnh .gt_column_spanner {
+#dainwvuyok .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #5F5F5F;
@@ -486,11 +520,11 @@ ul.task-list li input[type="checkbox"] {
   width: 100%;
 }
 
-#mappbgmpnh .gt_spanner_row {
+#dainwvuyok .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#mappbgmpnh .gt_group_heading {
+#dainwvuyok .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -516,7 +550,7 @@ ul.task-list li input[type="checkbox"] {
   text-align: left;
 }
 
-#mappbgmpnh .gt_empty_group_heading {
+#dainwvuyok .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -531,15 +565,15 @@ ul.task-list li input[type="checkbox"] {
   vertical-align: middle;
 }
 
-#mappbgmpnh .gt_from_md > :first-child {
+#dainwvuyok .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#mappbgmpnh .gt_from_md > :last-child {
+#dainwvuyok .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#mappbgmpnh .gt_row {
+#dainwvuyok .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -558,7 +592,7 @@ ul.task-list li input[type="checkbox"] {
   overflow-x: hidden;
 }
 
-#mappbgmpnh .gt_stub {
+#dainwvuyok .gt_stub {
   color: #FFFFFF;
   background-color: #5F5F5F;
   font-size: 100%;
@@ -571,7 +605,7 @@ ul.task-list li input[type="checkbox"] {
   padding-right: 5px;
 }
 
-#mappbgmpnh .gt_stub_row_group {
+#dainwvuyok .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -585,15 +619,15 @@ ul.task-list li input[type="checkbox"] {
   vertical-align: top;
 }
 
-#mappbgmpnh .gt_row_group_first td {
+#dainwvuyok .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#mappbgmpnh .gt_row_group_first th {
+#dainwvuyok .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#mappbgmpnh .gt_summary_row {
+#dainwvuyok .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -603,16 +637,16 @@ ul.task-list li input[type="checkbox"] {
   padding-right: 5px;
 }
 
-#mappbgmpnh .gt_first_summary_row {
+#dainwvuyok .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #5F5F5F;
 }
 
-#mappbgmpnh .gt_first_summary_row.thick {
+#dainwvuyok .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#mappbgmpnh .gt_last_summary_row {
+#dainwvuyok .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -622,7 +656,7 @@ ul.task-list li input[type="checkbox"] {
   border-bottom-color: #5F5F5F;
 }
 
-#mappbgmpnh .gt_grand_summary_row {
+#dainwvuyok .gt_grand_summary_row {
   color: #333333;
   background-color: #D5D5D5;
   text-transform: inherit;
@@ -632,7 +666,7 @@ ul.task-list li input[type="checkbox"] {
   padding-right: 5px;
 }
 
-#mappbgmpnh .gt_first_grand_summary_row {
+#dainwvuyok .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -642,7 +676,7 @@ ul.task-list li input[type="checkbox"] {
   border-top-color: #5F5F5F;
 }
 
-#mappbgmpnh .gt_last_grand_summary_row_top {
+#dainwvuyok .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -652,11 +686,11 @@ ul.task-list li input[type="checkbox"] {
   border-bottom-color: #5F5F5F;
 }
 
-#mappbgmpnh .gt_striped {
+#dainwvuyok .gt_striped {
   background-color: #F4F4F4;
 }
 
-#mappbgmpnh .gt_table_body {
+#dainwvuyok .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #5F5F5F;
@@ -665,7 +699,7 @@ ul.task-list li input[type="checkbox"] {
   border-bottom-color: #5F5F5F;
 }
 
-#mappbgmpnh .gt_footnotes {
+#dainwvuyok .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -679,7 +713,7 @@ ul.task-list li input[type="checkbox"] {
   border-right-color: #D3D3D3;
 }
 
-#mappbgmpnh .gt_footnote {
+#dainwvuyok .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -688,7 +722,7 @@ ul.task-list li input[type="checkbox"] {
   padding-right: 5px;
 }
 
-#mappbgmpnh .gt_sourcenotes {
+#dainwvuyok .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -702,7 +736,7 @@ ul.task-list li input[type="checkbox"] {
   border-right-color: #D3D3D3;
 }
 
-#mappbgmpnh .gt_sourcenote {
+#dainwvuyok .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -710,63 +744,63 @@ ul.task-list li input[type="checkbox"] {
   padding-right: 5px;
 }
 
-#mappbgmpnh .gt_left {
+#dainwvuyok .gt_left {
   text-align: left;
 }
 
-#mappbgmpnh .gt_center {
+#dainwvuyok .gt_center {
   text-align: center;
 }
 
-#mappbgmpnh .gt_right {
+#dainwvuyok .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#mappbgmpnh .gt_font_normal {
+#dainwvuyok .gt_font_normal {
   font-weight: normal;
 }
 
-#mappbgmpnh .gt_font_bold {
+#dainwvuyok .gt_font_bold {
   font-weight: bold;
 }
 
-#mappbgmpnh .gt_font_italic {
+#dainwvuyok .gt_font_italic {
   font-style: italic;
 }
 
-#mappbgmpnh .gt_super {
+#dainwvuyok .gt_super {
   font-size: 65%;
 }
 
-#mappbgmpnh .gt_footnote_marks {
+#dainwvuyok .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#mappbgmpnh .gt_asterisk {
+#dainwvuyok .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#mappbgmpnh .gt_indent_1 {
+#dainwvuyok .gt_indent_1 {
   text-indent: 5px;
 }
 
-#mappbgmpnh .gt_indent_2 {
+#dainwvuyok .gt_indent_2 {
   text-indent: 10px;
 }
 
-#mappbgmpnh .gt_indent_3 {
+#dainwvuyok .gt_indent_3 {
   text-indent: 15px;
 }
 
-#mappbgmpnh .gt_indent_4 {
+#dainwvuyok .gt_indent_4 {
   text-indent: 20px;
 }
 
-#mappbgmpnh .gt_indent_5 {
+#dainwvuyok .gt_indent_5 {
   text-indent: 25px;
 }
 </style>
@@ -777,71 +811,76 @@ ul.task-list li input[type="checkbox"] {
       <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" scope="col" id="<strong>Variable</strong>"><strong>Variable</strong></th>
       <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" scope="col" id="<strong>Source</strong>"><strong>Source</strong></th>
       <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" scope="col" id="<strong>Creator</strong>"><strong>Creator</strong></th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" scope="col" id="format">format</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" scope="col" id="<strong>Format</strong>"><strong>Format</strong></th>
       <th class="gt_col_heading gt_columns_bottom_border gt_center" rowspan="1" colspan="1" scope="col" id="<strong>License</strong>"><strong>License</strong></th>
     </tr>
   </thead>
   <tbody class="gt_table_body">
-    <tr><td headers="variable" class="gt_row gt_left">Deforestation</td>
-<td headers="source" class="gt_row gt_left">Mapbiomas</td>
-<td headers="creator" class="gt_row gt_left">Mapbiomas</td>
-<td headers="format" class="gt_row gt_left">Spatial Matrix</td>
+    <tr><td headers="variable" class="gt_row gt_left">Biomes</td>
+<td headers="source" class="gt_row gt_left">IPEA</td>
+<td headers="creator" class="gt_row gt_left">IBGE</td>
+<td headers="format" class="gt_row gt_left">Spatial Vector</td>
 <td headers="license" class="gt_row gt_center">—</td></tr>
-    <tr><td headers="variable" class="gt_row gt_left gt_striped">Natural Vegetation</td>
+    <tr><td headers="variable" class="gt_row gt_left gt_striped">Deforestation</td>
 <td headers="source" class="gt_row gt_left gt_striped">Mapbiomas</td>
 <td headers="creator" class="gt_row gt_left gt_striped">Mapbiomas</td>
 <td headers="format" class="gt_row gt_left gt_striped">Spatial Matrix</td>
 <td headers="license" class="gt_row gt_center gt_striped">—</td></tr>
-    <tr><td headers="variable" class="gt_row gt_left">Antropic Cover</td>
+    <tr><td headers="variable" class="gt_row gt_left">Natural Vegetation</td>
 <td headers="source" class="gt_row gt_left">Mapbiomas</td>
 <td headers="creator" class="gt_row gt_left">Mapbiomas</td>
 <td headers="format" class="gt_row gt_left">Spatial Matrix</td>
 <td headers="license" class="gt_row gt_center">—</td></tr>
-    <tr><td headers="variable" class="gt_row gt_left gt_striped">Conservation Units</td>
-<td headers="source" class="gt_row gt_left gt_striped">IPEA</td>
-<td headers="creator" class="gt_row gt_left gt_striped">MMAMC</td>
-<td headers="format" class="gt_row gt_left gt_striped">Spatial Vector</td>
+    <tr><td headers="variable" class="gt_row gt_left gt_striped">Antropic Cover</td>
+<td headers="source" class="gt_row gt_left gt_striped">Mapbiomas</td>
+<td headers="creator" class="gt_row gt_left gt_striped">Mapbiomas</td>
+<td headers="format" class="gt_row gt_left gt_striped">Spatial Matrix</td>
 <td headers="license" class="gt_row gt_center gt_striped">—</td></tr>
-    <tr><td headers="variable" class="gt_row gt_left">Indigenous Lands</td>
-<td headers="source" class="gt_row gt_left">FUNAI</td>
-<td headers="creator" class="gt_row gt_left">FUNAI</td>
+    <tr><td headers="variable" class="gt_row gt_left">Conservation Units</td>
+<td headers="source" class="gt_row gt_left">IPEA</td>
+<td headers="creator" class="gt_row gt_left">MMAMC</td>
 <td headers="format" class="gt_row gt_left">Spatial Vector</td>
 <td headers="license" class="gt_row gt_center">—</td></tr>
-    <tr><td headers="variable" class="gt_row gt_left gt_striped">Roads</td>
-<td headers="source" class="gt_row gt_left gt_striped">DNIT</td>
-<td headers="creator" class="gt_row gt_left gt_striped">—</td>
+    <tr><td headers="variable" class="gt_row gt_left gt_striped">Indigenous Lands</td>
+<td headers="source" class="gt_row gt_left gt_striped">FUNAI</td>
+<td headers="creator" class="gt_row gt_left gt_striped">FUNAI</td>
 <td headers="format" class="gt_row gt_left gt_striped">Spatial Vector</td>
 <td headers="license" class="gt_row gt_center gt_striped">—</td></tr>
-    <tr><td headers="variable" class="gt_row gt_left">Rural Property Limits</td>
-<td headers="source" class="gt_row gt_left">MMAMC</td>
+    <tr><td headers="variable" class="gt_row gt_left">Roads</td>
+<td headers="source" class="gt_row gt_left">DNIT</td>
 <td headers="creator" class="gt_row gt_left">—</td>
 <td headers="format" class="gt_row gt_left">Spatial Vector</td>
 <td headers="license" class="gt_row gt_center">—</td></tr>
-    <tr><td headers="variable" class="gt_row gt_left gt_striped">Population</td>
-<td headers="source" class="gt_row gt_left gt_striped">IBGE</td>
+    <tr><td headers="variable" class="gt_row gt_left gt_striped">Rural Property Limits</td>
+<td headers="source" class="gt_row gt_left gt_striped">MMAMC</td>
 <td headers="creator" class="gt_row gt_left gt_striped">—</td>
-<td headers="format" class="gt_row gt_left gt_striped">—</td>
+<td headers="format" class="gt_row gt_left gt_striped">Spatial Vector</td>
 <td headers="license" class="gt_row gt_center gt_striped">—</td></tr>
-    <tr><td headers="variable" class="gt_row gt_left">Public Policies</td>
-<td headers="source" class="gt_row gt_left">—</td>
+    <tr><td headers="variable" class="gt_row gt_left">Population</td>
+<td headers="source" class="gt_row gt_left">IBGE</td>
 <td headers="creator" class="gt_row gt_left">—</td>
-<td headers="format" class="gt_row gt_left">Text</td>
+<td headers="format" class="gt_row gt_left">Tabular</td>
 <td headers="license" class="gt_row gt_center">—</td></tr>
-    <tr><td headers="variable" class="gt_row gt_left gt_striped">Agricultural Production</td>
+    <tr><td headers="variable" class="gt_row gt_left gt_striped">Public Policies</td>
 <td headers="source" class="gt_row gt_left gt_striped">—</td>
 <td headers="creator" class="gt_row gt_left gt_striped">—</td>
-<td headers="format" class="gt_row gt_left gt_striped">—</td>
+<td headers="format" class="gt_row gt_left gt_striped">Text</td>
 <td headers="license" class="gt_row gt_center gt_striped">—</td></tr>
-    <tr><td headers="variable" class="gt_row gt_left">Respiratory Infections</td>
-<td headers="source" class="gt_row gt_left">SUS</td>
+    <tr><td headers="variable" class="gt_row gt_left">Agricultural Production</td>
+<td headers="source" class="gt_row gt_left">—</td>
 <td headers="creator" class="gt_row gt_left">—</td>
-<td headers="format" class="gt_row gt_left">—</td>
+<td headers="format" class="gt_row gt_left">Tabular</td>
 <td headers="license" class="gt_row gt_center">—</td></tr>
-    <tr><td headers="variable" class="gt_row gt_left gt_striped">Biodiversity</td>
-<td headers="source" class="gt_row gt_left gt_striped">GBIF</td>
+    <tr><td headers="variable" class="gt_row gt_left gt_striped">Respiratory Infections</td>
+<td headers="source" class="gt_row gt_left gt_striped">SUS</td>
 <td headers="creator" class="gt_row gt_left gt_striped">—</td>
-<td headers="format" class="gt_row gt_left gt_striped">Spatial Vector</td>
+<td headers="format" class="gt_row gt_left gt_striped">Tabular</td>
 <td headers="license" class="gt_row gt_center gt_striped">—</td></tr>
+    <tr><td headers="variable" class="gt_row gt_left">Biodiversity</td>
+<td headers="source" class="gt_row gt_left">GBIF</td>
+<td headers="creator" class="gt_row gt_left">—</td>
+<td headers="format" class="gt_row gt_left">Spatial Vector</td>
+<td headers="license" class="gt_row gt_center">—</td></tr>
   </tbody>
   
   
@@ -852,21 +891,24 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 </div>
-<section id="biomes" class="level4" data-number="3.3.1.1">
-<h4 data-number="3.3.1.1" class="anchored" data-anchor-id="biomes"><span class="header-section-number">3.3.1.1</span> Biomes</h4>
+<section id="biomes" class="level4" data-number="3.3.2.1">
+<h4 data-number="3.3.2.1" class="anchored" data-anchor-id="biomes"><span class="header-section-number">3.3.2.1</span> Biomes</h4>
+<p>The biomes limits are provided by IBGE. The extent of the biomes have been changing over the years, and since we are working on a time series, the extent will dependent on the year.</p>
+<p>The downloaded data was filtered to contain only the limits of the Amazon and Cerrado biomes.</p>
 </section>
-<section id="deforestation" class="level4" data-number="3.3.1.2">
-<h4 data-number="3.3.1.2" class="anchored" data-anchor-id="deforestation"><span class="header-section-number">3.3.1.2</span> Deforestation</h4>
+<section id="deforestation" class="level4" data-number="3.3.2.2">
+<h4 data-number="3.3.2.2" class="anchored" data-anchor-id="deforestation"><span class="header-section-number">3.3.2.2</span> Deforestation</h4>
 <p>The deforestation variable is derived from the MapBiomas land use and land cover collection.</p>
 <p>The downloaded data was cropped to the extent of the Cerrado and Amazon biomes. Than the raster data was aggregated to a coarser spatial resolution, from 30 to 300 meters, assigning the value of the most frequent class to the new pixel (the mode of the 100 pixels that will be aggregated to the 300 meters pixels). This was done to reduce the amount of observations, which would be unfeasible to process, since the original data consists of hundreds of billions pixels.</p>
 </section>
-<section id="conservation-units" class="level4" data-number="3.3.1.3">
-<h4 data-number="3.3.1.3" class="anchored" data-anchor-id="conservation-units"><span class="header-section-number">3.3.1.3</span> Conservation Units</h4>
+<section id="conservation-units" class="level4" data-number="3.3.2.3">
+<h4 data-number="3.3.2.3" class="anchored" data-anchor-id="conservation-units"><span class="header-section-number">3.3.2.3</span> Conservation Units</h4>
 <p>The limits of the Conservation Units (UC) are provided by the Ministry of Environment and Climate Change. These are the conservation units that finished the registration process at the National Register of Conservation Units (CNUC). However, the data used in this project is accessed by the Institute for Applied Economic Research (IPEA), which organizes data in a standard attributes and spatial projection. The data is represented as spatial vectors.</p>
 <p>The UC vectors are intersected to the base grid, and the area of each UC inside each cell is calculated.</p>
 </section>
-<section id="indigenous-lands" class="level4" data-number="3.3.1.4">
-<h4 data-number="3.3.1.4" class="anchored" data-anchor-id="indigenous-lands"><span class="header-section-number">3.3.1.4</span> Indigenous Lands</h4>
+<section id="indigenous-lands" class="level4" data-number="3.3.2.4">
+<h4 data-number="3.3.2.4" class="anchored" data-anchor-id="indigenous-lands"><span class="header-section-number">3.3.2.4</span> Indigenous Lands</h4>
+<p>The limits of Indigenous Lands (IL) inside the Amazon and Cerrado are provided by FUNAI.</p>
 </section>
 </section>
 </section>
@@ -876,23 +918,23 @@ ul.task-list li input[type="checkbox"] {
 <div class="cell">
 <div class="cell-output-display">
 
-<div id="duatruaobp" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#duatruaobp table {
+<div id="eqfhditnvv" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#eqfhditnvv table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#duatruaobp thead, #duatruaobp tbody, #duatruaobp tfoot, #duatruaobp tr, #duatruaobp td, #duatruaobp th {
+#eqfhditnvv thead, #eqfhditnvv tbody, #eqfhditnvv tfoot, #eqfhditnvv tr, #eqfhditnvv td, #eqfhditnvv th {
   border-style: none;
 }
 
-#duatruaobp p {
+#eqfhditnvv p {
   margin: 0;
   padding: 0;
 }
 
-#duatruaobp .gt_table {
+#eqfhditnvv .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -918,12 +960,12 @@ ul.task-list li input[type="checkbox"] {
   border-left-color: #D3D3D3;
 }
 
-#duatruaobp .gt_caption {
+#eqfhditnvv .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#duatruaobp .gt_title {
+#eqfhditnvv .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -935,7 +977,7 @@ ul.task-list li input[type="checkbox"] {
   border-bottom-width: 0;
 }
 
-#duatruaobp .gt_subtitle {
+#eqfhditnvv .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -947,7 +989,7 @@ ul.task-list li input[type="checkbox"] {
   border-top-width: 0;
 }
 
-#duatruaobp .gt_heading {
+#eqfhditnvv .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -959,13 +1001,13 @@ ul.task-list li input[type="checkbox"] {
   border-right-color: #D3D3D3;
 }
 
-#duatruaobp .gt_bottom_border {
+#eqfhditnvv .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#duatruaobp .gt_col_headings {
+#eqfhditnvv .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -980,7 +1022,7 @@ ul.task-list li input[type="checkbox"] {
   border-right-color: #D3D3D3;
 }
 
-#duatruaobp .gt_col_heading {
+#eqfhditnvv .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1000,7 +1042,7 @@ ul.task-list li input[type="checkbox"] {
   overflow-x: hidden;
 }
 
-#duatruaobp .gt_column_spanner_outer {
+#eqfhditnvv .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1012,15 +1054,15 @@ ul.task-list li input[type="checkbox"] {
   padding-right: 4px;
 }
 
-#duatruaobp .gt_column_spanner_outer:first-child {
+#eqfhditnvv .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#duatruaobp .gt_column_spanner_outer:last-child {
+#eqfhditnvv .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#duatruaobp .gt_column_spanner {
+#eqfhditnvv .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -1032,11 +1074,11 @@ ul.task-list li input[type="checkbox"] {
   width: 100%;
 }
 
-#duatruaobp .gt_spanner_row {
+#eqfhditnvv .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#duatruaobp .gt_group_heading {
+#eqfhditnvv .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1062,7 +1104,7 @@ ul.task-list li input[type="checkbox"] {
   text-align: left;
 }
 
-#duatruaobp .gt_empty_group_heading {
+#eqfhditnvv .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -1077,15 +1119,15 @@ ul.task-list li input[type="checkbox"] {
   vertical-align: middle;
 }
 
-#duatruaobp .gt_from_md > :first-child {
+#eqfhditnvv .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#duatruaobp .gt_from_md > :last-child {
+#eqfhditnvv .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#duatruaobp .gt_row {
+#eqfhditnvv .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1104,7 +1146,7 @@ ul.task-list li input[type="checkbox"] {
   overflow-x: hidden;
 }
 
-#duatruaobp .gt_stub {
+#eqfhditnvv .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1117,7 +1159,7 @@ ul.task-list li input[type="checkbox"] {
   padding-right: 5px;
 }
 
-#duatruaobp .gt_stub_row_group {
+#eqfhditnvv .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1131,15 +1173,15 @@ ul.task-list li input[type="checkbox"] {
   vertical-align: top;
 }
 
-#duatruaobp .gt_row_group_first td {
+#eqfhditnvv .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#duatruaobp .gt_row_group_first th {
+#eqfhditnvv .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#duatruaobp .gt_summary_row {
+#eqfhditnvv .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1149,16 +1191,16 @@ ul.task-list li input[type="checkbox"] {
   padding-right: 5px;
 }
 
-#duatruaobp .gt_first_summary_row {
+#eqfhditnvv .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#duatruaobp .gt_first_summary_row.thick {
+#eqfhditnvv .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#duatruaobp .gt_last_summary_row {
+#eqfhditnvv .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1168,7 +1210,7 @@ ul.task-list li input[type="checkbox"] {
   border-bottom-color: #D3D3D3;
 }
 
-#duatruaobp .gt_grand_summary_row {
+#eqfhditnvv .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1178,7 +1220,7 @@ ul.task-list li input[type="checkbox"] {
   padding-right: 5px;
 }
 
-#duatruaobp .gt_first_grand_summary_row {
+#eqfhditnvv .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1188,7 +1230,7 @@ ul.task-list li input[type="checkbox"] {
   border-top-color: #D3D3D3;
 }
 
-#duatruaobp .gt_last_grand_summary_row_top {
+#eqfhditnvv .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1198,11 +1240,11 @@ ul.task-list li input[type="checkbox"] {
   border-bottom-color: #D3D3D3;
 }
 
-#duatruaobp .gt_striped {
+#eqfhditnvv .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#duatruaobp .gt_table_body {
+#eqfhditnvv .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -1211,7 +1253,7 @@ ul.task-list li input[type="checkbox"] {
   border-bottom-color: #D3D3D3;
 }
 
-#duatruaobp .gt_footnotes {
+#eqfhditnvv .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1225,7 +1267,7 @@ ul.task-list li input[type="checkbox"] {
   border-right-color: #D3D3D3;
 }
 
-#duatruaobp .gt_footnote {
+#eqfhditnvv .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -1234,7 +1276,7 @@ ul.task-list li input[type="checkbox"] {
   padding-right: 5px;
 }
 
-#duatruaobp .gt_sourcenotes {
+#eqfhditnvv .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1248,7 +1290,7 @@ ul.task-list li input[type="checkbox"] {
   border-right-color: #D3D3D3;
 }
 
-#duatruaobp .gt_sourcenote {
+#eqfhditnvv .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -1256,63 +1298,63 @@ ul.task-list li input[type="checkbox"] {
   padding-right: 5px;
 }
 
-#duatruaobp .gt_left {
+#eqfhditnvv .gt_left {
   text-align: left;
 }
 
-#duatruaobp .gt_center {
+#eqfhditnvv .gt_center {
   text-align: center;
 }
 
-#duatruaobp .gt_right {
+#eqfhditnvv .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#duatruaobp .gt_font_normal {
+#eqfhditnvv .gt_font_normal {
   font-weight: normal;
 }
 
-#duatruaobp .gt_font_bold {
+#eqfhditnvv .gt_font_bold {
   font-weight: bold;
 }
 
-#duatruaobp .gt_font_italic {
+#eqfhditnvv .gt_font_italic {
   font-style: italic;
 }
 
-#duatruaobp .gt_super {
+#eqfhditnvv .gt_super {
   font-size: 65%;
 }
 
-#duatruaobp .gt_footnote_marks {
+#eqfhditnvv .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#duatruaobp .gt_asterisk {
+#eqfhditnvv .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#duatruaobp .gt_indent_1 {
+#eqfhditnvv .gt_indent_1 {
   text-indent: 5px;
 }
 
-#duatruaobp .gt_indent_2 {
+#eqfhditnvv .gt_indent_2 {
   text-indent: 10px;
 }
 
-#duatruaobp .gt_indent_3 {
+#eqfhditnvv .gt_indent_3 {
   text-indent: 15px;
 }
 
-#duatruaobp .gt_indent_4 {
+#eqfhditnvv .gt_indent_4 {
   text-indent: 20px;
 }
 
-#duatruaobp .gt_indent_5 {
+#eqfhditnvv .gt_indent_5 {
   text-indent: 25px;
 }
 </style>
@@ -1374,9 +1416,6 @@ ul.task-list li input[type="checkbox"] {
 <p><br>
 </p>
 <p>To understand and interpret the predictions made by the models, I will employ a variety of methods. They may include surrogate models, feature interactions, permutation feature importance, counterfactual explanations, and Shapley values. These methods are model-agnostic, meaning they can be applied to any regression or classification model, regardless of its underlying structure or parameters. By using these techniques, I aim to gain a deeper understanding of the relationships between the variables and how they contribute to the predictions. This information will enable assessing the reliability of the models and validity of their results.</p>
-</section>
-<section id="future-projections" class="level2" data-number="3.5">
-<h2 data-number="3.5" class="anchored" data-anchor-id="future-projections"><span class="header-section-number">3.5</span> Future Projections</h2>
 
 
 </section>
