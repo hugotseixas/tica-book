@@ -195,6 +195,7 @@ read_csv("data/variables_table.csv") |>
     variable = gt::md("**Variable**"),
     source = gt::md("**Source**"),
     creator = gt::md("**Creator**"),
+    format = gt::md("**Format**"),
     license = gt::md("**License**")
   ) |>
   tab_options(
