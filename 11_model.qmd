@@ -8,9 +8,18 @@ The first algorithm on the list of possibilities is the Bayesian Additive Regres
 
 ::: {.callout-important collapse="true"}
 
-READ:
+READ: spatial models
 
 - https://doi.org/10.3390/ijgi10090600
 - https://doi.org/10.1007/s00168-021-01101-x
+
+READ: causality for feature selection
+
+- https://arxiv.org/pdf/2207.04053.pdf
+- https://doi.org/10.1145/3409382
+
+READ: variables related to deforestation
+
+- https://doi.org/10.1371/journal.pone.0269729
 
 :::
