@@ -6,20 +6,37 @@ The target participants are researchers with past experience on analyzing defore
 
 The prospection of potential participants will be done by snowball sampling.
 
-The interviews will consist of open questions and an interactive activity of building a Directed Acyclic Graph (DAG) with the participants.
+The interviews will consist of open and questions and an interactive activity of building a Directed Acyclic Graph (DAG) with the participants.
 
-## Questions
+::: {.callout-important collapse="true"}
+
+READ: 
+
+- https://doi.org/10.11157/fohpe.v20i3.387
+
+- https://doi.org/10.1177/1468794118781718
+
+- https://doi.org/10.1016/S0167-9236(03)00095-2
+
+- https://doi.org/10.1080/13645579.2021.1935565
+
+- https://doi.org/10.1080/13645579.2020.1766777
+
+:::
+
+## Schedule
 
 The open questions will serve to develop a context of the participant experience and perspectives on deforestation.
 
- - What were your past experiences on deforestation?
- 
- - What were the regions that you developed projects related to deforestation?
- 
- - What is your perspective on deforestation, taking in account sustainability and human development?
- 
- - Based on your experience, what are the main conditions that facilitate the occurrence of deforestation?
- 
+```{r}
+#| label: tbl-schedule
+#| tbl-cap: Interview schedule used in this project.
+#| echo: false
+
+htmltools::includeHTML("./figs/interview_schedule.html")
+
+```
+
 ## Interactive activity
 
 The objective of developing DAGs with different participants is to explore a diversity of possibilities to model deforestation. The use of DAGs before any modelling exercise (such as feature selection) is useful to reflect about the phenomena, explore potential variables, look for possible confounders, colliders and mediators, and finally choose an appropriate model.
