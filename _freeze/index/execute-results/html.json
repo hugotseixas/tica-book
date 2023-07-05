@@ -1,7 +1,7 @@
 {
   "hash": "fe78c1848165aa97b37ab9b5516c907a",
   "result": {
-    "markdown": "---\ntoc: false\n---\n\n\n# Preface {.unnumbered}\n\nThis project is an effort to develop an interdisciplinary approach to model social and environmental dimensions related to land use and land cover (LULC) change. \n\nI'm performing this experiment on two Brazilian ecosystems, the Amazon and the Cerrado. \n\n\n::: {.cell}\n::: {.cell-output-display}\n![](figs/art/art_amazon.png)\n:::\n:::\n\n::: {.cell}\n::: {.cell-output-display}\n![](figs/art/art_cerrado.png)\n:::\n:::\n",
+    "markdown": "---\ntoc: false\n---\n\n\n# Preface {.unnumbered}\n\nThis project is an effort to develop an interdisciplinary approach to model social and environmental dimensions related to land use and land cover (LULC) change. \n\nI'm performing this experiment on two Brazilian ecosystems, the Amazon and the Cerrado. \n\n\n::: {.cell}\n::: {.cell-output-display}\n![](figs/art/art_amazon.png){width=886}\n:::\n:::\n\n::: {.cell}\n::: {.cell-output-display}\n![](figs/art/art_cerrado.png){width=886}\n:::\n:::\n",
     "supporting": [],
     "filters": [
       "rmarkdown/pagebreak.lua"
