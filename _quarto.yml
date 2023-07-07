@@ -3,7 +3,7 @@ project:
   output-dir: _book
 
 book:
-  title: "TICA: Dimensions of land transitions impacts in the Cerrado and Amazon"
+  title: "Dimensions of deforestation causes in the Amazon and Cerrado"
   author:
   - name: Hugo Tameirão Seixas
     email: seixas.hugo@protonmail.com
@@ -30,7 +30,6 @@ book:
     - 04_results.qmd
     - 05_discussion.qmd
     - 06_conclusions.qmd
-    - references.qmd
   appendices:
     - 12_interviews.qmd
     - 11_model.qmd
@@ -43,6 +42,7 @@ format:
     toc: true
     toc-depth: 3
     toc-title: Content
+    reference-location: margin
     mermaid:
       theme: neutral
 
