@@ -23,3 +23,38 @@ READ: variables related to deforestation
 - https://doi.org/10.1371/journal.pone.0269729
 
 :::
+
+### Variables
+
+The variables used in this project will serve to predict deforestation and its impacts on social and environmental dimensions. The variables may present diverse nature, such as quantitative and qualitative. A major part of this project will be figuring out the most appropriate way to translate these variables in an organized matrix that will be supplied to the models.
+
+```{r}
+#| label: tbl-variables
+#| tbl-cap: Variables used in this project.
+#| echo: false
+
+htmltools::includeHTML("./figs/variables_table.html")
+
+```
+
+#### Biomes
+
+The biomes limits are provided by IBGE. The extent of the biomes have been changing over the years, and since we are working on a time series, the extent will dependent on the year.
+
+The downloaded data was filtered to contain only the limits of the Amazon and Cerrado biomes.
+
+#### Deforestation
+
+The deforestation variable is derived from the MapBiomas land use and land cover collection.
+
+The downloaded data was cropped to the extent of the Cerrado and Amazon biomes. Than the raster data was aggregated to a coarser spatial resolution, from 30 to 300 meters, assigning the value of the most frequent class to the new pixel (the mode of the 100 pixels that will be aggregated to the 300 meters pixels). This was done to reduce the amount of observations, which would be unfeasible to process, since the original data consists of hundreds of billions pixels.
+
+#### Conservation Units
+
+The limits of the Conservation Units (UC) are provided by the Ministry of Environment and Climate Change. These are the conservation units that finished the registration process at the National Register of Conservation Units (CNUC). However, the data used in this project is accessed by the Institute for Applied Economic Research (IPEA), which organizes data in a standard attributes and spatial projection. The data is represented as spatial vectors.
+
+The UC vectors are intersected to the base grid, and the area of each UC inside each cell is calculated.
+
+#### Indigenous Lands
+
+The limits of Indigenous Lands (IL) inside the Amazon and Cerrado are provided by FUNAI.
