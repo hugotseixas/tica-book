@@ -1,4 +1,4 @@
-# Methods
+# Methods {#sec-methods}
 
 ```{r}
 #| label: libraries
@@ -10,52 +10,91 @@ library(tidyverse)
 
 ```
 
-The study will rely on available data to develop regression and classification models to predict native vegetation suppression and its impacts. 
-To achieve the proposed goal, I will divide the work into five major parts:
+This project relies on developing a theoretical model of how and why Natural Vegetation Suppression (NVS) occurs persistently in the Amazon and Cerrado. This theoretical model is responsible to represent the mechanisms that causes the NVS. Based on the theoretical model, sociological and statistical analysis are performed to describe the causes of NVS from subjective and objective perspectives.
 
-1.  Literature overview of the main d rivers of the expected outcomes (vegetation suppression, land cover transition, social and environmental variables);
+To employ the tasks above and accomplish the objectives (see @sec-objectives), the project is divided into four parts:
 
-2.  Experts interviews;
+1.  Creation of the NVS theoretical model;
 
-2.  Screening for available data and development of structured data collection;
+2.  Sociological assessment of agents related to the NVS theoretical model;
 
-3.  Development of models;
+3.  Statistical analysis of data related to the NVS theoretical model;
 
-4.  Models interpretations;
+4.  Interpretation of the results;
+
+The first part is performed by conducting an adaptation of the Critical Realist Grounded Theory [@oliver-2011] method (which is itself an adaptation of the general Grounded Theory method). My adaptation combines the interactive engagement with data trough the aquisition and coding process, and the retroduction aproach to reflect about causal mechanisms of NVS. The reult of this process will be a theoretic model, represented by a Directed Acyclic Graph (DAG), which abstracts relationships of cause between variables.
+
+In the second part, a sociological analysis describes how groups of interest are related to the variables from the NVS theoretical model, and what are the interactions between different groups, according to their actions and power status. The analysis will be based on Fields Theory of Bourdieu.
+
+The third part contains the development and employment of statistical regression algorithms, that will be trained and tested using available data that are represented in the NVS theoretic model. The prediction of the models will be analysed by machine learning interpretation techniques.
+
+The fourth and last part is where results of both aproaches (sociological and statistical analyses) will be interpreted in conjunction.
+
+The sequence of activities that compose each part are represented in @fig-method-diagram, summarising the method.
 
 ```{mermaid}
 %%| label: fig-method-diagram
-%%| fig-cap: Workflow of the project
+%%| fig-cap: "General workflow of the method. The activities that composes each part of the project are: (1) Literature Assessment, Experts Interviews, Theoretical Model; (2) Sociological Analysis; (3) Available Data, Database Structuring, Statistical Analysis; (4) Results Interpretation."
 %%| fig-responsive: true
 %%| fig-align: center
 
 flowchart TD
-    A[Literature Review] --> B[Available Data]
-    A[Literature Review] --> C[Database structuring]
-    B[Available Data] --> C[Database structuring]
-    D[Experts interviews] --> C[Database structuring]
-    C[Database structuring] --> E[Models Development]
-    A[Literature Review] --> E[Models Development]
-    D[Experts interviews] --> E[Models Development]
-    E[Models Development] --> G[Models Interpretations]
+    A[Literature Assessment] --> B[Theoretical Model]
+    C[Experts Interviews] --> B
+    B --> D[Database Structuring]
+    E[Available Data] --> D
+    B --> F[Sociological Analysis]
+    C --> G[Statistical Analysis]
+    D --> G
+    F --> H[Results Interpretation]
+    G --> H
 
 ```
 
-\
+The combination of activities configures as a Convergent Parallel Mixed Method of research, where quantitative and qualitative analysis are perform at the same time, providing results to a final interpretation, However, the design of this work includes a previous establishment of a common theory that guides both analysis, so they share the same foundations.
 
-The literature review will provide a theoretical and practical basis for the modeling section. 
-Information about the key variables, their manipulation process, and the analysis techniques used to reach the results.
+In the next sections, each part of the work, and its respective activities are described.
 
-The database structuring will store all the relevant data in a single file structure to facilitate the modeling process.
+## Theoretical Model
 
-The modeling process will follow standard procedures and libraries, with the possibility to implement different techniques.
+The theoretical model will be created by the employment of an adaptation of the Critical Realist Grounded Theory. The method of Grounded Theory is widely used in social sciences with the objective of generating theories, it consists of an interactive and concurrent process of data collection and analysis. It have been modifyed trough time to accomodate different paradigms of research, such as the Critical Realism.
 
-Models interpretation will be performed to understand the importance of the variables and their interactions, and to discuss public policy planning to mitigate the negative impacts of native vegetation suppression in the Amazon and Cerrado.
+The Critical Realist Grounded Theory introduces the necessity to explicitly account for the link between observations and their underlying generative mechanisms, and the use of retroduction in order to abstract these mechanisms [@oliver-2011].
 
-## Literature Review
+The process of data aquisition is performed by a series of interviews and literature assessment. The interviews inquire possible causes of NVS and the social groups related to this phenomena. After each interview, the answers are coded into general terms, and with related question of how and why they can affect NVS. These questions are transformed into literature database queries, that helps finding written material that may enrich analysis with convergences or divergences with interview answers, or with new causes of NVS. After each round of interviews and literature assessment, the next interview may change to accomodate findings from the previous. This cyclic process is demonstrated in @fig-theoretical-diagram.
 
-The literature review will address different topics. 
-For all of them, I will adopt a hybrid approach of database searches combined with snowball searches.
+```{mermaid}
+%%| label: fig-theoretical-diagram
+%%| fig-cap: Workflow of theoretical model development
+%%| fig-responsive: true
+%%| fig-align: center
+
+flowchart TD
+    A[Interview] --> B[Data]
+    C[Questions] --> D[Literature Assessment]
+    D --> E[Data]
+    B --> F[Theoretical Model]
+    F --> C
+    E --> F
+    F --> A
+ 
+```
+
+This process is repeated until the data from interviews and literature assessment satrts to get redundant, adding little additional information to the theoretical model.
+
+### Experts Interviews
+
+The objective of the interviews is to explore a diverse range of possible causes of deforestation, and its impacts on the environment and society.
+
+The target participants are researchers with past experience on analyzing deforestation in the Amazon or Cerrado biomes.
+
+The prospecting of potential participants are done by snowball sampling.
+
+The interviews consist of open and closed questions (see @sec-interview-schedule for the interview schedule), and an interactive activity of building a Directed Acyclic Graph (DAG) with the participants (see @sec-interview-dag).
+
+### Literature Assessment
+
+The literature review addresses different topics. For all of them, I adopt a hybrid approach of database searches combined with snowball searches.
 
 ```{mermaid}
 %%| label: fig-review-diagram
@@ -64,8 +103,8 @@ For all of them, I will adopt a hybrid approach of database searches combined wi
 %%| fig-align: center
 
 flowchart TD
-    A[Specific Questions] --> B[Query Development]
-    A[Specific Questions] --> C[Documents Screening]
+    A[Questions] --> B[Query Development]
+    A[Questions] --> C[Documents Screening]
     B[Query Development] --> D[Database Search]
     D[Database Search] --> C[Documents Screening]
     C[Documents Screening] --> E[Documents Collection]
@@ -75,46 +114,15 @@ flowchart TD
 
 ```
 
-\
+The literature review will answer questions about variables to be predicted in this project. For each variable, I want to explore the main drivers that cause them, how they relate to each other, and the methods used to estimate the effects and interactions.
 
-The literature review will answer questions about variables to be predicted in this project. 
-For each variable, I want to explore the main drivers that cause them, how they relate to each other, and the methods used to estimate the effects and interactions. 
+## Sociological Analysis
 
-## Experts Interviews
+## Statistical Analysis
 
-The objective of the interviews is to explore a diverse range of possible causes of deforestation, and its impacts on the environment and society.
+### Database Structuring
 
-The target participants are researchers with past experience on analyzing deforestation in the Amazon or Cerrado biomes.
-
-The prospection of potential participants will be done by snowball sampling.
-
-The interviews will consist of open questions and an interactive activity of building a Directed Acyclic Graph (DAG) with the participants.
-
-### Questions
-
-The open questions will serve to develop a context of the participant experience and perspectives on deforestation:
-
- - What were your past experiences on deforestation?
- 
- - What were the regions that you developed projects related to deforestation?
- 
- - What is your perspective on deforestation, taking in account sustainability and human development?
- 
- - Based on your experience, what are the main conditions that facilitate the occurrence of deforestation?
- 
-### Interactive activity
-
-The objective of developing DAGs with different participants is to explore a diversity of possibilities to model deforestation. 
-The use of DAGs before any modelling exercise (such as feature selection) is useful to reflect about the phenomena, explore potential variables, look for possible confounders, colliders and mediators, and finally choose an appropriate model.
-
-It is also possible to compare DAGs (since they are graphs!), so it will open an opportunity to explore convergences and divergences between participants.
-
-The DAGs will be create during the interview with the use of a interactive tool.
-
-## Database Structuring
-
-The database will contain data from different domains, which can be available in diverse formats and structures.
-To make the modeling process more efficient and transparent, all variables of interest must be organized coherently.
+The database will contain data from different domains, which can be available in diverse formats and structures. To make the modeling process more efficient and transparent, all variables of interest must be organized coherently.
 
 The process to create the database will consist of accessing the data sources, downloading the data to the local environment, transforming and organizing the data to the grid (if the data source provides any pre-processing tool before downloading the data, it should be done that way), and store in the local environment.
 
@@ -132,15 +140,9 @@ flowchart TD
 
 ```
 
-The data will be stored in a nested directories database with hive-style partitioning. 
-The database will be composed of a collection of parquet files, a format with high compression, that facilitates processing large volumes of data.
-The main partition will be the variables, which means that each variable will be stored in a separate directory.
-If necessary, the data will be partitioned by further variables (as a rule of thumb, each parquet file should not be smaller than 20MB and not bigger than 2GB).
+The data will be stored in a nested directories database with hive-style partitioning. The database will be composed of a collection of parquet files, a format with high compression, that facilitates processing large volumes of data. The main partition will be the variables, which means that each variable will be stored in a separate directory. If necessary, the data will be partitioned by further variables (as a rule of thumb, each parquet file should not be smaller than 20MB and not bigger than 2GB).
 
-### Base grid
-
-To structure a collection of data that presents different natures, I will transform all the variables into a standard grid system.
-The grid system will be composed of 0.2 degrees cells (40km x 40km), which should be a balanced compromise between detail and computational cost.
+To structure a collection of data that presents different natures, I will transform all the variables into a standard grid system. The grid system will be composed of 0.2 degrees cells (40km x 40km), which should be a balanced compromise between detail and computational cost.
 
 ```{r}
 #| label: fig-base-grid
@@ -154,53 +156,11 @@ viz_grid
 
 ```
 
-Each grid cell will contain an observation, for each year, for all the variables. 
-Only pixels that contained natural vegetation in the first year of the analysis will be considered valid.
+Each grid cell will contain an observation, for each year, for all the variables. Only pixels that contained natural vegetation in the first year of the analysis will be considered valid.
 
-### Variables
+### Model Development
 
-The variables used in this project will serve to predict deforestation and its impacts on social and environmental dimensions.
-The variables may present diverse nature, such as quantitative and qualitative.
-A major part of this project will be figuring out the most appropriate way to translate these variables in an organized matrix that will be supplied to the models.
-
-```{r}
-#| label: tbl-variables
-#| tbl-cap: Variables used in this project.
-#| echo: false
-
-htmltools::includeHTML("./figs/variables_table.html")
-
-```
-
-#### Biomes
-
-The biomes limits are provided by IBGE.
-The extent of the biomes have been changing over the years, and since we are working on a time series, the extent will dependent on the year.
-
-The downloaded data was filtered to contain only the limits of the Amazon and Cerrado biomes.
-
-#### Deforestation
-
-The deforestation variable is derived from the MapBiomas land use and land cover collection.
-
-The downloaded data was cropped to the extent of the Cerrado and Amazon biomes.
-Than the raster data was aggregated to a coarser spatial resolution, from 30 to 300 meters, assigning the value of the most frequent class to the new pixel (the mode of the 100 pixels that will be aggregated to the 300 meters pixels).
-This was done to reduce the amount of observations, which would be unfeasible to process, since the original data consists of hundreds of billions pixels.
-
-#### Conservation Units
-
-The limits of the Conservation Units (UC) are provided by the Ministry of Environment and Climate Change. These are the conservation units that finished the registration process at the National Register of Conservation Units (CNUC). However, the data used in this project is accessed by the Institute for Applied Economic Research (IPEA), which organizes data in a standard attributes and spatial projection. The data is represented as spatial vectors.
-
-The UC vectors are intersected to the base grid, and the area of each UC inside each cell is calculated.
-
-#### Indigenous Lands
-
-The limits of Indigenous Lands (IL) inside the Amazon and Cerrado are provided by FUNAI.
-
-## Model Development
-
-The models will follow a sequential order.
-The output of a model will serve as a feature of the next model.
+The models will follow a sequential order. The output of a model will serve as a feature of the next model.
 
 ```{r}
 #| label: model-table
@@ -229,19 +189,13 @@ table %>%
 
 ```
 
-The first model will classify areas that suffered vegetation suppression.
-So the outcome will be a binary result (0 = no suppression; 1 = suppression).
-I want this model to have the minimum inclusion errors for class "1".
-In other words, I want to avoid classifying an area with the label "1" when the reality is that it should be labeled "0".
-To achieve this, the model will be adjusted to present the minimum inclusion error for class "1", and the probability threshold to classify an observation as class "1" will be a higher value.
+The first model will classify areas that suffered vegetation suppression. So the outcome will be a binary result (0 = no suppression; 1 = suppression). I want this model to have the minimum inclusion errors for class "1". In other words, I want to avoid classifying an area with the label "1" when the reality is that it should be labeled "0". To achieve this, the model will be adjusted to present the minimum inclusion error for class "1", and the probability threshold to classify an observation as class "1" will be a higher value.
 
-The second model will predict the amount of vegetation suppression that was classified with the label "1" in the previous model.
-The predictions will have to be bounded by the amount of natural vegetation inside the grid cell (a Poisson distribution may be adequate to represent this variable).
+The second model will predict the amount of vegetation suppression that was classified with the label "1" in the previous model. The predictions will have to be bounded by the amount of natural vegetation inside the grid cell (a Poisson distribution may be adequate to represent this variable).
 
 The third model will predict the predominant land use transitions of the areas that suffered native vegetation suppression.
 
-The fourth model will be a set of models.
-Each model will be responsible to predict a single environmental or social outcome.
+The fourth model will be a set of models. Each model will be responsible to predict a single environmental or social outcome.
 
 Each model will follow the standard approach to develop supervised models.
 
@@ -269,9 +223,4 @@ flowchart TD
 
 ```
 
-\
-
-To understand and interpret the predictions made by the models, I will employ a variety of methods. They may include surrogate models, feature interactions, permutation feature importance, counterfactual explanations, and Shapley values. 
-These methods are model-agnostic, meaning they can be applied to any regression or classification model, regardless of its underlying structure or parameters.
-By using these techniques, I aim to gain a deeper understanding of the relationships between the variables and how they contribute to the predictions.
-This information will enable assessing the reliability of the models and validity of their results.
+To understand and interpret the predictions made by the models, I will employ a variety of methods. They may include surrogate models, feature interactions, permutation feature importance, counterfactual explanations, and Shapley values. These methods are model-agnostic, meaning they can be applied to any regression or classification model, regardless of its underlying structure or parameters. By using these techniques, I aim to gain a deeper understanding of the relationships between the variables and how they contribute to the predictions. This information will enable assessing the reliability of the models and validity of their results.
