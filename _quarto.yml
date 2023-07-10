@@ -25,11 +25,10 @@ book:
   chapters:
     - index.qmd
     - 01_introduction.qmd
-    - 02_objectives.qmd
-    - 03_methods.qmd
-    - 04_results.qmd
-    - 05_discussion.qmd
-    - 06_conclusions.qmd
+    - 02_methods.qmd
+    - 03_results.qmd
+    - 04_discussion.qmd
+    - 05_conclusions.qmd
   appendices:
     - 12_interviews.qmd
     - 11_model.qmd

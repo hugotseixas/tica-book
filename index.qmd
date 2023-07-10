@@ -1,6 +1,5 @@
 ---
 toc: false
-reference-location: margin
 ---
 
 # Preface {.unnumbered}

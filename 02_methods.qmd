@@ -13,7 +13,7 @@ library(tidyverse)
 The study will rely on available data to develop regression and classification models to predict native vegetation suppression and its impacts. 
 To achieve the proposed goal, I will divide the work into five major parts:
 
-1.  Literature overview of the main drivers of the expected outcomes (vegetation suppression, land cover transition, social and environmental variables);
+1.  Literature overview of the main d rivers of the expected outcomes (vegetation suppression, land cover transition, social and environmental variables);
 
 2.  Experts interviews;
 
