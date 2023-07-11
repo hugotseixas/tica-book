@@ -16,34 +16,6 @@ lapply(file_names, load, .GlobalEnv)
 
 ```
 
-## How to read
-
-The results will be organized by sections and subsections:
-
-1. Exploratory Analysis of the model variables;
-    a) Deforestation;
-        - Introduction to concepts;
-        - Quantitative analysis;
-        - Sociology perspective analysis;
-    b) Conservation Units;
-    c) ...
-2. Presentation of the models;
-    a) Deforestation model;
-        - Show Directed Acyclic Graphs (DAGs);
-        - Explanation of models assumptions;
-        - Sociology perspective analysis;
-    b) Land use transition model;
-    c) ...
-3. Model results;
-    a) Deforestation model;
-        - Validation results;
-        - Validation explanations;
-        - Test results;
-        - Test explanations;
-    b) Land use transition model;
-    c) ...
-4. Model interpretation;
-
 The study will present three main quantitative results based on quantitative data: predictions on vegetation suppression, land use transitions, and social and environmental variables. 
 Our predictions on vegetation suppression will show the likelihood and extent of removal events, serving as a basis for predicting the land use changes of the affected grid cells. 
 Finally, we will predict the impact of these findings on the environment and human well-being.
@@ -184,3 +156,5 @@ TODO:
 - Translate biomes names
 
 :::
+
+# References {.unnumbered}
