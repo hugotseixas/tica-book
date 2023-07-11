@@ -22,15 +22,15 @@ To employ the tasks above and accomplish the objectives (see @sec-objectives), t
 
 4.  Interpretation of the results;
 
-The first part is performed by conducting an adaptation of the Critical Realist Grounded Theory [@oliver-2011] method (which is itself an adaptation of the general Grounded Theory method). My adaptation combines the interactive engagement with data trough the aquisition and coding process, and the retroduction aproach to reflect about causal mechanisms of NVS. The reult of this process will be a theoretic model, represented by a Directed Acyclic Graph (DAG), which abstracts relationships of cause between variables.
+The first part is performed by conducting an adaptation of the Critical Realist Grounded Theory [@oliver-2011] method (which is itself an adaptation of the general Grounded Theory method). My adaptation combines the interactive engagement with data trough the acquisition and coding process, and the retroduction approach to reflect about causal mechanisms of NVS. The result of this process will be a theoretic model, represented by a Directed Acyclic Graph (DAG), which abstracts relationships of cause between variables.
 
 In the second part, a sociological analysis describes how groups of interest are related to the variables from the NVS theoretical model, and what are the interactions between different groups, according to their actions and power status. The analysis will be based on Fields Theory of Bourdieu.
 
-The third part contains the development and employment of statistical regression algorithms, that will be trained and tested using available data that are represented in the NVS theoretic model. The prediction of the models will be analysed by machine learning interpretation techniques.
+The third part contains the development and employment of statistical regression algorithms, that will be trained and tested using available data that are represented in the NVS theoretic model. The prediction of the models will be analyzed by machine learning interpretation techniques.
 
-The fourth and last part is where results of both aproaches (sociological and statistical analyses) will be interpreted in conjunction.
+The fourth and last part is where results of both approaches (sociological and statistical analyses) will be interpreted in conjunction.
 
-The sequence of activities that compose each part are represented in @fig-method-diagram, summarising the method.
+The sequence of activities that compose each part are represented in @fig-method-diagram, summarizing the method.
 
 ```{mermaid}
 %%| label: fig-method-diagram
@@ -57,11 +57,11 @@ In the next sections, each part of the work, and its respective activities are d
 
 ## Theoretical Model
 
-The theoretical model will be created by the employment of an adaptation of the Critical Realist Grounded Theory. The method of Grounded Theory is widely used in social sciences with the objective of generating theories, it consists of an interactive and concurrent process of data collection and analysis. It have been modifyed trough time to accomodate different paradigms of research, such as the Critical Realism.
+The theoretical model will be created by the employment of an adaptation of the Critical Realist Grounded Theory. The method of Grounded Theory is widely used in social sciences with the objective of generating theories, it consists of an interactive and concurrent process of data collection and analysis. It have been modified trough time to accommodate different paradigms of research, such as the Critical Realism.
 
 The Critical Realist Grounded Theory introduces the necessity to explicitly account for the link between observations and their underlying generative mechanisms, and the use of retroduction in order to abstract these mechanisms [@oliver-2011].
 
-The process of data aquisition is performed by a series of interviews and literature assessment. The interviews inquire possible causes of NVS and the social groups related to this phenomena. After each interview, the answers are coded into general terms, and with related question of how and why they can affect NVS. These questions are transformed into literature database queries, that helps finding written material that may enrich analysis with convergences or divergences with interview answers, or with new causes of NVS. After each round of interviews and literature assessment, the next interview may change to accomodate findings from the previous. This cyclic process is demonstrated in @fig-theoretical-diagram.
+The process of data acquisition is performed by a series of interviews and literature assessment. The interviews inquire possible causes of NVS and the social groups related to this phenomena. After each interview, the answers are coded into general terms, and with related question of how and why they can affect NVS. These questions are transformed into literature database queries, that helps finding written material that may enrich analysis with convergences or divergences with interview answers, or with new causes of NVS. After each round of interviews and literature assessment, the next interview may change to accommodate findings from the previous. This cyclic process is demonstrated in @fig-theoretical-diagram.
 
 ```{mermaid}
 %%| label: fig-theoretical-diagram
@@ -77,24 +77,24 @@ flowchart TD
     F --> C
     E --> F
     F --> A
- 
+
 ```
 
-This process is repeated until the data from interviews and literature assessment satrts to get redundant, adding little additional information to the theoretical model.
+This process is repeated until the data from interviews and literature assessment starts to get redundant, adding little additional information to the theoretical model.
 
 ### Experts Interviews
 
-The objective of the interviews is to explore a diverse range of possible causes of deforestation, and its impacts on the environment and society.
+The objective of the interviews is to explore a diverse range of possible causes of NVS, and its impacts on the environment and society.
 
-The target participants are researchers with past experience on analyzing deforestation in the Amazon or Cerrado biomes.
+The target participants are researchers with past experience on analyzing NVS in the Amazon or Cerrado biomes.
 
 The prospecting of potential participants are done by snowball sampling.
 
-The interviews consist of open and closed questions (see @sec-interview-schedule for the interview schedule), and an interactive activity of building a Directed Acyclic Graph (DAG) with the participants (see @sec-interview-dag).
+The interviews consist of open and closed questions (see @sec-interview-schedule for the interview schedule), and an interactive activity of building a DAG with the participants (see @sec-interview-dag).
 
 ### Literature Assessment
 
-The literature review addresses different topics. For all of them, I adopt a hybrid approach of database searches combined with snowball searches.
+The literature assessment provides information to the creation of the theoretical model, based on published results. However, it is performed as a complement to the reviews. The queries of the literature assessment are created based on reflections of the causal relationships identified in the interviews (e.g. if variable *A* is believed to cause *B*, what is the chain of events that allows this process?). Once the queries are created, a forward snowball search is performed, in which the resulting papers and its citing documents are screened.
 
 ```{mermaid}
 %%| label: fig-review-diagram
@@ -114,11 +114,35 @@ flowchart TD
 
 ```
 
-The literature review will answer questions about variables to be predicted in this project. For each variable, I want to explore the main drivers that cause them, how they relate to each other, and the methods used to estimate the effects and interactions.
+The relevant results from the literature are documented and stored for the creation of the theoretical model, in conjunction with the data acquired from the interviews.
 
 ## Sociological Analysis
 
+The sociological analysis is based on the theoretical model (created from the grounded theory), and it is performed according to the Field Theory of Bourdieu. The analysis consists on defining a social field, its social rules, social groups within the field, and the power relationships between the groups.
+
+In this project, the social field is idealized as an arena where NVS is materialized, in which I name as Land Use and Cover Field (LUCF). This field is where disputes over land happens. The concept of LUCF is broad, and may contain diverse types of disputes, however, in this work it is bounded to disputes related to NVS.
+
+The social rules dictate the disputes inside the LUCF, and are not restrained only by the politics institutions and devices.
+
+Social groups are conceptualized as groups of interest that represents not only individuals that share a common culture and goals, but also institutions.
+
+The power of the social groups can manifest in different ways, such as economic, political, symbolic, social and cultural power.
+
+The sociological analysis will consist in identifying the social groups and their power in each of the causes of NVS (that were proposed in the theoretical model). The relationship between these social groups will also be characterized.
+
+::: {.callout-important collapse="true"}
+READ:
+
+-   <https://doi.org/10.1177/026327696013002001>
+
+-   <https://doi.org/10.2752/152897999786690753>
+
+-   <https://doi.org/10.1162/GLEP_a_00323>
+:::
+
 ## Statistical Analysis
+
+The statistical analysis
 
 ### Database Structuring
 
@@ -160,43 +184,6 @@ Each grid cell will contain an observation, for each year, for all the variables
 
 ### Model Development
 
-The models will follow a sequential order. The output of a model will serve as a feature of the next model.
-
-```{r}
-#| label: model-table
-#| echo: false
-
-table <-
-  tibble(
-    section = c(
-      "Vegetation suppression probability", "Vegetation suppression area", 
-      "Land cover transitions", "Transitions impacts"
-    ),
-    model_type = c(
-      "Classification", "Regression",
-      "Classification", "Regression"
-    )
-  )
-
-table %>%
-  pivot_wider(names_from = section, values_from = model_type) %>%
-  gt() %>%
-  cols_align(align = "center") %>%
-  tab_options(
-    table.border.top.style = "hidden",
-    table.border.bottom.style = "hidden"
-  )
-
-```
-
-The first model will classify areas that suffered vegetation suppression. So the outcome will be a binary result (0 = no suppression; 1 = suppression). I want this model to have the minimum inclusion errors for class "1". In other words, I want to avoid classifying an area with the label "1" when the reality is that it should be labeled "0". To achieve this, the model will be adjusted to present the minimum inclusion error for class "1", and the probability threshold to classify an observation as class "1" will be a higher value.
-
-The second model will predict the amount of vegetation suppression that was classified with the label "1" in the previous model. The predictions will have to be bounded by the amount of natural vegetation inside the grid cell (a Poisson distribution may be adequate to represent this variable).
-
-The third model will predict the predominant land use transitions of the areas that suffered native vegetation suppression.
-
-The fourth model will be a set of models. Each model will be responsible to predict a single environmental or social outcome.
-
 Each model will follow the standard approach to develop supervised models.
 
 ```{mermaid}
@@ -222,7 +209,5 @@ flowchart TD
     K[Model Assessment] --> L[Model Interpretation]
 
 ```
-
-To understand and interpret the predictions made by the models, I will employ a variety of methods. They may include surrogate models, feature interactions, permutation feature importance, counterfactual explanations, and Shapley values. These methods are model-agnostic, meaning they can be applied to any regression or classification model, regardless of its underlying structure or parameters. By using these techniques, I aim to gain a deeper understanding of the relationships between the variables and how they contribute to the predictions. This information will enable assessing the reliability of the models and validity of their results.
 
 # References {.unnumbered}
