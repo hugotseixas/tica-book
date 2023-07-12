@@ -1,34 +1,30 @@
 # Paradigm
 
+The research paradigm of this work is made explicit to inform the ontological and epistemological foundations of the project, and to justify the adopted methodologies, that will serve to answer the research questions. The research philosophy follows the Critical Realism, which defines the ontology and epistemology. The research methodology is a mixed method approach, applying a combination of grounded theory, field theory of Bourdieu, and statistical regression algorithms.
+
+In this chapter I explain the Critical Realism as the research philosophy, and justify the alignment of the methodology with the philosophical ontology and epistemology.
+
 ## Critical Realism
 
+Critical realism is a philosophy of science that may serve as a framework for developing research methodologies [@fletcher-2016]. It is a perspective that negates the duality between the social and the natural, as also negates the determination of the social by the natural [@gorski-2013], and neither the other way around [@fletcher-2016]. Instead, its focus is on the inference of causal mechanisms [@lawani-2020], which dictates the natural and the social altogether. In this section, I define the ontology and epistemology, based on the paradigm of critical realism, adopted in this work, and how they justify the methodology.
+
+-   Ontology: There are three ontological domains, in other words, reality is stratified: the domain of the real, formed by the generative mechanisms that act as causal forces to produce events [@fletcher-2016]; the domain of the actual, that contains the realization of the real domain, when the generative mechanisms are activated and occurs whether or not these realizations can be perceived or measured; the domain of the empirical where the actual domain is observed, in other words, is where the events caused by the activation of generative mechanisms of the real domain are perceived or measured;
+
+-   Epistemology: Knowldge is obtained by interpreting patterns and tendencies of perceived and measured events, with the objective of explaining the phenomena of interest by the generative mechanisms that dictates it [@lawani-2020; @wynn-2012].
 
 ::: {.callout-important collapse="true"}
-
 READ:
 
-- https://doi.org/10.1108/QRJ-08-2020-0101
-
-- https://doi.org/10.1080/13645579.2016.1144401
-
-- https://doi.org/10.1186/s12889-019-7760-7
-
-- https://doi.org/10.1177/15586898211049847
-
-- https://doi.org/10.1558/aleth.v5i1.56
-
-- https://doi.org/10.1177/1368431015590700
-
-- https://doi.org/10.1111/1468-5914.00127
-
-- https://doi.org/10.1016/j.cpa.2016.03.001
-
-- https://doi.org/10.1111/1467-954X.00407
-
-- https://doi.org/10.1558/jcr.v3i1.133
-
-- https://doi.org/10.1111/0735-2751.00064
-
-- https://doi.org/10.1177/0018726718767952
-
+-   https://doi.org/10.1108/QRJ-08-2020-0101
+-   https://doi.org/10.1080/13645579.2016.1144401
+-   https://doi.org/10.1186/s12889-019-7760-7
+-   https://doi.org/10.1177/15586898211049847
+-   https://doi.org/10.1558/aleth.v5i1.56
+-   https://doi.org/10.1177/1368431015590700
+-   https://doi.org/10.1111/1468-5914.00127
+-   https://doi.org/10.1016/j.cpa.2016.03.001
+-   https://doi.org/10.1111/1467-954X.00407
+-   https://doi.org/10.1558/jcr.v3i1.133
+-   https://doi.org/10.1111/0735-2751.00064
+-   https://doi.org/10.1177/0018726718767952
 :::
