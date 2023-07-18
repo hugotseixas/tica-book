@@ -218,6 +218,7 @@ div.csl-indent {
   <li><a href="#database-structuring" id="toc-database-structuring" class="nav-link" data-scroll-target="#database-structuring"><span class="header-section-number">2.3.1</span> Database Structuring</a></li>
   <li><a href="#model-development" id="toc-model-development" class="nav-link" data-scroll-target="#model-development"><span class="header-section-number">2.3.2</span> Model Development</a></li>
   </ul></li>
+  <li><a href="#results-interpretation" id="toc-results-interpretation" class="nav-link" data-scroll-target="#results-interpretation"><span class="header-section-number">2.4</span> Results Interpretation</a></li>
   <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">References</a></li>
   </ul>
 </nav>
@@ -250,7 +251,7 @@ div.csl-indent {
 <li><p>Statistical analysis of data related to the NVS theoretical model;</p></li>
 <li><p>Interpretation of the results;</p></li>
 </ol>
-<p>The first part is performed by conducting an adaptation of the Critical Realist Grounded Theory <span class="citation" data-cites="oliver-2011">(<a href="#ref-oliver-2011" role="doc-biblioref">Oliver 2011</a>)</span> method (which is itself an adaptation of the general Grounded Theory method). My adaptation combines the interactive engagement with data trough the acquisition and coding process, and the retroduction approach to reflect about causal mechanisms of NVS. The result of this process will be a theoretic model, represented by a Directed Acyclic Graph (DAG), which abstracts relationships of cause between variables.</p>
+<p>The first part is performed by conducting an adaptation of the Critical Realist Grounded Theory <span class="citation" data-cites="oliver-2011">(<a href="#ref-oliver-2011" role="doc-biblioref">Oliver 2011</a>)</span> method (which is itself an adaptation of the general Grounded Theory method). My adaptation combines the interactive engagement with data trough the acquisition and coding process, and the retroduction approach to infer causal mechanisms of NVS. The result of this process will be a theoretic model, represented by a Directed Acyclic Graph (DAG), which abstracts relationships of cause between variables.</p>
 <p>In the second part, a sociological analysis describes how groups of interest are related to the variables from the NVS theoretical model, and what are the interactions between different groups, according to their actions and power status. The analysis will be based on Fields Theory of Bourdieu.</p>
 <p>The third part contains the development and employment of statistical regression algorithms, that will be trained and tested using available data that are represented in the NVS theoretic model. The prediction of the models will be analyzed by machine learning interpretation techniques.</p>
 <p>The fourth and last part is where results of both approaches (sociological and statistical analyses) will be interpreted in conjunction.</p>
@@ -344,12 +345,12 @@ div.csl-indent {
 </section>
 <section id="sociological-analysis" class="level2" data-number="2.2">
 <h2 data-number="2.2" class="anchored" data-anchor-id="sociological-analysis"><span class="header-section-number">2.2</span> Sociological Analysis</h2>
-<p>The sociological analysis is based on the theoretical model (created from the grounded theory), and it is performed according to the Field Theory of Bourdieu. The analysis consists on defining a social field, its social rules, social groups within the field, and the power relationships between the groups.</p>
+<p>The sociological analysis is based on the theoretical model (created from the grounded theory), and it is performed according to the Field Theory of Bourdieu. The analysis consists on defining a social field, its social rules, social actors within the field, and the power relationships between the actors.</p>
 <p>In this project, the social field is idealized as an arena where NVS is materialized, in which I name as Land Use and Cover Field (LUCF). This field is where disputes over land happens. The concept of LUCF is broad, and may contain diverse types of disputes, however, in this work it is bounded to disputes related to NVS.</p>
 <p>The social rules dictate the disputes inside the LUCF, and are not restrained only by the politics institutions and devices.</p>
-<p>Social groups are conceptualized as groups of interest that represents not only individuals that share a common culture and goals, but also institutions.</p>
-<p>The power of the social groups can manifest in different ways, such as economic, political, symbolic, social and cultural power.</p>
-<p>The sociological analysis will consist in identifying the social groups and their power in each of the causes of NVS (that were proposed in the theoretical model). The relationship between these social groups will also be characterized.</p>
+<p>Social actors are conceptualized as groups of interest that represents not only individuals that share a common culture and goals, but also institutions.</p>
+<p>The power of the social actors can manifest in different ways, such as economic, political, symbolic, social and cultural power.</p>
+<p>The sociological analysis will consist in identifying the social groups and their power in each of the causes of NVS (that were proposed in the theoretical model). The relationship between these social groups will also be characterized. From these information, the causal mechanisms of deforestation are discussed by. abducttion</p>
 <div class="callout callout-style-default callout-important callout-titled">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
@@ -374,11 +375,11 @@ Important
 </section>
 <section id="statistical-analysis" class="level2" data-number="2.3">
 <h2 data-number="2.3" class="anchored" data-anchor-id="statistical-analysis"><span class="header-section-number">2.3</span> Statistical Analysis</h2>
-<p>The statistical analysis</p>
+<p>The statistical analysis is responsible for exploring relationships of observed variables within the exercise of predicting NVS. It is performed by structuring a database of observed variables that are considered to be a possible cause of the NVS, followed by a selection of variables according to the theoretical model, and finally the prediction of NVS.</p>
 <section id="database-structuring" class="level3" data-number="2.3.1">
 <h3 data-number="2.3.1" class="anchored" data-anchor-id="database-structuring"><span class="header-section-number">2.3.1</span> Database Structuring</h3>
-<p>The database will contain data from different domains, which can be available in diverse formats and structures. To make the modeling process more efficient and transparent, all variables of interest must be organized coherently.</p>
-<p>The process to create the database will consist of accessing the data sources, downloading the data to the local environment, transforming and organizing the data to the grid (if the data source provides any pre-processing tool before downloading the data, it should be done that way), and store in the local environment.</p>
+<p>The database contains data from different social and natural dimensions, which can be available in diverse formats and structures. To make the modeling process more efficient and transparent, all variables of interest must be organized coherently.</p>
+<p>The process to create the database consists of accessing the data sources, downloading the data to the local environment, transforming and organizing the data to the grid, and store in the local environment.</p>
 <div class="cell" data-fig-responsive="true" data-layout-align="center">
 <div class="cell-output-display">
 <div id="fig-data-diagram" class="quarto-figure quarto-figure-center anchored">
@@ -397,8 +398,8 @@ Important
 </div>
 </div>
 </div>
-<p>The data will be stored in a nested directories database with hive-style partitioning. The database will be composed of a collection of parquet files, a format with high compression, that facilitates processing large volumes of data. The main partition will be the variables, which means that each variable will be stored in a separate directory. If necessary, the data will be partitioned by further variables (as a rule of thumb, each parquet file should not be smaller than 20MB and not bigger than 2GB).</p>
-<p>To structure a collection of data that presents different natures, I will transform all the variables into a standard grid system. The grid system will be composed of 0.2 degrees cells (40km x 40km), which should be a balanced compromise between detail and computational cost.</p>
+<p>The data are stored in a nested directories database with hive-style partitioning. The database is composed of a collection of parquet files, a format with high compression, that facilitates processing large volumes of data. The main partition stores the variables, which means that each variable will be stored in a separate directory. If necessary, the data will be partitioned by further variables (as a rule of thumb, each parquet file should not be smaller than 20MB and not bigger than 2GB).</p>
+<p>To structure a collection of data that presents different natures, I must transform all the variables into a standard grid system. The grid system will be composed of 0.2 degrees cells (40km x 40km), which should be a balanced compromise between detail and computational cost.</p>
 <div class="cell" data-fig.asp="1">
 <div class="cell-output-display">
 <div id="fig-base-grid" class="quarto-figure quarto-figure-center anchored">
@@ -409,11 +410,11 @@ Important
 </div>
 </div>
 </div>
-<p>Each grid cell will contain an observation, for each year, for all the variables. Only pixels that contained natural vegetation in the first year of the analysis will be considered valid.</p>
+<p>Each grid cell contains one observation, for each year, for all the variables. Only pixels that contained natural vegetation in the first year of the analysis will be considered valid.</p>
 </section>
 <section id="model-development" class="level3" data-number="2.3.2">
 <h3 data-number="2.3.2" class="anchored" data-anchor-id="model-development"><span class="header-section-number">2.3.2</span> Model Development</h3>
-<p>Each model will follow the standard approach to develop supervised models.</p>
+<p>The statistical model follow the standard approach to develop supervised models.</p>
 <div class="cell" data-fig-responsive="true" data-layout-align="center">
 <div class="cell-output-display">
 <div id="fig-model-diagram" class="quarto-figure quarto-figure-center anchored">
@@ -443,6 +444,9 @@ Important
 </div>
 </div>
 </section>
+</section>
+<section id="results-interpretation" class="level2" data-number="2.4">
+<h2 data-number="2.4" class="anchored" data-anchor-id="results-interpretation"><span class="header-section-number">2.4</span> Results Interpretation</h2>
 </section>
 <section id="references" class="level1 unnumbered">
 <h1 class="unnumbered">References</h1>
