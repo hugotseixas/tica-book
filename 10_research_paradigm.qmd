@@ -1,10 +1,10 @@
-# Paradigm
+# Paradigm {#sec-paradigm}
 
 The research paradigm of this work is made explicit to inform the ontological and epistemological foundations of the project, and to justify the adopted methodologies, that will serve to answer the research questions. The research philosophy follows the Critical Realism, which defines the ontology and epistemology. The research methodology is a mixed method approach, applying a combination of grounded theory, field theory of Bourdieu, and statistical regression algorithms.
 
 In this chapter I explain the Critical Realism as the research philosophy, and justify the alignment of the methodology with the philosophical ontology and epistemology.
 
-## Critical Realism
+## Critical Realism {#sec-cr}
 
 Critical realism is a philosophy of science that may serve as a framework for developing research methodologies [@fletcher-2016]. It is a perspective that negates the duality between the social and the natural, as also negates the determination of the social by the natural [@gorski-2013], and neither the other way around [@fletcher-2016]. Instead, its focus is on the inference of causal mechanisms [@lawani-2020], which dictates the natural and the social altogether. In this section, I define the ontology and epistemology, based on the paradigm of critical realism, adopted in this work, and how they justify the methodology.
 
@@ -14,6 +14,10 @@ Critical realism is a philosophy of science that may serve as a framework for de
 
 ::: {.callout-important collapse="true"}
 READ:
+
+-   https://doi.org/10.1007/s11191-018-9983-x
+
+<!-- -->
 
 -   https://doi.org/10.1186/s12889-019-7760-7
 -   https://doi.org/10.1177/15586898211049847
@@ -27,7 +31,7 @@ READ:
 -   https://doi.org/10.1177/0018726718767952
 :::
 
-## Sociological Field Theory
+## Sociological Field Theory {#sec-bourdieu}
 
 The field theory is a method of analysis that describes social arenas where actors pursue an objective at stake, interacting with other actors to achieve their goals [@kluttz-2016]. Bourdieu is a recognized sociologist that influenced the Sociological Field Theory, having developed the concepts of field, habitus, capital and doxa. His theory is widely applied in diverse areas of study due to its generalized nature.
 
@@ -49,7 +53,7 @@ READ:
 -   <https://doi.org/10.1177/0018726718767952>
 :::
 
-## Statistical Modeling
+## Statistical Modeling {#sec-stats}
 
 Statistical modeling cab be useful for explaining and predicting an observable phenomena. When creating a statistical model, we accept (implicitly or explicitly) a diverse number of assumptions that should be true for the model to represent reality correctly. However, the correctness of all the assumptions is impossible, so we are limited to make estimations about the phenomena of interest. Following this reasoning, we should not condition the reality to the statistical models that we create, in reality, it should be the other way around, theories about reality should condition our statistical models.
 
