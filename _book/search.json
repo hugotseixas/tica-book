@@ -312,6 +312,6 @@
     "href": "10_research_paradigm.html#statistical-modeling",
     "title": "Appendix A — Paradigm",
     "section": "A.3 Statistical Modeling",
-    "text": "A.3 Statistical Modeling"
+    "text": "A.3 Statistical Modeling\nStatistical modeling cab be useful for explaining and predicting an observable phenomena. When creating a statistical model, we accept (implicitly or explicitly) a diverse number of assumptions that should be true for the model to represent reality correctly. However, the correctness of all the assumptions is impossible, so we are limited to make estimations about the phenomena of interest. Following this reasoning, we should not condition the reality to the statistical models that we create, in reality, it should be the other way around, theories about reality should condition our statistical models.\nThe use of statistical causal inference methods is a possible way to develop a statistical model informed by causal theory, and is usually applied when the objective is to explain certain phenomena. Statistical algorithms can also be used solely for prediction, with the goal of minimizing prediction errors, but not taking to account causal mechanisms of the phenomena of interest. However, both approaches do not need to be completely separated, prediction exercises can also be informed by causal inference techniques, in order to create fair statistical models, which can be useful for exploration of a phenomena."
   }
 ]
