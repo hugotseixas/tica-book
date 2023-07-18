@@ -29,9 +29,9 @@ READ:
 
 ## Sociological Field Theory
 
-The field theory... Bourdieu is a recognized sociologist that developed the concepts of field, habitus, capital and doxa. His theory is widely applied in diverse areas of study due to its generalized nature.
+The field theory is a method of analysis that describes social arenas where actors pursue an objective at stake, interacting with other actors to achieve their goals [@kluttz-2016]. Bourdieu is a recognized sociologist that influenced the Sociological Field Theory, having developed the concepts of field, habitus, capital and doxa. His theory is widely applied in diverse areas of study due to its generalized nature.
 
-The concept of field in the perspective of Bourdieu is that fields are arenas of disputes between different social actors [@kluttz-2016]. The social actors ocupy a certain position in the field, and are in dispute towards an objective at stake [@thomson-2014]. Each field functions according to it's own logic, or in other words, present specific "rules of the game" [@kluttz-2016; @thomson-2014].
+The concept of field in the perspective of Bourdieu is that fields are arenas of disputes between different social actors [@kluttz-2016]. The social actors occupy a certain position in the field, and are in dispute towards an objective at stake [@thomson-2014]. Each field functions according to it's own logic, or in other words, present specific "rules of the game" [@kluttz-2016; @thomson-2014].
 
 The capital is the manifestation of different types of power, that can be economic, cultural or social [@kluttz-2016].
 
@@ -49,8 +49,6 @@ READ:
 -   <https://doi.org/10.1177/0018726718767952>
 :::
 
-## Statistics
-
-Statistics
+## Statistical Modeling
 
 # References
