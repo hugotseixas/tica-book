@@ -1,4 +1,4 @@
-# Model
+# Model {#sec-model}
 
 The modelling methodology should be appropriate to deal with spatiotemporal dynamics.
 
@@ -7,21 +7,19 @@ There will be two exercises: create a model to optimize prediction of deforestat
 The first algorithm on the list of possibilities is the Bayesian Additive Regression Trees (BART).
 
 ::: {.callout-important collapse="true"}
-
 READ: spatial models
 
-- https://doi.org/10.3390/ijgi10090600
-- https://doi.org/10.1007/s00168-021-01101-x
+-   https://doi.org/10.3390/ijgi10090600
+-   https://doi.org/10.1007/s00168-021-01101-x
 
 READ: causality for feature selection
 
-- https://arxiv.org/pdf/2207.04053.pdf
-- https://doi.org/10.1145/3409382
+-   https://arxiv.org/pdf/2207.04053.pdf
+-   https://doi.org/10.1145/3409382
 
 READ: variables related to deforestation
 
-- https://doi.org/10.1371/journal.pone.0269729
-
+-   https://doi.org/10.1371/journal.pone.0269729
 :::
 
 ### Variables
