@@ -414,7 +414,12 @@ Important
 </section>
 <section id="model-development" class="level3" data-number="2.3.2">
 <h3 data-number="2.3.2" class="anchored" data-anchor-id="model-development"><span class="header-section-number">2.3.2</span> Model Development</h3>
-<p>The statistical model follow the standard approach to develop supervised models.</p>
+<p>The statistical model follow the standard approach to develop supervised models (see <a href="11_model.html"><span>Appendix&nbsp;B</span></a>).</p>
+<p>The variables selection will be performed according to available data of possible causes of NVS (as stated in the theoretical model), the selection will also be performed to remove variables that can induce unwanted bias in the results, such as colliders and mediators.</p>
+<p>The data splitting between training and training, validation and testing groups will be performed in order to avoid spatial and temporal correlation between observations.</p>
+<p>The parameters adjustments will be performed by cross validation methods for resampling and racing techniques for parameter optimization. In this process, validation data will be used for parameter adjustments.</p>
+<p>After the final model fit, accuracy metrics will be calculated in order to estimate the error of the statistical model. Along with the accuracy assessment, a series of model interpretation techniques will be applied in order to understand the model results.</p>
+<p>The main steps are shown in <a href="#fig-model-diagram">Figure&nbsp;<span>2.6</span></a>.</p>
 <div class="cell" data-fig-responsive="true" data-layout-align="center">
 <div class="cell-output-display">
 <div id="fig-model-diagram" class="quarto-figure quarto-figure-center anchored">
@@ -447,6 +452,7 @@ Important
 </section>
 <section id="results-interpretation" class="level2" data-number="2.4">
 <h2 data-number="2.4" class="anchored" data-anchor-id="results-interpretation"><span class="header-section-number">2.4</span> Results Interpretation</h2>
+<p>The interpretation of quantitative and qualitative results are performed by reflecting about the possible causal mechanisms of NVS.</p>
 </section>
 <section id="references" class="level1 unnumbered">
 <h1 class="unnumbered">References</h1>
