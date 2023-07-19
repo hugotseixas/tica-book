@@ -184,7 +184,17 @@ Each grid cell contains one observation, for each year, for all the variables. O
 
 ### Model Development
 
-The statistical model follow the standard approach to develop supervised models.
+The statistical model follow the standard approach to develop supervised models (see @sec-model).
+
+The variables selection will be performed according to available data of possible causes of NVS (as stated in the theoretical model), the selection will also be performed to remove variables that can induce unwanted bias in the results, such as colliders and mediators.
+
+The data splitting between training and training, validation and testing groups will be performed in order to avoid spatial and temporal correlation between observations.
+
+The parameters adjustments will be performed by cross validation methods for resampling and racing techniques for parameter optimization. In this process, validation data will be used for parameter adjustments.
+
+After the final model fit, accuracy metrics will be calculated in order to estimate the error of the statistical model. Along with the accuracy assessment, a series of model interpretation techniques will be applied in order to understand the model results.
+
+The main steps are shown in @fig-model-diagram.
 
 ```{mermaid}
 %%| label: fig-model-diagram
@@ -211,5 +221,7 @@ flowchart TD
 ```
 
 ## Results Interpretation
+
+The interpretation of quantitative and qualitative results are performed by reflecting about the possible causal mechanisms of NVS.
 
 # References {.unnumbered}
