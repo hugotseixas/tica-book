@@ -1,12 +1,3 @@
 # Conclusions
 
-The final outcome of this project is expected to provide answers to the following questions as concluding remarks:
-
-- How suitable were the models to represent the studied phenomena?
-
-The final remarks should summarize the potential of utilizing observed data and statistical models to estimate the causes and impacts of deforestation, as also explore the limitations of this method. 
-
-- What are the implications of the results to the development of public policies in the Amazon and Cerrado biomes?
-
-Assuming that the models were suitable for representing the phenomena, the concluding remarks will summarize how the results can inform important variables that need to be taken into account for the development of public policies. Spatialization may also prove useful by providing regions that are more suitable for different kinds of strategies to mitigate deforestation and its impacts.
 
