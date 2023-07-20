@@ -16,7 +16,13 @@ lapply(file_names, load, .GlobalEnv)
 
 ```
 
-## Modelling variables
+## Theoretical Model
+
+## Sociological Analysis
+
+## Statistical Analysis
+
+### Exploratory Data Analysis
 
 In this section I analyse each variable of my model. 
 It is important to note that all quantitative analysis were performed in the data stored in the base grid.
@@ -129,5 +135,7 @@ deforestation_colsum_natural
 deforestation_colsum_human
 
 ```
+
+## Final results
 
 # References {.unnumbered}
