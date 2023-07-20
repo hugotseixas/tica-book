@@ -90,7 +90,34 @@ The target participants are researchers with past experience on analyzing NVS in
 
 The prospecting of potential participants are done by snowball sampling.
 
-The interviews consist of open and closed questions (see @sec-interview-schedule for the interview schedule), and an interactive activity of building a DAG with the participants (see @sec-interview-dag).
+The interviews consist of open and closed questions, and an interactive activity of building a DAG with the participants. The objective of developing DAGs with different participants is to explore a diversity of possibilities to theorize NVS causes. The use of DAGs before any modeling exercise (such as feature selection) is useful to reflect about the phenomena. It is also possible to compare DAGs (since they are graphs), so it will open an opportunity to explore convergences and divergences between participants.
+
+::: {.callout-important collapse="true"}
+READ:
+
+-   https://doi.org/10.11157/fohpe.v20i3.387
+
+-   https://doi.org/10.1177/1468794118781718
+
+-   https://doi.org/10.1016/S0167-9236(03)00095-2
+
+-   https://doi.org/10.1080/13645579.2021.1935565
+
+-   https://doi.org/10.1080/13645579.2020.1766777
+
+-   https://doi.org/10.1080/13645579.2018.1503400
+:::
+
+The questions aims to develop a context of the participant experience and perspectives on deforestation.
+
+```{r}
+#| label: tbl-schedule
+#| tbl-cap: Interview schedule used in this project.
+#| echo: false
+
+htmltools::includeHTML("./figs/interview_schedule.html")
+
+```
 
 ### Literature Assessment
 
@@ -115,6 +142,41 @@ flowchart TD
 ```
 
 The relevant results from the literature are documented and stored for the creation of the theoretical model, in conjunction with the data acquired from the interviews.
+
+### Variables description
+
+The variables used in this project will serve to predict deforestation and its impacts on social and environmental dimensions. The variables may present diverse nature, such as quantitative and qualitative.
+
+```{r}
+#| label: tbl-variables
+#| tbl-cap: Variables used in this project.
+#| echo: false
+
+htmltools::includeHTML("./figs/variables_table.html")
+
+```
+
+#### Biomes
+
+The biomes limits are provided by IBGE. The extent of the biomes have been changing over the years, and since we are working on a time series, the extent will dependent on the year.
+
+The downloaded data was filtered to contain only the limits of the Amazon and Cerrado biomes.
+
+#### Deforestation
+
+The deforestation variable is derived from the MapBiomas land use and land cover collection.
+
+The downloaded data was cropped to the extent of the Cerrado and Amazon biomes. Than the raster data was aggregated to a coarser spatial resolution, from 30 to 300 meters, assigning the value of the most frequent class to the new pixel (the mode of the 100 pixels that will be aggregated to the 300 meters pixels). This was done to reduce the amount of observations, which would be unfeasible to process, since the original data consists of hundreds of billions pixels.
+
+#### Conservation Units
+
+The limits of the Conservation Units (UC) are provided by the Ministry of Environment and Climate Change. These are the conservation units that finished the registration process at the National Register of Conservation Units (CNUC). However, the data used in this project is accessed by the Institute for Applied Economic Research (IPEA), which organizes data in a standard attributes and spatial projection. The data is represented as spatial vectors.
+
+The UC vectors are intersected to the base grid, and the area of each UC inside each cell is calculated.
+
+#### Indigenous Lands
+
+The limits of Indigenous Lands (IL) inside the Amazon and Cerrado are provided by FUNAI.
 
 ## Sociological Analysis
 
@@ -184,7 +246,7 @@ Each grid cell contains one observation, for each year, for all the variables. O
 
 ### Model Development
 
-The statistical model follow the standard approach to develop supervised models (see @sec-model).
+The statistical model follow the standard approach to develop supervised models.
 
 The variables selection will be performed according to available data of possible causes of NVS (as stated in the theoretical model), the selection will also be performed to remove variables that can induce unwanted bias in the results, such as colliders and mediators.
 
@@ -219,6 +281,22 @@ flowchart TD
     K[Model Assessment] --> L[Model Interpretation]
 
 ```
+
+::: {.callout-important collapse="true"}
+READ: spatial models
+
+-   <https://doi.org/10.3390/ijgi10090600>
+-   <https://doi.org/10.1007/s00168-021-01101-x>
+
+READ: causality for feature selection
+
+-   <https://arxiv.org/pdf/2207.04053.pdf>
+-   <https://doi.org/10.1145/3409382>
+
+READ: variables related to deforestation
+
+-   <https://doi.org/10.1371/journal.pone.0269729>
+:::
 
 ## Results Interpretation
 
