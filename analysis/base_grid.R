@@ -162,10 +162,10 @@ color_scale <-
   geom_point(alpha = 0) +
   scico::scale_fill_scico(
     breaks = c(0, 1),
-    labels = c("Minimum","Maximum"),
+    labels = c("Minimum", "Maximum"),
     guide = guide_colorbar(
       frame.colour = "#000000",
-      frame.linewidth = 1/.pt,
+      frame.linewidth = 1 / .pt,
       ticks.colour = "transparent"
     )
   ) +
@@ -174,9 +174,9 @@ color_scale <-
     legend.position = c(0.5, 0.5), # move the legend to the center
     legend.title = element_blank(),
     legend.text = element_text(size = 13, face = "bold"),
-    legend.key = element_rect(fill = 'NA'),
-    legend.key.height = ggplot2::unit(6, 'mm'),
-    legend.key.width = ggplot2::unit(30, 'mm'),
+    legend.key = element_rect(fill = "NA"),
+    legend.key.height = ggplot2::unit(6, "mm"),
+    legend.key.width = ggplot2::unit(30, "mm"),
     legend.text.align = c(0, 1),
     legend.direction = "horizontal"
   )
