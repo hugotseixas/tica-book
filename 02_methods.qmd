@@ -5,7 +5,6 @@
 #| include: false
 
 library(gt)
-library(lubridate)
 library(tidyverse)
 
 ```
@@ -16,17 +15,17 @@ To employ the tasks above and accomplish the objectives (see @sec-objectives), t
 
 1.  Creation of the NVS theoretical model;
 
-2.  Sociological assessment of agents related to the NVS theoretical model;
+2.  Sociological assessment of social actors related to NVS;
 
-3.  Statistical analysis of data related to the NVS theoretical model;
+3.  Statistical modeling of NVS;
 
 4.  Interpretation of the results;
 
-The first part is performed by conducting an adaptation of the Critical Realist Grounded Theory [@oliver-2011] method (which is itself an adaptation of the general Grounded Theory method). My adaptation combines the interactive engagement with data trough the acquisition and coding process, and the retroduction approach to infer causal mechanisms of NVS. The result of this process will be a theoretic model, represented by a Directed Acyclic Graph (DAG), which abstracts relationships of cause between variables.
+The first part is performed by conducting an adaptation of the Critical Realist Grounded Theory [@oliver-2011] method (which is itself an adaptation of the general Grounded Theory method). My adaptation combines the interactive engagement with data trough the acquisition and coding process, and the retroduction approach to infer causal mechanisms of NVS. The result of this process is a theoretic model, represented by a Directed Acyclic Graph (DAG), which abstracts relationships of cause between variables.
 
-In the second part, a sociological analysis describes how groups of interest are related to the variables from the NVS theoretical model, and what are the interactions between different groups, according to their actions and power status. The analysis will be based on Fields Theory of Bourdieu.
+In the second part, a sociological analysis describes how social actors are related to the variables from the NVS theoretical model, and what are the interactions between different groups, according to their actions and power status. The analysis will be based on Fields Theory of Bourdieu.
 
-The third part contains the development and employment of statistical regression algorithms, that will be trained and tested using available data that are represented in the NVS theoretic model. The prediction of the models will be analyzed by machine learning interpretation techniques.
+The third part contains the development and employment of statistical regression algorithms, that are trained and tested using available data that are represented in the NVS theoretic model. The prediction of the models will be analyzed by machine learning interpretation techniques.
 
 The fourth and last part is where results of both approaches (sociological and statistical analyses) will be interpreted in conjunction.
 
@@ -51,17 +50,17 @@ flowchart TD
 
 ```
 
-The combination of activities configures as a Convergent Parallel Mixed Method of research, where quantitative and qualitative analysis are perform at the same time, providing results to a final interpretation, However, the design of this work includes a previous establishment of a common theory that guides both analysis, so they share the same foundations.
+The combination of activities configures as a Convergent Parallel Mixed Method of research, where quantitative and qualitative analysis are performed at the same time, providing results to a final interpretation, However, the design of this work includes a previous establishment of a common theory that guides both analysis, so they share the same foundations.
 
 In the next sections, each part of the work, and its respective activities are described.
 
 ## Theoretical Model
 
-The theoretical model will be created by the employment of an adaptation of the Critical Realist Grounded Theory. The method of Grounded Theory is widely used in social sciences with the objective of generating theories, it consists of an interactive and concurrent process of data collection and analysis. It have been modified trough time to accommodate different paradigms of research, such as the Critical Realism.
+The theoretical model is created by the employment of an adaptation of the Critical Realist Grounded Theory. The method of Grounded Theory is widely used in social sciences with the objective of generating theories, it consists of an interactive and concurrent process of data collection and analysis. It have been modified trough time to accommodate different paradigms of research, such as the Critical Realism.
 
 The Critical Realist Grounded Theory introduces the necessity to explicitly account for the link between observations and their underlying generative mechanisms, and the use of retroduction in order to abstract these mechanisms [@oliver-2011].
 
-The process of data acquisition is performed by a series of interviews and literature assessment. The interviews inquire possible causes of NVS and the social groups related to this phenomena. After each interview, the answers are coded into general terms, and with related question of how and why they can affect NVS. These questions are transformed into literature database queries, that helps finding written material that may enrich analysis with convergences or divergences with interview answers, or with new causes of NVS. After each round of interviews and literature assessment, the next interview may change to accommodate findings from the previous. This cyclic process is demonstrated in @fig-theoretical-diagram.
+The process of data acquisition is performed by a series of interviews and literature assessment. The interviews inquire possible causes of NVS and the social groups related to this phenomena. After each interview, the answers are coded into general terms, and with related questions of how and why they can affect NVS. These questions are transformed into literature database queries, that helps finding written material that may enrich analysis with convergences or divergences with interview answers, or with new possible causes of NVS. After each round of interviews and literature assessment, the next interview may change to accommodate findings from the previous. This cyclic process is demonstrated in @fig-theoretical-diagram.
 
 ```{mermaid}
 %%| label: fig-theoretical-diagram
@@ -84,13 +83,13 @@ This process is repeated until the data from interviews and literature assessmen
 
 ### Experts Interviews
 
-The objective of the interviews is to explore a diverse range of possible causes of NVS, and its impacts on the environment and society.
+The objective of the interviews is to explore a diverse range of possible causes of NVS.
 
 The target participants are researchers with past experience on analyzing NVS in the Amazon or Cerrado biomes.
 
-The prospecting of potential participants are done by snowball sampling.
+The prospecting of potential participants is done by snowball sampling.
 
-The interviews consist of open and closed questions, and an interactive activity of building a DAG with the participants. The objective of developing DAGs with different participants is to explore a diversity of possibilities to theorize NVS causes. The use of DAGs before any modeling exercise (such as feature selection) is useful to reflect about the phenomena. It is also possible to compare DAGs (since they are graphs), so it will open an opportunity to explore convergences and divergences between participants.
+The interviews consist of open and closed questions, and an interactive activity of building a DAG with the participants. The objective of developing DAGs with different participants is to explore a diversity of possibilities to theorize NVS causes. The use of DAGs before any modeling exercise (such as variables selection) is useful to reflect about the phenomena. It is also possible to compare DAGs (since they are graphs), so it will open an opportunity to explore convergences and divergences between participants.
 
 ::: {.callout-important collapse="true"}
 READ:
@@ -108,7 +107,7 @@ READ:
 -   https://doi.org/10.1080/13645579.2018.1503400
 :::
 
-The questions aims to develop a context of the participant experience and perspectives on deforestation.
+The questions aims to develop a context of the participant experience and perspectives on NVS.
 
 ```{r}
 #| label: tbl-schedule
@@ -145,7 +144,7 @@ The relevant results from the literature are documented and stored for the creat
 
 ### Variables description
 
-The variables used in this project will serve to predict deforestation and its impacts on social and environmental dimensions. The variables may present diverse nature, such as quantitative and qualitative.
+The possible causes of NVS that are included in the theoretical model may or may not be observed as data, but all of them are described in this section. The variables may present diverse nature, such as quantitative and qualitative.
 
 ```{r}
 #| label: tbl-variables
@@ -158,15 +157,19 @@ htmltools::includeHTML("./figs/variables_table.html")
 
 #### Biomes
 
-The biomes limits are provided by IBGE. The extent of the biomes have been changing over the years, and since we are working on a time series, the extent will dependent on the year.
+The biomes limits are provided by IBGE. The extent of the biomes have been changing over the years, and since we are working on a time series, the extent will dependent on the year. The biomes limits were defined by IBGE at 2004, and was updated in 2019.
 
 The downloaded data was filtered to contain only the limits of the Amazon and Cerrado biomes.
 
-#### Deforestation
+#### Natural Vegetation Suppression
 
-The deforestation variable is derived from the MapBiomas land use and land cover collection.
+The term of NVS is used to avoid the ambiguity of using the deforestation definition, recent research reviewed 65 reports, and found 15 definitions of deforestation, and 9 definitions of forests [@oca-2021]. There are also practical implications in how to identify NVS by satellite images, but in this project I simplify it by accounting for any non-trivial transition from natural vegetation to antropic land uses.
 
-The downloaded data was cropped to the extent of the Cerrado and Amazon biomes. Than the raster data was aggregated to a coarser spatial resolution, from 30 to 300 meters, assigning the value of the most frequent class to the new pixel (the mode of the 100 pixels that will be aggregated to the 300 meters pixels). This was done to reduce the amount of observations, which would be unfeasible to process, since the original data consists of hundreds of billions pixels.
+The NVS variable is derived from the MapBiomas land use and land cover collection (version 7.1).
+
+The downloaded data was cropped to the extent of the Cerrado and Amazon biomes and projected to the SIRGAS 2000 / Brazil Policonic cartesian projection (EPSG:5880), which represents fixed area pixels in meters. Than the raster data was aggregated to a coarser spatial resolution, from 30 to 150 meters, assigning the value of the most frequent class to the new pixel (the mode of the 25 pixels that will be aggregated to the 150 meters pixels). This was done to reduce the amount of observations, which would be unfeasible to process, since the original data consists of hundreds of billions pixels.
+
+The conversion from land use data to NVS is made for each grid cell. To perform this conversion, the downloaded raster files are cropped to the grid cell extent, and labeled in six groups: natural vegetation, pasture, temporary crops, perennial crops, forest plantation, and mosaic. The following step is to identify transitions between natural vegetation to antropic use, and calculate the area of those transitions for the grid cell. These transitions represents the NVS.
 
 #### Conservation Units
 
@@ -190,7 +193,7 @@ Social actors are conceptualized as groups of interest that represents not only 
 
 The power of the social actors can manifest in different ways, such as economic, political, symbolic, social and cultural power.
 
-The sociological analysis will consist in identifying the social groups and their power in each of the causes of NVS (that were proposed in the theoretical model). The relationship between these social groups will also be characterized. From these information, the causal mechanisms of deforestation are discussed by. abducttion
+The sociological analysis will consist in identifying the social actors and their power, for each cause of NVS (that were proposed in the theoretical model). The relationship between these social groups will also be characterized.
 
 ::: {.callout-important collapse="true"}
 READ:
@@ -242,7 +245,7 @@ viz_grid
 
 ```
 
-Each grid cell contains one observation, for each year, for all the variables. Only pixels that contained natural vegetation in the first year of the analysis will be considered valid.
+Each grid cell contains one observation, for each year, for all the variables.
 
 ### Model Development
 
@@ -282,6 +285,8 @@ flowchart TD
 
 ```
 
+The regression algorithms used to predict NVS are based on Decision Trees (DT) and ensemble techniques, that are Random Forest (RF) and Bayesian Additive Regression Trees (BART). Using models with different complexity, but a common framework is useful to interpret the results.
+
 ::: {.callout-important collapse="true"}
 READ: spatial models
 
@@ -293,13 +298,13 @@ READ: causality for feature selection
 -   <https://arxiv.org/pdf/2207.04053.pdf>
 -   <https://doi.org/10.1145/3409382>
 
-READ: variables related to deforestation
+READ: variables related to NVS
 
 -   <https://doi.org/10.1371/journal.pone.0269729>
 :::
 
 ## Results Interpretation
 
-The interpretation of quantitative and qualitative results are performed by reflecting about the possible causal mechanisms of NVS.
+The interpretation of quantitative and qualitative results are performed in conjunction to find underlying mechanisms of how the dispute between social actors also influence the variables that cause NVS. The interpretation is done by comparing the results from the sociological and statistical analysis, searching for convergences, divergences and possible gaps in the explanation of the causes of NVS.
 
 # References {.unnumbered}
