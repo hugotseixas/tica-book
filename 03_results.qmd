@@ -18,9 +18,17 @@ lapply(file_names, load, .GlobalEnv)
 
 ## Theoretical Model
 
+In this section I summarise the reults from the interviews and literature assessment, and present the resulting theoretical model of NVS.
+
+The theoretical model is presented as a diagram visualization, accompained with text explining the causal processes represented in the diagram.
+
 ## Sociological Analysis
 
+In this section I show the identified social actors and how they relate with each other in the dispute over land, determined by NVS. The results will lso be represented as diagrams, that will show the relations between the social actors, and the capital of each.
+
 ## Statistical Analysis
+
+In this section I present the results from the quantitative analysis, from the exploratory data analysis to the statistical model predictions and interpretation.
 
 ### Exploratory Data Analysis
 
@@ -135,5 +143,7 @@ deforestation_colsum_human
 ```
 
 ## Final results
+
+The final results section will present the divergences and convergences between the qualitative and quantitative results, summarising the findings in tables and diagrams.
 
 # References {.unnumbered}
