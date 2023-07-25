@@ -1,3 +1,5 @@
 # Discussion
 
+I expect to be able to discuss my results with a large range of studies regarding NVS in the Amazon and Cerrado, including small scale case studies and large scale modelling experiments. The discussion must present convergences and divergences between my results and the results found in the literature, and point out how my results can be useful in some way.
 
+Furthermore, I expect to be able to discuss the application of mixed methods in analysing NVS in those biomes, how to deal with qualitative data in statistical models, and how to merge information from different perspectives of analysis (field theory and regression algorithms).
