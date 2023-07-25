@@ -50,9 +50,7 @@ color_scale
 
 ```
 
-### Deforestation
-
-A recent research reviewed 65 reports, and found 15 definitions of deforestation, and 9 definitions of forests [@oca-2021].
+### Natural Vegetation Suppression
 
 ::: {.callout-important collapse="true"}
 
@@ -66,7 +64,7 @@ READ:
 
 ```{r}
 #| label: tbl-deforestation_summary
-#| tbl-cap: "Summary table of deforestation."
+#| tbl-cap: "Summary table of natural vegetation suppression."
 #| echo: false
 
 htmltools::includeHTML("./figs/eda/deforestation_table.html")
