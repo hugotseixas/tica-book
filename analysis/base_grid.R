@@ -29,6 +29,8 @@ conflicts_prefer(dplyr::filter)
 #
 # LOAD BIOME DATA -------------------------------------------------------------
 
+download_aoi()
+
 aoi <- read_sf("data/external/aoi/aoi.fgb")
 
 # CREATE AND SAVE GRID --------------------------------------------------------
@@ -38,7 +40,7 @@ base_grid <- create_grid(resolution = 30000)
 # Save grid polygons as FlatGeobuf file
 write_sf(
   obj = base_grid,
-  dsn = "./data/base_grid.fgb",
+  dsn = "data/base_grid.fgb",
   driver = "FlatGeobuf",
   append = FALSE,
   delete_dsn = TRUE

@@ -23,6 +23,8 @@ conflicts_prefer(dplyr::filter)
 #
 # PROCESS AND SAVE UC DATA ----------------------------------------------------
 
+download_land_use()
+
 deforestation_grid <-
   process_land_use()
 
