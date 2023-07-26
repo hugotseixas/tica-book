@@ -205,19 +205,19 @@ ul.task-list li input[type="checkbox"] {
 
 <section id="theoretical-model" class="level2" data-number="3.1">
 <h2 data-number="3.1" class="anchored" data-anchor-id="theoretical-model"><span class="header-section-number">3.1</span> Theoretical Model</h2>
-<p>In this section I summarise the reults from the interviews and literature assessment, and present the resulting theoretical model of NVS.</p>
-<p>The theoretical model is presented as a diagram visualization, accompained with text explining the causal processes represented in the diagram.</p>
+<p>In this section I summarize the results from the interviews and literature assessment, and present the resulting theoretical model of NVS.</p>
+<p>The theoretical model is presented as a diagram visualization, accompanied with text explaining the causal processes represented in the diagram.</p>
 </section>
 <section id="sociological-analysis" class="level2" data-number="3.2">
 <h2 data-number="3.2" class="anchored" data-anchor-id="sociological-analysis"><span class="header-section-number">3.2</span> Sociological Analysis</h2>
-<p>In this section I show the identified social actors and how they relate with each other in the dispute over land, determined by NVS. The results will lso be represented as diagrams, that will show the relations between the social actors, and the capital of each.</p>
+<p>In this section I show the identified social actors and how they relate with each other in the dispute over land, determined by NVS. The results will also be represented as diagrams, that will show the relations between the social actors, and the capital of each.</p>
 </section>
 <section id="statistical-analysis" class="level2" data-number="3.3">
 <h2 data-number="3.3" class="anchored" data-anchor-id="statistical-analysis"><span class="header-section-number">3.3</span> Statistical Analysis</h2>
 <p>In this section I present the results from the quantitative analysis, from the exploratory data analysis to the statistical model predictions and interpretation.</p>
 <section id="exploratory-data-analysis" class="level3" data-number="3.3.1">
 <h3 data-number="3.3.1" class="anchored" data-anchor-id="exploratory-data-analysis"><span class="header-section-number">3.3.1</span> Exploratory Data Analysis</h3>
-<p>In this section I analyse each variable of my model. It is important to note that all quantitative analysis were performed in the data stored in the base grid. So the figures and tables do not show distributions of the raw observations/estimates, but the values that were transformed to fit the grid cells (<a href="#fig-base-grid">Figure&nbsp;<span>3.1</span></a>).</p>
+<p>In this section I analyze each variable of my model. It is important to note that all quantitative analysis were performed in the data stored in the base grid. So the figures and tables do not show distributions of the raw observations/estimates, but the values that were transformed to fit the grid cells (<a href="#fig-base-grid">Figure&nbsp;<span>3.1</span></a>).</p>
 <div class="cell" data-fig.asp="1">
 <div class="cell-output-display">
 <div id="fig-base-grid" class="quarto-figure quarto-figure-center anchored">
@@ -228,7 +228,7 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 </div>
-<p>All visualizations about the variables follows a common color scale, to facilitate their interpretation along the document (<a href="#fig-color-scale">Figure&nbsp;<span>3.2</span></a>). The minimum values are represented by light grey color, values close to the median shows a yellow color, and maximum values as dark red color.</p>
+<p>All visualizations about the variables follows a common color scale, to facilitate their interpretation along the document (<a href="#fig-color-scale">Figure&nbsp;<span>3.2</span></a>). The minimum values are represented by light gray color, values close to the median shows a yellow color, and maximum values as dark red color.</p>
 <div class="cell" data-fig.asp="0.2">
 <div class="cell-output-display">
 <div id="fig-color-scale" class="quarto-figure quarto-figure-center anchored">
@@ -241,6 +241,7 @@ ul.task-list li input[type="checkbox"] {
 </div>
 <section id="natural-vegetation-suppression" class="level4" data-number="3.3.1.1">
 <h4 data-number="3.3.1.1" class="anchored" data-anchor-id="natural-vegetation-suppression"><span class="header-section-number">3.3.1.1</span> Natural Vegetation Suppression</h4>
+<p>The NVS is the phenomena of interest of this project.</p>
 <div class="callout callout-style-default callout-important callout-titled">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
@@ -262,9 +263,10 @@ Important
 </div>
 </div>
 </div>
+<p>In the grid of analysis, the minimum area of NVS is 2 ha for the Amazon and Cerrado, and the maximum area is 18000 ha a year for the Amazon, and 12000 ha a year in the Cerrado <a href="#tbl-deforestation-summary">Table&nbsp;<span>3.1</span></a>.</p>
 <div class="cell">
 <div class="cell-output-display">
-<div id="tbl-deforestation_summary" class="anchored">
+<div id="tbl-deforestation-summary" class="anchored">
 
 
 
@@ -715,7 +717,7 @@ Important
   text-indent: 25px;
 }
 </style>
-  <table class="gt_table" data-quarto-disable-processing="false" data-quarto-bootstrap="false"><caption>Table&nbsp;3.1:  <p>Summary table of natural vegetation suppression.</p> </caption>
+  <table class="gt_table" data-quarto-disable-processing="false" data-quarto-bootstrap="false"><caption>Table&nbsp;3.1:  <p>Summary table of yearly natural vegetation suppression.</p> </caption>
   <thead>
     <tr class="gt_heading">
       <td colspan="7" class="gt_heading gt_title gt_font_normal gt_bottom_border" style="">Deforestation Area (ha)</td>
@@ -756,26 +758,29 @@ Important
 </div>
 </div>
 </div>
+<p>The distribution of NVS area in the grid cells is heavily skewed towards smaller areas, specially in the Amazon, which also shows a high frequency of a diverse range of values <a href="#fig-deforestation-hist">Figure&nbsp;<span>3.3</span></a>. The distribution of NVS for the Cerrado is less skewed, and show more frequent values close to 1000 ha a year <a href="#fig-deforestation-hist">Figure&nbsp;<span>3.3</span></a>.</p>
 <div class="cell" data-fig.asp="0.7">
 <div class="cell-output-display">
 <div id="fig-deforestation-hist" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 <p><img src="03_results_files/figure-html/fig-deforestation-hist-1.png" class="img-fluid figure-img" width="672"></p>
-<figcaption class="figure-caption">Figure&nbsp;3.3: Distribution of deforestation in the Amazon and Cerrado. The horizontal scale is transformed to base 10 log.</figcaption>
+<figcaption class="figure-caption">Figure&nbsp;3.3: Distribution of natural vegetation suppression in the Amazon and Cerrado. The horizontal scale is transformed to base 10 log.</figcaption>
 </figure>
 </div>
 </div>
 </div>
+<p>The cumulative NVS area shows that grid cells with high values of NVS accounts for the majority of the total NVS in a year, for the Amazon NVS from 3000ha to 18000 ha, which are the 25% highest values, accounts for 79% of all NVS <a href="#fig-deforestation-cumsum">Figure&nbsp;<span>3.4</span></a>. For the Cerrado, NVS from 900 ha to 12000 ha, the 25% highest values, accounts for 57% of the total NVS <a href="#fig-deforestation-cumsum">Figure&nbsp;<span>3.4</span></a>.</p>
 <div class="cell" data-fig.asp="0.7">
 <div class="cell-output-display">
 <div id="fig-deforestation-cumsum" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 <p><img src="03_results_files/figure-html/fig-deforestation-cumsum-1.png" class="img-fluid figure-img" width="672"></p>
-<figcaption class="figure-caption">Figure&nbsp;3.4: Cumulative percent of the deforestation area.</figcaption>
+<figcaption class="figure-caption">Figure&nbsp;3.4: Cumulative percent of the natural vegetation suppression area.</figcaption>
 </figure>
 </div>
 </div>
 </div>
+<p>The spatial distribution of NVS</p>
 <div class="cell" data-fig.asp="1">
 <div class="cell-output-display">
 <div id="fig-deforestation-spatial-distribution" class="quarto-figure quarto-figure-center anchored">
@@ -786,6 +791,7 @@ Important
 </div>
 </div>
 </div>
+<p>The NVS time series</p>
 <div class="cell" data-fig.asp="0.7">
 <div class="cell-output-display">
 <div id="fig-deforestation-timeseries" class="quarto-figure quarto-figure-center anchored">
@@ -796,6 +802,7 @@ Important
 </div>
 </div>
 </div>
+<p>The natural vegetation types that suffered suppression</p>
 <div class="cell" data-fig.asp="0.7">
 <div class="cell-output-display">
 <div id="fig-deforestation-colsum-natural" class="quarto-figure quarto-figure-center anchored">
@@ -806,6 +813,7 @@ Important
 </div>
 </div>
 </div>
+<p>The antropic land uses that followed after NVS</p>
 <div class="cell" data-fig.asp="0.7">
 <div class="cell-output-display">
 <div id="fig-deforestation-colsum-human" class="quarto-figure quarto-figure-center anchored">
@@ -821,7 +829,7 @@ Important
 </section>
 <section id="final-results" class="level2" data-number="3.4">
 <h2 data-number="3.4" class="anchored" data-anchor-id="final-results"><span class="header-section-number">3.4</span> Final results</h2>
-<p>The final results section will present the divergences and convergences between the qualitative and quantitative results, summarising the findings in tables and diagrams.</p>
+<p>The final results section will present the divergences and convergences between the qualitative and quantitative results, summarizing the findings in tables and diagrams.</p>
 </section>
 <section id="references" class="level1 unnumbered">
 <h1 class="unnumbered">References</h1>

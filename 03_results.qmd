@@ -18,13 +18,13 @@ lapply(file_names, load, .GlobalEnv)
 
 ## Theoretical Model
 
-In this section I summarise the reults from the interviews and literature assessment, and present the resulting theoretical model of NVS.
+In this section I summarize the results from the interviews and literature assessment, and present the resulting theoretical model of NVS.
 
-The theoretical model is presented as a diagram visualization, accompained with text explining the causal processes represented in the diagram.
+The theoretical model is presented as a diagram visualization, accompanied with text explaining the causal processes represented in the diagram.
 
 ## Sociological Analysis
 
-In this section I show the identified social actors and how they relate with each other in the dispute over land, determined by NVS. The results will lso be represented as diagrams, that will show the relations between the social actors, and the capital of each.
+In this section I show the identified social actors and how they relate with each other in the dispute over land, determined by NVS. The results will also be represented as diagrams, that will show the relations between the social actors, and the capital of each.
 
 ## Statistical Analysis
 
@@ -32,7 +32,7 @@ In this section I present the results from the quantitative analysis, from the e
 
 ### Exploratory Data Analysis
 
-In this section I analyse each variable of my model. It is important to note that all quantitative analysis were performed in the data stored in the base grid. So the figures and tables do not show distributions of the raw observations/estimates, but the values that were transformed to fit the grid cells (@fig-base-grid).
+In this section I analyze each variable of my model. It is important to note that all quantitative analysis were performed in the data stored in the base grid. So the figures and tables do not show distributions of the raw observations/estimates, but the values that were transformed to fit the grid cells (@fig-base-grid).
 
 ```{r}
 #| label: fig-base-grid
@@ -44,7 +44,7 @@ viz_grid_area
 
 ```
 
-All visualizations about the variables follows a common color scale, to facilitate their interpretation along the document (@fig-color-scale). The minimum values are represented by light grey color, values close to the median shows a yellow color, and maximum values as dark red color.
+All visualizations about the variables follows a common color scale, to facilitate their interpretation along the document (@fig-color-scale). The minimum values are represented by light gray color, values close to the median shows a yellow color, and maximum values as dark red color.
 
 ```{r}
 #| label: fig-color-scale
@@ -58,6 +58,8 @@ color_scale
 
 #### Natural Vegetation Suppression
 
+The NVS is the phenomena of interest of this project.
+
 ::: {.callout-important collapse="true"}
 READ:
 
@@ -66,18 +68,22 @@ READ:
 -   https://doi.org/10.1111/j.1475-682X.2007.00200.x
 :::
 
+In the grid of analysis, the minimum area of NVS is 2 ha for the Amazon and Cerrado, and the maximum area is 18000 ha a year for the Amazon, and 12000 ha a year in the Cerrado @tbl-deforestation-summary.
+
 ```{r}
-#| label: tbl-deforestation_summary
-#| tbl-cap: "Summary table of natural vegetation suppression."
+#| label: tbl-deforestation-summary
+#| tbl-cap: "Summary table of yearly natural vegetation suppression."
 #| echo: false
 
 htmltools::includeHTML("./figs/eda/deforestation_table.html")
 
 ```
 
+The distribution of NVS area in the grid cells is heavily skewed towards smaller areas, specially in the Amazon, which also shows a high frequency of a diverse range of values @fig-deforestation-hist. The distribution of NVS for the Cerrado is less skewed, and show more frequent values close to 1000 ha a year @fig-deforestation-hist.
+
 ```{r}
 #| label: fig-deforestation-hist
-#| fig-cap: "Distribution of deforestation in the Amazon and Cerrado. The horizontal scale is transformed to base 10 log."
+#| fig-cap: "Distribution of natural vegetation suppression in the Amazon and Cerrado. The horizontal scale is transformed to base 10 log."
 #| fig-asp: 0.70
 #| echo: false
 
@@ -85,15 +91,19 @@ deforestation_histogram
 
 ```
 
+The cumulative NVS area shows that grid cells with high values of NVS accounts for the majority of the total NVS in a year, for the Amazon NVS from 3000ha to 18000 ha, which are the 25% highest values, accounts for 79% of all NVS @fig-deforestation-cumsum. For the Cerrado, NVS from 900 ha to 12000 ha, the 25% highest values, accounts for 57% of the total NVS @fig-deforestation-cumsum.
+
 ```{r}
 #| label: fig-deforestation-cumsum
-#| fig-cap: "Cumulative percent of the deforestation area."
+#| fig-cap: "Cumulative percent of the natural vegetation suppression area."
 #| fig-asp: 0.70
 #| echo: false
 
 deforestation_cumulative
 
 ```
+
+The spatial distribution of NVS
 
 ```{r}
 #| label: fig-deforestation-spatial-distribution
@@ -104,6 +114,8 @@ deforestation_cumulative
 deforestation_spatial
 
 ```
+
+The NVS time series
 
 ```{r}
 #| label: fig-deforestation-timeseries
@@ -116,6 +128,8 @@ deforestation_timeseries
 
 ```
 
+The natural vegetation types that suffered suppression
+
 ```{r}
 #| label: fig-deforestation-colsum-natural
 #| fig-cap: "Deforested area of different land cover."
@@ -126,6 +140,8 @@ deforestation_timeseries
 deforestation_colsum_natural
 
 ```
+
+The antropic land uses that followed after NVS
 
 ```{r}
 #| label: fig-deforestation-colsum-human
@@ -140,6 +156,6 @@ deforestation_colsum_human
 
 ## Final results
 
-The final results section will present the divergences and convergences between the qualitative and quantitative results, summarising the findings in tables and diagrams.
+The final results section will present the divergences and convergences between the qualitative and quantitative results, summarizing the findings in tables and diagrams.
 
 # References {.unnumbered}
