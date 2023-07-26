@@ -23,6 +23,8 @@ conflicts_prefer(dplyr::filter)
 #
 # PROCESS AND SAVE UC DATA ----------------------------------------------------
 
+download_conservation_units()
+
 conservation_units_grid <-
   process_conservation_units()
 

@@ -32,9 +32,7 @@ In this section I present the results from the quantitative analysis, from the e
 
 ### Exploratory Data Analysis
 
-In this section I analyse each variable of my model. 
-It is important to note that all quantitative analysis were performed in the data stored in the base grid.
-So the figures and tables do not show distributions of the raw observations/estimates, but the values that were transformed to fit the grid cells (@fig-base-grid). 
+In this section I analyse each variable of my model. It is important to note that all quantitative analysis were performed in the data stored in the base grid. So the figures and tables do not show distributions of the raw observations/estimates, but the values that were transformed to fit the grid cells (@fig-base-grid).
 
 ```{r}
 #| label: fig-base-grid
@@ -58,16 +56,14 @@ color_scale
 
 ```
 
-### Natural Vegetation Suppression
+#### Natural Vegetation Suppression
 
 ::: {.callout-important collapse="true"}
-
 READ:
 
-- https://ssrn.com/abstract=4063325
-- https://doi.org/10.1086/597794 
-- https://doi.org/10.1111/j.1475-682X.2007.00200.x
-
+-   https://ssrn.com/abstract=4063325
+-   https://doi.org/10.1086/597794
+-   https://doi.org/10.1111/j.1475-682X.2007.00200.x
 :::
 
 ```{r}
