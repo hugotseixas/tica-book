@@ -68,21 +68,6 @@ create_visualizations(
   out_path = "figs/eda/"
 )
 
-create_visualizations(
-  f = eda_cumulative_distribution,
-  data = filter(uc, uc_area != 0),
-  variable = uc_area,
-  group_variable = region_name,
-  group_facet = TRUE,
-  viz_title = "Cumulative Conservation Unit Area",
-  x_title = "Conservation unit Area (ha)",
-  y_title = "Cumulative Percentage (%)",
-  quantiles_list = c(0.05, 0.5, 0.75, 1),
-  scale_transform = "identity",
-  out_filename = "uc_cumulative",
-  out_path = "figs/eda/"
-)
-
 viz_data <- uc |>
   summarise(
     uc_area = sum(uc_area),
@@ -120,7 +105,10 @@ viz_data <- read_parquet(file = "data/conservation_units.parquet") |>
   ) |>
   select(!c(geometry, cell_area)) |>
   drop_na() |>
-  mutate(uc_area = uc_area * 0.0001) |>
+  mutate(
+    uc_area = uc_area * 0.0001,
+    government_level = str_to_title(government_level)
+  ) |>
   summarise(
     uc_area = sum(uc_area),
     .by = c("region_name", "government_level")
@@ -134,9 +122,9 @@ create_visualizations(
   group_variable = region_name,
   cat_variable = government_level,
   scale_transform = "log",
-  viz_title = "Deforested Areas Classes",
-  x_title = "LULC",
-  y_title = "Deforestation Area (ha)",
+  viz_title = "Administrative Division of Conservation Units",
+  x_title = "Administrative Division of Conservation Units",
+  y_title = "Area covered by Conservation Units (ha)",
   out_filename = "uc_colsum",
   out_path = "figs/eda/"
 )
@@ -154,9 +142,9 @@ create_visualizations(
   variable = cumulative_uc_area,
   group_facet = TRUE,
   group_variable = region_name,
-  viz_title = "Deforestation Time Series",
+  viz_title = "Conservation Units Area Time Series",
   x_title = "Year",
-  y_title = "Deforestation Area (ha)",
+  y_title = "Area covered by Conservation Units Area (ha)",
   ts_type = "step",
   out_filename = "uc_timeseries",
   out_path = "figs/eda/"
@@ -192,4 +180,11 @@ create_visualizations(
   out_path = "figs/eda/"
 )
 
-
+eda_summary_table(
+  data = uc,
+  variable = uc_area,
+  rowname_variable = region_name,
+  viz_title = "Conservation Unit (ha)",
+  out_path = "./figs/eda/",
+  out_filename = "uc_table"
+)
