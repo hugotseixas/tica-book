@@ -14,6 +14,7 @@ book:
   license: CC BY-NC-ND 4.0
   favicon: /figs/art/logo.png
   sidebar:
+    style: "docked"
     search: true
     logo: /figs/art/logo.png
   comments:
