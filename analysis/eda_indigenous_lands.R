@@ -42,7 +42,7 @@ il <-
   arrange(cell_id, year) |>
   summarise(
     il_area = sum(il_area, na.rm = TRUE),
-    .by = c("cell_id", "year")
+    .by = c("cell_id", "region_name", "year")
   ) |>
   mutate(
     cumulative_il_area = cumsum(il_area),
@@ -77,4 +77,20 @@ create_visualizations(
   out_path = "figs/eda/",
   out_width = 15,
   out_height = 15
+)
+
+create_visualizations(
+  f = eda_histogram,
+  data = filter(il, il_area != 0),
+  variable = il_area,
+  group_variable = region_name,
+  group_facet = TRUE,
+  viz_title = "Indigenous Lands Histogram",
+  x_title = "Indigenous Lands  Area (ha)",
+  y_title = "",
+  scale_transform = "identity",
+  n_bins = 50,
+  x_lim = NULL,
+  out_filename = "il_histogram",
+  out_path = "figs/eda/"
 )
