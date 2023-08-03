@@ -3,3 +3,12 @@ toc: false
 ---
 
 # Glossary {.unnumbered}
+
+```{r}
+#| label: glossary
+#| echo: false
+#| dev: "ragg_png"
+
+htmltools::includeHTML("./figs/glossary.html")
+
+```
