@@ -16,8 +16,9 @@ In this work, I try to perform such task by running parallel analysis of differe
 
 ```{r}
 #| label: fig-amazon-hex
-#| fig-cap: Representation of the Amazon biome. TODO Describe some of the images inside the cells.
+#| fig-cap: Representation of the Brazilian Amazon biome.
 #| echo: false
+#| dev: "ragg_png"
 
 knitr::include_graphics("figs/art/art_amazon.png")
 
@@ -39,8 +40,9 @@ Finally, the results from qualitative and quantitative assessments are compared 
 
 ```{r}
 #| label: fig-cerrado-hex
-#| fig-cap: Representation of the Cerrado biome. TODO Describe some of the images inside the cells.
+#| fig-cap: Representation of the Cerrado biome.
 #| echo: false
+#| dev: "ragg_png"
 
 knitr::include_graphics("figs/art/art_cerrado.png")
 
