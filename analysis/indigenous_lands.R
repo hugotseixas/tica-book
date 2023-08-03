@@ -23,6 +23,8 @@ conflicts_prefer(dplyr::filter)
 #
 # PROCESS AND SAVE UC DATA ----------------------------------------------------
 
+download_indigenous_lands()
+
 indigenous_lands_grid <-
   process_indigenous_lands()
 
