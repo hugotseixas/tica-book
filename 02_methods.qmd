@@ -43,8 +43,7 @@ flowchart TD
     B --> D[Database Structuring]
     E[Available Data] --> D
     B --> F[Sociological Analysis]
-    C --> G[Statistical Analysis]
-    D --> G
+    D --> G[Statistical Analysis]
     F --> H[Results Interpretation]
     G --> H
 
@@ -113,6 +112,7 @@ The questions aims to develop a context of the participant experience and perspe
 #| label: tbl-schedule
 #| tbl-cap: Interview schedule used in this project.
 #| echo: false
+#| dev: "ragg_png"
 
 htmltools::includeHTML("./figs/interview_schedule.html")
 
@@ -150,6 +150,7 @@ The possible causes of NVS that are included in the theoretical model may or may
 #| label: tbl-variables
 #| tbl-cap: Variables used in this project.
 #| echo: false
+#| dev: "ragg_png"
 
 htmltools::includeHTML("./figs/variables_table.html")
 
@@ -217,7 +218,7 @@ The process to create the database consists of accessing the data sources, downl
 
 ```{mermaid}
 %%| label: fig-data-diagram
-%%| fig-cap: Mermaid diagram
+%%| fig-cap: Diagram of the process to create the project database.
 %%| fig-responsive: true
 %%| fig-align: center
 
@@ -235,9 +236,10 @@ To structure a collection of data that presents different natures, I must transf
 
 ```{r}
 #| label: fig-base-grid
-#| fig-cap: "Model grid, in which variables were transformed to"
+#| fig-cap: "Model grid, in which variables were transformed to."
 #| fig-asp: 1
 #| echo: false
+#| dev: "ragg_png"
 
 load("./figs/base_grid.rdata")
 
@@ -263,7 +265,7 @@ The main steps are shown in @fig-model-diagram.
 
 ```{mermaid}
 %%| label: fig-model-diagram
-%%| fig-cap: Mermaid diagram
+%%| fig-cap: Diagram of the modelling process.
 %%| fig-responsive: true
 %%| fig-align: center
 
@@ -285,7 +287,7 @@ flowchart TD
 
 ```
 
-The regression algorithms used to predict NVS are based on Decision Trees (DT) and ensemble techniques, that are Random Forest (RF) and Bayesian Additive Regression Trees (BART). Using models with different complexity, but a common framework is useful to interpret the results.
+The regression algorithms used to predict NVS are based on Decision Trees (DT) and ensemble techniques, that are Random Forest (RF), Bayesian Additive Regression Trees (BART) and Gradient Boosting Decision Trees (GBDT). Using models with different complexity, but a common framework is useful to interpret the results.
 
 ::: {.callout-important collapse="true"}
 READ: spatial models
@@ -306,5 +308,7 @@ READ: variables related to NVS
 ## Results Interpretation
 
 The interpretation of quantitative and qualitative results are performed in conjunction to find underlying mechanisms of how the dispute between social actors also influence the variables that cause NVS. The interpretation is done by comparing the results from the sociological and statistical analysis, searching for convergences, divergences and possible gaps in the explanation of the causes of NVS.
+
+This interpretation allows the development of an updated theoretical model of NVS.
 
 # References {.unnumbered}
