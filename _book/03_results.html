@@ -20,7 +20,26 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -64,9 +83,10 @@ ul.task-list li input[type="checkbox"] {
 }</script>
 
 
+<link rel="stylesheet" href="styles.css">
 </head>
 
-<body class="nav-sidebar floating">
+<body class="nav-sidebar docked">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -87,7 +107,7 @@ ul.task-list li input[type="checkbox"] {
 <!-- content -->
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation floating overflow-auto">
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation docked overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header sidebar-header-stacked">
       <a href="./index.html" class="sidebar-logo-link">
       <img src="./figs/art/logo.png" alt="" class="sidebar-logo py-0 d-lg-inline d-none">
@@ -780,47 +800,1207 @@ Important
 </div>
 </div>
 </div>
-<p>The spatial distribution of NVS</p>
+<p>The spatial distribution of NVS shows a concentration in some regions of the Amazon, specially in areas in proximity to the Cerrado biome <a href="#fig-deforestation-spatial-distribution">Figure&nbsp;<span>3.5</span></a>. However, the distribution of NVS in the Cerrado shows a different pattern, where the NVS occurrence is spread in the whole biome <a href="#fig-deforestation-spatial-distribution">Figure&nbsp;<span>3.5</span></a>.</p>
 <div class="cell" data-fig.asp="1">
 <div class="cell-output-display">
 <div id="fig-deforestation-spatial-distribution" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 <p><img src="03_results_files/figure-html/fig-deforestation-spatial-distribution-1.png" class="img-fluid figure-img" width="672"></p>
-<figcaption class="figure-caption">Figure&nbsp;3.5: Spatial distribution of the deforestation area.</figcaption>
+<figcaption class="figure-caption">Figure&nbsp;3.5: Spatial distribution of the natural vegetation suppression area.</figcaption>
 </figure>
 </div>
 </div>
 </div>
-<p>The NVS time series</p>
+<p>The NVS time series shows periods of increase of NVS in the Amazon from 1985 to 2003, followed by a consistent drop of NVS area after 2003 <a href="#fig-deforestation-timeseries">Figure&nbsp;<span>3.6</span></a>. For the Cerrado, the NVS area have been decreasing since the start of the time series, with some periods of increase in 2004 and 2013.</p>
 <div class="cell" data-fig.asp="0.7">
 <div class="cell-output-display">
 <div id="fig-deforestation-timeseries" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 <p><img src="03_results_files/figure-html/fig-deforestation-timeseries-1.png" class="img-fluid figure-img" alt="Time series." width="672"></p>
-<figcaption class="figure-caption">Figure&nbsp;3.6: Time series of deforestation area.</figcaption>
+<figcaption class="figure-caption">Figure&nbsp;3.6: Time series of natural vegetation suppression area.</figcaption>
 </figure>
 </div>
 </div>
 </div>
-<p>The natural vegetation types that suffered suppression</p>
+<p>The natural vegetation types that suffered suppression are Forests, Grasslands, Savannas and Wetlands. In the Amazon, the majority of NVS occurs over Forests, and in the Cerrado it occurrence is predominant over Savannas <a href="#fig-deforestation-colsum-natural">Figure&nbsp;<span>3.7</span></a>.</p>
 <div class="cell" data-fig.asp="0.7">
 <div class="cell-output-display">
 <div id="fig-deforestation-colsum-natural" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 <p><img src="03_results_files/figure-html/fig-deforestation-colsum-natural-1.png" class="img-fluid figure-img" alt="Time series." width="672"></p>
-<figcaption class="figure-caption">Figure&nbsp;3.7: Deforested area of different land cover.</figcaption>
+<figcaption class="figure-caption">Figure&nbsp;3.7: Natural vegetation suppression area of different land cover.</figcaption>
 </figure>
 </div>
 </div>
 </div>
-<p>The antropic land uses that followed after NVS</p>
+<p>The antropic land uses that followed after NVS are predominantly Pastures for both biomes <a href="#fig-deforestation-colsum-human">Figure&nbsp;<span>3.8</span></a>. However, Mosaic of Uses and Temporary Crops share a significant amount of NVS area in the Cerrado <a href="#fig-deforestation-colsum-human">Figure&nbsp;<span>3.8</span></a>.</p>
 <div class="cell" data-fig.asp="0.7">
 <div class="cell-output-display">
 <div id="fig-deforestation-colsum-human" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 <p><img src="03_results_files/figure-html/fig-deforestation-colsum-human-1.png" class="img-fluid figure-img" alt="Time series." width="672"></p>
-<figcaption class="figure-caption">Figure&nbsp;3.8: Area of established LULC after deforestation.</figcaption>
+<figcaption class="figure-caption">Figure&nbsp;3.8: Area of established land use after natural vegetation suppression.</figcaption>
 </figure>
+</div>
+</div>
+</div>
+</section>
+<section id="conservation-units" class="level4" data-number="3.3.1.2">
+<h4 data-number="3.3.1.2" class="anchored" data-anchor-id="conservation-units"><span class="header-section-number">3.3.1.2</span> Conservation Units</h4>
+<p>The creation of conservation units is a main strategy to protect natural landscapes in Brazil. The creation of protected areas in Brazil dates from 1896, with the creation of the first National Park in São Paulo <span class="citation" data-cites="drummond-2009">(<a href="#ref-drummond-2009" role="doc-biblioref">Drummond, Andrade Franco, and Ninis 2009</a>)</span>, however, it was only in 2000 that a law was approved to create a system to organize and regulate the UCs, named as the National System of Conservation Units (SNUC) <span class="citation" data-cites="drummond-2009 borges-2009 moreira-2021">(<a href="#ref-drummond-2009" role="doc-biblioref">Drummond, Andrade Franco, and Ninis 2009</a>; <a href="#ref-borges-2009" role="doc-biblioref">Borges, Rezende, and Pereira 2009</a>; <a href="#ref-moreira-2021" role="doc-biblioref">Moreira et al. 2021</a>)</span>. The SNUC comprises federal, state and municipal UCs of different characteristics <span class="citation" data-cites="borges-2009">(<a href="#ref-borges-2009" role="doc-biblioref">Borges, Rezende, and Pereira 2009</a>)</span>.</p>
+<p>In the grid of analysis, the maximum area occupied by UC in a single cell is 78000 ha, which is the total cell area <a href="#fig-uc-summary">Figure&nbsp;<span>3.9</span></a>. The majority of cells do not present any area of UC <a href="#fig-uc-summary">Figure&nbsp;<span>3.9</span></a>.</p>
+<div class="cell" data-fig.asp="0.7">
+<div id="fig-uc-summary" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+
+
+
+
+<meta charset="utf-8">
+<style>body{background-color:white;}</style>
+
+
+
+
+<div id="aneazlzfvj" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+  <style>#aneazlzfvj table {
+  font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#aneazlzfvj thead, #aneazlzfvj tbody, #aneazlzfvj tfoot, #aneazlzfvj tr, #aneazlzfvj td, #aneazlzfvj th {
+  border-style: none;
+}
+
+#aneazlzfvj p {
+  margin: 0;
+  padding: 0;
+}
+
+#aneazlzfvj .gt_table {
+  display: table;
+  border-collapse: collapse;
+  line-height: normal;
+  margin-left: auto;
+  margin-right: auto;
+  color: #333333;
+  font-size: 14px;
+  font-weight: normal;
+  font-style: normal;
+  background-color: #FFFFFF;
+  width: auto;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #000000;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #000000;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+}
+
+#aneazlzfvj .gt_caption {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+#aneazlzfvj .gt_title {
+  color: #333333;
+  font-size: 125%;
+  font-weight: initial;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-color: #FFFFFF;
+  border-bottom-width: 0;
+}
+
+#aneazlzfvj .gt_subtitle {
+  color: #333333;
+  font-size: 85%;
+  font-weight: initial;
+  padding-top: 3px;
+  padding-bottom: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-color: #FFFFFF;
+  border-top-width: 0;
+}
+
+#aneazlzfvj .gt_heading {
+  background-color: #FFFFFF;
+  text-align: center;
+  border-bottom-color: #FFFFFF;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#aneazlzfvj .gt_bottom_border {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #5F5F5F;
+}
+
+#aneazlzfvj .gt_col_headings {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #5F5F5F;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #5F5F5F;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#aneazlzfvj .gt_col_heading {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 6px;
+  padding-left: 5px;
+  padding-right: 5px;
+  overflow-x: hidden;
+}
+
+#aneazlzfvj .gt_column_spanner_outer {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+#aneazlzfvj .gt_column_spanner_outer:first-child {
+  padding-left: 0;
+}
+
+#aneazlzfvj .gt_column_spanner_outer:last-child {
+  padding-right: 0;
+}
+
+#aneazlzfvj .gt_column_spanner {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #5F5F5F;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  overflow-x: hidden;
+  display: inline-block;
+  width: 100%;
+}
+
+#aneazlzfvj .gt_spanner_row {
+  border-bottom-style: hidden;
+}
+
+#aneazlzfvj .gt_group_heading {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #5F5F5F;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #5F5F5F;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  text-align: left;
+}
+
+#aneazlzfvj .gt_empty_group_heading {
+  padding: 0.5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #5F5F5F;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #5F5F5F;
+  vertical-align: middle;
+}
+
+#aneazlzfvj .gt_from_md > :first-child {
+  margin-top: 0;
+}
+
+#aneazlzfvj .gt_from_md > :last-child {
+  margin-bottom: 0;
+}
+
+#aneazlzfvj .gt_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin: 10px;
+  border-top-style: none;
+  border-top-width: 1px;
+  border-top-color: #D5D5D5;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D5D5D5;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D5D5D5;
+  vertical-align: middle;
+  overflow-x: hidden;
+}
+
+#aneazlzfvj .gt_stub {
+  color: #FFFFFF;
+  background-color: #5F5F5F;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #5F5F5F;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#aneazlzfvj .gt_stub_row_group {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+  vertical-align: top;
+}
+
+#aneazlzfvj .gt_row_group_first td {
+  border-top-width: 2px;
+}
+
+#aneazlzfvj .gt_row_group_first th {
+  border-top-width: 2px;
+}
+
+#aneazlzfvj .gt_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#aneazlzfvj .gt_first_summary_row {
+  border-top-style: solid;
+  border-top-color: #5F5F5F;
+}
+
+#aneazlzfvj .gt_first_summary_row.thick {
+  border-top-width: 2px;
+}
+
+#aneazlzfvj .gt_last_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #5F5F5F;
+}
+
+#aneazlzfvj .gt_grand_summary_row {
+  color: #333333;
+  background-color: #D5D5D5;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#aneazlzfvj .gt_first_grand_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-style: double;
+  border-top-width: 6px;
+  border-top-color: #5F5F5F;
+}
+
+#aneazlzfvj .gt_last_grand_summary_row_top {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: double;
+  border-bottom-width: 6px;
+  border-bottom-color: #5F5F5F;
+}
+
+#aneazlzfvj .gt_striped {
+  background-color: #F4F4F4;
+}
+
+#aneazlzfvj .gt_table_body {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #5F5F5F;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #5F5F5F;
+}
+
+#aneazlzfvj .gt_footnotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#aneazlzfvj .gt_footnote {
+  margin: 0px;
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#aneazlzfvj .gt_sourcenotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#aneazlzfvj .gt_sourcenote {
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#aneazlzfvj .gt_left {
+  text-align: left;
+}
+
+#aneazlzfvj .gt_center {
+  text-align: center;
+}
+
+#aneazlzfvj .gt_right {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+#aneazlzfvj .gt_font_normal {
+  font-weight: normal;
+}
+
+#aneazlzfvj .gt_font_bold {
+  font-weight: bold;
+}
+
+#aneazlzfvj .gt_font_italic {
+  font-style: italic;
+}
+
+#aneazlzfvj .gt_super {
+  font-size: 65%;
+}
+
+#aneazlzfvj .gt_footnote_marks {
+  font-size: 75%;
+  vertical-align: 0.4em;
+  position: initial;
+}
+
+#aneazlzfvj .gt_asterisk {
+  font-size: 100%;
+  vertical-align: 0;
+}
+
+#aneazlzfvj .gt_indent_1 {
+  text-indent: 5px;
+}
+
+#aneazlzfvj .gt_indent_2 {
+  text-indent: 10px;
+}
+
+#aneazlzfvj .gt_indent_3 {
+  text-indent: 15px;
+}
+
+#aneazlzfvj .gt_indent_4 {
+  text-indent: 20px;
+}
+
+#aneazlzfvj .gt_indent_5 {
+  text-indent: 25px;
+}
+</style>
+  <table class="gt_table" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
+  <thead>
+    <tr class="gt_heading">
+      <td colspan="7" class="gt_heading gt_title gt_font_normal gt_bottom_border" style="">Conservation Unit (ha)</td>
+    </tr>
+    
+    <tr class="gt_col_headings">
+      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" scope="col" id=""></th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="<strong>Minimum</strong>"><strong>Minimum</strong></th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="<strong>Mean</strong>"><strong>Mean</strong></th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="<strong>Median</strong>"><strong>Median</strong></th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="<strong>Maximum</strong>"><strong>Maximum</strong></th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="<strong>Standard Deviation</strong>"><strong>Standard Deviation</strong></th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="<strong>Missing Values</strong>"><strong>Missing Values</strong></th>
+    </tr>
+  </thead>
+  <tbody class="gt_table_body">
+    <tr><th id="stub_1_1" scope="row" class="gt_row gt_left gt_stub">Amazônia</th>
+<td headers="stub_1_1 min" class="gt_row gt_right">0</td>
+<td headers="stub_1_1 mean" class="gt_row gt_right">574</td>
+<td headers="stub_1_1 median" class="gt_row gt_right">0</td>
+<td headers="stub_1_1 max" class="gt_row gt_right">78K</td>
+<td headers="stub_1_1 std" class="gt_row gt_right">6K</td>
+<td headers="stub_1_1 n_miss" class="gt_row gt_right">0</td></tr>
+    <tr><th id="stub_1_2" scope="row" class="gt_row gt_left gt_stub">Cerrado</th>
+<td headers="stub_1_2 min" class="gt_row gt_right gt_striped">0</td>
+<td headers="stub_1_2 mean" class="gt_row gt_right gt_striped">148</td>
+<td headers="stub_1_2 median" class="gt_row gt_right gt_striped">0</td>
+<td headers="stub_1_2 max" class="gt_row gt_right gt_striped">78K</td>
+<td headers="stub_1_2 std" class="gt_row gt_right gt_striped">3K</td>
+<td headers="stub_1_2 n_miss" class="gt_row gt_right gt_striped">0</td></tr>
+  </tbody>
+  
+  
+</table>
+</div>
+
+
+<figcaption class="figure-caption">Figure&nbsp;3.9: Summary table of Conservation Units.</figcaption>
+</figure>
+</div>
+</div>
+<p>When analyzing the grid cells with any cover of UC, we observe that in the Amazon, most those grid cells are fully occupied by UC <a href="#fig-uc-hist">Figure&nbsp;<span>3.10</span></a>. The situation is very different for the Cerrado, where most pixels occupied by UC shows small areas, indicating that small UC are more frequent for this biome <a href="#fig-uc-hist">Figure&nbsp;<span>3.10</span></a>.</p>
+<div class="cell" data-fig.asp="0.7">
+<div class="cell-output-display">
+<div id="fig-uc-hist" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="03_results_files/figure-html/fig-uc-hist-1.png" class="img-fluid figure-img" width="672"></p>
+<figcaption class="figure-caption">Figure&nbsp;3.10: Histogram of Conservation Units.</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<p>The spatial distributions of UC in the Amazon and Cerrado are very different. In the Amazon it is possible to observe a large number of big UC, while in Cerrado most of UC are smaller as scattered around the biome <a href="#fig-uc-spatial-distribution">Figure&nbsp;<span>3.11</span></a>.</p>
+<div class="cell" data-fig.asp="1">
+<div class="cell-output-display">
+<div id="fig-uc-spatial-distribution" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="03_results_files/figure-html/fig-uc-spatial-distribution-1.png" class="img-fluid figure-img" width="672"></p>
+<figcaption class="figure-caption">Figure&nbsp;3.11: Spatial distribution of Conservation Units.</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<p>The time series of accumulated UC area over time shows a steady increase from 1985 to 2010, followed by a period of stagnation of the creation of new UC for the Amazon and Cerrado <a href="#fig-uc-timeseries">Figure&nbsp;<span>3.12</span></a>.</p>
+<div class="cell" data-fig.asp="0.7">
+<div class="cell-output-display">
+<div id="fig-uc-timeseries" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="03_results_files/figure-html/fig-uc-timeseries-1.png" class="img-fluid figure-img" width="672"></p>
+<figcaption class="figure-caption">Figure&nbsp;3.12: Time series of Conservation Units.</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="policies" class="level4" data-number="3.3.1.3">
+<h4 data-number="3.3.1.3" class="anchored" data-anchor-id="policies"><span class="header-section-number">3.3.1.3</span> Policies</h4>
+<p>There are a large number of laws, decrees, resolutions and commitments made in Brazil with the objective to decrease NVS. These are organized in a timeline with some key policies related to NVS <a href="#fig-pp-timeline">Figure&nbsp;<span>3.13</span></a>.</p>
+<div class="cell scrolling" data-fig.asp="1.8">
+<div class="cell-output-display">
+<div id="fig-pp-timeline" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="03_results_files/figure-html/fig-pp-timeline-1.png" class="img-fluid figure-img" width="672"></p>
+<figcaption class="figure-caption">Figure&nbsp;3.13: Time line of policies related to Natural Vegetation Suppression.</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<p>The details of these policies are summarized in the <a href="#tbl-timeline">Table&nbsp;<span>3.2</span></a>.</p>
+<div class="cell">
+<div class="cell-output-display">
+<div id="tbl-timeline" class="anchored">
+
+
+
+
+<meta charset="utf-8">
+<style>body{background-color:white;}</style>
+
+
+
+
+<div id="zbdrvchegc" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:500px;">
+  <style>#zbdrvchegc table {
+  font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#zbdrvchegc thead, #zbdrvchegc tbody, #zbdrvchegc tfoot, #zbdrvchegc tr, #zbdrvchegc td, #zbdrvchegc th {
+  border-style: none;
+}
+
+#zbdrvchegc p {
+  margin: 0;
+  padding: 0;
+}
+
+#zbdrvchegc .gt_table {
+  display: table;
+  border-collapse: collapse;
+  line-height: normal;
+  margin-left: auto;
+  margin-right: auto;
+  color: #333333;
+  font-size: 14px;
+  font-weight: normal;
+  font-style: normal;
+  background-color: #FFFFFF;
+  width: auto;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #000000;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #000000;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+}
+
+#zbdrvchegc .gt_caption {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+#zbdrvchegc .gt_title {
+  color: #333333;
+  font-size: 125%;
+  font-weight: initial;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-color: #FFFFFF;
+  border-bottom-width: 0;
+}
+
+#zbdrvchegc .gt_subtitle {
+  color: #333333;
+  font-size: 85%;
+  font-weight: initial;
+  padding-top: 3px;
+  padding-bottom: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-color: #FFFFFF;
+  border-top-width: 0;
+}
+
+#zbdrvchegc .gt_heading {
+  background-color: #FFFFFF;
+  text-align: center;
+  border-bottom-color: #FFFFFF;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#zbdrvchegc .gt_bottom_border {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #5F5F5F;
+}
+
+#zbdrvchegc .gt_col_headings {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #5F5F5F;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #5F5F5F;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#zbdrvchegc .gt_col_heading {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 6px;
+  padding-left: 5px;
+  padding-right: 5px;
+  overflow-x: hidden;
+}
+
+#zbdrvchegc .gt_column_spanner_outer {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+#zbdrvchegc .gt_column_spanner_outer:first-child {
+  padding-left: 0;
+}
+
+#zbdrvchegc .gt_column_spanner_outer:last-child {
+  padding-right: 0;
+}
+
+#zbdrvchegc .gt_column_spanner {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #5F5F5F;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  overflow-x: hidden;
+  display: inline-block;
+  width: 100%;
+}
+
+#zbdrvchegc .gt_spanner_row {
+  border-bottom-style: hidden;
+}
+
+#zbdrvchegc .gt_group_heading {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #5F5F5F;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #5F5F5F;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  text-align: left;
+}
+
+#zbdrvchegc .gt_empty_group_heading {
+  padding: 0.5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #5F5F5F;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #5F5F5F;
+  vertical-align: middle;
+}
+
+#zbdrvchegc .gt_from_md > :first-child {
+  margin-top: 0;
+}
+
+#zbdrvchegc .gt_from_md > :last-child {
+  margin-bottom: 0;
+}
+
+#zbdrvchegc .gt_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin: 10px;
+  border-top-style: none;
+  border-top-width: 1px;
+  border-top-color: #D5D5D5;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D5D5D5;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D5D5D5;
+  vertical-align: middle;
+  overflow-x: hidden;
+}
+
+#zbdrvchegc .gt_stub {
+  color: #FFFFFF;
+  background-color: #5F5F5F;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #5F5F5F;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#zbdrvchegc .gt_stub_row_group {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+  vertical-align: top;
+}
+
+#zbdrvchegc .gt_row_group_first td {
+  border-top-width: 2px;
+}
+
+#zbdrvchegc .gt_row_group_first th {
+  border-top-width: 2px;
+}
+
+#zbdrvchegc .gt_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#zbdrvchegc .gt_first_summary_row {
+  border-top-style: solid;
+  border-top-color: #5F5F5F;
+}
+
+#zbdrvchegc .gt_first_summary_row.thick {
+  border-top-width: 2px;
+}
+
+#zbdrvchegc .gt_last_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #5F5F5F;
+}
+
+#zbdrvchegc .gt_grand_summary_row {
+  color: #333333;
+  background-color: #D5D5D5;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#zbdrvchegc .gt_first_grand_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-style: double;
+  border-top-width: 6px;
+  border-top-color: #5F5F5F;
+}
+
+#zbdrvchegc .gt_last_grand_summary_row_top {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: double;
+  border-bottom-width: 6px;
+  border-bottom-color: #5F5F5F;
+}
+
+#zbdrvchegc .gt_striped {
+  background-color: #F4F4F4;
+}
+
+#zbdrvchegc .gt_table_body {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #5F5F5F;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #5F5F5F;
+}
+
+#zbdrvchegc .gt_footnotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#zbdrvchegc .gt_footnote {
+  margin: 0px;
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#zbdrvchegc .gt_sourcenotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#zbdrvchegc .gt_sourcenote {
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#zbdrvchegc .gt_left {
+  text-align: left;
+}
+
+#zbdrvchegc .gt_center {
+  text-align: center;
+}
+
+#zbdrvchegc .gt_right {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+#zbdrvchegc .gt_font_normal {
+  font-weight: normal;
+}
+
+#zbdrvchegc .gt_font_bold {
+  font-weight: bold;
+}
+
+#zbdrvchegc .gt_font_italic {
+  font-style: italic;
+}
+
+#zbdrvchegc .gt_super {
+  font-size: 65%;
+}
+
+#zbdrvchegc .gt_footnote_marks {
+  font-size: 75%;
+  vertical-align: 0.4em;
+  position: initial;
+}
+
+#zbdrvchegc .gt_asterisk {
+  font-size: 100%;
+  vertical-align: 0;
+}
+
+#zbdrvchegc .gt_indent_1 {
+  text-indent: 5px;
+}
+
+#zbdrvchegc .gt_indent_2 {
+  text-indent: 10px;
+}
+
+#zbdrvchegc .gt_indent_3 {
+  text-indent: 15px;
+}
+
+#zbdrvchegc .gt_indent_4 {
+  text-indent: 20px;
+}
+
+#zbdrvchegc .gt_indent_5 {
+  text-indent: 25px;
+}
+</style>
+  <table class="gt_table" data-quarto-disable-processing="false" data-quarto-bootstrap="false"><caption>Table&nbsp;3.2:  <p>Table with policies related to Natural Vegetation Suppression.</p> </caption>
+  <thead>
+    
+    <tr class="gt_col_headings">
+      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" scope="col" id=""></th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="<strong>Start Date</strong>"><strong>Start Date</strong></th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="<strong>End Date</strong>"><strong>End Date</strong></th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" scope="col" id="<strong>Coverage</strong>"><strong>Coverage</strong></th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" scope="col" id="<strong>Description</strong>"><strong>Description</strong></th>
+    </tr>
+  </thead>
+  <tbody class="gt_table_body">
+    <tr class="gt_group_heading_row">
+      <th colspan="5" class="gt_group_heading" style="background-color: #EEEEEE; font-weight: bold;" scope="colgroup" id="1981">1981</th>
+    </tr>
+    <tr class="gt_row_group_first"><td headers="1981  name" class="gt_row gt_left">Law nº 6938</td>
+<td headers="1981  start_date" class="gt_row gt_right">1981-08-31</td>
+<td headers="1981  end_date" class="gt_row gt_right">—</td>
+<td headers="1981  coverage" class="gt_row gt_left">Brazil</td>
+<td headers="1981  description" class="gt_row gt_left">Establishes the National Environmental Policy, specifies its purposes and mechanisms of formulation and application, and makes other provisions.</td></tr>
+    <tr class="gt_group_heading_row">
+      <th colspan="5" class="gt_group_heading" style="background-color: #EEEEEE; font-weight: bold;" scope="colgroup" id="1985">1985</th>
+    </tr>
+    <tr class="gt_row_group_first"><td headers="1985  name" class="gt_row gt_left">Law nº 7347</td>
+<td headers="1985  start_date" class="gt_row gt_right">1985-07-24</td>
+<td headers="1985  end_date" class="gt_row gt_right">—</td>
+<td headers="1985  coverage" class="gt_row gt_left">Brazil</td>
+<td headers="1985  description" class="gt_row gt_left">Defines the public civil action of liability for damages caused to the environment, to the consumer, to goods and rights of artistic, aesthetic, historical, tourist and landscape value and makes other provisions.</td></tr>
+    <tr class="gt_group_heading_row">
+      <th colspan="5" class="gt_group_heading" style="background-color: #EEEEEE; font-weight: bold;" scope="colgroup" id="1989">1989</th>
+    </tr>
+    <tr class="gt_row_group_first"><td headers="1989  name" class="gt_row gt_left">Law nº 7803</td>
+<td headers="1989  start_date" class="gt_row gt_right">1989-07-18</td>
+<td headers="1989  end_date" class="gt_row gt_right">—</td>
+<td headers="1989  coverage" class="gt_row gt_left">Brazil</td>
+<td headers="1989  description" class="gt_row gt_left">Amends the Forest Code of 1965 (Law nº 4771), defines regulations of use and commercialization of chainsaws.</td></tr>
+    <tr><td headers="1989  name" class="gt_row gt_left">Law nº 7805</td>
+<td headers="1989  start_date" class="gt_row gt_right">1989-07-18</td>
+<td headers="1989  end_date" class="gt_row gt_right">—</td>
+<td headers="1989  coverage" class="gt_row gt_left">Brazil</td>
+<td headers="1989  description" class="gt_row gt_left">Creates the mining permission regulation.</td></tr>
+    <tr><td headers="1989  name" class="gt_row gt_left">Law nº 7735</td>
+<td headers="1989  start_date" class="gt_row gt_right">1989-02-22</td>
+<td headers="1989  end_date" class="gt_row gt_right">—</td>
+<td headers="1989  coverage" class="gt_row gt_left">Brazil</td>
+<td headers="1989  description" class="gt_row gt_left">Creates the Brazilian Institute for the Environment and Renewable Natural Resources (IBAMA) and makes other provisions.</td></tr>
+    <tr class="gt_group_heading_row">
+      <th colspan="5" class="gt_group_heading" style="background-color: #EEEEEE; font-weight: bold;" scope="colgroup" id="1998">1998</th>
+    </tr>
+    <tr class="gt_row_group_first"><td headers="1998  name" class="gt_row gt_left">Law nº 9605</td>
+<td headers="1998  start_date" class="gt_row gt_right">1998-02-12</td>
+<td headers="1998  end_date" class="gt_row gt_right">—</td>
+<td headers="1998  coverage" class="gt_row gt_left">Brazil</td>
+<td headers="1998  description" class="gt_row gt_left">Provides for criminal and administrative sanctions arising from conduct and activities harmful to the environment, and makes other provisions.</td></tr>
+    <tr class="gt_group_heading_row">
+      <th colspan="5" class="gt_group_heading" style="background-color: #EEEEEE; font-weight: bold;" scope="colgroup" id="2000">2000</th>
+    </tr>
+    <tr class="gt_row_group_first"><td headers="2000  name" class="gt_row gt_left">Law nº 9985</td>
+<td headers="2000  start_date" class="gt_row gt_right">2000-07-18</td>
+<td headers="2000  end_date" class="gt_row gt_right">—</td>
+<td headers="2000  coverage" class="gt_row gt_left">Brazil</td>
+<td headers="2000  description" class="gt_row gt_left">Regulates art. 225, § 1, items I, II, III and VII of the Federal Constitution, establishes the National System of Nature Conservation Units (SNUC) and makes other provisions.</td></tr>
+    <tr class="gt_group_heading_row">
+      <th colspan="5" class="gt_group_heading" style="background-color: #EEEEEE; font-weight: bold;" scope="colgroup" id="2004">2004</th>
+    </tr>
+    <tr class="gt_row_group_first"><td headers="2004  name" class="gt_row gt_left">Decree 15 March 2004</td>
+<td headers="2004  start_date" class="gt_row gt_right">2004-03-15</td>
+<td headers="2004  end_date" class="gt_row gt_right">2019-11-28</td>
+<td headers="2004  coverage" class="gt_row gt_left">Legal Amazon</td>
+<td headers="2004  description" class="gt_row gt_left">Amends the Decree of July 3, 2003, which creates the Permanent Interministerial Working Group with the purpose of proposing measures and coordinating actions aimed at reducing deforestation rates in the Legal Amazon (PPCDAm), and makes other provisions.</td></tr>
+    <tr class="gt_group_heading_row">
+      <th colspan="5" class="gt_group_heading" style="background-color: #EEEEEE; font-weight: bold;" scope="colgroup" id="2006">2006</th>
+    </tr>
+    <tr class="gt_row_group_first"><td headers="2006  name" class="gt_row gt_left">Law nº 11284</td>
+<td headers="2006  start_date" class="gt_row gt_right">2006-03-02</td>
+<td headers="2006  end_date" class="gt_row gt_right">—</td>
+<td headers="2006  coverage" class="gt_row gt_left">Brazil</td>
+<td headers="2006  description" class="gt_row gt_left">Provides for the management of public forests for sustainable production; establishes, within the structure of the Ministry of the Environment, the Brazilian Forest Service (SFB); creates the National Forest Development Fund (FNDF).</td></tr>
+    <tr><td headers="2006  name" class="gt_row gt_left">Soy Moratorium</td>
+<td headers="2006  start_date" class="gt_row gt_right">2006-07-24</td>
+<td headers="2006  end_date" class="gt_row gt_right">—</td>
+<td headers="2006  coverage" class="gt_row gt_left">Amazon Biome</td>
+<td headers="2006  description" class="gt_row gt_left">Industries and exporters associated with ABIOVE and ANEC commit not to purchase soybeans from newly deforested areas (after 24 of July of 2006).</td></tr>
+    <tr class="gt_group_heading_row">
+      <th colspan="5" class="gt_group_heading" style="background-color: #EEEEEE; font-weight: bold;" scope="colgroup" id="2007">2007</th>
+    </tr>
+    <tr class="gt_row_group_first"><td headers="2007  name" class="gt_row gt_left">Law nº 11516</td>
+<td headers="2007  start_date" class="gt_row gt_right">2007-08-28</td>
+<td headers="2007  end_date" class="gt_row gt_right">—</td>
+<td headers="2007  coverage" class="gt_row gt_left">Brazil</td>
+<td headers="2007  description" class="gt_row gt_left">Provides for the creation of the Chico Mendes Institute for Biodiversity Conservation (ICMBio).</td></tr>
+    <tr><td headers="2007  name" class="gt_row gt_left">Decree nº 6321</td>
+<td headers="2007  start_date" class="gt_row gt_right">2007-12-21</td>
+<td headers="2007  end_date" class="gt_row gt_right">—</td>
+<td headers="2007  coverage" class="gt_row gt_left">Amazon Biome</td>
+<td headers="2007  description" class="gt_row gt_left">Provides for actions related to the prevention, monitoring and control of deforestation in the Amazon Biome. Creates lists of municipalities with high deforestation rates.</td></tr>
+    <tr class="gt_group_heading_row">
+      <th colspan="5" class="gt_group_heading" style="background-color: #EEEEEE; font-weight: bold;" scope="colgroup" id="2008">2008</th>
+    </tr>
+    <tr class="gt_row_group_first"><td headers="2008  name" class="gt_row gt_left">Resolution nº 3545</td>
+<td headers="2008  start_date" class="gt_row gt_right">2008-02-29</td>
+<td headers="2008  end_date" class="gt_row gt_right">2021-05-01</td>
+<td headers="2008  coverage" class="gt_row gt_left">Amazon Biome</td>
+<td headers="2008  description" class="gt_row gt_left">Amends MCR 2-1 to establish a requirement for of documentation proving the environmental conditions, for the purpose of agricultural financing in the Amazon Biome.</td></tr>
+    <tr><td headers="2008  name" class="gt_row gt_left">Decree nº 6527</td>
+<td headers="2008  start_date" class="gt_row gt_right">2008-08-01</td>
+<td headers="2008  end_date" class="gt_row gt_right">—</td>
+<td headers="2008  coverage" class="gt_row gt_left">Legal Amazon</td>
+<td headers="2008  description" class="gt_row gt_left">Provides for the establishment of the Amazon Fund by the National Bank for Economic and Social Development (BNDES).</td></tr>
+    <tr class="gt_group_heading_row">
+      <th colspan="5" class="gt_group_heading" style="background-color: #EEEEEE; font-weight: bold;" scope="colgroup" id="2009">2009</th>
+    </tr>
+    <tr class="gt_row_group_first"><td headers="2009  name" class="gt_row gt_left">Law nº 12187</td>
+<td headers="2009  start_date" class="gt_row gt_right">2009-12-29</td>
+<td headers="2009  end_date" class="gt_row gt_right">—</td>
+<td headers="2009  coverage" class="gt_row gt_left">Brazil</td>
+<td headers="2009  description" class="gt_row gt_left">Institutes the National Policy on Climate Change (PNMC) and makes other provisions.</td></tr>
+    <tr class="gt_group_heading_row">
+      <th colspan="5" class="gt_group_heading" style="background-color: #EEEEEE; font-weight: bold;" scope="colgroup" id="2010">2010</th>
+    </tr>
+    <tr class="gt_row_group_first"><td headers="2010  name" class="gt_row gt_left">Decree 15 September 2010</td>
+<td headers="2010  start_date" class="gt_row gt_right">2010-09-15</td>
+<td headers="2010  end_date" class="gt_row gt_right">—</td>
+<td headers="2010  coverage" class="gt_row gt_left">Cerrado Biome</td>
+<td headers="2010  description" class="gt_row gt_left">Institutes the Action Plan for the Prevention and Control of Deforestation and Burning in the Cerrado Biome (PPCerrado).</td></tr>
+    <tr class="gt_group_heading_row">
+      <th colspan="5" class="gt_group_heading" style="background-color: #EEEEEE; font-weight: bold;" scope="colgroup" id="2012">2012</th>
+    </tr>
+    <tr class="gt_row_group_first"><td headers="2012  name" class="gt_row gt_left">Law nº 12651</td>
+<td headers="2012  start_date" class="gt_row gt_right">2012-05-25</td>
+<td headers="2012  end_date" class="gt_row gt_right">—</td>
+<td headers="2012  coverage" class="gt_row gt_left">Brazil</td>
+<td headers="2012  description" class="gt_row gt_left">Provides for the protection of native vegetation. Establishes the new Forest Code.</td></tr>
+    <tr class="gt_group_heading_row">
+      <th colspan="5" class="gt_group_heading" style="background-color: #EEEEEE; font-weight: bold;" scope="colgroup" id="2016">2016</th>
+    </tr>
+    <tr class="gt_row_group_first"><td headers="2016  name" class="gt_row gt_left">Soy Moratorium</td>
+<td headers="2016  start_date" class="gt_row gt_right">2016-05-09</td>
+<td headers="2016  end_date" class="gt_row gt_right">—</td>
+<td headers="2016  coverage" class="gt_row gt_left">Amazon Biome</td>
+<td headers="2016  description" class="gt_row gt_left">Renew the soy moratorium indefinitely, and updates the limit date of deforestation to 22 July 2008.</td></tr>
+    <tr class="gt_group_heading_row">
+      <th colspan="5" class="gt_group_heading" style="background-color: #EEEEEE; font-weight: bold;" scope="colgroup" id="2023">2023</th>
+    </tr>
+    <tr class="gt_row_group_first"><td headers="2023  name" class="gt_row gt_left">Decree nº 11367</td>
+<td headers="2023  start_date" class="gt_row gt_right">2023-01-01</td>
+<td headers="2023  end_date" class="gt_row gt_right">—</td>
+<td headers="2023  coverage" class="gt_row gt_left">Brazil</td>
+<td headers="2023  description" class="gt_row gt_left">Establishes the Permanent Interministerial Commission for the Prevention and Control of Deforestation, re-establishes the Action Plan for the Prevention and Control of Deforestation in the Legal Amazon (PPCDAm) and provides for the Action Plans for the Prevention and Control of Deforestation in the Cerrado, the Atlantic Forest, the Caatinga, the Pampa and the Pantanal.</td></tr>
+  </tbody>
+  
+  
+</table>
+</div>
+
+
 </div>
 </div>
 </div>
@@ -835,6 +2015,17 @@ Important
 <h1 class="unnumbered">References</h1>
 
 
+<div id="refs" class="references csl-bib-body hanging-indent" role="list">
+<div id="ref-borges-2009" class="csl-entry" role="listitem">
+Borges, Luís Antônio Coimbra, José Luiz Pereira de Rezende, and José Aldo Alves Pereira. 2009. <span>“Evolução Da Legislação Ambiental No Brasil.”</span> <em>Revista Em Agronegócio e Meio Ambiente</em> 2 (3): 447–66.
+</div>
+<div id="ref-drummond-2009" class="csl-entry" role="listitem">
+Drummond, Jose Augusto, Jose Luiz de Andrade Franco, and Alessandro Bortoni Ninis. 2009. <span>“Brazilian Federal Conservation Units: A Historical Overview of Their Creation and of Their Current Status.”</span> <em>Environment and History</em> 15 (4): 463–91. <a href="https://doi.org/10.3197/096734009x12532652872036">https://doi.org/10.3197/096734009x12532652872036</a>.
+</div>
+<div id="ref-moreira-2021" class="csl-entry" role="listitem">
+Moreira, Kátia Soares, José Alves Junqueira Júnior, Paulo Eduardo de Oliveira Sousa, Heitor Soares Moreira, and Danielle Pereira Baliza. 2021. <span>“A Evolução Da Legislação Ambiental No Contexto Histórico Brasileiro.”</span> <em>Research, Society and Development</em> 10 (2). <a href="https://doi.org/10.33448/rsd-v10i2.12087">https://doi.org/10.33448/rsd-v10i2.12087</a>.
+</div>
+</div>
 </section>
 
 </main> <!-- /main -->
