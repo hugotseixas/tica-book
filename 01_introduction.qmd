@@ -6,7 +6,7 @@ toc: false
 
 The Native Vegetation Suppression (NVS) in the Amazon and Cerrado biomes is a matter of great concern due to its potential impact on the environment and human well-being. There is a growing international interest in the protection of natural vegetation, in order to avoid greenhouse gases emissions and biodiversity loss. Understanding the drivers and effects of this phenomena is crucial to guide policies to avoid further natural vegetation suppression and mitigate negative impacts. However, this is a challenging task since the factors involved in this phenomenon are diverse, heterogeneous, and can even be contradictory. Existing literature suggests that native vegetation suppression is caused by economic fluctuations [@hargrave-2012], conservation policies [@pfaff-2015], population distribution [@jusys-2016], land tenure [@cattaneo-2001], livestock and crop productions [@bowman-2016]. On the other side, vegetation removal may impact human health [@santos-2018], climate regime [@silva-2023], regional hydrology [@cavalcante-2019], soil properties [@dias-2022] and biodiversity [@gestich-2021].
 
-Unfortunately, much of the research in this area tends to focus on only a few dimensions of the problem, rather than taking a holistic approach. This narrow focus often fails to capture the full extent of the issue and can lead to oversimplifications or misdirection in efforts to solve it.
+Unfortunately, much of the research in this area tends to focus on only a few dimensions of the problem, rather than taking a holistic approach [@turner-2020]. This narrow focus often fails to capture the full extent of the issue and can lead to oversimplifications or misdirection in efforts to solve it.
 
 This project aims to develop a theoretical model of the causes of NVS in the Cerrado and Amazon biomes, considering environmental and social dimensions. A mixed method will be employed, combining statistical regression algorithms, and sociological analysis. The results will provide a deeper understanding of the relationships between land use changes, environmental factors, and social dynamics related to NVS.
 
@@ -21,12 +21,20 @@ READ: land use theory
 
 The main objective of this project is to identify possible causes of NVS in the Amazon and Cerrado, and describe the relationships of social and environmental dimensions. This objective is achieved trough the achievement of minor goals:
 
-1.  Indicate possible causes of NVS trough grounded theory;
+1.  Identify possible causes of NVS trough grounded theory;
 
-2.  Describe social relationships between groups of interest related to the causes, by performing a sociological analysis;
+2.  Describe relationships between social actors related to the causes of NVS, by performing a field theory sociological analysis;
 
 3.  Estimate predictors of NVS by statistical regression algorithms;
 
-4.  Identify the convergences and divergences of results;
+4.  Combine quantitative and qualitative results to update the theoretical model of NVS;
+
+The results obtained by completing these objectives are expected to be presented in three published articles:
+
+-   Developing a theory for Natural Vegetation Suppression in the Amazon and Cerrado;
+
+-   Analysing the land use social field on Natural Vegetation Suppression in the Amazon and Cerrado;
+
+-   Predicting temporal and spatial trends of Natural Vegetation Suppression in the Amazon and Cerrado;
 
 # References {.unnumbered}
