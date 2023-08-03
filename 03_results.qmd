@@ -229,7 +229,7 @@ There are a large number of laws, decrees, resolutions and commitments made in B
 pp_timeline
 ```
 
-The details of these policies are summarized in the @tbl-timeline.
+The details of these policies are summarized in the @tbl-timeline, which shows the beggining and end of the policy, their spatial coverage and a general description.
 
 ```{r}
 #| label: tbl-timeline
