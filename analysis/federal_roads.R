@@ -7,7 +7,10 @@ library(tidyverse)
 
 conflicts_prefer(dplyr::filter)
 
-tica::download_federal_roads()
+download_external_data(
+  f = "download_federal_roads",
+  dest_dir = "./data/external/"
+)
 
 federal_roads_grid <- tica::process_federal_roads()
 
