@@ -1,0 +1,14 @@
+id,data_name,data_source,data_description,source_url,data_url_function,data_url,file_pattern
+1,biomes,Instituto Brasileiro de Geografia e Estatística (IBGE),Delimitation of Brazilian Biomes,https://www.ibge.gov.br/geociencias/informacoes-ambientais/vegetacao/15842-biomas.html?edicao=16060&t=o-que-e,biomes_url_function(), ,shp
+2,municipality,"Instituto Brasileiro de Geografia e Estatística (IBGE)
+Instituto de Pesquisa Econômica Aplicada (IPEA)",Delimitation of Brazilian Municipalities,"https://www.ibge.gov.br/geociencias/organizacao-do-territorio/malhas-territoriais/15774-malhas.html?=&t=o-que-e
+https://github.com/ipeaGIT/geobr",municipality_url_function(),,
+3,lulc,MapBiomas,Annual classification of land use and land cover of Brazil from 1985 to 2022,https://brasil.mapbiomas.org/,lulc_url_function(),,
+4,highways,Departamento Nacional de Infraestrutura de Transportes (DNIT),Delineation of brazilian highways from 1994 to 2023,http://servicos.dnit.gov.br/dnitcloud/index.php/s/oTpPRmYs5AAdiNr,highways_url_function(),,shp
+5,indigenous_territory,Fundação Nacional dos Povos Indígenas (FUNAI),Delimitation of Indigenous Territory,https://www.gov.br/funai/pt-br/atuacao/terras-indigenas/geoprocessamento-e-mapas,,https://geoserver.funai.gov.br/geoserver/Funai/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=Funai%3Atis_poligonais_portarias&maxFeatures=10000&outputFormat=SHAPE-ZIP,shp
+6,conservation_units,"Ministério do Meio Ambiente e Mudança do Clima (MMAMC)
+Instituto Chico Mendes de Conservação da Biodiversidade (ICMBio)",Delimitation and characterization of conservation units registered with the CNUC,https://dados.gov.br/dados/conjuntos-dados/unidadesdeconservacao,,https://dados.mma.gov.br/dataset/44b6dc8a-dc82-4a84-8d95-1b0da7c85dac/resource/9ec98f66-44ad-4397-8583-a1d9cc3a9835/download/shp_cnuc_2023_07-1.zip,shp
+7,quilombola_territory,Instituto Nacional de Colonização e Reforma Agrária (INCRA),Delimitation and characterization of quilombola territories,https://dados.gov.br/dados/conjuntos-dados/acervo-fundiario,,https://certificacao.incra.gov.br/csv_shp/zip/%C3%81reas%20de%20Quilombolas.zip,shp
+8,municipality_priority,Diário Oficial da União (DOU),List of municipalities included as a priority target for deforestation monitoring,"https://www.in.gov.br/servicos/diario-oficial-da-uniao
+https://zenodo.org/records/8412144",,https://zenodo.org/records/8412144/files/priority_list.csv?download=1,
+9,veg_supression,MapBiomas,Annual classification of vegetation suppression and secondary vegetation recovery,https://brasil.mapbiomas.org/,vegsuppression_url_function(),,

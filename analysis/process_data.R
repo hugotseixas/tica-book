@@ -20,10 +20,10 @@ library(tidyverse)
 #
 # PROCESS DATA ----------------------------------------------------------------
 
-arguments <- read_delim("./analysis/process_data_arguments.txt", delim = "|")
+arguments <- read_delim("./analysis/process_data_arguments.txt", delim = ",")
 
-pmap(
-  .l = arguments,
+pwalk(
+  .l = arguments[4, ],
   .f = \(
     f,
     base_grid_path,

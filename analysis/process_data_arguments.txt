@@ -1,2 +1,5 @@
-"f"|"base_grid_path"|"external_data_path"|dest_dir|"start_year"|"end_year"
-"process_conservation_units"|"./data/base_grid.fgb"|"./data/external_raw/uc/uc.fgb"|"./data/"|1985|2021
+f,base_grid_path,external_data_path,dest_dir,start_year,end_year
+process_conservation_units,./data/base_grid.fgb,./data/external_raw/uc/uc.fgb,./data/,1985,2021
+process_indigenous_lands,./data/base_grid.fgb,./data/external_raw/il/il.fgb,./data/,1985,2021
+process_deforestation,./data/base_grid.fgb,./data/external_raw/lulc/,./data/,1985,2021
+process_land_use,./data/base_grid.fgb,./data/external_raw/lulc/,./data/,1985,2021

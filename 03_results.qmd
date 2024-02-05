@@ -21,9 +21,28 @@ lapply(file_names, load, .GlobalEnv)
 
 ## Theoretical Model
 
-In this section I summarize the results from the interviews and literature assessment, and present the resulting theoretical model of NVS.
+The NVS Theoretical Model have the purpose to formally describe the phenomena manifestation process. Therefore, before presenting the model, it is necessary to revisit the concept of NVS being adopted.
 
-The theoretical model is presented as a diagram visualization, accompanied with text explaining the causal processes represented in the diagram.
+The NVS, abbreviation for Natural Vegetation Suppression, is an action performed directly by humans, and consists of the transformation of an area occupied by natural vegetation. This transformation occurs by the removal of the natural vegetation to a degree in which the area is no longer recognized as a natural formation, by the human perception.
+
+To describe the NVS Theoretical Model, I especulate about the causal mechanism that, when manifested, materializes the NVS.
+
+I propose four phenomena that composes the causal mechanism of NVS:
+
+- Value: It is the possible values that can be attributed to a certain natural vegetation, occuping a certain space at a certain time;
+- Gains: The benefits that supressing a certain natural vegetation (in a certain space, at a certain time) may provide to the agent that is performing the action of supression;
+- Losses: The drawbacks that may arise against the agent, as a concequence of its action of supression of a certain natural vegetation (in a certain space, at a certain time);
+- Work: Is the physical manifestation of a social agent performing the action of natural vegetation suppression;
+
+The causal mechanism is the relationship between the value of a natural vegetation, and the gain and losses of its suppression, followed the possibility of work. The NVS will be manifested when the causal mechanism is triggered, therefore, when there is a favorable opportunity, and there is the possibility of execution.
+
+According to the ontological paradigm being adopted, this causal mechanism lies in the domain of the real. I assume that it is absolute, in the sense that it do not change over time and space, and that the analysed phenomena (the NVS) is manifested only when this causal mechanism is triggered.
+
+The causal mechanism is trigerred when a social agent and the natural vegetation exists in the same space and time, and when the dillema of the supression arises. The context of the situation in which the causal mechanism is triggrered will define the characteristics of value, gains, losses and work. This means that while the causal mechanism do not change over time and space, it will be manifested as different forms, depending of the context. The idea developed in this paragraph depicts the actual domain of the adopted ontology paradigm.
+
+The form in which the NVS causal mechanism will manifest changes according to the situation context. The value of a natural vegetation, the gains and losses from its supression, and the work demanded for its execution are never the same, they are situational. The value of a natural vegetation can be easily represented by cultural aspects of social agents, while gains and losses can be represented as material and social capital, and work can be related to technology and momentum.
+
+However, how these aspects of the NVS causal mechanisms are perceived and interpreted by the social agents when it is trigerred is always partial. The social agent does not have access, or it is insensible, to certain values of the natural vegetation. The social agent has also a partial perception of gains and losses, it does not know all consequences of their action. At last, the work that executed the suppression is not always percepted, as it can be unintentional.
 
 ## Sociological Analysis
 
