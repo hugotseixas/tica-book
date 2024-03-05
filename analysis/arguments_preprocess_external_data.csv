@@ -1,3 +1,0 @@
-id,external_data,preprocess_function
-1,conservation_units,preprocess_conservation_units()
-2,indigenous_territory,preprocess_indigenous_territory()

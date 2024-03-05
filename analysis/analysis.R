@@ -1,37 +1,68 @@
-# Download data ----
+# Download data
 tica::loop_function(
   function_name = "download_external_data",
-  arguments_subset = 5
+  arguments_subset = 1
 )
 
-# Create analysis grid ----
+# Set Project CRS
+project_crs <-
+  sf::st_crs(
+    readr::read_file(
+      glue::glue("./data/project_crs.txt")
+    )
+  )
+
+# Create analysis grid
 aoi <-
   sf::read_sf("./data/external_raw/biomes/biomes_2019.fgb") |>
-  dplyr::filter(cd_bioma %in% c(1, 3))
+  dplyr::filter(code_biome %in% c(1, 3))
 
 grid <-
   tica::create_grid(
     aoi = aoi,
-    crs = glue::glue(
-      'PROJCS["unnamed",GEOGCS["GCS_GRS_1980_IUGG_1980",DATUM["D_unknown",',
-      'SPHEROID["GRS80",6378137,298.257222101]],PRIMEM["Greenwich",0],',
-      'UNIT["Degree",0.0174532925199433]], PROJECTION["',
-      'Albers_Conic_Equal_Area"],PARAMETER["latitude_of_center",-12], ',
-      'PARAMETER["longitude_of_center",-54],',
-      'PARAMETER["standard_parallel_1",-2],',
-      'PARAMETER["standard_parallel_2",-22],',
-      'PARAMETER["false_easting",5000000],',
-      'PARAMETER["false_northing",10000000],',
-      'UNIT["metre",1,AUTHORITY["EPSG","9001"]], AXIS["Easting",EAST],',
-      'AXIS["Northing",NORTH]]'
-    ),
-    resolution = 40000,
-    full_cells = TRUE,
+    crs = project_crs,
+    resolution = 60000,
+    full_cells = FALSE,
     shape = "hex"
   )
 
-# Process data ----
+# Process data
 tica::loop_function(
-  function_name = "preprocess_external_data",
-  arguments_subset = 1:2
+  function_name = "process_external_data",
+  arguments_subset = c(2)
 )
+
+# Merge gridded data
+merged_data <- tica::merge_data()
+
+# Fill merged data
+filled_data <- tica::fill_data(merged_data)
+
+data_split <- rsample::initial_split(filled_data, prop = 3 / 4)
+
+# Create data frames for the two sets:
+train_data <- rsample::training(data_split)
+test_data  <- rsample::testing(data_split)
+
+veg_suppression_rec <-
+  recipes::recipe(area ~ ., data = train_data) |>
+  recipes::step_naomit(recipes::all_outcomes()) |>
+  recipes::step_naomit(recipes::all_predictors()) |>
+  recipes::update_role(cell_id, year, new_role = "ID") |>
+  recipes::step_zv(recipes::all_predictors()) |>
+  recipes::step_dummy(recipes::all_nominal_predictors())
+
+rf_mod <-
+  parsnip::rand_forest(trees = 1000) |>
+  parsnip::set_engine("ranger") |>
+  parsnip::set_mode("regression")
+
+veg_suppression_wflow <-
+  workflows::workflow() |>
+  workflows::add_model(rf_mod) |>
+  workflows::add_recipe(veg_suppression_rec)
+
+veg_suppression_fit <- veg_suppression_wflow |>
+  parsnip::fit(data = train_data)
+
+predict(veg_suppression_fit, test_data)
