@@ -2,7 +2,7 @@
 toc: false
 ---
 
-# Glossary {.unnumbered}
+# Glossário {.unnumbered}
 
 ```{r}
 #| label: glossary

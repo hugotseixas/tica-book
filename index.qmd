@@ -2,21 +2,25 @@
 toc: false
 ---
 
-# Preface {.unnumbered}
+# Prefácio {.unnumbered}
 
-This work is an effort to develop an interdisciplinary approach to analyze social and environmental dimensions related to Natural Vegetation Supression (NVS)[^index-1] in the Amazon and Cerrado biomes. The main objective is to use qualitative and quantitative methods to explore causes of NVS in these areas, and uncover underlying social conflicts that emerge and shape this phenomena.
+Esse trabalho é fruto de um esforço para desenvolver uma teoria interdisciplinar sobre a Supressão de Vegetação Natural (SVN)[^index-1]. Uma teoria interdisciplinar seria aquela que consegue unir o conhecimento de diversas áreas de conhecimento (como a Sociologia, a Geografia e a Biologia). Caso uma teoria interdisciplinar seja bem sucedida, esperamos que ela possa fornecer uma nova perspectiva sobre um problema complexo (como a SVN), e possívelmente até servir de fomento para a idealização de novas soluções.
 
-[^index-1]: I'm considering any type of natural vegetation suppression caused by human activity, including forest formations, shrublands and grasslands. This is also usually named as deforestation.
+[^index-1]: Estou considerando a SVN como a supressão de qualquer tipo de vegetação considerada natural, causada pela atividade humana. Essas vegetações podem ser florestas, savanas, campos, pântanos ou qualquer outro tipo formação vegetal. Esse fenômeno também é geralmente chamado de desmatamento.
 
-The motivation to develop this research is to account for a diversity of factors involved in the NVS process. When analyzing social and environmental variables, we must always remember what lies hidden in numerical values, individuals, relationships, culture, landscapes. Is it possible to avoid omitting these when conducting research at large scales? How to represent them inside structured data formats?
+Um ponto fundamental no desenvolvimento do modelo teórico desse trabalho, é de que a interdisciplinaridade pode ser concretizada a partir do uso de uma base filosófica comum, para a realização de análises de diferentes dimensões da realidade (dimensões sociais e ambientais, por exemplo). Através dessa proposta, espera-se criar uma situação propícia para a integração de conhecimentos, gerados por diferentes métodos de diferentes disciplinas, que a princípio seriam considerados incompatíveis.
 
-The fact is that is usually not possible to abstract certain processes in a quantitative framework. That's why interdisciplinary approaches, using qualitative and quantitative methods, can support deep and rich analysis about complex and dynamic processes, such as NVS.
+Para o desenvolvimento do modelo teórico, utilizarei uma base filosófica conhecida como Realismo Crítico. Essa base filosófica irá ditar a perspectiva de realidade adotada no trabalho, e também na forma em que as ferramentas metodológicas serão escolhidas e aplicadas.
 
-In this work, I try to perform such task by running parallel analysis of different dimensions, but based in common grounds. Such as @fig-amazon-hex and @fig-cerrado-hex, this project is composed by numerical analysis of structured spatial data (represented as regular grid cells), as also by sociological investigation of social and environmental processes that can't be measured.
+No caso desse trabalho, escolhi a Teoria Geral dos Campos desenvolvida por Bourdieu para a realização de uma análise sociológica do problema da SVN, em sua dimensão social. Também adotei Modelagem Estatística de dados espaciais como método de análise da dimensão geográfica, que engloba caracteristicas biofísicas da superficie da terra, e de fronteiras políticas.
+
+A motivação das escolhas, feitas para estruturar a metodologia desse trabalho, veio da dificuldade da realização de uma análise aprofundada da SVN apenas através da utilização de métodos quantitativos sobre dados numéricos e estruturados. A SVN é um fenômeno que se materializa por dinâmicas sociais que dificilmente podem ser estimadas numéricamente e descritas por fórmulas matemáticas. Portanto a complementação de conhecimentos gerados por diferentes métodos é algo promissor para um entendimento mais aprofundado da SVN.
+
+Para a aplicação do modelo teórico, dois biomas brasileiros foram escolhidos para servir de contexto espacial e temporal. Os biomas são a Amazônia e o Cerrado (Figuras @fig-amazon-hex e @fig-cerrado-hex), ambos extremamente afetados pela SVN nas últimas décadas.
 
 ```{r}
 #| label: fig-amazon-hex
-#| fig-cap: Representation of the Brazilian Amazon biome.
+#| fig-cap: Representação do Bioma Amazônia.
 #| echo: false
 #| dev: "ragg_png"
 
@@ -24,19 +28,7 @@ knitr::include_graphics("figs/art/art_amazon.png")
 
 ```
 
-Before diving into this work, I would like to first introduce some key foundations adopted in my research (see more at @sec-paradigm).
-
-As a philosophical background for the work, I have adopted the perspective of Critical Realism (see @sec-cr), which focuses the reflection about causal mechanisms. This is the research paradigm for the thesis, and the perspective I use both in planning the analysis and interpreting my results.
-
-The information gathering to create my scientific model[^index-2] is based on Grounded Theory", which is a general method to gather data in qualitative studies and test theories. I have adapted this method to gather data from interviews and the literature, in order to trace the causes of deforestation.
-
-[^index-2]: The scientific model is the abstraction of the generative process that rules the observed phenomena. The scientific model defines the variables and their mutual relationships.
-
-The qualitative assessment of the resulting scientific model is based on the Sociological Field Theory in the perspective of Bordieu's work (see @sec-bourdieu). The concepts of social fields and habitus of different social actors is a powerful tool to explore underlying mechanisms related to NVS in Brazil.
-
-For the quantitative analysis (see @sec-stats), a subset of variables from the scientific model were selected by two criteria: (1) the variable can be represented in a structured numerical format; (2) the variable is assumed to have a causal effect on NVS. The second criterion relies on formal causal inference methods of variable selection, which is fundamental to create fair and robust statistical learning models. Apart from using causality foundations to select variables, the quantitative analysis is based on a prediction modeling framework, composed by statistical learning algorithms.
-
-Finally, the results from qualitative and quantitative assessments are compared and discussed in light with the literature. Interpretation and discussion of results relies on a skeptical perspective of the models, which are a flawed representation of the phenomena of interest. However, they still provide a useful source of information to advance the knowledge about the NVS in the Amazon and Cerrado.
+A escolha desses biomas se deu pela oportunidade singular que eles oferecem, apesar de estarem no mesmo país, existem diferenças importantes entre ambos, como o tipo de vegetação e legislação. Portanto, existe uma facilidade de análise por se situarem em um mesmo país, ao mesmo tempo em que existe uma hetegeneidade causada pelas diferenças entre os biomas, algo de extrema importância para a aplicação de um modelo teórico que almeja ser considerado como uma Teoria Geral da SVN.
 
 ```{r}
 #| label: fig-cerrado-hex
@@ -48,4 +40,4 @@ knitr::include_graphics("figs/art/art_cerrado.png")
 
 ```
 
-This is a work of exploratory nature, and avoids diagnostic prescription to solve the NVS problem. Instead, it presents a different framework to assess the phenomena, which relies on multiple areas of knowledge. The document is likely to engage specially with readers with interest on NVS, but it also provides rich material to the subjects of Critical Realism, Sociological Field Theory, Grounded Theory, Causal Inference and Machine Learning.
+As figuras acima representam a forma desse trabalho, no sentido de que existe uma união entre análises quantitativas usando dados espacialmente estruturados, e análises qualitativas que representam processos qua vão além de números, e incluem pessoas, comunidades, culturas, conflitos e alianças.

@@ -14,22 +14,20 @@ project_crs <-
 
 # Create analysis grid
 aoi <-
-  sf::read_sf("./data/external_raw/biomes/biomes_2019.fgb") |>
+  sf::read_sf("./data/raw/biomes/biomes_2019.fgb") |>
   dplyr::filter(code_biome %in% c(1, 3))
 
 grid <-
   tica::create_grid(
     aoi = aoi,
     crs = project_crs,
-    resolution = 60000,
-    full_cells = FALSE,
-    shape = "hex"
+    resolution = 40000
   )
 
 # Process data
 tica::loop_function(
   function_name = "process_external_data",
-  arguments_subset = c(2)
+  arguments_subset = c(1:8)
 )
 
 # Merge gridded data
@@ -38,31 +36,13 @@ merged_data <- tica::merge_data()
 # Fill merged data
 filled_data <- tica::fill_data(merged_data)
 
-data_split <- rsample::initial_split(filled_data, prop = 3 / 4)
+sampled_data <- tica::sample_data(filled_data, 1)
 
-# Create data frames for the two sets:
-train_data <- rsample::training(data_split)
-test_data  <- rsample::testing(data_split)
+model_predictions <- tica::run_model(filled_data, sampled_data)
 
-veg_suppression_rec <-
-  recipes::recipe(area ~ ., data = train_data) |>
-  recipes::step_naomit(recipes::all_outcomes()) |>
-  recipes::step_naomit(recipes::all_predictors()) |>
-  recipes::update_role(cell_id, year, new_role = "ID") |>
-  recipes::step_zv(recipes::all_predictors()) |>
-  recipes::step_dummy(recipes::all_nominal_predictors())
+tica::eda_nas_timeseries(filled_data)
 
-rf_mod <-
-  parsnip::rand_forest(trees = 1000) |>
-  parsnip::set_engine("ranger") |>
-  parsnip::set_mode("regression")
-
-veg_suppression_wflow <-
-  workflows::workflow() |>
-  workflows::add_model(rf_mod) |>
-  workflows::add_recipe(veg_suppression_rec)
-
-veg_suppression_fit <- veg_suppression_wflow |>
-  parsnip::fit(data = train_data)
-
-predict(veg_suppression_fit, test_data)
+tica::loop_function(
+  function_name = "create_visualization",
+  arguments_subset = 1:4
+)

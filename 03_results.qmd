@@ -63,7 +63,7 @@ In this section I analyze each variable of my model. It is important to note tha
 #| echo: false
 #| dev: "ragg_png"
 
-viz_grid_area
+#viz_grid_area
 ```
 
 All visualizations about the variables follows a common color scale, to facilitate their interpretation along the document (@fig-color-scale). The minimum values are represented by light gray color, values close to the median shows a yellow color, and maximum values as dark red color.
@@ -75,7 +75,7 @@ All visualizations about the variables follows a common color scale, to facilita
 #| echo: false
 #| dev: "ragg_png"
 
-color_scale
+#color_scale
 ```
 
 #### Natural Vegetation Suppression
@@ -98,7 +98,7 @@ In the grid of analysis, the minimum area of NVS is 2 ha for the Amazon and Cerr
 #| echo: false
 #| dev: "ragg_png"
 
-htmltools::includeHTML("./figs/eda/deforestation_table.html")
+#htmltools::includeHTML("./figs/eda/deforestation_table.html")
 ```
 
 The distribution of NVS area in the grid cells is heavily skewed towards smaller areas, specially in the Amazon, which also shows a high frequency of a diverse range of values @fig-deforestation-hist. The distribution of NVS for the Cerrado is less skewed, and show more frequent values close to 1000 ha a year @fig-deforestation-hist.
@@ -110,7 +110,7 @@ The distribution of NVS area in the grid cells is heavily skewed towards smaller
 #| echo: false
 #| dev: "ragg_png"
 
-deforestation_histogram
+#deforestation_histogram
 ```
 
 The cumulative NVS area shows that grid cells with high values of NVS accounts for the majority of the total NVS in a year, for the Amazon NVS from 3000ha to 18000 ha, which are the 25% highest values, accounts for 79% of all NVS @fig-deforestation-cumsum. For the Cerrado, NVS from 900 ha to 12000 ha, the 25% highest values, accounts for 57% of the total NVS @fig-deforestation-cumsum.
@@ -122,7 +122,7 @@ The cumulative NVS area shows that grid cells with high values of NVS accounts f
 #| echo: false
 #| dev: "ragg_png"
 
-deforestation_cumulative
+#deforestation_cumulative
 ```
 
 The spatial distribution of NVS shows a concentration in some regions of the Amazon, specially in areas in proximity to the Cerrado biome [@fig-deforestation-spatial-distribution]. However, the distribution of NVS in the Cerrado shows a different pattern, where the NVS occurrence is spread in the whole biome [@fig-deforestation-spatial-distribution].
@@ -134,7 +134,7 @@ The spatial distribution of NVS shows a concentration in some regions of the Ama
 #| echo: false
 #| dev: "ragg_png"
 
-deforestation_spatial
+#deforestation_spatial
 ```
 
 The NVS time series shows periods of increase of NVS in the Amazon from 1985 to 2003, followed by a consistent drop of NVS area after 2003 [@fig-deforestation-timeseries]. For the Cerrado, the NVS area have been decreasing since the start of the time series, with some periods of increase in 2004 and 2013.
@@ -147,7 +147,8 @@ The NVS time series shows periods of increase of NVS in the Amazon from 1985 to 
 #| echo: false
 #| dev: "ragg_png"
 
-deforestation_timeseries
+nvs_timeseries
+
 ```
 
 The natural vegetation types that suffered suppression are Forests, Grasslands, Savannas and Wetlands. In the Amazon, the majority of NVS occurs over Forests, and in the Cerrado it occurrence is predominant over Savannas [@fig-deforestation-colsum-natural].
@@ -160,7 +161,7 @@ The natural vegetation types that suffered suppression are Forests, Grasslands, 
 #| echo: false
 #| dev: "ragg_png"
 
-deforestation_colsum_natural
+#deforestation_colsum_natural
 ```
 
 The antropic land uses that followed after NVS are predominantly Pastures for both biomes [@fig-deforestation-colsum-human]. However, Mosaic of Uses and Temporary Crops share a significant amount of NVS area in the Cerrado [@fig-deforestation-colsum-human].
@@ -173,7 +174,7 @@ The antropic land uses that followed after NVS are predominantly Pastures for bo
 #| echo: false
 #| dev: "ragg_png"
 
-deforestation_colsum_human
+#deforestation_colsum_human
 ```
 
 #### Conservation Units
@@ -190,7 +191,7 @@ In the grid of analysis, the maximum area occupied by UC in a single cell is 780
 #| echo: false
 #| dev: "ragg_png"
 
-htmltools::includeHTML("./figs/eda/uc_table.html")
+#htmltools::includeHTML("./figs/eda/uc_table.html")
 ```
 
 When analyzing the grid cells with any cover of UC, we observe that in the Amazon, most those grid cells are fully occupied by UC @fig-uc-hist. The situation is very different for the Cerrado, where most pixels occupied by UC shows small areas, indicating that small UC are more frequent for this biome @fig-uc-hist.
@@ -203,7 +204,7 @@ When analyzing the grid cells with any cover of UC, we observe that in the Amazo
 #| echo: false
 #| dev: "ragg_png"
 
-uc_histogram
+#uc_histogram
 ```
 
 The spatial distributions of UC in the Amazon and Cerrado are very different. In the Amazon it is possible to observe a large number of big UC, while in Cerrado most of UC are smaller as scattered around the biome @fig-uc-spatial-distribution.
@@ -216,7 +217,7 @@ The spatial distributions of UC in the Amazon and Cerrado are very different. In
 #| echo: false
 #| dev: "ragg_png"
 
-uc_spatial
+#uc_spatial
 ```
 
 The time series of accumulated UC area over time shows a steady increase from 1985 to 2010, followed by a period of stagnation of the creation of new UC for the Amazon and Cerrado @fig-uc-timeseries.
@@ -229,7 +230,7 @@ The time series of accumulated UC area over time shows a steady increase from 19
 #| echo: false
 #| dev: "ragg_png"
 
-uc_timeseries
+#uc_timeseries
 ```
 
 #### Policies
@@ -245,7 +246,7 @@ There are a large number of laws, decrees, resolutions and commitments made in B
 #| echo: false
 #| dev: "ragg_png"
 
-pp_timeline
+#pp_timeline
 ```
 
 The details of these policies are summarized in the @tbl-timeline, which shows the beggining and end of the policy, their spatial coverage and a general description.
@@ -256,7 +257,7 @@ The details of these policies are summarized in the @tbl-timeline, which shows t
 #| echo: false
 #| dev: "ragg_png"
 
-htmltools::includeHTML("./figs/policies_table.html")
+#htmltools::includeHTML("./figs/policies_table.html")
 
 ```
 

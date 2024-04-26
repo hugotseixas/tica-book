@@ -1,13 +1,13 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pt" xml:lang="pt"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.3.433">
+<meta name="generator" content="quarto-1.3.450">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Dimensions of deforestation causes in the Amazon and Cerrado - 2&nbsp; Methods</title>
+<title>Explorando dimensões da Supressão de Vegetação Natural através de uma teoria geral - 2&nbsp; Método</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -61,6 +61,7 @@ div.csl-indent {
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/quarto-contrib/glossary/glossary.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -69,18 +70,24 @@ div.csl-indent {
   "type": "textbox",
   "limit": 20,
   "language": {
-    "search-no-results-text": "No results",
-    "search-matching-documents-text": "matching documents",
-    "search-copy-link-title": "Copy link to search",
-    "search-hide-matches-text": "Hide additional matches",
-    "search-more-match-text": "more match in this document",
-    "search-more-matches-text": "more matches in this document",
-    "search-clear-button-title": "Clear",
-    "search-detached-cancel-button-title": "Cancel",
-    "search-submit-button-title": "Submit",
-    "search-label": "Search"
+    "search-no-results-text": "Nenhum resultado",
+    "search-matching-documents-text": "documentos correspondentes",
+    "search-copy-link-title": "Copiar link para a busca",
+    "search-hide-matches-text": "Esconder correspondências adicionais",
+    "search-more-match-text": "mais correspondência neste documento",
+    "search-more-matches-text": "mais correspondências neste documento",
+    "search-clear-button-title": "Limpar",
+    "search-detached-cancel-button-title": "Cancelar",
+    "search-submit-button-title": "Enviar",
+    "search-label": "Procurar"
   }
 }</script>
+<script type="application/json" class="js-hypothesis-config">
+{
+  "theme": "clean"
+}
+</script>
+<script async="" src="https://hypothes.is/embed.js"></script>
 <meta name="mermaid-theme" content="neutral">
 <script src="site_libs/quarto-diagram/mermaid.min.js"></script>
 <script src="site_libs/quarto-diagram/mermaid-init.js"></script>
@@ -95,11 +102,11 @@ div.csl-indent {
   <header id="quarto-header" class="headroom fixed-top">
   <nav class="quarto-secondary-nav">
     <div class="container-fluid d-flex">
-      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./02_methods.html"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Methods</span></a></li></ol></nav>
-      <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./02_methods.html"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Método</span></a></li></ol></nav>
+      <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
       </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
         <i class="bi bi-search"></i>
@@ -116,12 +123,12 @@ div.csl-indent {
       <img src="./figs/art/logo.png" alt="" class="sidebar-logo py-0 d-lg-inline d-none">
       </a>
     <div class="sidebar-title mb-0 py-0">
-      <a href="./">Dimensions of deforestation causes in the Amazon and Cerrado</a> 
+      <a href="./">Explorando dimensões da Supressão de Vegetação Natural através de uma teoria geral</a> 
     </div>
       </div>
         <div class="mt-2 flex-shrink-0 align-items-center">
         <div class="sidebar-search">
-        <div id="quarto-search" class="" title="Search"></div>
+        <div id="quarto-search" class="" title="Procurar"></div>
         </div>
         </div>
     <div class="sidebar-menu-container"> 
@@ -129,25 +136,25 @@ div.csl-indent {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Preface</span></a>
+ <span class="menu-text">Prefácio</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./00_glossary.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Glossary</span></a>
+ <span class="menu-text">Glossário</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./01_introduction.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introduction</span></span></a>
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introdução</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./02_methods.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Methods</span></span></a>
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Método</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -171,8 +178,8 @@ div.csl-indent {
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">
- <span class="menu-text">Appendices</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true" aria-label="Toggle section">
+ <span class="menu-text">Apêndices</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true" aria-label="Alternar seção">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
@@ -195,7 +202,7 @@ div.csl-indent {
     <h2 id="toc-title">Content</h2>
    
   <ul>
-  <li><a href="#theoretical-model" id="toc-theoretical-model" class="nav-link active" data-scroll-target="#theoretical-model"><span class="header-section-number">2.1</span> Theoretical Model</a>
+  <li><a href="#modelo-teórico" id="toc-modelo-teórico" class="nav-link active" data-scroll-target="#modelo-teórico"><span class="header-section-number">2.1</span> Modelo Teórico</a>
   <ul class="collapse">
   <li><a href="#experts-interviews" id="toc-experts-interviews" class="nav-link" data-scroll-target="#experts-interviews"><span class="header-section-number">2.1.1</span> Experts Interviews</a></li>
   <li><a href="#literature-assessment" id="toc-literature-assessment" class="nav-link" data-scroll-target="#literature-assessment"><span class="header-section-number">2.1.2</span> Literature Assessment</a></li>
@@ -217,7 +224,7 @@ div.csl-indent {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span id="sec-methods" class="quarto-section-identifier"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Methods</span></span></h1>
+<h1 class="title"><span id="sec-methods" class="quarto-section-identifier"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Método</span></span></h1>
 </div>
 
 
@@ -232,48 +239,50 @@ div.csl-indent {
 
 </header>
 
-<p>This project relies on developing a theoretical model of how and why Natural Vegetation Suppression (NVS) occurs persistently in the Amazon and Cerrado. This theoretical model is responsible to represent the mechanisms that causes the NVS. Based on the theoretical model, sociological and statistical analysis are performed to describe the causes of NVS from subjective and objective perspectives.</p>
-<p>To employ the tasks above and accomplish the objectives (see <a href="01_introduction.html#sec-objectives"><span>Section&nbsp;1.1</span></a>), the project is divided into four parts:</p>
+<p>Esse trabalho tem como objetivo central o desenvolvimento e a aplicação de um modelo teórico geral da SVN. Para atingir esse objetivo, uma série de atividades serão conduzidas em sequência:</p>
 <ol type="1">
-<li><p>Creation of the NVS theoretical model;</p></li>
-<li><p>Sociological assessment of social actors related to NVS;</p></li>
-<li><p>Statistical modeling of NVS;</p></li>
-<li><p>Interpretation of the results;</p></li>
+<li><p>Desenvolvimento do modelo teórico geral da SVN a partir de uma perspectiva do Realismo Crítico:</p>
+<p>Nessa etapa o modelo teórico é criado a partir de entrevistas e leituras de artigos, livros e teses que abordem o tema da SVN. A seleção de materiais não é feito de forma sistêmica, e não há um método formal para o desenvolvimento do modelo teórico, esse processo é feito de modo livre e espontâneo, ao contrário de <span class="citation" data-cites="fletcher-2016">Fletcher (<a href="#ref-fletcher-2016" role="doc-biblioref">2016</a>)</span>, que aborda a identificação de mecanismos causais de maneira metodológica.</p></li>
+<li><p>Análise sociológica da SVN através da aplicação de conceitos desenvolvidos na Teoria Geral dos Campos de Bourdieu:</p>
+<p>A análise sociológica é feita pela caracterização do campo social da SVN, e pela identificação de agentes sociais que fazem parte da disputa dentro desse campo. Esse processo é realizado com base na mesma literatura utilizada no desenvolvimento do modelo teórico. Essa etapa é conduzida através de três passos discutidos por Bourdieu <span class="citation" data-cites="grenfell-2018">(<a href="#ref-grenfell-2018" role="doc-biblioref">Grenfell 2018, 105</a>)</span>: contextualizar o campo social da SVN em relação ao campo do poder; identificar as relações entre agentes sociais que fazem parte do campo social da SVN; analisar os habitus dos agentes sociais dentro do campo social da SVN.</p></li>
+<li><p>Análise estatística a partir da aplicação de algorítmos de regressão sobre dados relacionados a SVN:</p>
+<p>A análise estatística será realizada sobre dados com representação espacial e temporal. A seleção dos dados para a análise é baseada na literatura e disponibilidade dos mesmos, porém, para serem incluídos na análise, eles devem obedecer o mecanismo causal proposto pelo modelo teórico. Já a escolha do algorítmo estatístico não tem relação com o modelo teórico, e é feita a partir de um balanço entre complexidade e custo computacional.</p></li>
+<li><p>Interpretação conjunta dos resultados:</p>
+<p>A interpretação dos resultados das diferentes análises será realizada de maneira conjunta, através da perspectiva ontológica definida pelo Realismo Crítico. A interpretação será feita de maneira que os resultados estejam em sintonia com o modelo teórico proposto, em que serão identificadas lacunas, concordâncias e discordâncias entre os conhecimentos gerados por ambas análises.</p></li>
 </ol>
-<p>The first part is performed by conducting an adaptation of the Critical Realist Grounded Theory <span class="citation" data-cites="oliver-2011">(<a href="#ref-oliver-2011" role="doc-biblioref">Oliver 2011</a>)</span> method (which is itself an adaptation of the general Grounded Theory method). My adaptation combines the interactive engagement with data trough the acquisition and coding process, and the retroduction approach to infer causal mechanisms of NVS. The result of this process is a theoretic model, represented by a Directed Acyclic Graph (DAG), which abstracts relationships of cause between variables.</p>
-<p>In the second part, a sociological analysis describes how social actors are related to the variables from the NVS theoretical model, and what are the interactions between different groups, according to their actions and power status. The analysis will be based on Fields Theory of Bourdieu.</p>
-<p>The third part contains the development and employment of statistical regression algorithms, that are trained and tested using available data that are represented in the NVS theoretic model. The prediction of the models will be analyzed by machine learning interpretation techniques.</p>
-<p>The fourth and last part is where results of both approaches (sociological and statistical analyses) will be interpreted in conjunction.</p>
-<p>The sequence of activities that compose each part are represented in <a href="#fig-method-diagram">Figure&nbsp;<span>2.1</span></a>, summarizing the method.</p>
+<p>A sequência de atividades que compõe a pesquisa é representada na <a href="#fig-method-diagram">Figura&nbsp;<span>2.1</span></a>. Apesar do processo ser realizado de modo sequêncial, ele não é linear, e permite circularidades. Ou seja, o modelo teórico pode ser modificado ao longo da condução da pesquisa, o que força uma atualização de todas as etapas subsequentes.</p>
 <div class="cell" data-fig-responsive="true" data-layout-align="center">
 <div class="cell-output-display">
 <div id="fig-method-diagram" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 <div>
 <pre class="mermaid mermaid-js" data-label="fig-method-diagram">flowchart TD
-    A[Literature Assessment] --&gt; B[Theoretical Model]
-    C[Experts Interviews] --&gt; B
-    B --&gt; D[Database Structuring]
-    E[Available Data] --&gt; D
-    B --&gt; F[Sociological Analysis]
-    D --&gt; G[Statistical Analysis]
-    F --&gt; H[Results Interpretation]
+    A[Consulta da Literatura] --&gt; B[Modelo Teórico]
+    C[Entrevistas] --&gt; B
+    B --&gt; D[Estruturação da Base de Dados]
+    E[Dados Disponíveis] --&gt; D
+    B --&gt; F[Análise Sociológica]
+    D --&gt; G[Análise Estatística]
+    F --&gt; H[Interpretação dos Resultados]
     G --&gt; H
 
 </pre>
 </div>
-<figcaption class="figure-caption">Figure&nbsp;2.1: General workflow of the method. The activities that composes each part of the project are: (1) Literature Assessment, Experts Interviews, Theoretical Model; (2) Sociological Analysis; (3) Available Data, Database Structuring, Statistical Analysis; (4) Results Interpretation.</figcaption>
+<figcaption class="figure-caption">Figura&nbsp;2.1: Fluxo geral da pesquisa. As atividades realizadas em cada parte da pesquisa são: (1) Consulta da Literatura, Entrevistas, Modelo Teórico; (2) Análise Sociológica; (3) Dados Disponíveis, Estruturação da Base de Dados, Análise Estatística; (4) Interpretação dos Resultados.</figcaption>
 </figure>
 </div>
 </div>
 </div>
-<p>The combination of activities configures as a Convergent Parallel Mixed Method of research, where quantitative and qualitative analysis are performed at the same time, providing results to a final interpretation, However, the design of this work includes a previous establishment of a common theory that guides both analysis, so they share the same foundations.</p>
-<p>In the next sections, each part of the work, and its respective activities are described.</p>
-<section id="theoretical-model" class="level2" data-number="2.1">
-<h2 data-number="2.1" class="anchored" data-anchor-id="theoretical-model"><span class="header-section-number">2.1</span> Theoretical Model</h2>
+<p>O método geral do trabalho (como apresentado na <a href="#fig-method-diagram">Figura&nbsp;<span>2.1</span></a>) pode ser caracterizado como um Método Misto Paralelo-Convergente, em que análises quantitativas e qualitativas são conduzidas paralelamente e independentemente (elas não se relacionam de maneira direta), até que seus resultados são interpretados de maneira conjunta. Porém, a idéia central desse trabalho é a adoção de uma perspectiva ontológica e epistemológica única para todas as análises conduzidas. Em teoria, essa idéia é completamente agnóstica em relação aos métodos de análise adotados. Portanto, não é feita uma defesa dos métodos de análise adotados, já que exitiriam uma infinidade de possibilidades metodológicas, mais ou menos apropriadas para o entendimento do fenômeno em questão.</p>
+<p>Nas próximas sessões, cada parte do trabalho é descrita em maiores detalhes.</p>
+<section id="modelo-teórico" class="level2" data-number="2.1">
+<h2 data-number="2.1" class="anchored" data-anchor-id="modelo-teórico"><span class="header-section-number">2.1</span> Modelo Teórico</h2>
+<p>O modelo teórico é desenvolvido com base em informações obtidas da literatura técnica e científica e entrevistas realisadas com pesquisadores que atuam no tema da SVN. Porém, o desenvolvimento desse modelo teórico também é fortemente afetado pelas minhas experiências pessoais, como exposição à noticias, discussões diversas sobre o tema, e reflexões e indagações pessoais. Portanto, o conteúdo gerado nessa parte da pesquisa não pode ser considerada como produto de um método sistemático e reproduzível. Porém, apesar de se caracterizar como um processo um tanto ametódico, o desenvolvimento do modelo teórico segue uma maneira de se refletir sobre um fenômeno, se inspira em certas proposições metodológicas, e se baseia parcialmente, em uma limitada sistematização de informações.</p>
+<p>A maneira de se refletir sobre um fenômeno, adotada nesse trabalho, é baseada na idéia de retrodução do Realismo Crítico. A retrodução pode ser definida como uma atividade de imaginação em que pensamos nos mecanismos generativos que, se de fato forem reais, irão causar um fenômeno quando tais mecanismos forem manifestados <span class="citation" data-cites="bhaskar-2016">(<a href="#ref-bhaskar-2016" role="doc-biblioref">Bhaskar 2016, 3</a>)</span>. A prática da retrodução implica em um exercício de imaginação que tenta transitar entre os domínios ontológicos do Realismo Crítico, o domínio do empírico, o domínio do atual e o domínio do real <span class="citation" data-cites="akram-2023">(<a href="#ref-akram-2023" role="doc-biblioref">Akram 2023, 53–54</a>)</span>. Uma ilustração geral e superficial do exercício de retrodução feita nessa pesquisa pode ser feita da seguinte forma: em um cenário hipotético, acredita-se que os <button class="glossary"><span class="def">É a integração de conhecimentos sobre determinado objeto intransitivo, a socialização de tudo que percebemos. Por exemplo, se pensarmos em uma rodovia: o que define ela como rodovia, pra que ela serve, a relação dela com demais objetos, essas são definições sociais que representam a idéia de rodovia como um objeto transitivo.</span>objetos transitivos</button> A e B sejam causadores da SVN; a partir disso, nos questionamos quais seriam as condições necessárias para que essa relação de A e a SVN se manifeste; essas condições são traduzidas como o mecanismo generativo proposto; por consequência, nos questionamos se tal mecanismo generativo consegue explicar a relação de causa de B e a SVN. Esse exercício é repetido em qualquer ordem, e a medida que esse processo se sucede, lacunas do mecanismo generativo podem ser identificadas e retificadas, assim como inconsistências podem ser eliminadas, se possível.</p>
+<p>O desenvolvimento do modelo teórico também incorpora algumas idéias do método da Teoria Fundamentada, e mais especificamente desse método baseado no Realismo Crítico, como proposto por <span class="citation" data-cites="oliver-2011">Oliver (<a href="#ref-oliver-2011" role="doc-biblioref">2011</a>)</span>. Nesse projeto, a condução de entrevistas e consultas da literatura são sistematizadas em forma de dados qualitativos estruturados, contendo as idéias centrais obtidas a partir desses materiais. Essa sistematização de dados é feita de maneira concomitante com o desenvolvimento do modelo teórico.</p>
 <p>The theoretical model is created by the employment of an adaptation of the Critical Realist Grounded Theory. The method of Grounded Theory is widely used in social sciences with the objective of generating theories, it consists of an interactive and concurrent process of data collection and analysis. It have been modified trough time to accommodate different paradigms of research, such as the Critical Realism.</p>
 <p>The Critical Realist Grounded Theory introduces the necessity to explicitly account for the link between observations and their underlying generative mechanisms, and the use of retroduction in order to abstract these mechanisms <span class="citation" data-cites="oliver-2011">(<a href="#ref-oliver-2011" role="doc-biblioref">Oliver 2011</a>)</span>.</p>
-<p>The process of data acquisition is performed by a series of interviews and literature assessment. The interviews inquire possible causes of NVS and the social groups related to this phenomena. After each interview, the answers are coded into general terms, and with related questions of how and why they can affect NVS. These questions are transformed into literature database queries, that helps finding written material that may enrich analysis with convergences or divergences with interview answers, or with new possible causes of NVS. After each round of interviews and literature assessment, the next interview may change to accommodate findings from the previous. This cyclic process is demonstrated in <a href="#fig-theoretical-diagram">Figure&nbsp;<span>2.2</span></a>.</p>
+<p>The process of data acquisition is performed by a series of interviews and literature assessment. The interviews inquire possible causes of NVS and the social groups related to this phenomena. After each interview, the answers are coded into general terms, and with related questions of how and why they can affect NVS. These questions are transformed into literature database queries, that helps finding written material that may enrich analysis with convergences or divergences with interview answers, or with new possible causes of NVS. After each round of interviews and literature assessment, the next interview may change to accommodate findings from the previous. This cyclic process is demonstrated in <a href="#fig-theoretical-diagram">Figura&nbsp;<span>2.2</span></a>.</p>
 <div class="cell" data-fig-responsive="true" data-layout-align="center">
 <div class="cell-output-display">
 <div id="fig-theoretical-diagram" class="quarto-figure quarto-figure-center anchored">
@@ -290,7 +299,7 @@ div.csl-indent {
 
 </pre>
 </div>
-<figcaption class="figure-caption">Figure&nbsp;2.2: Workflow of theoretical model development</figcaption>
+<figcaption class="figure-caption">Figura&nbsp;2.2: Workflow of theoretical model development</figcaption>
 </figure>
 </div>
 </div>
@@ -308,7 +317,7 @@ div.csl-indent {
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Important
+Importante
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
@@ -780,7 +789,7 @@ Important
   text-indent: 25px;
 }
 </style>
-  <table class="gt_table" data-quarto-disable-processing="false" data-quarto-bootstrap="false"><caption>Table&nbsp;2.1:  <p>Interview schedule used in this project.</p> </caption>
+  <table class="gt_table" data-quarto-disable-processing="false" data-quarto-bootstrap="false"><caption>Tabela&nbsp;2.1:  <p>Interview schedule used in this project.</p> </caption>
   
   <tbody class="gt_table_body">
     <tr class="gt_group_heading_row">
@@ -875,7 +884,7 @@ Important
 
 </pre>
 </div>
-<figcaption class="figure-caption">Figure&nbsp;2.3: Workflow of literature review</figcaption>
+<figcaption class="figure-caption">Figura&nbsp;2.3: Workflow of literature review</figcaption>
 </figure>
 </div>
 </div>
@@ -886,6 +895,11 @@ Important
 <h3 data-number="2.1.3" class="anchored" data-anchor-id="variables-description"><span class="header-section-number">2.1.3</span> Variables description</h3>
 <p>The possible causes of NVS that are included in the theoretical model may or may not be observed as data, but all of them are described in this section. The variables may present diverse nature, such as quantitative and qualitative.</p>
 <div class="cell">
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: `includeHTML()` was provided a `path` that appears to be a complete HTML document.
+✖ Path: ./figs/variables_table.html
+ℹ Use `tags$iframe()` to include an HTML document. You can either ensure `path` is accessible in your app or document (see e.g. `shiny::addResourcePath()`) and pass the relative path to the `src` argument. Or you can read the contents of `path` and pass the contents to `srcdoc`.</code></pre>
+</div>
 <div class="cell-output-display">
 <div id="tbl-variables" class="anchored">
 
@@ -1338,7 +1352,7 @@ Important
   text-indent: 25px;
 }
 </style>
-  <table class="gt_table" data-quarto-disable-processing="false" data-quarto-bootstrap="false"><caption>Table&nbsp;2.2:  <p>Variables used in this project.</p> </caption>
+  <table class="gt_table" data-quarto-disable-processing="false" data-quarto-bootstrap="false"><caption>Tabela&nbsp;2.2:  <p>Variables used in this project.</p> </caption>
   <thead>
     
     <tr class="gt_col_headings">
@@ -1452,7 +1466,7 @@ Important
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Important
+Importante
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
@@ -1488,23 +1502,13 @@ Important
 
 </pre>
 </div>
-<figcaption class="figure-caption">Figure&nbsp;2.4: Diagram of the process to create the project database.</figcaption>
+<figcaption class="figure-caption">Figura&nbsp;2.4: Diagram of the process to create the project database.</figcaption>
 </figure>
 </div>
 </div>
 </div>
 <p>The data are stored in a nested directories database with hive-style partitioning. The database is composed of a collection of parquet files, a format with high compression, that facilitates processing large volumes of data. The main partition stores the variables, which means that each variable will be stored in a separate directory. If necessary, the data will be partitioned by further variables (as a rule of thumb, each parquet file should not be smaller than 20MB and not bigger than 2GB).</p>
 <p>To structure a collection of data that presents different natures, I must transform all the variables into a standard grid system. The grid system will be composed of 0.2 degrees cells (40km x 40km), which should be a balanced compromise between detail and computational cost.</p>
-<div class="cell" data-fig.asp="1">
-<div class="cell-output-display">
-<div id="fig-base-grid" class="quarto-figure quarto-figure-center anchored">
-<figure class="figure">
-<p><img src="02_methods_files/figure-html/fig-base-grid-1.png" class="img-fluid figure-img" width="672"></p>
-<figcaption class="figure-caption">Figure&nbsp;2.5: Model grid, in which variables were transformed to.</figcaption>
-</figure>
-</div>
-</div>
-</div>
 <p>Each grid cell contains one observation, for each year, for all the variables.</p>
 </section>
 <section id="model-development" class="level3" data-number="2.3.2">
@@ -1514,7 +1518,7 @@ Important
 <p>The data splitting between training and training, validation and testing groups will be performed in order to avoid spatial and temporal correlation between observations.</p>
 <p>The parameters adjustments will be performed by cross validation methods for resampling and racing techniques for parameter optimization. In this process, validation data will be used for parameter adjustments.</p>
 <p>After the final model fit, accuracy metrics will be calculated in order to estimate the error of the statistical model. Along with the accuracy assessment, a series of model interpretation techniques will be applied in order to understand the model results.</p>
-<p>The main steps are shown in <a href="#fig-model-diagram">Figure&nbsp;<span>2.6</span></a>.</p>
+<p>The main steps are shown in <a href="#fig-model-diagram">Figura&nbsp;<span>2.5</span></a>.</p>
 <div class="cell" data-fig-responsive="true" data-layout-align="center">
 <div class="cell-output-display">
 <div id="fig-model-diagram" class="quarto-figure quarto-figure-center anchored">
@@ -1538,7 +1542,7 @@ Important
 
 </pre>
 </div>
-<figcaption class="figure-caption">Figure&nbsp;2.6: Diagram of the modelling process.</figcaption>
+<figcaption class="figure-caption">Figura&nbsp;2.5: Diagram of the modelling process.</figcaption>
 </figure>
 </div>
 </div>
@@ -1550,7 +1554,7 @@ Important
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Important
+Importante
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
@@ -1585,11 +1589,23 @@ Important
 
 
 <div id="refs" class="references csl-bib-body hanging-indent" role="list">
+<div id="ref-akram-2023" class="csl-entry" role="listitem">
+Akram, Sadiya. 2023. <em>Bourdieu, Habitus and Field: A Critical Realist Approach</em>. <em>Palgrave Studies in Relational Sociology</em>. Springer International Publishing. <a href="https://doi.org/10.1007/978-3-031-41846-4">https://doi.org/10.1007/978-3-031-41846-4</a>.
+</div>
+<div id="ref-bhaskar-2016" class="csl-entry" role="listitem">
+Bhaskar, Roy. 2016. <em>Enlightened common sense: The philosophy of critical realism</em>.
+</div>
+<div id="ref-fletcher-2016" class="csl-entry" role="listitem">
+Fletcher, Amber J. 2016. <span>«Applying critical realism in qualitative research: methodology meets method»</span>. <em>International Journal of Social Research Methodology</em> 20 (2): 181–94. <a href="https://doi.org/10.1080/13645579.2016.1144401">https://doi.org/10.1080/13645579.2016.1144401</a>.
+</div>
+<div id="ref-grenfell-2018" class="csl-entry" role="listitem">
+Grenfell, Michael. 2018. <em>Pierre Bourdieu: conceitos fundamentais</em>.
+</div>
 <div id="ref-oca-2021" class="csl-entry" role="listitem">
-Oca, Ana Isabel Fernández-Montes de, José Alberto Gallardo-Cruz, Adrián Ghilardi, Edith Kauffer, Jonathan Vidal Solórzano, and Víctor Sánchez-Cordero. 2021. <span>“An Integrated Framework for Harmonizing Definitions of Deforestation.”</span> <em>Environmental Science and Policy</em> 115 (January): 71–78. <a href="https://doi.org/10.1016/j.envsci.2020.10.007">https://doi.org/10.1016/j.envsci.2020.10.007</a>.
+Oca, Ana Isabel Fernández-Montes de, José Alberto Gallardo-Cruz, Adrián Ghilardi, Edith Kauffer, Jonathan Vidal Solórzano, e Víctor Sánchez-Cordero. 2021. <span>«An integrated framework for harmonizing definitions of deforestation»</span>. <em>Environmental Science and Policy</em> 115 (janeiro): 71–78. <a href="https://doi.org/10.1016/j.envsci.2020.10.007">https://doi.org/10.1016/j.envsci.2020.10.007</a>.
 </div>
 <div id="ref-oliver-2011" class="csl-entry" role="listitem">
-Oliver, C. 2011. <span>“Critical Realist Grounded Theory: A New Approach for Social Work Research.”</span> <em>British Journal of Social Work</em> 42 (2): 371–87. <a href="https://doi.org/10.1093/bjsw/bcr064">https://doi.org/10.1093/bjsw/bcr064</a>.
+Oliver, C. 2011. <span>«Critical Realist Grounded Theory: A New Approach for Social Work Research»</span>. <em>British Journal of Social Work</em> 42 (2): 371–87. <a href="https://doi.org/10.1093/bjsw/bcr064">https://doi.org/10.1093/bjsw/bcr064</a>.
 </div>
 </div>
 </section>
@@ -1649,12 +1665,12 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     // flash "checked"
     button.classList.add('code-copy-button-checked');
     var currentTitle = button.getAttribute("title");
-    button.setAttribute("title", "Copied!");
+    button.setAttribute("title", "Copiada");
     let tooltip;
     if (window.bootstrap) {
       button.setAttribute("data-bs-toggle", "tooltip");
       button.setAttribute("data-bs-placement", "left");
-      button.setAttribute("data-bs-title", "Copied!");
+      button.setAttribute("data-bs-title", "Copiada");
       tooltip = new bootstrap.Tooltip(button, 
         { trigger: "manual", 
           customClass: "code-copy-button-tooltip",
@@ -1828,12 +1844,10 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
 });
 </script>
-<script src="https://giscus.app/client.js" data-repo="hugotseixas/tica-book" data-repo-id="R_kgDOJMlNNg" data-category="Announcements" data-category-id="DIC_kwDOJMlNNs4CVCYq" data-mapping="title" data-reactions-enabled="0" data-emit-metadata="0" data-input-position="top" data-theme="light" data-lang="en" crossorigin="anonymous" async="">
-</script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
       <a href="./01_introduction.html" class="pagination-link">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introduction</span></span>
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introdução</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">

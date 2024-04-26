@@ -2,15 +2,17 @@ project:
   type: book
   output-dir: _book
 
+lang: pt
+
 book:
-  title: "Dimensions of deforestation causes in the Amazon and Cerrado"
+  title: "Explorando dimensões da Supressão de Vegetação Natural através de uma teoria geral"
   author:
   - name: Hugo Tameirão Seixas
     email: seixas.hugo@protonmail.com
     url: hugotseixas.com
     affiliations:
-      - name: State University of Campinas
-  date: "3/21/2023"
+      - name: Universidade Estadual de Campinas
+  date: "4/23/2024"
   license: CC BY-NC-ND 4.0
   favicon: /figs/art/logo.png
   sidebar:
@@ -18,11 +20,8 @@ book:
     search: true
     logo: /figs/art/logo.png
   comments:
-    giscus:
-      repo: hugotseixas/tica-book
-      category: "Announcements"
-      category-id: "DIC_kwDOJMlNNs4CVCYq"
-      reactions-enabled: false
+    hypothesis:
+      theme: clean
   chapters:
     - index.qmd
     - 00_glossary.qmd
@@ -33,6 +32,11 @@ book:
     - 05_conclusions.qmd
   appendices:
     - 10_research_paradigm.qmd
+
+glossary:
+  path: glossary.yml
+  popup: click
+  show: true
 
 bibliography: references.bib
 
