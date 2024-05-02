@@ -2,7 +2,13 @@
 library(gt)
 library(tidyverse)
 
-read_delim(file = "./data/glossary.csv") |>
+yaml::read_yaml(file = "./glossary.yml") |>
+  tibble::as_tibble() |>
+  tidyr::pivot_longer(
+    dplyr::everything(),
+    names_to = "term",
+    values_to = "definition"
+  ) |>
   mutate(
     letter = str_sub(term, start = 1, end = 1)
   ) |>

@@ -1,5 +1,7 @@
 # Método {#sec-methods}
 
+## Visão Geral
+
 ```{r}
 #| label: libraries
 #| include: false
@@ -9,17 +11,17 @@ library(tidyverse)
 
 ```
 
-Esse trabalho tem como objetivo central o desenvolvimento e a aplicação de um modelo teórico geral da SVN. Para atingir esse objetivo, uma série de atividades serão conduzidas em sequência:
+Esse trabalho tem como objetivo central o desenvolvimento e a aplicação de um modelo teórico geral da {{< glossary "supressão de vegetação natural" display="SVN" >}}. Para atingir esse objetivo, uma série de atividades serão conduzidas em sequência:
 
-1.  Desenvolvimento do modelo teórico geral da SVN a partir de uma perspectiva do Realismo Crítico:
+1.  Desenvolvimento do modelo teórico geral da {{< glossary "supressão de vegetação natural" display="SVN" >}} a partir de uma perspectiva do Realismo Crítico:
 
-    Nessa etapa o modelo teórico é criado a partir de entrevistas e leituras de artigos, livros e teses que abordem o tema da SVN. A seleção de materiais não é feito de forma sistêmica, e não há um método formal para o desenvolvimento do modelo teórico, esse processo é feito de modo livre e espontâneo, ao contrário de @fletcher-2016, que aborda a identificação de mecanismos causais de maneira metodológica.
+    Nessa etapa o modelo teórico é criado a partir de entrevistas e leituras de artigos, livros e teses que abordem o tema da {{< glossary "supressão de vegetação natural" display="SVN" >}}. A seleção de materiais não é feito de forma sistêmica, e não há um método formal para o desenvolvimento do modelo teórico, esse processo é feito de modo livre e espontâneo, ao contrário de @fletcher-2016, que aborda a identificação de mecanismos causais de maneira metodológica.
 
-2.  Análise sociológica da SVN através da aplicação de conceitos desenvolvidos na Teoria Geral dos Campos de Bourdieu:
+2.  Análise sociológica da {{< glossary "supressão de vegetação natural" display="SVN" >}} através da aplicação de conceitos desenvolvidos na Teoria Geral dos Campos de Bourdieu:
 
-    A análise sociológica é feita pela caracterização do campo social da SVN, e pela identificação de agentes sociais que fazem parte da disputa dentro desse campo. Esse processo é realizado com base na mesma literatura utilizada no desenvolvimento do modelo teórico. Essa etapa é conduzida através de três passos discutidos por Bourdieu [@grenfell-2018, p.105]: contextualizar o campo social da SVN em relação ao campo do poder; identificar as relações entre agentes sociais que fazem parte do campo social da SVN; analisar os habitus dos agentes sociais dentro do campo social da SVN.  
+    A análise sociológica é feita pela caracterização do campo social da {{< glossary "supressão de vegetação natural" display="SVN" >}}, e pela identificação de agentes sociais que fazem parte da disputa dentro desse campo. Esse processo é realizado com base na mesma literatura utilizada no desenvolvimento do modelo teórico. Essa etapa é conduzida através de três passos discutidos por Bourdieu [@grenfell-2018, p.105]: contextualizar o campo social da {{< glossary "supressão de vegetação natural" display="SVN" >}} em relação ao campo do poder; identificar as relações entre agentes sociais que fazem parte do campo social da {{< glossary "supressão de vegetação natural" display="SVN" >}}; analisar o {{< glossary habitus >}} dos agentes sociais dentro do campo social da {{< glossary "supressão de vegetação natural" display="SVN" >}}.  
 
-3.  Análise estatística a partir da aplicação de algorítmos de regressão sobre dados relacionados a SVN:
+3.  Análise estatística a partir da aplicação de algorítmos de regressão sobre dados relacionados a {{< glossary "supressão de vegetação natural" display="SVN" >}}:
 
     A análise estatística será realizada sobre dados com representação espacial e temporal. A seleção dos dados para a análise é baseada na literatura e disponibilidade dos mesmos, porém, para serem incluídos na análise, eles devem obedecer o mecanismo causal proposto pelo modelo teórico. Já a escolha do algorítmo estatístico não tem relação com o modelo teórico, e é feita a partir de um balanço entre complexidade e custo computacional.
 
@@ -27,7 +29,7 @@ Esse trabalho tem como objetivo central o desenvolvimento e a aplicação de um 
 
     A interpretação dos resultados das diferentes análises será realizada de maneira conjunta, através da perspectiva ontológica definida pelo Realismo Crítico. A interpretação será feita de maneira que os resultados estejam em sintonia com o modelo teórico proposto, em que serão identificadas lacunas, concordâncias e discordâncias entre os conhecimentos gerados por ambas análises.
 
-A sequência de atividades que compõe a pesquisa é representada na @fig-method-diagram. Apesar do processo ser realizado de modo sequêncial, ele não é linear, e permite circularidades. Ou seja, o modelo teórico pode ser modificado ao longo da condução da pesquisa, o que força uma atualização de todas as etapas subsequentes.
+A sequência de atividades que compõe a pesquisa é representada na @fig-method-diagram. Apesar do processo ser realizado de modo sequêncial, ele não é linear, e permite circularidades. Ou seja, o modelo teórico pode ser modificado ao longo da condução da pesquisa, que caso aconteça, força uma atualização de todas as etapas subsequentes.
 
 ```{mermaid}
 %%| label: fig-method-diagram
@@ -53,165 +55,179 @@ Nas próximas sessões, cada parte do trabalho é descrita em maiores detalhes.
 
 ## Modelo Teórico
 
-O modelo teórico é desenvolvido com base em informações obtidas da literatura técnica e científica e entrevistas realisadas com pesquisadores que atuam no tema da SVN. Porém, o desenvolvimento desse modelo teórico também é fortemente afetado pelas minhas experiências pessoais, como exposição à noticias, discussões diversas sobre o tema, e reflexões e indagações pessoais. Portanto, o conteúdo gerado nessa parte da pesquisa não pode ser considerada como produto de um método sistemático e reproduzível. Porém, apesar de se caracterizar como um processo um tanto ametódico, o desenvolvimento do modelo teórico segue uma maneira de se refletir sobre um fenômeno, se inspira em certas proposições metodológicas, e se baseia parcialmente, em uma limitada sistematização de informações.
+O modelo teórico é desenvolvido com base em informações obtidas da literatura técnica e científica e entrevistas realisadas com pesquisadores que atuam no tema da {{< glossary "supressão de vegetação natural" display="SVN" >}}. Porém, o desenvolvimento desse modelo teórico também é fortemente afetado pelas minhas experiências pessoais, como exposição à noticias, discussões diversas sobre o tema, e reflexões e indagações pessoais. Portanto, o conteúdo gerado nessa parte da pesquisa não pode ser considerado como produto de um método sistemático e reproduzível. Porém, apesar de se caracterizar como um processo um tanto ametódico, o desenvolvimento do modelo teórico segue uma maneira de se refletir sobre um fenômeno, se inspira em certas proposições metodológicas, e se baseia parcialmente, em uma limitada sistematização de informações.
 
-A maneira de se refletir sobre um fenômeno, adotada nesse trabalho, é baseada na idéia de retrodução do Realismo Crítico. A retrodução pode ser definida como uma atividade de imaginação em que pensamos nos mecanismos generativos que, se de fato forem reais, irão causar um fenômeno quando tais mecanismos forem manifestados [@bhaskar-2016, p.3]. A prática da retrodução implica em um exercício de imaginação que tenta transitar entre os domínios ontológicos do Realismo Crítico, o domínio do empírico, o domínio do atual e o domínio do real [@akram-2023, p.53-54]. Uma ilustração geral e superficial do exercício de retrodução feita nessa pesquisa pode ser feita da seguinte forma: em um cenário hipotético, acredita-se que os {{< glossary "objeto transitivo" display="objetos transitivos" >}} A e B sejam causadores da SVN; a partir disso, nos questionamos quais seriam as condições necessárias para que essa relação de A e a SVN se manifeste; essas condições são traduzidas como o mecanismo generativo proposto; por consequência, nos questionamos se tal mecanismo generativo consegue explicar a relação de causa de B e a SVN. Esse exercício é repetido em qualquer ordem, e a medida que esse processo se sucede, lacunas do mecanismo generativo podem ser identificadas e retificadas, assim como inconsistências podem ser eliminadas, se possível.
+A maneira de se refletir sobre um fenômeno, adotada nesse trabalho, é baseada na idéia de retrodução do Realismo Crítico. A retrodução pode ser definida como uma atividade de imaginação em que pensamos nos mecanismos generativos que, se de fato forem reais, irão causar um fenômeno quando tais mecanismos forem manifestados [@bhaskar-2016, p.3]. A prática da retrodução implica em um exercício de imaginação que tenta transitar entre os domínios ontológicos do Realismo Crítico, o domínio do empírico, o domínio do atual e o domínio do real [@akram-2023, p.53-54]. Uma ilustração geral e superficial do exercício de retrodução feita nessa pesquisa pode ser feita da seguinte forma: em um cenário hipotético, acredita-se que os {{< glossary "objeto transitivo" display="objetos transitivos" >}} A e B sejam causadores da {{< glossary "supressão de vegetação natural" display="SVN" >}}; a partir disso, nos questionamos quais seriam as condições necessárias para que essa relação de A e a {{< glossary "supressão de vegetação natural" display="SVN" >}} se manifeste; essas condições são traduzidas como o mecanismo generativo proposto; por consequência, nos questionamos se tal mecanismo generativo consegue explicar a relação de causa de B e a {{< glossary "supressão de vegetação natural" display="SVN" >}}. Esse exercício é repetido em qualquer ordem, e a medida que esse processo se sucede, lacunas do mecanismo generativo podem ser identificadas e retificadas, assim como inconsistências podem ser eliminadas, se possível.
 
-O desenvolvimento do modelo teórico também incorpora algumas idéias do método da Teoria Fundamentada, e mais especificamente desse método baseado no Realismo Crítico, como proposto por @oliver-2011. Nesse projeto, a condução de entrevistas e consultas da literatura são sistematizadas em forma de dados qualitativos estruturados, contendo as idéias centrais obtidas a partir desses materiais. Essa sistematização de dados é feita de maneira concomitante com o desenvolvimento do modelo teórico.
+O desenvolvimento do modelo teórico também incorpora algumas idéias do método da Teoria Fundamentada [@glaser-1968], e mais especificamente desse método baseado no Realismo Crítico, como proposto por @oliver-2011 e @hoddy-2018. Nesse projeto, a condução de entrevistas e consultas da literatura são sistematizadas em forma de dados qualitativos estruturados, contendo as idéias centrais obtidas a partir desses materiais. Essa sistematização de dados é feita de maneira concomitante com o desenvolvimento do modelo teórico.
 
-The theoretical model is created by the employment of an adaptation of the Critical Realist Grounded Theory. The method of Grounded Theory is widely used in social sciences with the objective of generating theories, it consists of an interactive and concurrent process of data collection and analysis. It have been modified trough time to accommodate different paradigms of research, such as the Critical Realism.
+O processo de sistematização de informação, na forma de dados qualitativos estruturados em tabela, é baseado nas entrevistas e nas consultas à literatura. As entrevistas são feitas de modo a especular sobre possíveis causas da {{< glossary "supressão de vegetação natural" display="SVN" >}}, de maneira semelhante ao processo de retrodução ilustrado anteriormente. A partir das indagações feitas durante as entrevistas, são desenvolvidas questões que servem de base para buscas na literatura, que por sua vez fornecem mais informações sobre o fenômeno em questão, a {{< glossary "supressão de vegetação natural" display="SVN" >}}. Após cada rodada de entrevistas e de consultas à literatura, a forma de condução das entrevistas seguintes podem ser alteradas de acordo com o conhecimento gerado pelas anteriores.
 
-The Critical Realist Grounded Theory introduces the necessity to explicitly account for the link between observations and their underlying generative mechanisms, and the use of retroduction in order to abstract these mechanisms [@oliver-2011].
+Os dados, coletados a partir das entrevistas e consultas à literatura, contém as seguintes informações: identificação da fonte da informação (de forma anônima no caso das entrevistas); os {{< glossary "objeto transitivo" display="objetos transitivos" >}} identificados como relacionados a {{< glossary "supressão de vegetação natural" display="SVN" >}}; a descrição da relação entre os  {{< glossary "objeto transitivo" display="objetos transitivos" >}} com a {{< glossary "supressão de vegetação natural" display="SVN" >}}.
 
-The process of data acquisition is performed by a series of interviews and literature assessment. The interviews inquire possible causes of NVS and the social groups related to this phenomena. After each interview, the answers are coded into general terms, and with related questions of how and why they can affect NVS. These questions are transformed into literature database queries, that helps finding written material that may enrich analysis with convergences or divergences with interview answers, or with new possible causes of NVS. After each round of interviews and literature assessment, the next interview may change to accommodate findings from the previous. This cyclic process is demonstrated in @fig-theoretical-diagram.
 
 ```{mermaid}
 %%| label: fig-theoretical-diagram
-%%| fig-cap: Workflow of theoretical model development
+%%| fig-cap: Fluxo geral do processo de desenvolvimento do modelo teórico.
 %%| fig-responsive: true
 %%| fig-align: center
 
 flowchart TD
-    A[Interview] --> B[Data]
-    C[Questions] --> D[Literature Assessment]
+    A[Entrevista] --> B[Dados]
+    C[Questões] --> D[Consulta da Literatura]
     D --> E[Data]
-    B --> F[Theoretical Model]
+    B --> F[Modelo Teórico]
+    A --> F
+    D --> F
     F --> C
     E --> F
     F --> A
 
 ```
 
-This process is repeated until the data from interviews and literature assessment starts to get redundant, adding little additional information to the theoretical model.
+O processo de desenvolvimento do modelo teórico não apresenta um ponto final determinado. O modelo teórico pode ser modificado caso haja a descoberta de novos conhecimentos que desafiem a lógica do modelo. Porém, nesse projeto, a etapa de desenvolvimento do modelo teórico é interrompida quando as informações obtidas se tornem redundantes o bastante para que não seja necessária a modificação do modelo.
 
-### Experts Interviews
+O modelo teórico será baseado em conceitos do Realismo Crítico, sendo formado sobre especulações da existência de certos {{< glossary "objeto intransitivo" display="objetos intransitivos" >}}, e da existência de interações entre eles, formando um {{< glossary "mecanismo generativo" >}} da {{< glossary "supressão de vegetação natural" display="SVN" >}}.
 
-The objective of the interviews is to explore a diverse range of possible causes of NVS.
+### Entrevistas
 
-The target participants are researchers with past experience on analyzing NVS in the Amazon or Cerrado biomes.
+As entrevistas conduzidas nesse projeto, tem o objetivo de obter informações sobre os fatores que afetam a ocorrência da {{< glossary "supressão de vegetação natural" display="SVN" >}}. Essas informações servem de base para o desenvolvimento do modelo teórico da {{< glossary "supressão de vegetação natural" display="SVN" >}}.
 
-The prospecting of potential participants is done by snowball sampling.
+O método utilizado é de entrevistas semi-estruturadas. O roteiro das entrevistas é baseado em sugestões propostas por @bearman-2019, em que são priorizadas questões abertas, que incentivam descrições ricas nas respostas dos participantes. Também foram incorporados elementos da metodologia de entrevistas Centradas em Problemas (PCI) [@witzel-2012], em que as entrevistas contém uma estrutura definida e centrada no fenômeno de interesse, mas que apresenta uma flexibilidade para incentivar respostas abertas e profundas [@doringer-2020].
 
-The interviews consist of open and closed questions, and an interactive activity of building a DAG with the participants. The objective of developing DAGs with different participants is to explore a diversity of possibilities to theorize NVS causes. The use of DAGs before any modeling exercise (such as variables selection) is useful to reflect about the phenomena. It is also possible to compare DAGs (since they are graphs), so it will open an opportunity to explore convergences and divergences between participants.
+O público alvo para participar nas entrevistas são pesquisadores, de diferentes disciplinas, atuantes no tema da {{< glossary "supressão de vegetação natural" display="SVN" >}}. As entrevistas serão feitas a distância, através de vídeo chamadas. Esse meio de entrevista tem sido frequentemente adotado em pesquisas qualitativas, e apesar de apresentarem desvantagens, como falhas técnicas durante as entrevistas, não há evidências claras de que os dados coletados apresentem menor riqueza de informações, em comparação com entrevistas presenciais [@thunberg-2021]. Além disso, o acesso a participantes é mais amplo, devido a falta de necessidade de deslocamento.
 
-::: {.callout-important collapse="true"}
-READ:
-
--   https://doi.org/10.11157/fohpe.v20i3.387
-
--   https://doi.org/10.1177/1468794118781718
-
--   https://doi.org/10.1016/S0167-9236(03)00095-2
-
--   https://doi.org/10.1080/13645579.2021.1935565
-
--   https://doi.org/10.1080/13645579.2020.1766777
-
--   https://doi.org/10.1080/13645579.2018.1503400
-:::
-
-The questions aims to develop a context of the participant experience and perspectives on NVS.
+O roteiro das entrevistas pode ser dividido em três partes (@tbl-schedule). A parte introdutória da entrevista contém uma exposição sobre o tema e objetivos dessa pesquisa, assim como a motivação para a realização das entrevistas. A parte de desenvolvimento da entrevista contém perguntas inciais que estimulam a criação de uma narrativa por parte dos entrevistados, seguidas por perguntas mais específicas sobre o fenômeno em questão [@witzel-2012]. Por fim, a conclusão dá a oportunidade aos entrevistados de elaborar reflexões sobre o tema [@bearman-2019].
 
 ```{r}
 #| label: tbl-schedule
-#| tbl-cap: Interview schedule used in this project.
+#| tbl-cap: Roteiro de entrevistas adotado.
 #| echo: false
-#| warning: false
-#| dev: "ragg_png"
 
-htmltools::includeHTML("./figs/interview_schedule.html")
+tibble::tribble(
+  ~id, ~section, ~description, ~sub,
+  1, "Introdução", "Introdução à pesquisa e ao autor", 0,
+  2, "Introdução", "Clarificação dos objetivos da pesquisa", 0,
+  3, "Introdução", "Clarificação da motivação das entrevistas", 0,
+  4, "Introdução", "Checagem de consentimento e do tempo disponível para a entrevista", 0,
+  5, "Desenvolvimento", "Contextualização de experiências prévias do participante com o tema da SVN", 0,
+  5, "Desenvolvimento", "- Quais foram suas experiências mais importantes dentro do tema da SVN?", 1,
+  5, "Desenvolvimento", "- Quais foram as regiões que você desenvolveu projetos dentro do tema da SVN?", 1,
+  6, "Desenvolvimento", "Identificação de objetos que afetam a SVN", 0,
+  6, "Desenvolvimento", "- Qual é a sua perspectiva sobre a importância da SVN, em relação a sustentabilidade e desenvolvimento?", 1,
+  6, "Desenvolvimento", "- De acordo com sua experiência, quais são os fatores mais importantes que afetam a SVN?", 1,
+  7, "Desenvolvimento", "Identificação das relações entre os objetos e a SVN", 0,
+  7, "Desenvolvimento", "- Quais são as condições necessárias para que tal fator tenha um impacto importante na SVN?", 1,
+  7, "Desenvolvimento", "- Quais são os grupos de pessoas que participam desse fator? E como elas acabam afetando a SVN?", 1,
+  8, "Conclusão", "Reflexões sobre a SVN", 0,
+  8, "Conclusão", "- Você acredita na possibilidade de que a SVN seja suprimida a ponto de não ser um problema socioambiental?", 1,
+  8, "Conclusão", "- Na sua opinião, existem condições em que a SVN é justificável apesar de seus impactos?", 1,
+  9, "Conclusão", "Oportunidade para o entrevistado realizar comentários abertos", 0,
+  10, "Conclusão", "Encerramento da entrevista", 0
+) |>
+  gt::gt(groupname_col = c("section")) |>
+  gt::cols_hide(columns = c(id, sub)) |>
+  gt::tab_options(
+    table.font.size = 14,
+    column_labels.hidden = TRUE,
+    table.width = gt::pct(90)
+  ) |>
+  gt::tab_style(
+    style = list(
+      gt::cell_text(
+        indent = gt::pct(5),
+        style = "italic"
+      ),
+      gt::cell_fill(color = "#e9e9e9")
+    ),
+    locations = gt::cells_body(
+      columns = c(description),
+      rows = sub %in% c(1)
+    )
+  ) |>
+  gt::tab_style(
+    style = gt::cell_text(weight = "bold"),
+    locations = gt::cells_row_groups()
+  ) |>
+  gt::opt_stylize(style = 1, color = "gray", add_row_striping = FALSE)
 
 ```
 
-### Literature Assessment
-
-The literature assessment provides information to the creation of the theoretical model, based on published results. However, it is performed as a complement to the reviews. The queries of the literature assessment are created based on reflections of the causal relationships identified in the interviews (e.g. if variable *A* is believed to cause *B*, what is the chain of events that allows this process?). Once the queries are created, a forward snowball search is performed, in which the resulting papers and its citing documents are screened.
-
-```{mermaid}
-%%| label: fig-review-diagram
-%%| fig-cap: Workflow of literature review
-%%| fig-responsive: true
-%%| fig-align: center
-
-flowchart TD
-    A[Questions] --> B[Query Development]
-    A[Questions] --> C[Documents Screening]
-    B[Query Development] --> D[Database Search]
-    D[Database Search] --> C[Documents Screening]
-    C[Documents Screening] --> E[Documents Collection]
-    E[Documents Collection] --> F[Forward Snowball Search]
-    F[Forward Snowball Search] --> C[Documents Screening]
-    E[Documents Collection] --> G[Final Collection]
-
-```
-
-The relevant results from the literature are documented and stored for the creation of the theoretical model, in conjunction with the data acquired from the interviews.
-
-### Variables description
-
-The possible causes of NVS that are included in the theoretical model may or may not be observed as data, but all of them are described in this section. The variables may present diverse nature, such as quantitative and qualitative.
+Cada entrevista irá fornecer informações que servem de conteúdo para a geração de uma tabela de dados. Nessa tabela, são identificados os {{< glossary "objeto transitivo" display="objetos transitivos" >}} associados com a {{< glossary "supressão de vegetação natural" display="SVN" >}}, e são descritas as condições necessárias para que essa associação ocorra.
 
 ```{r}
-#| label: tbl-variables
-#| tbl-cap: Variables used in this project.
+#| label: tbl-interviewdata
+#| tbl-cap: Ilustração da tabela de dados gerada com base nas informações obtidas através das entrevistas.
 #| echo: false
-#| dev: "ragg_png"
 
-htmltools::includeHTML("./figs/variables_table.html")
+tibble::tribble(
+  ~id, ~participante, ~objeto, ~condição,
+  1, "Entrevistado 1", "Objeto A", "Condições X, Y e Z",
+  2, "Entrevistado 1", "Objeto B", "Condições W e K",
+  3, "Entrevistado 2", "Objeto A", "Condições P e I"
+) |>
+  gt::gt() |>
+  gt::tab_options(
+    table.font.size = 14,
+    table.width = gt::pct(90),
+    quarto.use_bootstrap = TRUE,
+    quarto.disable_processing = FALSE
+  ) |>
+  gt::opt_stylize(style = 1, color = "gray", add_row_striping = TRUE) |>
+  gt::as_raw_html()
 
 ```
 
-#### Biomes
+### Consultas à Literatura
 
-The biomes limits are provided by IBGE. The extent of the biomes have been changing over the years, and since we are working on a time series, the extent will dependent on the year. The biomes limits were defined by IBGE at 2004, and was updated in 2019.
+Assim como as entrevistas, a consulta à literatura tem o objetivo de obter informações sobre os fatores que afetam a ocorrência da {{< glossary "supressão de vegetação natural" display="SVN" >}}, servindo de base para o desenvolvimento do modelo teórico.
 
-The downloaded data was filtered to contain only the limits of the Amazon and Cerrado biomes.
+A literatura consultada é de natureza diversa, podem ser artigos publicadas em periódicos científicos, livros, documentos técnicos, dissertações e teses, não sendo limitadas entre essas citadas. O motivo para essa abrangência é a de ter amplo acesso a documentos diversos sobre qualquer conteúdo relacionado à {{< glossary "supressão de vegetação natural" display="SVN" >}}.
 
-#### Natural Vegetation Suppression
+A busca por tais documentos é feita através de ferramenta de buscas amplas, ou mais específicas de documentos acadêmicos. O processo de buscas não apresenta um método sistemático, e é feita de maneira livre. A forma das buscas é feita através do uso de palavras-chave, identificadas em indagações feitas com base em informações obtidas através das entrevistas e consultas à literatura anteriores. As buscas também são feitas com bases em citações encontradas em documentos consultados.
 
-The term of NVS is used to avoid the ambiguity of using the deforestation definition, recent research reviewed 65 reports, and found 15 definitions of deforestation, and 9 definitions of forests [@oca-2021]. There are also practical implications in how to identify NVS by satellite images, but in this project I simplify it by accounting for any non-trivial transition from natural vegetation to antropic land uses.
+Na medida do possível, as informações obtidas através das consultas são sistematizadas em uma tabela. Isso tem o objetivo de facilitar comparações entre os conteúdos de diferentes fontes. Essa tabela contém informações semelhantes a @tbl-interviewdata, porém, com dados adicionais que permitem a identificação da origem do dado (@tbl-literaturedata).
 
-The NVS variable is derived from the MapBiomas land use and land cover collection (version 7.1).
+```{r}
+#| label: tbl-literaturedata
+#| tbl-cap: Ilustração da tabela de dados gerada com base nas informações obtidas através das consultas à literatura.
+#| echo: false
 
-The downloaded data was cropped to the extent of the Cerrado and Amazon biomes and projected to the SIRGAS 2000 / Brazil Policonic cartesian projection (EPSG:5880), which represents fixed area pixels in meters. Than the raster data was aggregated to a coarser spatial resolution, from 30 to 150 meters, assigning the value of the most frequent class to the new pixel (the mode of the 25 pixels that will be aggregated to the 150 meters pixels). This was done to reduce the amount of observations, which would be unfeasible to process, since the original data consists of hundreds of billions pixels.
+tibble::tribble(
+  ~id, ~doi, ~autor, ~titulo, ~ano, ~local, ~objeto, ~condição,
+  1, "https://doi.org/...1", "Fulano", "Algo sobre algo", "1968", "Lá longe", "Objeto A", "Condições X, Y e Z",
+  2, "https://doi.org/...1", "Fulano", "Algo sobre algo", "1968", "Lá longe", "Objeto B", "Condições W e K",
+  3, "https://doi.org/...2", "Sicrano et al.", "Isto sobre aquilo", "2001", "Logo ali", "Objeto A", "Condições P e I"
+) |>
+  gt::gt() |>
+  gt::tab_options(
+    table.font.size = 14,
+    table.width = gt::pct(90),
+    quarto.use_bootstrap = TRUE,
+    quarto.disable_processing = FALSE
+  ) |>
+  gt::opt_stylize(style = 1, color = "gray", add_row_striping = TRUE) |>
+  gt::as_raw_html()
 
-The conversion from land use data to NVS is made for each grid cell. To perform this conversion, the downloaded raster files are cropped to the grid cell extent, and labeled in six groups: natural vegetation, pasture, temporary crops, perennial crops, forest plantation, and mosaic. The following step is to identify transitions between natural vegetation to antropic use, and calculate the area of those transitions for the grid cell. These transitions represents the NVS.
+```
 
-#### Conservation Units
+É importante reforçar que, o desenvolvimento do modelo teórico, não é baseado restritamente aos dados presentes nas tabelas [-@tbl-interviewdata] e [-@tbl-literaturedata]. Isso proporciona uma maior liberdade para o processo de reflexão de desenvolvimento do modelo teórico, que também é afetado pelos métodos de análise adotados.
 
-The limits of the Conservation Units (UC) are provided by the Ministry of Environment and Climate Change. These are the conservation units that finished the registration process at the National Register of Conservation Units (CNUC). However, the data used in this project is accessed by the Institute for Applied Economic Research (IPEA), which organizes data in a standard attributes and spatial projection. The data is represented as spatial vectors.
+Além disso, a justificativa para a adoção de um processo ametódico de consulta à literatura, se baseia na vantagem de proporcionar maior liberdade de pensamento, mas também na ausência de um motivo forte para a realização de um processo metódico. Por exemplo, caso o objetivo da consulta à literatura fosse identificar as causas da {{< glossary "supressão de vegetação natural" display="SVN" >}} mais citadas na literatura científica, seria então aconselhável adotar um método de revisão sistemática. Esse não é o caso dessa pesquisa.
 
-The UC vectors are intersected to the base grid, and the area of each UC inside each cell is calculated.
+## Análise Sociológica
 
-#### Indigenous Lands
+A análise sociológica será feita através da Teoria Geral dos Campos desenvolvida por Bourdieu, aplicada como perspectiva analítica do modelo teórico da {{< glossary "supressão de vegetação natural" display="SVN" >}}. A análise será conduzida através da adaptação de três passos, identificados por @grenfell-2018:
 
-The limits of Indigenous Lands (IL) inside the Amazon and Cerrado are provided by FUNAI.
+1. Descrever a posição do {{< glossary "campo" >}} analisado em relação ao {{< glossary "campo do poder" >}};
 
-## Sociological Analysis
+2. Descrever as posições ocupadas pelos {{< glossary "agente social" display="agentes sociais" >}} que participam do das disputas dentro do {{< glossary "campo" >}} analisado. E caracterizar as relações entre cada posição ocupada por cada {{< glossary "agente social" >}}. As posições são caracterizadas pelo {{< glossary "capital" >}} de cada {{< glossary "agente social" >}}, pelo objetivo do {{< glossary "agente social" >}} em relação ao fenômeno de interesse, e pela forma como um certo tipo de {{< glossary "capital" >}} influencia um {{< glossary "agente social" >}} a atingir seu objetivo;
 
-The sociological analysis is based on the theoretical model (created from the grounded theory), and it is performed according to the Field Theory of Bourdieu. The analysis consists on defining a social field, its social rules, social actors within the field, and the power relationships between the actors.
+3. Caracterizar as disposições dos {{< glossary "agente social" display="agentes sociais" >}} em relação ao fenômeno de interesse, e como essas disposições influênciam as ações tomadas com o objetivo desses agentes. Isso é feito através do conceito de {{< glossary "habitus" >}}.
 
-In this project, the social field is idealized as an arena where NVS is materialized, in which I name as Land Use and Cover Field (LUCF). This field is where disputes over land happens. The concept of LUCF is broad, and may contain diverse types of disputes, however, in this work it is bounded to disputes related to NVS.
 
-The social rules dictate the disputes inside the LUCF, and are not restrained only by the politics institutions and devices.
 
-Social actors are conceptualized as groups of interest that represents not only individuals that share a common culture and goals, but also institutions.
-
-The power of the social actors can manifest in different ways, such as economic, political, symbolic, social and cultural power.
-
-The sociological analysis will consist in identifying the social actors and their power, for each cause of NVS (that were proposed in the theoretical model). The relationship between these social groups will also be characterized.
-
-::: {.callout-important collapse="true"}
-READ:
-
--   <https://doi.org/10.1177/026327696013002001>
-
--   <https://doi.org/10.2752/152897999786690753>
-
--   <https://doi.org/10.1162/GLEP_a_00323>
-:::
-
-## Statistical Analysis
+## Análise Estatística
 
 The statistical analysis is responsible for exploring relationships of observed variables within the exercise of predicting NVS. It is performed by structuring a database of observed variables that are considered to be a possible cause of the NVS, followed by a selection of variables according to the theoretical model, and finally the prediction of NVS.
 

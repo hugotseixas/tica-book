@@ -35,7 +35,7 @@ book:
 
 glossary:
   path: glossary.yml
-  popup: click
+  popup: hover
   show: true
 
 bibliography: references.bib
