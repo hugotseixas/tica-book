@@ -2,15 +2,6 @@
 
 ## Visão Geral
 
-```{r}
-#| label: libraries
-#| include: false
-
-library(gt)
-library(tidyverse)
-
-```
-
 Esse trabalho tem como objetivo central o desenvolvimento e a aplicação de um modelo teórico geral da {{< glossary "supressão de vegetação natural" display="SVN" >}}. Para atingir esse objetivo, uma série de atividades serão conduzidas em sequência:
 
 1.  Desenvolvimento do modelo teórico geral da {{< glossary "supressão de vegetação natural" display="SVN" >}} a partir de uma perspectiva do Realismo Crítico:
@@ -53,18 +44,9 @@ O método geral do trabalho (como apresentado na @fig-method-diagram) pode ser c
 
 Nas próximas sessões, cada parte do trabalho é descrita em maiores detalhes.
 
-## Modelo Teórico
+## Modelo Teórico {#sec-methods-modteo}
 
-O modelo teórico é desenvolvido com base em informações obtidas da literatura técnica e científica e entrevistas realisadas com pesquisadores que atuam no tema da {{< glossary "supressão de vegetação natural" display="SVN" >}}. Porém, o desenvolvimento desse modelo teórico também é fortemente afetado pelas minhas experiências pessoais, como exposição à noticias, discussões diversas sobre o tema, e reflexões e indagações pessoais. Portanto, o conteúdo gerado nessa parte da pesquisa não pode ser considerado como produto de um método sistemático e reproduzível. Porém, apesar de se caracterizar como um processo um tanto ametódico, o desenvolvimento do modelo teórico segue uma maneira de se refletir sobre um fenômeno, se inspira em certas proposições metodológicas, e se baseia parcialmente, em uma limitada sistematização de informações.
-
-A maneira de se refletir sobre um fenômeno, adotada nesse trabalho, é baseada na idéia de retrodução do Realismo Crítico. A retrodução pode ser definida como uma atividade de imaginação em que pensamos nos mecanismos generativos que, se de fato forem reais, irão causar um fenômeno quando tais mecanismos forem manifestados [@bhaskar-2016, p.3]. A prática da retrodução implica em um exercício de imaginação que tenta transitar entre os domínios ontológicos do Realismo Crítico, o domínio do empírico, o domínio do atual e o domínio do real [@akram-2023, p.53-54]. Uma ilustração geral e superficial do exercício de retrodução feita nessa pesquisa pode ser feita da seguinte forma: em um cenário hipotético, acredita-se que os {{< glossary "objeto transitivo" display="objetos transitivos" >}} A e B sejam causadores da {{< glossary "supressão de vegetação natural" display="SVN" >}}; a partir disso, nos questionamos quais seriam as condições necessárias para que essa relação de A e a {{< glossary "supressão de vegetação natural" display="SVN" >}} se manifeste; essas condições são traduzidas como o mecanismo generativo proposto; por consequência, nos questionamos se tal mecanismo generativo consegue explicar a relação de causa de B e a {{< glossary "supressão de vegetação natural" display="SVN" >}}. Esse exercício é repetido em qualquer ordem, e a medida que esse processo se sucede, lacunas do mecanismo generativo podem ser identificadas e retificadas, assim como inconsistências podem ser eliminadas, se possível.
-
-O desenvolvimento do modelo teórico também incorpora algumas idéias do método da Teoria Fundamentada [@glaser-1968], e mais especificamente desse método baseado no Realismo Crítico, como proposto por @oliver-2011 e @hoddy-2018. Nesse projeto, a condução de entrevistas e consultas da literatura são sistematizadas em forma de dados qualitativos estruturados, contendo as idéias centrais obtidas a partir desses materiais. Essa sistematização de dados é feita de maneira concomitante com o desenvolvimento do modelo teórico.
-
-O processo de sistematização de informação, na forma de dados qualitativos estruturados em tabela, é baseado nas entrevistas e nas consultas à literatura. As entrevistas são feitas de modo a especular sobre possíveis causas da {{< glossary "supressão de vegetação natural" display="SVN" >}}, de maneira semelhante ao processo de retrodução ilustrado anteriormente. A partir das indagações feitas durante as entrevistas, são desenvolvidas questões que servem de base para buscas na literatura, que por sua vez fornecem mais informações sobre o fenômeno em questão, a {{< glossary "supressão de vegetação natural" display="SVN" >}}. Após cada rodada de entrevistas e de consultas à literatura, a forma de condução das entrevistas seguintes podem ser alteradas de acordo com o conhecimento gerado pelas anteriores.
-
-Os dados, coletados a partir das entrevistas e consultas à literatura, contém as seguintes informações: identificação da fonte da informação (de forma anônima no caso das entrevistas); os {{< glossary "objeto transitivo" display="objetos transitivos" >}} identificados como relacionados a {{< glossary "supressão de vegetação natural" display="SVN" >}}; a descrição da relação entre os  {{< glossary "objeto transitivo" display="objetos transitivos" >}} com a {{< glossary "supressão de vegetação natural" display="SVN" >}}.
-
+O modelo teórico é desenvolvido com base em informações obtidas da literatura técnica e científica e entrevistas realisadas com pesquisadores que atuam no tema da {{< glossary "supressão de vegetação natural" display="SVN" >}} (@fig-theoretical-diagram). Porém, o desenvolvimento desse modelo teórico também é fortemente afetado pelas minhas experiências pessoais, como exposição à noticias, discussões diversas sobre o tema, e reflexões e indagações pessoais. Portanto, o conteúdo gerado nessa parte da pesquisa não pode ser considerado como produto de um método sistemático e reproduzível. Porém, apesar de se caracterizar como um processo um tanto ametódico, o desenvolvimento do modelo teórico segue uma maneira de se refletir sobre um fenômeno, se inspira em certas proposições metodológicas, e se baseia parcialmente, em uma limitada sistematização de informações.
 
 ```{mermaid}
 %%| label: fig-theoretical-diagram
@@ -85,9 +67,17 @@ flowchart TD
 
 ```
 
+A maneira de se refletir sobre um fenômeno, adotada nesse trabalho, é baseada na idéia de retrodução do Realismo Crítico. A retrodução pode ser definida como uma atividade de imaginação em que pensamos nos mecanismos generativos que, se de fato forem reais, irão causar um fenômeno quando tais mecanismos forem manifestados [@bhaskar-2016, p.3]. A prática da retrodução implica em um exercício de imaginação que tenta transitar entre os domínios ontológicos do Realismo Crítico, o domínio do empírico, o domínio do atual e o domínio do real [@akram-2023, p.53-54]. Uma ilustração geral e superficial do exercício de retrodução feita nessa pesquisa pode ser feita da seguinte forma: em um cenário hipotético, acredita-se que os {{< glossary "objeto transitivo" display="objetos transitivos" >}} A e B sejam causadores da {{< glossary "supressão de vegetação natural" display="SVN" >}}; a partir disso, nos questionamos quais seriam as condições necessárias para que essa relação de A e a {{< glossary "supressão de vegetação natural" display="SVN" >}} se manifeste; essas condições são traduzidas como o mecanismo generativo proposto; por consequência, nos questionamos se tal mecanismo generativo consegue explicar a relação de causa de B e a {{< glossary "supressão de vegetação natural" display="SVN" >}}. Esse exercício é repetido em qualquer ordem, e a medida que esse processo se sucede, lacunas do mecanismo generativo podem ser identificadas e retificadas, assim como inconsistências podem ser eliminadas, se possível.
+
+O desenvolvimento do modelo teórico também incorpora algumas idéias do método da Teoria Fundamentada [@glaser-1968], e mais especificamente desse método baseado no Realismo Crítico, como proposto por @oliver-2011 e @hoddy-2018. Nesse projeto, a condução de entrevistas e consultas da literatura são sistematizadas em forma de dados qualitativos estruturados, contendo as idéias centrais obtidas a partir desses materiais. Essa sistematização de dados é feita de maneira concomitante com o desenvolvimento do modelo teórico.
+
+O processo de sistematização de informação, na forma de dados qualitativos estruturados em tabela, é baseado nas entrevistas e nas consultas à literatura. As entrevistas são feitas de modo a especular sobre possíveis causas da {{< glossary "supressão de vegetação natural" display="SVN" >}}, de maneira semelhante ao processo de retrodução ilustrado anteriormente. A partir das indagações feitas durante as entrevistas, são desenvolvidas questões que servem de base para buscas na literatura, que por sua vez fornecem mais informações sobre o fenômeno em questão, a {{< glossary "supressão de vegetação natural" display="SVN" >}}. Após cada rodada de entrevistas e de consultas à literatura, a forma de condução das entrevistas seguintes podem ser alteradas de acordo com o conhecimento gerado pelas anteriores.
+
+Os dados, coletados a partir das entrevistas e consultas à literatura, contém as seguintes informações: identificação da fonte da informação (de forma anônima no caso das entrevistas); os {{< glossary "objeto transitivo" display="objetos transitivos" >}} identificados como relacionados a {{< glossary "supressão de vegetação natural" display="SVN" >}}; a descrição da relação entre os  {{< glossary "objeto transitivo" display="objetos transitivos" >}} com a {{< glossary "supressão de vegetação natural" display="SVN" >}}.
+
 O processo de desenvolvimento do modelo teórico não apresenta um ponto final determinado. O modelo teórico pode ser modificado caso haja a descoberta de novos conhecimentos que desafiem a lógica do modelo. Porém, nesse projeto, a etapa de desenvolvimento do modelo teórico é interrompida quando as informações obtidas se tornem redundantes o bastante para que não seja necessária a modificação do modelo.
 
-O modelo teórico será baseado em conceitos do Realismo Crítico, sendo formado sobre especulações da existência de certos {{< glossary "objeto intransitivo" display="objetos intransitivos" >}}, e da existência de interações entre eles, formando um {{< glossary "mecanismo generativo" >}} da {{< glossary "supressão de vegetação natural" display="SVN" >}}.
+O modelo teórico é baseado em conceitos do Realismo Crítico, sendo formado sobre especulações da existência de certos {{< glossary "objeto intransitivo" display="objetos intransitivos" >}}, e da existência de interações entre eles, formando um {{< glossary "mecanismo generativo" >}} da {{< glossary "supressão de vegetação natural" display="SVN" >}}.
 
 ### Entrevistas
 
@@ -130,7 +120,8 @@ tibble::tribble(
   gt::tab_options(
     table.font.size = 14,
     column_labels.hidden = TRUE,
-    table.width = gt::pct(90)
+    table.width = gt::pct(90),
+    quarto.disable_processing = TRUE
   ) |>
   gt::tab_style(
     style = list(
@@ -170,11 +161,9 @@ tibble::tribble(
   gt::tab_options(
     table.font.size = 14,
     table.width = gt::pct(90),
-    quarto.use_bootstrap = TRUE,
-    quarto.disable_processing = FALSE
+    quarto.disable_processing = TRUE
   ) |>
-  gt::opt_stylize(style = 1, color = "gray", add_row_striping = TRUE) |>
-  gt::as_raw_html()
+  gt::opt_stylize(style = 1, color = "gray", add_row_striping = TRUE)
 
 ```
 
@@ -203,11 +192,9 @@ tibble::tribble(
   gt::tab_options(
     table.font.size = 14,
     table.width = gt::pct(90),
-    quarto.use_bootstrap = TRUE,
-    quarto.disable_processing = FALSE
+    quarto.disable_processing = TRUE
   ) |>
-  gt::opt_stylize(style = 1, color = "gray", add_row_striping = TRUE) |>
-  gt::as_raw_html()
+  gt::opt_stylize(style = 1, color = "gray", add_row_striping = TRUE)
 
 ```
 
@@ -217,72 +204,64 @@ Além disso, a justificativa para a adoção de um processo ametódico de consul
 
 ## Análise Sociológica
 
-A análise sociológica será feita através da Teoria Geral dos Campos desenvolvida por Bourdieu, aplicada como perspectiva analítica do modelo teórico da {{< glossary "supressão de vegetação natural" display="SVN" >}}. A análise será conduzida através da adaptação de três passos, identificados por @grenfell-2018:
+A análise sociológica é feita através da Teoria Geral dos Campos desenvolvida por Bourdieu, aplicada como perspectiva analítica do modelo teórico da {{< glossary "supressão de vegetação natural" display="SVN" >}}. A análise é conduzida através da adaptação de três passos, identificados por @grenfell-2018:
 
-1. Descrever a posição do {{< glossary "campo" >}} analisado em relação ao {{< glossary "campo do poder" >}};
+1. Descrever a posição do {{< glossary "campo social" >}} analisado em relação ao {{< glossary "campo do poder" >}}:
 
-2. Descrever as posições ocupadas pelos {{< glossary "agente social" display="agentes sociais" >}} que participam do das disputas dentro do {{< glossary "campo" >}} analisado. E caracterizar as relações entre cada posição ocupada por cada {{< glossary "agente social" >}}. As posições são caracterizadas pelo {{< glossary "capital" >}} de cada {{< glossary "agente social" >}}, pelo objetivo do {{< glossary "agente social" >}} em relação ao fenômeno de interesse, e pela forma como um certo tipo de {{< glossary "capital" >}} influencia um {{< glossary "agente social" >}} a atingir seu objetivo;
+    A relação é descrita de forma a estabelecer como a acumulação de poder dentro de um {{< glossary "campo social" >}} influencia na acumulação de poder de forma mais abrangente, dentro do  {{< glossary "campo do poder" >}}. Aqui, poder não é descrito apenas como o {{< glossary "capital" >}}, mas uma forma de legitimação de um {{< glossary "agente social" >}}, e de persistência de sua pŕopira existência.
 
-3. Caracterizar as disposições dos {{< glossary "agente social" display="agentes sociais" >}} em relação ao fenômeno de interesse, e como essas disposições influênciam as ações tomadas com o objetivo desses agentes. Isso é feito através do conceito de {{< glossary "habitus" >}}.
+2. Identificar os principais agentes sociais {{< glossary "agente social" display="agentes sociais" >}} que participam do {{< glossary "campo social" >}} analisado. Descrever as posições que cada um ocupa dentro desse campo. E caracterizar as relações entre cada posição ocupada por cada {{< glossary "agente social" >}}:
 
+   As posições são caracterizadas pelo {{< glossary "capital" >}} de cada {{< glossary "agente social" >}}, pelo objetivo do agente em relação ao fenômeno de interesse, e pela forma como um certo tipo de {{< glossary "capital" >}} influencia o agente a atingir seu objetivo;
 
+3. Caracterizar as disposições dos {{< glossary "agente social" display="agentes sociais" >}} em relação ao fenômeno de interesse, e como essas disposições influênciam as ações tomadas com o objetivo desses agentes. Isso é feito através do conceito de {{< glossary "habitus" >}}:
+
+    As disposições são descritas de acordo com contextos históricos dos {{< glossary "agente social" display="agentes sociais" >}} e de suas posições dentro do {{< glossary "campo social" >}} analisado.
+
+Todas as etapas descritas acima serão feitas com base em informações obtidas das consultas à literatura. Portanto, conceitos como {{< glossary "capital" >}} não serão representados de forma numérica ou como categorias qualitativas, mas de forma abstrata a partir de informações coletadas da literatura. Já o conceito de {{< glossary "habitus" >}} será descrito a partir de informações históricas relacionadas à um certo {{< glossary "agente social" >}}, e não por meio de entrevistas, como é comum de se observar em pesquisas feitas com base na Teoria Geral dos Campos desenvolvida por Bourdieu. Essa forma de análise se justifica pela dificuldade de obtenção de informações de maneiras convencionais, já que o tema da {{< glossary "supressão de vegetação natural" display="SVN" >}} abrange {{< glossary "agente social" display="agentes sociais" >}} de difícil acesso.
 
 ## Análise Estatística
 
-The statistical analysis is responsible for exploring relationships of observed variables within the exercise of predicting NVS. It is performed by structuring a database of observed variables that are considered to be a possible cause of the NVS, followed by a selection of variables according to the theoretical model, and finally the prediction of NVS.
+A análise estatística tem como o objetivo a aplicação do modelo teórico de forma numérica. Esse processo é conduzido através da coleta e do processamento de dados quantitativos e qualitativos (que representam os {{< glossary "objeto transitivo" display="objetos transitivos" >}}), e posteriormente na execução de um modelo de regressão sobre esses dados. No entanto, antes desse processo, é feita uma triagem de quais dados serão coletados e urilizados.
 
-### Database Structuring
+A triagem é feita com base em dados que foram identificados na literatura consultada. A partir dessa lista de possíveis dados, é feita uma avaliação, que consiste na verificação da adequação do {{< glossary "objeto transitivo" >}}, representado pelo dado, com relação ao modelo teórico. Ou seja, mesmo que o dado tenha sido considerado como correlacionado com a {{< glossary "supressão de vegetação natural" display="SVN" >}}, não significa que ele obedece as regras impostas pelo modelo teórico. Caso um dado indicado pela literatura obedeça as regras do modelo teórico, ele é selecionado para ser utilizado no modelo estatístico, passando a ser considerado como uma {{< glossary "variável" >}}.
 
-The database contains data from different social and natural dimensions, which can be available in diverse formats and structures. To make the modeling process more efficient and transparent, all variables of interest must be organized coherently.
+### Estruturação da Base de Dados
 
-The process to create the database consists of accessing the data sources, downloading the data to the local environment, transforming and organizing the data to the grid, and store in the local environment.
+O processo para a criação do banco de dados consiste em acessar e extrair os dados de suas fontes, processar e transformar os dados em uma grade regular, e armazena-los em ambiente computacional local (@fig-data-diagram).
 
 ```{mermaid}
 %%| label: fig-data-diagram
-%%| fig-cap: Diagram of the process to create the project database.
+%%| fig-cap: Fluxo do processamento dos dados.
 %%| fig-responsive: true
 %%| fig-align: center
 
 flowchart TD
-    A[Data Source] --> E[Pre Processing]
-    B[Base Grid] --> E[Pre Processing]
-    E[Pre Processing] --> F[Gridded Data]
-    F[Gridded Data] --> G[Database]
+    A[Fonte do Dado] --> E[Pré Processamento]
+    B[Grade Regular] --> E
+    E --> F[Dados Estruturados em Grade]
+    F --> G[Banco de Dados]
 
 ```
 
-The data are stored in a nested directories database with hive-style partitioning. The database is composed of a collection of parquet files, a format with high compression, that facilitates processing large volumes of data. The main partition stores the variables, which means that each variable will be stored in a separate directory. If necessary, the data will be partitioned by further variables (as a rule of thumb, each parquet file should not be smaller than 20MB and not bigger than 2GB).
-
-To structure a collection of data that presents different natures, I must transform all the variables into a standard grid system. The grid system will be composed of 0.2 degrees cells (40km x 40km), which should be a balanced compromise between detail and computational cost.
+O processamento de cada dado varia com seu formato (tabular, vetorial ou matricial), e de sua organização original. O detalhamento dos dados, como sua fonte e formato, e seu processamento, podem ser lidos na sessão @sec-data. No final do processamento, cada dado é estruturado dentro de um grade regular hexagonal (@fig-base-grid), em que cada exagono possui 140 mil hectares, aproximadamente.
 
 ```{r}
 #| label: fig-base-grid
-#| fig-cap: "Model grid, in which variables were transformed to."
+#| fig-cap: "Representação da grade regular em que os dados são transformados, e posteriormente utilizados no modelo estatístico."
 #| fig-asp: 1
 #| echo: false
 #| dev: "ragg_png"
 
 load("./figs/base_grid.rdata")
 
-#viz_grid
+viz_grid
 
 ```
 
-Each grid cell contains one observation, for each year, for all the variables.
+### Desenvolvimento dos Modelos Estatísticos
 
-### Model Development
-
-The statistical model follow the standard approach to develop supervised models.
-
-The variables selection will be performed according to available data of possible causes of NVS (as stated in the theoretical model), the selection will also be performed to remove variables that can induce unwanted bias in the results, such as colliders and mediators.
-
-The data splitting between training and training, validation and testing groups will be performed in order to avoid spatial and temporal correlation between observations.
-
-The parameters adjustments will be performed by cross validation methods for resampling and racing techniques for parameter optimization. In this process, validation data will be used for parameter adjustments.
-
-After the final model fit, accuracy metrics will be calculated in order to estimate the error of the statistical model. Along with the accuracy assessment, a series of model interpretation techniques will be applied in order to understand the model results.
-
-The main steps are shown in @fig-model-diagram.
+O desenvolvimento dos modelos segue as práticas padrão usual de algorítmos de regressão supervisionados (@fig-model-diagram). Nesse método, os dados disponíveis são separados entre dados de treinamento, responsáveis por treinar os modelos, dados de validação, utilizados para ajustes dos parâmetros dos modelos, e dados de teste, que são utilizados para a aplicação dos modelos e comparação dos resultados.
 
 ```{mermaid}
 %%| label: fig-model-diagram
@@ -291,45 +270,25 @@ The main steps are shown in @fig-model-diagram.
 %%| fig-align: center
 
 flowchart TD
-    A[Database] --> B[Variables Selection]
-    B[Variables Selection] --> C[Data Split]
-    C[Data Split] --> D[Training Data]
-    D[Training Data] --> E[Pre Processing]
-    E[Pre Processing] --> F[Initial Model Fit]
-    C[Data Split] --> G[Validation Data]
-    C[Data Split] --> H[Test Data]
-    F[Initial Model Fit] --> I[Parameters Adjustments]
-    G[Validation Data] --> I[Parameters Adjustments]
-    I[Parameters Adjustments] --> J[Final Model Fit]
-    H[Test Data] --> K[Model Assessment]
-    J[Final Model Fit] --> K[Model Assessment]
-    J[Final Model Fit] --> L[Model Interpretation]
-    K[Model Assessment] --> L[Model Interpretation]
+    A[Banco de dados] --> C[Divisão dos Dados]
+    C --> D[Dados de Treinamento]
+    D --> F[Ajuste Inicial do Modelo]
+    C --> G[Dados de Validação]
+    C --> H[Dados de Teste]
+    F --> I[Ajuste de Parâmetros]
+    G --> I
+    I --> J[Ajuste Final do Modelo]
+    H --> K[Avaliação do Modelo]
+    J --> K
+    J --> L[Interpretação do Modelo]
+    K --> L
 
 ```
 
-The regression algorithms used to predict NVS are based on Decision Trees (DT) and ensemble techniques, that are Random Forest (RF), Bayesian Additive Regression Trees (BART) and Gradient Boosting Decision Trees (GBDT). Using models with different complexity, but a common framework is useful to interpret the results.
+Os algorítmos de regressão usados para predição da {{< glossary "supressão de vegetação natural" display="SVN" >}} são: Decision Trees (DT), Random Forest (RF), Bayesian Additive Regression Trees (BART) e Gradient Boosting Decision Trees (GBDT). Os modelos mencionados possuem diferentes complexidades.
 
-::: {.callout-important collapse="true"}
-READ: spatial models
+## Interpretação dos Resultados
 
--   <https://doi.org/10.3390/ijgi10090600>
--   <https://doi.org/10.1007/s00168-021-01101-x>
+A interpretação dos resultados da análise sociológica e estatistica é feita pela comparação de objetos em comum entre ambas.
 
-READ: causality for feature selection
-
--   <https://arxiv.org/pdf/2207.04053.pdf>
--   <https://doi.org/10.1145/3409382>
-
-READ: variables related to NVS
-
--   <https://doi.org/10.1371/journal.pone.0269729>
-:::
-
-## Results Interpretation
-
-The interpretation of quantitative and qualitative results are performed in conjunction to find underlying mechanisms of how the dispute between social actors also influence the variables that cause NVS. The interpretation is done by comparing the results from the sociological and statistical analysis, searching for convergences, divergences and possible gaps in the explanation of the causes of NVS.
-
-This interpretation allows the development of an updated theoretical model of NVS.
-
-# References {.unnumbered}
+# Referências {.unnumbered}

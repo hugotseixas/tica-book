@@ -2,12 +2,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="pt" xml:lang="pt"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.3.450">
+<meta name="generator" content="quarto-1.4.554">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Explorando dimensões da Supressão de Vegetação Natural através de uma teoria geral - 3&nbsp; Results</title>
+<title>Explorando dimensões da Supressão de Vegetação Natural através de uma teoria geral - 3&nbsp; Resultados</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -24,6 +24,7 @@ ul.task-list li input[type="checkbox"] {
 div.csl-bib-body { }
 div.csl-entry {
   clear: both;
+  margin-bottom: 0em;
 }
 .hanging-indent div.csl-entry {
   margin-left:2em;
@@ -61,13 +62,20 @@ div.csl-indent {
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/quarto-contrib/glossary/glossary.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
   "collapse-after": 3,
   "panel-placement": "start",
   "type": "textbox",
-  "limit": 20,
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
   "language": {
     "search-no-results-text": "Nenhum resultado",
     "search-matching-documents-text": "documentos correspondentes",
@@ -76,6 +84,7 @@ div.csl-indent {
     "search-more-match-text": "mais correspondência neste documento",
     "search-more-matches-text": "mais correspondências neste documento",
     "search-clear-button-title": "Limpar",
+    "search-text-placeholder": "",
     "search-detached-cancel-button-title": "Cancelar",
     "search-submit-button-title": "Enviar",
     "search-label": "Procurar"
@@ -87,6 +96,19 @@ div.csl-indent {
 }
 </script>
 <script async="" src="https://hypothes.is/embed.js"></script>
+<script>
+  window.document.addEventListener("DOMContentLoaded", function (_event) {
+    document.body.classList.add('hypothesis-enabled');
+  });
+</script>
+<script src="site_libs/core-js-2.5.3/shim.min.js"></script>
+<script src="site_libs/react-18.2.0/react.min.js"></script>
+<script src="site_libs/react-18.2.0/react-dom.min.js"></script>
+<script src="site_libs/reactwidget-1.0.0/react-tools.js"></script>
+<link href="site_libs/htmltools-fill-0.5.8.1/fill.css" rel="stylesheet">
+<script src="site_libs/htmlwidgets-1.6.4/htmlwidgets.js"></script>
+<link href="site_libs/reactable-0.4.4/reactable.css" rel="stylesheet">
+<script src="site_libs/reactable-binding-0.4.4/reactable.js"></script>
 
 
 <link rel="stylesheet" href="styles.css">
@@ -98,12 +120,12 @@ div.csl-indent {
   <header id="quarto-header" class="headroom fixed-top">
   <nav class="quarto-secondary-nav">
     <div class="container-fluid d-flex">
-      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./03_results.html"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Results</span></a></li></ol></nav>
-      <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
-      </a>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./03_results.html"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Resultados</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
         <i class="bi bi-search"></i>
       </button>
@@ -113,7 +135,7 @@ div.csl-indent {
 <!-- content -->
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation docked overflow-auto">
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header sidebar-header-stacked">
       <a href="./index.html" class="sidebar-logo-link">
       <img src="./figs/art/logo.png" alt="" class="sidebar-logo py-0 d-lg-inline d-none">
@@ -156,19 +178,19 @@ div.csl-indent {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./03_results.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Results</span></span></a>
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Resultados</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./04_discussion.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Discussion</span></span></a>
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Discussão</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./05_conclusions.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Conclusions</span></span></a>
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Conclusões</span></span></a>
   </div>
 </li>
         <li class="sidebar-item sidebar-item-section">
@@ -183,7 +205,13 @@ div.csl-indent {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./10_research_paradigm.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">A</span>&nbsp; <span class="chapter-title">Paradigm</span></span></a>
+ <span class="menu-text"><span class="chapter-number">A</span>&nbsp; <span class="chapter-title">Conceitos Fundamentais</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./11_research_data.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">B</span>&nbsp; <span class="chapter-title">Processamento dos dados</span></span></a>
   </div>
 </li>
       </ul>
@@ -191,16 +219,20 @@ div.csl-indent {
     </ul>
     </div>
 </nav>
-<div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         <nav id="TOC" role="doc-toc" class="toc-active">
     <h2 id="toc-title">Content</h2>
    
   <ul>
-  <li><a href="#theoretical-model" id="toc-theoretical-model" class="nav-link active" data-scroll-target="#theoretical-model"><span class="header-section-number">3.1</span> Theoretical Model</a></li>
-  <li><a href="#sociological-analysis" id="toc-sociological-analysis" class="nav-link" data-scroll-target="#sociological-analysis"><span class="header-section-number">3.2</span> Sociological Analysis</a></li>
-  <li><a href="#statistical-analysis" id="toc-statistical-analysis" class="nav-link" data-scroll-target="#statistical-analysis"><span class="header-section-number">3.3</span> Statistical Analysis</a>
+  <li><a href="#modelo-teórico" id="toc-modelo-teórico" class="nav-link active" data-scroll-target="#modelo-teórico"><span class="header-section-number">3.1</span> Modelo Teórico</a>
+  <ul class="collapse">
+  <li><a href="#desenvolvimento-do-modelo-teórico" id="toc-desenvolvimento-do-modelo-teórico" class="nav-link" data-scroll-target="#desenvolvimento-do-modelo-teórico"><span class="header-section-number">3.1.1</span> Desenvolvimento do Modelo Teórico</a></li>
+  <li><a href="#formalização-do-modelo-teórico" id="toc-formalização-do-modelo-teórico" class="nav-link" data-scroll-target="#formalização-do-modelo-teórico"><span class="header-section-number">3.1.2</span> Formalização do Modelo Teórico</a></li>
+  </ul></li>
+  <li><a href="#análise-sociológica" id="toc-análise-sociológica" class="nav-link" data-scroll-target="#análise-sociológica"><span class="header-section-number">3.2</span> Análise Sociológica</a></li>
+  <li><a href="#análise-estatística" id="toc-análise-estatística" class="nav-link" data-scroll-target="#análise-estatística"><span class="header-section-number">3.3</span> Análise Estatística</a>
   <ul class="collapse">
   <li><a href="#exploratory-data-analysis" id="toc-exploratory-data-analysis" class="nav-link" data-scroll-target="#exploratory-data-analysis"><span class="header-section-number">3.3.1</span> Exploratory Data Analysis</a></li>
   </ul></li>
@@ -214,7 +246,7 @@ div.csl-indent {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Results</span></h1>
+<h1 class="title"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Resultados</span></h1>
 </div>
 
 
@@ -227,36 +259,62 @@ div.csl-indent {
   </div>
   
 
+
 </header>
 
-<section id="theoretical-model" class="level2" data-number="3.1">
-<h2 data-number="3.1" class="anchored" data-anchor-id="theoretical-model"><span class="header-section-number">3.1</span> Theoretical Model</h2>
-<p>The NVS Theoretical Model have the purpose to formally describe the phenomena manifestation process. Therefore, before presenting the model, it is necessary to revisit the concept of NVS being adopted.</p>
-<p>The NVS, abbreviation for Natural Vegetation Suppression, is an action performed directly by humans, and consists of the transformation of an area occupied by natural vegetation. This transformation occurs by the removal of the natural vegetation to a degree in which the area is no longer recognized as a natural formation, by the human perception.</p>
-<p>To describe the NVS Theoretical Model, I especulate about the causal mechanism that, when manifested, materializes the NVS.</p>
-<p>I propose four phenomena that composes the causal mechanism of NVS:</p>
+
+<section id="modelo-teórico" class="level2" data-number="3.1">
+<h2 data-number="3.1" class="anchored" data-anchor-id="modelo-teórico"><span class="header-section-number">3.1</span> Modelo Teórico</h2>
+<section id="desenvolvimento-do-modelo-teórico" class="level3" data-number="3.1.1">
+<h3 data-number="3.1.1" class="anchored" data-anchor-id="desenvolvimento-do-modelo-teórico"><span class="header-section-number">3.1.1</span> Desenvolvimento do Modelo Teórico</h3>
+<p>O desenvolvimento do modelo teórico é parcialmente conduzido com base nos dados levantados pelas consultas à literatura e pelas entrevistas. Esses dados refletem minha interpretação do que foi escrito ou dito nos conteúdos disponíveis.</p>
+<p>A (<a href="#tbl-literatureresults" class="quarto-xref">Tabela&nbsp;<span>3.1</span></a>) mostra parte das informações encontradas na literatura. Nela, é possível encontrar os objetos relacionados à <button class="glossary" title="">SVN</button>, e qual é a descrição da relação entre ambos.</p>
+<div class="cell">
+<div id="tbl-literatureresults" class="cell quarto-float anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-literatureresults-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Tabela&nbsp;3.1: Tabela de dados resultante das consultas à bibliografia.
+</figcaption>
+<div aria-describedby="tbl-literatureresults-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="cell-output-display">
+<div class="reactable html-widget html-fill-item" id="htmlwidget-7185b25d4ee43af2f927" style="width:auto;height:auto;"></div>
+<script type="application/json" data-for="htmlwidget-7185b25d4ee43af2f927">{"x":{"tag":{"name":"Reactable","attribs":{"data":{"id":["1<br> <br>https://doi.org/10.1016/S1364-8152(03)00161-0<br> <br>Mas et al.<br> <br>Modelling deforestation using GIS and artificial neural networks<br> <br>2004<br> <br>México","1<br> <br>https://doi.org/10.1016/S1364-8152(03)00161-0<br> <br>Mas et al.<br> <br>Modelling deforestation using GIS and artificial neural networks<br> <br>2004<br> <br>México","1<br> <br>https://doi.org/10.1016/S1364-8152(03)00161-0<br> <br>Mas et al.<br> <br>Modelling deforestation using GIS and artificial neural networks<br> <br>2004<br> <br>México","1<br> <br>https://doi.org/10.1016/S1364-8152(03)00161-0<br> <br>Mas et al.<br> <br>Modelling deforestation using GIS and artificial neural networks<br> <br>2004<br> <br>México","1<br> <br>https://doi.org/10.1016/S1364-8152(03)00161-0<br> <br>Mas et al.<br> <br>Modelling deforestation using GIS and artificial neural networks<br> <br>2004<br> <br>México","1<br> <br>https://doi.org/10.1016/S1364-8152(03)00161-0<br> <br>Mas et al.<br> <br>Modelling deforestation using GIS and artificial neural networks<br> <br>2004<br> <br>México","1<br> <br>https://doi.org/10.1016/S1364-8152(03)00161-0<br> <br>Mas et al.<br> <br>Modelling deforestation using GIS and artificial neural networks<br> <br>2004<br> <br>México","2<br> <br>https://doi.org/10.2307/1243944<br> <br>Nelson et al.<br> <br>Do Roads Cause Deforestation? Using Satellite Images in Econometric Analysis of Land Use<br> <br>1997<br> <br>México","2<br> <br>https://doi.org/10.2307/1243944<br> <br>Nelson et al.<br> <br>Do Roads Cause Deforestation? Using Satellite Images in Econometric Analysis of Land Use<br> <br>1997<br> <br>México","2<br> <br>https://doi.org/10.2307/1243944<br> <br>Nelson et al.<br> <br>Do Roads Cause Deforestation? Using Satellite Images in Econometric Analysis of Land Use<br> <br>1997<br> <br>México","2<br> <br>https://doi.org/10.2307/1243944<br> <br>Nelson et al.<br> <br>Do Roads Cause Deforestation? Using Satellite Images in Econometric Analysis of Land Use<br> <br>1997<br> <br>México","2<br> <br>https://doi.org/10.2307/1243944<br> <br>Nelson et al.<br> <br>Do Roads Cause Deforestation? Using Satellite Images in Econometric Analysis of Land Use<br> <br>1997<br> <br>México","2<br> <br>https://doi.org/10.2307/1243944<br> <br>Nelson et al.<br> <br>Do Roads Cause Deforestation? Using Satellite Images in Econometric Analysis of Land Use<br> <br>1997<br> <br>México","2<br> <br>https://doi.org/10.2307/1243944<br> <br>Nelson et al.<br> <br>Do Roads Cause Deforestation? Using Satellite Images in Econometric Analysis of Land Use<br> <br>1997<br> <br>México","3<br> <br>http://dx.doi.org/10.1016/j.biocon.2014.07.004<br> <br>Barber et al.<br> <br>Roads, deforestation, and the mitigating effect of protected areas in the Amazon<br> <br>2014<br> <br>Brasil","3<br> <br>http://dx.doi.org/10.1016/j.biocon.2014.07.004<br> <br>Barber et al.<br> <br>Roads, deforestation, and the mitigating effect of protected areas in the Amazon<br> <br>2014<br> <br>Brasil","3<br> <br>http://dx.doi.org/10.1016/j.biocon.2014.07.004<br> <br>Barber et al.<br> <br>Roads, deforestation, and the mitigating effect of protected areas in the Amazon<br> <br>2014<br> <br>Brasil","4<br> <br>https://doi.org/10.1016/S0301-4797(05)80038-6<br> <br>Ludeke et al.<br> <br>An analysis of anthropogenic deforestation using logistic regression and GIS<br> <br>1990<br> <br>Honduras","4<br> <br>https://doi.org/10.1016/S0301-4797(05)80038-6<br> <br>Ludeke et al.<br> <br>An analysis of anthropogenic deforestation using logistic regression and GIS<br> <br>1990<br> <br>Honduras","4<br> <br>https://doi.org/10.1016/S0301-4797(05)80038-6<br> <br>Ludeke et al.<br> <br>An analysis of anthropogenic deforestation using logistic regression and GIS<br> <br>1990<br> <br>Honduras","4<br> <br>https://doi.org/10.1016/S0301-4797(05)80038-6<br> <br>Ludeke et al.<br> <br>An analysis of anthropogenic deforestation using logistic regression and GIS<br> <br>1990<br> <br>Honduras","4<br> <br>https://doi.org/10.1016/S0301-4797(05)80038-6<br> <br>Ludeke et al.<br> <br>An analysis of anthropogenic deforestation using logistic regression and GIS<br> <br>1990<br> <br>Honduras","4<br> <br>https://doi.org/10.1016/S0301-4797(05)80038-6<br> <br>Ludeke et al.<br> <br>An analysis of anthropogenic deforestation using logistic regression and GIS<br> <br>1990<br> <br>Honduras","4<br> <br>https://doi.org/10.1016/S0301-4797(05)80038-6<br> <br>Ludeke et al.<br> <br>An analysis of anthropogenic deforestation using logistic regression and GIS<br> <br>1990<br> <br>Honduras","4<br> <br>https://doi.org/10.1016/S0301-4797(05)80038-6<br> <br>Ludeke et al.<br> <br>An analysis of anthropogenic deforestation using logistic regression and GIS<br> <br>1990<br> <br>Honduras","4<br> <br>https://doi.org/10.1016/S0301-4797(05)80038-6<br> <br>Ludeke et al.<br> <br>An analysis of anthropogenic deforestation using logistic regression and GIS<br> <br>1990<br> <br>Honduras","4<br> <br>https://doi.org/10.1016/S0301-4797(05)80038-6<br> <br>Ludeke et al.<br> <br>An analysis of anthropogenic deforestation using logistic regression and GIS<br> <br>1990<br> <br>Honduras","4<br> <br>https://doi.org/10.1016/S0301-4797(05)80038-6<br> <br>Ludeke et al.<br> <br>An analysis of anthropogenic deforestation using logistic regression and GIS<br> <br>1990<br> <br>Honduras","5<br> <br>https://doi.org/10.1046/j.1365-2699.2002.00721.x<br> <br>Laurance et al.<br> <br>Predictors of deforestation in the Brazilian Amazon<br> <br>2002<br> <br>Brazil","5<br> <br>https://doi.org/10.1046/j.1365-2699.2002.00721.x<br> <br>Laurance et al.<br> <br>Predictors of deforestation in the Brazilian Amazon<br> <br>2002<br> <br>Brazil","5<br> <br>https://doi.org/10.1046/j.1365-2699.2002.00721.x<br> <br>Laurance et al.<br> <br>Predictors of deforestation in the Brazilian Amazon<br> <br>2002<br> <br>Brazil","5<br> <br>https://doi.org/10.1046/j.1365-2699.2002.00721.x<br> <br>Laurance et al.<br> <br>Predictors of deforestation in the Brazilian Amazon<br> <br>2002<br> <br>Brazil","5<br> <br>https://doi.org/10.1046/j.1365-2699.2002.00721.x<br> <br>Laurance et al.<br> <br>Predictors of deforestation in the Brazilian Amazon<br> <br>2002<br> <br>Brazil","5<br> <br>https://doi.org/10.1046/j.1365-2699.2002.00721.x<br> <br>Laurance et al.<br> <br>Predictors of deforestation in the Brazilian Amazon<br> <br>2002<br> <br>Brazil","6<br> <br>https://doi.org/10.1371/journal.pone.0077231<br> <br>Rosa et al.<br> <br>Predictive Modelling of Contagious Deforestation in the Brazilian Amazon<br> <br>2013<br> <br>Brazil","6<br> <br>https://doi.org/10.1371/journal.pone.0077231<br> <br>Rosa et al.<br> <br>Predictive Modelling of Contagious Deforestation in the Brazilian Amazon<br> <br>2013<br> <br>Brazil","6<br> <br>https://doi.org/10.1371/journal.pone.0077231<br> <br>Rosa et al.<br> <br>Predictive Modelling of Contagious Deforestation in the Brazilian Amazon<br> <br>2013<br> <br>Brazil","6<br> <br>https://doi.org/10.1371/journal.pone.0077231<br> <br>Rosa et al.<br> <br>Predictive Modelling of Contagious Deforestation in the Brazilian Amazon<br> <br>2013<br> <br>Brazil","6<br> <br>https://doi.org/10.1371/journal.pone.0077231<br> <br>Rosa et al.<br> <br>Predictive Modelling of Contagious Deforestation in the Brazilian Amazon<br> <br>2013<br> <br>Brazil","6<br> <br>https://doi.org/10.1371/journal.pone.0077231<br> <br>Rosa et al.<br> <br>Predictive Modelling of Contagious Deforestation in the Brazilian Amazon<br> <br>2013<br> <br>Brazil","6<br> <br>https://doi.org/10.1371/journal.pone.0077231<br> <br>Rosa et al.<br> <br>Predictive Modelling of Contagious Deforestation in the Brazilian Amazon<br> <br>2013<br> <br>Brazil","6<br> <br>https://doi.org/10.1371/journal.pone.0077231<br> <br>Rosa et al.<br> <br>Predictive Modelling of Contagious Deforestation in the Brazilian Amazon<br> <br>2013<br> <br>Brazil","6<br> <br>https://doi.org/10.1371/journal.pone.0077231<br> <br>Rosa et al.<br> <br>Predictive Modelling of Contagious Deforestation in the Brazilian Amazon<br> <br>2013<br> <br>Brazil","6<br> <br>https://doi.org/10.1371/journal.pone.0077231<br> <br>Rosa et al.<br> <br>Predictive Modelling of Contagious Deforestation in the Brazilian Amazon<br> <br>2013<br> <br>Brazil","6<br> <br>https://doi.org/10.1371/journal.pone.0077231<br> <br>Rosa et al.<br> <br>Predictive Modelling of Contagious Deforestation in the Brazilian Amazon<br> <br>2013<br> <br>Brazil","6<br> <br>https://doi.org/10.1371/journal.pone.0077231<br> <br>Rosa et al.<br> <br>Predictive Modelling of Contagious Deforestation in the Brazilian Amazon<br> <br>2013<br> <br>Brazil","6<br> <br>https://doi.org/10.1371/journal.pone.0077231<br> <br>Rosa et al.<br> <br>Predictive Modelling of Contagious Deforestation in the Brazilian Amazon<br> <br>2013<br> <br>Brazil","6<br> <br>https://doi.org/10.1371/journal.pone.0077231<br> <br>Rosa et al.<br> <br>Predictive Modelling of Contagious Deforestation in the Brazilian Amazon<br> <br>2013<br> <br>Brazil","6<br> <br>https://doi.org/10.1371/journal.pone.0077231<br> <br>Rosa et al.<br> <br>Predictive Modelling of Contagious Deforestation in the Brazilian Amazon<br> <br>2013<br> <br>Brazil","7<br> <br>https://doi.org/10.1111/j.1467-8306.1985.tb00079.x<br> <br>Allen et al.<br> <br>The Causes of Deforestation in Developing Countries<br> <br>1985<br> <br>Global","7<br> <br>https://doi.org/10.1111/j.1467-8306.1985.tb00079.x<br> <br>Allen et al.<br> <br>The Causes of Deforestation in Developing Countries<br> <br>1985<br> <br>Global","7<br> <br>https://doi.org/10.1111/j.1467-8306.1985.tb00079.x<br> <br>Allen et al.<br> <br>The Causes of Deforestation in Developing Countries<br> <br>1985<br> <br>Global","7<br> <br>https://doi.org/10.1111/j.1467-8306.1985.tb00079.x<br> <br>Allen et al.<br> <br>The Causes of Deforestation in Developing Countries<br> <br>1985<br> <br>Global","7<br> <br>https://doi.org/10.1111/j.1467-8306.1985.tb00079.x<br> <br>Allen et al.<br> <br>The Causes of Deforestation in Developing Countries<br> <br>1985<br> <br>Global","7<br> <br>https://doi.org/10.1111/j.1467-8306.1985.tb00079.x<br> <br>Allen et al.<br> <br>The Causes of Deforestation in Developing Countries<br> <br>1985<br> <br>Global","8<br> <br>https://doi.org/10.1016/j.ecolind.2005.03.014<br> <br>Armenteras et al.<br> <br>Patterns and causes of deforestation in the Colombian Amazon<br> <br>2006<br> <br>Colombia","8<br> <br>https://doi.org/10.1016/j.ecolind.2005.03.014<br> <br>Armenteras et al.<br> <br>Patterns and causes of deforestation in the Colombian Amazon<br> <br>2006<br> <br>Colombia","8<br> <br>https://doi.org/10.1016/j.ecolind.2005.03.014<br> <br>Armenteras et al.<br> <br>Patterns and causes of deforestation in the Colombian Amazon<br> <br>2006<br> <br>Colombia","8<br> <br>https://doi.org/10.1016/j.ecolind.2005.03.014<br> <br>Armenteras et al.<br> <br>Patterns and causes of deforestation in the Colombian Amazon<br> <br>2006<br> <br>Colombia","8<br> <br>https://doi.org/10.1016/j.ecolind.2005.03.014<br> <br>Armenteras et al.<br> <br>Patterns and causes of deforestation in the Colombian Amazon<br> <br>2006<br> <br>Colombia","8<br> <br>https://doi.org/10.1016/j.ecolind.2005.03.014<br> <br>Armenteras et al.<br> <br>Patterns and causes of deforestation in the Colombian Amazon<br> <br>2006<br> <br>Colombia","8<br> <br>https://doi.org/10.1016/j.ecolind.2005.03.014<br> <br>Armenteras et al.<br> <br>Patterns and causes of deforestation in the Colombian Amazon<br> <br>2006<br> <br>Colombia","9<br> <br>https://doi.org/10.1016/j.worlddev.2019.104746<br> <br>Miyamoto<br> <br>Poverty reduction saves forests sustainably: Lessons for deforestation policies<br> <br>2020<br> <br>Indonesia; Malasya","9<br> <br>https://doi.org/10.1016/j.worlddev.2019.104746<br> <br>Miyamoto<br> <br>Poverty reduction saves forests sustainably: Lessons for deforestation policies<br> <br>2020<br> <br>Indonesia; Malasya","9<br> <br>https://doi.org/10.1016/j.worlddev.2019.104746<br> <br>Miyamoto<br> <br>Poverty reduction saves forests sustainably: Lessons for deforestation policies<br> <br>2020<br> <br>Indonesia; Malasya","9<br> <br>https://doi.org/10.1016/j.worlddev.2019.104746<br> <br>Miyamoto<br> <br>Poverty reduction saves forests sustainably: Lessons for deforestation policies<br> <br>2020<br> <br>Indonesia; Malasya","9<br> <br>https://doi.org/10.1016/j.worlddev.2019.104746<br> <br>Miyamoto<br> <br>Poverty reduction saves forests sustainably: Lessons for deforestation policies<br> <br>2020<br> <br>Indonesia; Malasya","10<br> <br>https://doi.org/10.1016/j.jenvman.2021.113020<br> <br>Santos et al.<br> <br>Deforestation drivers in the Brazilian Amazon: assessing new spatial predictors<br> <br>2021<br> <br>Brazil","11<br> <br>https://doi.org/10.1016/j.landusepol.2020.105072<br> <br>West et al.<br> <br>Brazil’s conservation reform and the reduction of deforestation in Amazonia<br> <br>2021<br> <br>Brazil","12<br> <br>https://doi.org/10.1017/S0376892900012236<br> <br>NA<br> <br>NA<br> <br>NA<br> <br>NA"],"object":["Elevação","Declividade","Tipo de solo","Distância da rodovia mais próxima","Distância da população mais pŕoxima","Distância da borda de floresta mais próxima","Fragmentação florestal","Elevação","Declividade","Fertilidade do solo","Intensidade de Radiação Solar Potencial","Custo de acesso a rodovia mais próxima","Presença de grandes centros populacionais","Presença de vilarejos","Distância em relação à rodovias","Distância em relação à rios navegáveis","Presença de áreas protegidas","Elevação","Declividade","Estado (limite político)","Tipo de Solo","Distância da estrutura de acesso mais pŕoxima","Distância da estrada mais próxima","Distância da moradia mais próxima","Distância do centro urbano mais próximo","Distância do rio mais próximo","Classe de zona ecológica","Proximidade de bordas florestais","Presença de estradas pavimentadas e não pavimentadas","Presença de rios navegáveis","População urbana e rural","Precipitação annual","Severidade da estação seca","Propriedades quimicas, hidricas e fisicas do solo","Supressões passadas","Cobertura florestal remanecente","Estradas oficiais e não oficiais","Rios principais","Povoados","Elevação","Fertilidade do solo","Duração da estação seca","População de bovinos","Área ocupada por agricultura temporária","Área ocupada por agricultura perene","PIB dos municipios","PIB agricola dos municipios","Áreas protegidas","Estado (limite político)","Crescimento populacional","Expansão da agricultura","Extração de materiais florestais","Mudanças climáticas","Catastrofes naturais","Gestão pública","Qualidade de vida","População bruta","Densidade populacional","Crescimento populacional","Área de pastagem","Violência","Presença de remanecentes naturais","Nível de desenvolvimento humano","Pobreza","Construção de estradas","Escassez de áreas para cultivo","Lucratividade da agricultura",null,null,null],"condition":["Áreas elevadas não apresentam inundação e tem solos mais ferteis, apresentando mais supressão.","Áreas com declividades suaves não apresentam inundação e tem solos mais ferteis, apresentando mais supressão.","Solos mais ferteis apresentam mais supressão.","Áreas próximas das rodovias apresentam mais supressão. Áreas mais distantes das rodovias apresentam menor supressão.","Áreas próximas de áreas povoadas apresentam mais supressão. Áreas mais distantes de áreas povoadas apresentam menor supressão.","Áreas próximas de bordas florestais apresentam mais supressão. Áreas mais distantes de bordas florestais apresentam menor supressão.","Áreas com florestais mais fragmentadas apresentam mais supressão.",null,null,null,null,"Um maior custo de acesso à rodovias é associado com mais florestas, e portanto, menos desmatamento.","Não é claro como a presença de grandes centros afeta a supressão.","Não é claro como a presença de vilarejos afeta a supressão.","Supressão ocorrem com mais frequência em áreas menos distantes de rodovias e estradas.","A proximidade de rios navegáveis não parece afetar a ocorrência de supressão.","A presença de áreas protegidas é relacionada com a redução na ocorrência de supressões. Esse efeito varia entre os tipos de áreas protegidas.",null,null,null,null,"Áreas próximas à estruturas de acesso apresentam maior ocorrência de supressão.","Áreas próximas à estradas apresentam maior ocorrência de supressão.","Áreas próximas à moradias apresentam maior ocorrência de supressão.",null,null,null,"Áreas próximas de outras áreas previamente suprimidas, apresentam maior ocorrência de supressão.","Presença de estradas apresentam maior ocorrência de supressão. Estradas pavimentadas são meios de acesso à floresta ao longo de todo o ano, e normalmente estão associadas ao aparecimento de estradas não pavimentadas.",null,"Maiores densidades populacionais são relacionadas com mais supressão. Populações rurais podem estar mais diretamente ligadas com a supressão, mas acredita-se em efeitos indiretos causados pela população urbana. Também é discutido que a população rural é heterogenea, e grupos diferentes tem efeitos diferentes sobre a supressão. Também foi discutido que mesmo populações rurais pequenas podem ter um grande impacto no aumento das supressões.","Áreas com menor precipitação apresentam mais supressão. Foi especulado que isso é em razão da maior facilidade de queimar florestas mais secas, reduzindo o esforço necessário para execução da supressão. Também foi discutido que florestas mais secas geralmente contém solos mais férteis. Além disso, a localização dessas florestas mais secas podem afetar a ocorrência de supressão, por estarem mais acessíveis.",null,"Não apresentaram uma relação clara com a ocorrẽncia de supressão. Foi notado a quantidade de incertezas nos dados. Também foi discutido que os agentes envolvidos na supressão podem ter poucas informações sobre esses fatores.","Áreas próximas de locais suprimidos anteriormente tem maior chance de sofrerem supressão.",null,"Presença de estradas são fatores determinantes para ocorrência de supressão, já que servem como estrutura de acesso a remanecentes florestais.",null,null,null,null,null,null,null,null,null,null,"As áreas protegidas apresentam menores chances de sofrerem supressão. Isso depende do tipo de área protegida. Foi discutido que áreas protegidas perto de rodovias levam a um desmatamento mais concentrado perto dessas rodovias, ao invés de um padrão mais extensivo e explahado ao redor de rodovias que não são próximas de áreas protegidas.","Existem estados que são mais predispostos a apresentar maiores quantidades de supressão. Foi discutido que isso pode variar de acordo com a posição geográfica dos estados, que podem sofrer menos supressões por estarem mais isolados.","O crescimento populacional aumenta a demanda por alimentos e por outros recursos naturais presentes em vegetações naturais.","O aumento da demanda por alimentos, causado pelo crescimento populacional, leva a supressão de vegetação natural para p estabelecimento de agricultura. Isso ocorre especialmente em países onde não há avanços na produtividade da produção agrícola.","A extração de madeira leva a alteração da vegetação natural, e é acompanhada pela construção de novas estradas, consideradas como uma causa da supressão. Também é discutida a extração de recursos para o uso como combustível de residências, que podem levar a supressão.",null,"Desastres como queimadas e deslizamentos de terra podem levar a supressão.","A falta de conhecimento e a falta de estrutura de instituições responsáveis pela gestão são fatores que podem influenciar na ocorrência de supressão.","Áreas com menor qualidade de vida e maior densidade populacional tendem a apresentar mais supressão. Porém, os autores afirmaram não haver relação estatística entre qualidade de vida e ocorrência de supressão.","Áreas com maior população tendem a apresentar maior supressão.","Áreas com maior densidade populacional tendem a apresentar maior supressão.","O crescimento populacional não se mostrou correlacionado com a ocorrẽncia de supressão.","Quanto maior a área de pastagem, maior a ocorrência de supressão.","A violência não se mostrou relacionada com a ocorrẽncia de supressão.",null,"Em países com alto nível de desenvolvimento humano, o porduto interno bruto (PIB) e população bruta não apresentaram efeitos na supressão de vegetação nativa. Porém, esse efeito foi observado em países com baixo nível de desenvolvimento humano.","Maiores níceis de pobreza leva a mais ocorrẽncias de supressão. Porém, é discutido que a forma de redução da pobreza pode levar a aumento de supressão em curto prazo, mas numa diminuição de supressões a longo prazo.","A construção de novas estradas facilita o transporte de recursos obtidos de vegetações naturais, levando ao aumento da supressão. A autora descreve o processo em que empresas extrativistas estabelecem estradas e abandonam a área depois de anos, deixando espaço para o estabelecimento da agricultura nesses locais.","O aumento da população, somado com a falta de áreas, leva a supressão ou a ocupação de área que já foram suprimidas.","Caso a atividade agricola se mostre lucrativa, e há a dispobilidade de remanecentes naturais, há uma tendência na ocorrência de supressão. Porém, isso depende do contexto, já que na ausência de pobreza, a lucratividade não iria aumentar a supressão, como discutido pela autora.",null,null,null]},"columns":[{"id":"id","name":"Identificação","type":"character","filterable":true,"grouped":"function(cellInfo) {return cellInfo.value}","html":true},{"id":"object","name":"Objeto","type":"character","filterable":true},{"id":"condition","name":"Descrição","type":"character","filterable":true}],"groupBy":["id"],"defaultPageSize":1,"showPageSizeOptions":true,"pageSizeOptions":[1,5,10,20],"paginationType":"jump","highlight":true,"striped":true,"language":{"filterPlaceholder":"Procurar...","pageNext":"Próxima","pagePrevious":"Anterior","pageNumbers":"{page} de {pages}","pageInfo":"Mostrando {rowStart}–{rowEnd} de {rows} itens","pageSizeOptions":"Mostrar {rows}"},"dataKey":"607464fcd1baedec3da2905ecac79721"},"children":[]},"class":"reactR_markup"},"evals":["tag.attribs.columns.0.grouped"],"jsHooks":[]}</script>
+</div>
+</div>
+</figure>
+</div>
+</div>
+<p>A partir das informações disponíveis, o modelo teórico foi desenvolvido através da repetição de um exercício de retrodução, como explicado na <a href="02_methods.html#sec-methods-modteo" class="quarto-xref"><span>Seção 2.2</span></a>. Nos pŕoximos paragráfos farei uma descrição do processo de retrodução para alguns objetos identificados na literatura e nas entrevistas.</p>
+<section id="o-caso-das-rodovias" class="level4" data-number="3.1.1.1">
+<h4 data-number="3.1.1.1" class="anchored" data-anchor-id="o-caso-das-rodovias"><span class="header-section-number">3.1.1.1</span> O caso das rodovias</h4>
+<p>Um dos objetos mais discutidos na literatura são as rodovias e estradas (aqui chamadas somente como rodovias), sendo consideradas como um dos fatores mais importantes para a ocorrência da <button class="glossary" title="">SVN</button>. Já sendo um objeto de relevância conhecida, agora é necessário realizar a seguinte pergunta: se a presença de rodovias causa a supressão, quais são as condições necessárias para que essa relação seja real? A partir dessa pergunta refletimos se a simples presença de uma rodovia em proximidade à um remanecente de vegetação nativa irá necessariamente causar sua supressão.</p>
+<p>As rodovias servem como um meio de transporte de pessoas, maquinários e bens de consumo, portanto elas podem oferecer uma facilidade tanto para o acesso à um remanecente de vegetação natural e a execução de sua supressão, quanto para o transporte dos recursos extraídos da área aonde a supressão ocorreu <span class="citation" data-cites="laurance-2002 rosa-2013 miyamoto-2020">(<a href="#ref-laurance-2002" role="doc-biblioref">Laurance et al. 2002</a>; <a href="#ref-rosa-2013" role="doc-biblioref">Rosa et al. 2013</a>; <a href="#ref-miyamoto-2020" role="doc-biblioref">Miyamoto 2020</a>)</span>. Somente a facilidade de acesso e transporte de bens não seriam as únicas vantagens oferecidas pela presença de rodovias, a apropriação e venda das áreas suprimidas também é um possível ganho financeiro proporcionado pela <button class="glossary" title="">SVN</button> <span class="citation" data-cites="fearnside-1983">(<a href="#ref-fearnside-1983" role="doc-biblioref">Fearnside 1983</a>)</span>. Porém, mesmo com vantagens financeiras aparentes, nem todos os remanecentes de vegetação nativa nas proximidades de rodovias sofrem supressão, portanto imaginamos que existem contrapontos que podem ser mais fortes do que os ganhos proporcionados pela supressão. No Brasil, a presença de áreas protegidas por lei são um exemplo visto como bem sucedido para evitar supressões <span class="citation" data-cites="barber-2014">(<a href="#ref-barber-2014" role="doc-biblioref">Barber et al. 2014</a>)</span>, e que tem esse efeito mesmo quando localizados próximos a rodovias <span class="citation" data-cites="rosa-2013">(<a href="#ref-rosa-2013" role="doc-biblioref">Rosa et al. 2013</a>)</span>.</p>
+</section>
+</section>
+<section id="formalização-do-modelo-teórico" class="level3" data-number="3.1.2">
+<h3 data-number="3.1.2" class="anchored" data-anchor-id="formalização-do-modelo-teórico"><span class="header-section-number">3.1.2</span> Formalização do Modelo Teórico</h3>
+<p>O mecanismo generativo proposto para a <button class="glossary" title="">SVN</button> é composto por quatro objetos:</p>
 <ul>
-<li>Value: It is the possible values that can be attributed to a certain natural vegetation, occuping a certain space at a certain time;</li>
-<li>Gains: The benefits that supressing a certain natural vegetation (in a certain space, at a certain time) may provide to the agent that is performing the action of supression;</li>
-<li>Losses: The drawbacks that may arise against the agent, as a concequence of its action of supression of a certain natural vegetation (in a certain space, at a certain time);</li>
-<li>Work: Is the physical manifestation of a social agent performing the action of natural vegetation suppression;</li>
+<li>Valor: São valores abstratos que podem ser atribuídos a uma determinada vegetação natural, ocupando um determinado espaço num determinado momento;</li>
+<li>Benefícios: Os benefícios que a supressão de uma determinada vegetação natural (num determinado espaço, num determinado momento) pode proporcionar aos agentes envolvidos na ação de supressão;</li>
+<li>Malefícios: Os inconvenientes que podem surgir contra o agente, como consequência da sua ação de supressão de uma determinada vegetação natural (num determinado espaço, num determinado tempo);</li>
+<li>Trabalho: É a manifestação física de um agente social que realiza a ação de supressão da vegetação natural;</li>
 </ul>
-<p>The causal mechanism is the relationship between the value of a natural vegetation, and the gain and losses of its suppression, followed the possibility of work. The NVS will be manifested when the causal mechanism is triggered, therefore, when there is a favorable opportunity, and there is the possibility of execution.</p>
-<p>According to the ontological paradigm being adopted, this causal mechanism lies in the domain of the real. I assume that it is absolute, in the sense that it do not change over time and space, and that the analysed phenomena (the NVS) is manifested only when this causal mechanism is triggered.</p>
-<p>The causal mechanism is trigerred when a social agent and the natural vegetation exists in the same space and time, and when the dillema of the supression arises. The context of the situation in which the causal mechanism is triggrered will define the characteristics of value, gains, losses and work. This means that while the causal mechanism do not change over time and space, it will be manifested as different forms, depending of the context. The idea developed in this paragraph depicts the actual domain of the adopted ontology paradigm.</p>
-<p>The form in which the NVS causal mechanism will manifest changes according to the situation context. The value of a natural vegetation, the gains and losses from its supression, and the work demanded for its execution are never the same, they are situational. The value of a natural vegetation can be easily represented by cultural aspects of social agents, while gains and losses can be represented as material and social capital, and work can be related to technology and momentum.</p>
-<p>However, how these aspects of the NVS causal mechanisms are perceived and interpreted by the social agents when it is trigerred is always partial. The social agent does not have access, or it is insensible, to certain values of the natural vegetation. The social agent has also a partial perception of gains and losses, it does not know all consequences of their action. At last, the work that executed the suppression is not always percepted, as it can be unintentional.</p>
+<p>O mecanismo causal é a relação entre o valor atribuído à uma vegetação natural, e os benefícios e maleficios resultantes de sua supressão, seguida da possibilidade de execução do trabalho. A <button class="glossary" title="">SVN</button> se manifestará quando o mecanismo causal for acionado, portanto, quando houver um contexto favorável, e houver a possibilidade de execução da supressão.</p>
+<p>De acordo com o paradigma ontológico adotado, este mecanismo generativo situa-se no <button class="glossary" title="O domínio real">domínio real</button>. Portanto eu assumo que ele é permanente, no sentido em que não se altera no tempo e no espaço, e que o fenômeno analisado, a <button class="glossary" title="">SVN</button> só se manifesta quando este mecanismo generativo é acionado.</p>
+<p>O mecanismo generativo pode ser acionado quando um agente social e a vegetação natural coexistem no mesmo espaço e tempo, surgindo um dilema sobre suprimir ou não a vegetação natural. O contexto da situação em que o mecanismo generativo é acionado, definirá as características do valor, dos benefícios, dos malefícios e da possibilidade de trabalho. Isto significa que, embora o mecanismo gemerativo não se altere ao longo do tempo e do espaço, ele mse manifesta de formas diferentes, de acordo com o contexto em que ele é acionado. A ideia desenvolvida neste parágrafo descreve o <button class="glossary" title="O domínio atual">domínio atual</button> do paradigma ontológico adotado.</p>
+<p>A forma em que o mecanismo da <button class="glossary" title="">SVN</button> se manifestará muda de acordo com o contexto da situação. O valor atribuído à uma vegetação natural, os benefícios e malefícios gerados por sua supressão, e o trabalho exigido para a sua execução nunca são os mesmos. O valor de uma vegetação natural pode ser representado por aspectos culturais dos agentes sociais, enquanto os benefícios e malefícios podem ser representados como aspectos econômicos e sociais dos agentes, e o trabalho pode ser relacionado com a técnologia a disposição.</p>
+<p>No entanto, a forma como esses aspectos do mecanismos generativo da <button class="glossary" title="">SVN</button> são percebidos e interpretados pelos agentes sociais é sempre parcial. O agente social não tem acesso, ou é insensível, a certos valores sobre uma vegetação natural. O agente social tem também uma perceção parcial dos benefícios e malefícios, portanto desconhece todas as consequências da sua ação. Por fim, o trabalho que executou a supressão nem sempre é percebido, pois pode ser involuntário.</p>
 </section>
-<section id="sociological-analysis" class="level2" data-number="3.2">
-<h2 data-number="3.2" class="anchored" data-anchor-id="sociological-analysis"><span class="header-section-number">3.2</span> Sociological Analysis</h2>
-<p>In this section I show the identified social actors and how they relate with each other in the dispute over land, determined by NVS. The results will also be represented as diagrams, that will show the relations between the social actors, and the capital of each.</p>
 </section>
-<section id="statistical-analysis" class="level2" data-number="3.3">
-<h2 data-number="3.3" class="anchored" data-anchor-id="statistical-analysis"><span class="header-section-number">3.3</span> Statistical Analysis</h2>
-<p>In this section I present the results from the quantitative analysis, from the exploratory data analysis to the statistical model predictions and interpretation.</p>
+<section id="análise-sociológica" class="level2" data-number="3.2">
+<h2 data-number="3.2" class="anchored" data-anchor-id="análise-sociológica"><span class="header-section-number">3.2</span> Análise Sociológica</h2>
+</section>
+<section id="análise-estatística" class="level2" data-number="3.3">
+<h2 data-number="3.3" class="anchored" data-anchor-id="análise-estatística"><span class="header-section-number">3.3</span> Análise Estatística</h2>
 <section id="exploratory-data-analysis" class="level3" data-number="3.3.1">
 <h3 data-number="3.3.1" class="anchored" data-anchor-id="exploratory-data-analysis"><span class="header-section-number">3.3.1</span> Exploratory Data Analysis</h3>
-<p>In this section I analyze each variable of my model. It is important to note that all quantitative analysis were performed in the data stored in the base grid. So the figures and tables do not show distributions of the raw observations/estimates, but the values that were transformed to fit the grid cells (<span class="quarto-unresolved-ref">?fig-base-grid</span>).</p>
+<p>In this section I analyze each variable of my model. It is important to note that all quantitative analysis were performed in the data stored in the base grid. So the figures and tables do not show distributions of the raw observations/estimates, but the values that were transformed to fit the grid cells (<a href="02_methods.html#fig-base-grid" class="quarto-xref">Figura&nbsp;<span>2.4</span></a>).</p>
 <p>All visualizations about the variables follows a common color scale, to facilitate their interpretation along the document (<span class="quarto-unresolved-ref">?fig-color-scale</span>). The minimum values are represented by light gray color, values close to the median shows a yellow color, and maximum values as dark red color.</p>
 <section id="natural-vegetation-suppression" class="level4" data-number="3.3.1.1">
 <h4 data-number="3.3.1.1" class="anchored" data-anchor-id="natural-vegetation-suppression"><span class="header-section-number">3.3.1.1</span> Natural Vegetation Suppression</h4>
@@ -282,20 +340,31 @@ Importante
 </div>
 </div>
 </div>
-<p>In the grid of analysis, the minimum area of NVS is 2 ha for the Amazon and Cerrado, and the maximum area is 18000 ha a year for the Amazon, and 12000 ha a year in the Cerrado <span class="quarto-unresolved-ref">?tbl-deforestation-summary</span>.</p>
-<div id="tbl-deforestation-summary" class="cell tbl-parent quarto-layout-panel anchored" data-tbl-cap="Summary table of yearly natural vegetation suppression.">
+<p>In the grid of analysis, the minimum area of NVS is 2 ha for the Amazon and Cerrado, and the maximum area is 18000 ha a year for the Amazon, and 12000 ha a year in the Cerrado <a href="#tbl-deforestation-summary" class="quarto-xref">Tabela&nbsp;<span>3.2</span></a>.</p>
+<div id="tbl-deforestation-summary" class="cell quarto-float anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-deforestation-summary-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Tabela&nbsp;3.2: Summary table of yearly natural vegetation suppression.
+</figcaption>
+<div aria-describedby="tbl-deforestation-summary-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 
+</div>
+</figure>
 </div>
 <p>The distribution of NVS area in the grid cells is heavily skewed towards smaller areas, specially in the Amazon, which also shows a high frequency of a diverse range of values <span class="quarto-unresolved-ref">?fig-deforestation-hist</span>. The distribution of NVS for the Cerrado is less skewed, and show more frequent values close to 1000 ha a year <span class="quarto-unresolved-ref">?fig-deforestation-hist</span>.</p>
 <p>The cumulative NVS area shows that grid cells with high values of NVS accounts for the majority of the total NVS in a year, for the Amazon NVS from 3000ha to 18000 ha, which are the 25% highest values, accounts for 79% of all NVS <span class="quarto-unresolved-ref">?fig-deforestation-cumsum</span>. For the Cerrado, NVS from 900 ha to 12000 ha, the 25% highest values, accounts for 57% of the total NVS <span class="quarto-unresolved-ref">?fig-deforestation-cumsum</span>.</p>
 <p>The spatial distribution of NVS shows a concentration in some regions of the Amazon, specially in areas in proximity to the Cerrado biome <span class="quarto-unresolved-ref">?fig-deforestation-spatial-distribution</span>. However, the distribution of NVS in the Cerrado shows a different pattern, where the NVS occurrence is spread in the whole biome <span class="quarto-unresolved-ref">?fig-deforestation-spatial-distribution</span>.</p>
-<p>The NVS time series shows periods of increase of NVS in the Amazon from 1985 to 2003, followed by a consistent drop of NVS area after 2003 <a href="#fig-deforestation-timeseries">Figura&nbsp;<span>3.1</span></a>. For the Cerrado, the NVS area have been decreasing since the start of the time series, with some periods of increase in 2004 and 2013.</p>
-<div class="cell" data-fig.asp="0.7">
+<p>The NVS time series shows periods of increase of NVS in the Amazon from 1985 to 2003, followed by a consistent drop of NVS area after 2003 <a href="#fig-deforestation-timeseries" class="quarto-xref">Figura&nbsp;<span>3.1</span></a>. For the Cerrado, the NVS area have been decreasing since the start of the time series, with some periods of increase in 2004 and 2013.</p>
+<div class="cell">
 <div class="cell-output-display">
-<div id="fig-deforestation-timeseries" class="quarto-figure quarto-figure-center anchored">
-<figure class="figure">
-<p><img src="03_results_files/figure-html/fig-deforestation-timeseries-1.png" class="img-fluid figure-img" alt="Time series." width="672"></p>
-<figcaption class="figure-caption">Figura&nbsp;3.1: Time series of natural vegetation suppression area.</figcaption>
+<div id="fig-deforestation-timeseries" class="quarto-figure quarto-figure-center quarto-float anchored" alt="Time series.">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-deforestation-timeseries-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="03_results_files/figure-html/fig-deforestation-timeseries-1.png" class="img-fluid figure-img" alt="Time series." width="672">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-deforestation-timeseries-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figura&nbsp;3.1: Time series of natural vegetation suppression area.
+</figcaption>
 </figure>
 </div>
 </div>
@@ -314,12 +383,19 @@ Importante
 <section id="policies" class="level4" data-number="3.3.1.3">
 <h4 data-number="3.3.1.3" class="anchored" data-anchor-id="policies"><span class="header-section-number">3.3.1.3</span> Policies</h4>
 <p>There are a large number of laws, decrees, resolutions and commitments made in Brazil with the objective to decrease NVS. These are organized in a timeline with some key policies related to NVS <span class="quarto-unresolved-ref">?fig-pp-timeline</span>.</p>
-<div class="cell scrolling" data-fig.asp="1.8">
+<div class="cell scrolling">
 
 </div>
-<p>The details of these policies are summarized in the <span class="quarto-unresolved-ref">?tbl-timeline</span>, which shows the beggining and end of the policy, their spatial coverage and a general description.</p>
-<div id="tbl-timeline" class="cell tbl-parent quarto-layout-panel anchored" data-tbl-cap="Table with policies related to Natural Vegetation Suppression.">
+<p>The details of these policies are summarized in the <a href="#tbl-timeline" class="quarto-xref">Tabela&nbsp;<span>3.3</span></a>, which shows the beggining and end of the policy, their spatial coverage and a general description.</p>
+<div id="tbl-timeline" class="cell quarto-float anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-timeline-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Tabela&nbsp;3.3: Table with policies related to Natural Vegetation Suppression.
+</figcaption>
+<div aria-describedby="tbl-timeline-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 
+</div>
+</figure>
 </div>
 </section>
 </section>
@@ -332,15 +408,30 @@ Importante
 <h1 class="unnumbered">References</h1>
 
 
-<div id="refs" class="references csl-bib-body hanging-indent" role="list">
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
+<div id="ref-barber-2014" class="csl-entry" role="listitem">
+Barber, Christopher P., Mark A. Cochrane, Carlos M. Souza, e William F. Laurance. 2014. <span>«Roads, deforestation, and the mitigating effect of protected areas in the Amazon»</span>. <em>Biological Conservation</em> 177: 203–9. <a href="https://doi.org/10.1016/j.biocon.2014.07.004">https://doi.org/10.1016/j.biocon.2014.07.004</a>.
+</div>
 <div id="ref-borges-2009" class="csl-entry" role="listitem">
 Borges, Luís Antônio Coimbra, José Luiz Pereira de Rezende, e José Aldo Alves Pereira. 2009. <span>«Evolução da legislação ambiental no Brasil»</span>. <em>Revista em Agronegócio e Meio Ambiente</em> 2 (3): 447–66.
 </div>
 <div id="ref-drummond-2009" class="csl-entry" role="listitem">
 Drummond, Jose Augusto, Jose Luiz de Andrade Franco, e Alessandro Bortoni Ninis. 2009. <span>«Brazilian Federal Conservation Units: A Historical Overview of their Creation and of their Current Status»</span>. <em>Environment and History</em> 15 (4): 463–91. <a href="https://doi.org/10.3197/096734009x12532652872036">https://doi.org/10.3197/096734009x12532652872036</a>.
 </div>
+<div id="ref-fearnside-1983" class="csl-entry" role="listitem">
+Fearnside, Philip M. 1983. <span>«Land-use Trends in the Brazilian Amazon Region as Factors in Accelerating Deforestation»</span>. <em>Environmental Conservation</em> 10 (2): 141–48. <a href="https://doi.org/10.1017/s0376892900012236">https://doi.org/10.1017/s0376892900012236</a>.
+</div>
+<div id="ref-laurance-2002" class="csl-entry" role="listitem">
+Laurance, William F., Ana K. M. Albernaz, Götz Schroth, Philip M. Fearnside, Scott Bergen, Eduardo M. Venticinque, e Carlos Da Costa. 2002. <span>«Predictors of deforestation in the Brazilian Amazon»</span>. <em>Journal of Biogeography</em> 29 (5–6): 737–48. <a href="https://doi.org/10.1046/j.1365-2699.2002.00721.x">https://doi.org/10.1046/j.1365-2699.2002.00721.x</a>.
+</div>
+<div id="ref-miyamoto-2020" class="csl-entry" role="listitem">
+Miyamoto, Motoe. 2020. <span>«Poverty reduction saves forests sustainably: Lessons for deforestation policies»</span>. <em>World Development</em> 127: 104746. <a href="https://doi.org/10.1016/j.worlddev.2019.104746">https://doi.org/10.1016/j.worlddev.2019.104746</a>.
+</div>
 <div id="ref-moreira-2021" class="csl-entry" role="listitem">
 Moreira, Kátia Soares, José Alves Junqueira Júnior, Paulo Eduardo de Oliveira Sousa, Heitor Soares Moreira, e Danielle Pereira Baliza. 2021. <span>«A evolução da legislação ambiental no contexto histórico brasileiro»</span>. <em>Research, Society and Development</em> 10 (2). <a href="https://doi.org/10.33448/rsd-v10i2.12087">https://doi.org/10.33448/rsd-v10i2.12087</a>.
+</div>
+<div id="ref-rosa-2013" class="csl-entry" role="listitem">
+Rosa, Isabel M. D., Drew Purves, Carlos Souza, e Robert M. Ewers. 2013. <span>«Predictive Modelling of Contagious Deforestation in the Brazilian Amazon»</span>. Editado por Bruno Hérault. <em>PLoS ONE</em> 8 (10): e77231. <a href="https://doi.org/10.1371/journal.pone.0077231">https://doi.org/10.1371/journal.pone.0077231</a>.
 </div>
 </div>
 </section>
@@ -425,10 +516,27 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     // clear code selection
     e.clearSelection();
   });
-  function tippyHover(el, contentFn) {
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
     const config = {
       allowHTML: true,
-      content: contentFn,
       maxWidth: 500,
       delay: 100,
       arrow: false,
@@ -438,8 +546,17 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       interactive: true,
       interactiveBorder: 10,
       theme: 'quarto',
-      placement: 'bottom-start'
+      placement: 'bottom-start',
     };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
     window.tippy(el, config); 
   }
   const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
@@ -451,7 +568,130 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       try { href = new URL(href).hash; } catch {}
       const id = href.replace(/^#\/?/, "");
       const note = window.document.getElementById(id);
-      return note.innerHTML;
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
     });
   }
       let selectedAnnoteEl;
@@ -495,6 +735,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
             }
             div.style.top = top - 2 + "px";
             div.style.height = height + 4 + "px";
+            div.style.left = 0;
             let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
             if (gutterDiv === null) {
               gutterDiv = window.document.createElement("div");
@@ -520,6 +761,32 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
         });
         selectedAnnoteEl = undefined;
       };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
       // Attach click handler to the DT
       const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
       for (const annoteDlNode of annoteDls) {
@@ -581,17 +848,18 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./02_methods.html" class="pagination-link">
+      <a href="./02_methods.html" class="pagination-link" aria-label="Método">
         <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Método</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./04_discussion.html" class="pagination-link">
-        <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Discussion</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./04_discussion.html" class="pagination-link" aria-label="Discussão">
+        <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Discussão</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
 </div> <!-- /content -->
+
 
 
 

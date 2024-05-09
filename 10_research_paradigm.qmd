@@ -1,4 +1,4 @@
-# Paradigm {#sec-paradigm}
+# Conceitos Fundamentais {#sec-paradigm}
 
 The research paradigm of this work is made explicit to inform the ontological and epistemological foundations of the project, and to justify the adopted methodologies, that will serve to answer the research questions. The research philosophy follows the Critical Realism, which defines the ontology and epistemology. The research methodology is a mixed method approach, applying a combination of grounded theory, field theory of Bourdieu, and statistical regression algorithms.
 

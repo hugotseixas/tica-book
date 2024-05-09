@@ -2,7 +2,7 @@
 css: styles.css
 ---
 
-# Results
+# Resultados
 
 ```{r}
 #| label: results-load
@@ -17,40 +17,105 @@ file_names <-
   )
 
 lapply(file_names, load, .GlobalEnv)
+
 ```
 
-## Theoretical Model
+## Modelo Teórico
 
-The NVS Theoretical Model have the purpose to formally describe the phenomena manifestation process. Therefore, before presenting the model, it is necessary to revisit the concept of NVS being adopted.
+### Desenvolvimento do Modelo Teórico
 
-The NVS, abbreviation for Natural Vegetation Suppression, is an action performed directly by humans, and consists of the transformation of an area occupied by natural vegetation. This transformation occurs by the removal of the natural vegetation to a degree in which the area is no longer recognized as a natural formation, by the human perception.
+O desenvolvimento do modelo teórico é parcialmente conduzido com base nos dados levantados pelas consultas à literatura e pelas entrevistas. Esses dados refletem minha interpretação do que foi escrito ou dito nos conteúdos disponíveis.
 
-To describe the NVS Theoretical Model, I especulate about the causal mechanism that, when manifested, materializes the NVS.
+A (@tbl-literatureresults) mostra parte das informações encontradas na literatura. Nela, é possível encontrar os objetos relacionados à {{< glossary "supressão de vegetação natural" display="SVN" >}}, e qual é a descrição da relação entre ambos.
 
-I propose four phenomena that composes the causal mechanism of NVS:
+```{r}
+#| label: tbl-literatureresults
+#| tbl-cap: Tabela de dados resultante das consultas à bibliografia.
+#| echo: false
 
-- Value: It is the possible values that can be attributed to a certain natural vegetation, occuping a certain space at a certain time;
-- Gains: The benefits that supressing a certain natural vegetation (in a certain space, at a certain time) may provide to the agent that is performing the action of supression;
-- Losses: The drawbacks that may arise against the agent, as a concequence of its action of supression of a certain natural vegetation (in a certain space, at a certain time);
-- Work: Is the physical manifestation of a social agent performing the action of natural vegetation suppression;
+# readxl::read_xlsx("./data/literature.xlsx") |>
+#   tidyr::unite(col = "id", id, doi, author, title, year, location, sep = "  \n - ") |>
+#   gt::gt(groupname_col = "id", process_md = TRUE) |>
+#   gt::cols_label(object = "Objeto", condition = "Condição") |>
+#   gt::tab_options(
+#     table.font.size = 14,
+#     table.width = gt::pct(90),
+#     quarto.disable_processing = TRUE,
+#     row_group.as_column = TRUE
+#   ) |>
+#   gt::sub_missing(missing_text = "-----") |>
+#   gt::opt_stylize(style = 1, color = "gray", add_row_striping = TRUE) |>
+#   gt::opt_table_lines(extent = "default")
 
-The causal mechanism is the relationship between the value of a natural vegetation, and the gain and losses of its suppression, followed the possibility of work. The NVS will be manifested when the causal mechanism is triggered, therefore, when there is a favorable opportunity, and there is the possibility of execution.
+readxl::read_xlsx("./data/literature.xlsx") |>
+  dplyr::arrange(year) |>
+  dplyr::mutate(id = dplyr::cur_group_id()) |>
+  tidyr::drop_na(object) |>
+  tidyr::unite(col = "id", id, doi, author, title, year, location, sep = "<br> <br>") |>
+  reactable::reactable(
+    groupBy = "id", 
+    paginationType = "jump",
+    defaultPageSize = 1,
+    showPageSizeOptions = TRUE,
+    pageSizeOptions = c(1, 5, 10, 20),
+    striped = TRUE,
+    highlight = TRUE,
+    columns = list(
+      id = reactable::colDef(
+        name = "Identificação",
+        html = TRUE,
+        grouped = reactable::JS("function(cellInfo) {return cellInfo.value}"),
+        filterable = TRUE
+      ),
+      object = reactable::colDef(name = "Objeto", filterable = TRUE),
+      condition = reactable::colDef(name = "Descrição", filterable = TRUE)
+    ),
+    language = reactable::reactableLang(
+      filterPlaceholder = "Procurar...",
+      pageSizeOptions = "Mostrar {rows}",
+      pageInfo = "Mostrando {rowStart}\u2013{rowEnd} de {rows} itens",
+      pagePrevious = "Anterior",
+      pageNext = "Próxima",
+      pageNumbers = "{page} de {pages}"
+    )
+  )
 
-According to the ontological paradigm being adopted, this causal mechanism lies in the domain of the real. I assume that it is absolute, in the sense that it do not change over time and space, and that the analysed phenomena (the NVS) is manifested only when this causal mechanism is triggered.
+```
 
-The causal mechanism is trigerred when a social agent and the natural vegetation exists in the same space and time, and when the dillema of the supression arises. The context of the situation in which the causal mechanism is triggrered will define the characteristics of value, gains, losses and work. This means that while the causal mechanism do not change over time and space, it will be manifested as different forms, depending of the context. The idea developed in this paragraph depicts the actual domain of the adopted ontology paradigm.
+A partir das informações disponíveis, o modelo teórico foi desenvolvido através da repetição de um exercício de retrodução, como explicado na @sec-methods-modteo. Nos pŕoximos paragráfos farei uma descrição do processo de retrodução para alguns objetos identificados na literatura e nas entrevistas.
 
-The form in which the NVS causal mechanism will manifest changes according to the situation context. The value of a natural vegetation, the gains and losses from its supression, and the work demanded for its execution are never the same, they are situational. The value of a natural vegetation can be easily represented by cultural aspects of social agents, while gains and losses can be represented as material and social capital, and work can be related to technology and momentum.
+#### O caso das rodovias
 
-However, how these aspects of the NVS causal mechanisms are perceived and interpreted by the social agents when it is trigerred is always partial. The social agent does not have access, or it is insensible, to certain values of the natural vegetation. The social agent has also a partial perception of gains and losses, it does not know all consequences of their action. At last, the work that executed the suppression is not always percepted, as it can be unintentional.
+Um dos objetos mais discutidos na literatura são as rodovias e estradas (aqui chamadas somente como rodovias), sendo consideradas como um dos fatores mais importantes para a ocorrência da {{< glossary "supressão de vegetação natural" display="SVN" >}}. Já sendo um objeto de relevância conhecida, agora é necessário realizar a seguinte pergunta: se a presença de rodovias causa a supressão, quais são as condições necessárias para que essa relação seja real? A partir dessa pergunta refletimos se a simples presença de uma rodovia em proximidade à um remanecente de vegetação nativa irá necessariamente causar sua supressão. Em seguida, realizamos outra pergunta: Embora a relação entre a presença de rodovias e a ocorrência da supressão seja real, em quais condições essa relação não irá se manifestar? 
 
-## Sociological Analysis
+As rodovias servem como um meio de transporte de pessoas, maquinários e bens de consumo, portanto elas podem oferecer uma facilidade tanto para o acesso à um remanecente de vegetação natural e a execução de sua supressão, quanto para o transporte dos recursos extraídos da área aonde a supressão ocorreu [@laurance-2002; @rosa-2013; @miyamoto-2020]. Somente a facilidade de acesso e transporte de bens não seriam as únicas vantagens oferecidas pela presença de rodovias, a apropriação e venda das áreas suprimidas também é um possível ganho financeiro proporcionado pela  {{< glossary "supressão de vegetação natural" display="SVN" >}} [@fearnside-1983]. Porém, mesmo com vantagens financeiras aparentes, nem todos os remanecentes de vegetação nativa nas proximidades de rodovias sofrem supressão, portanto imaginamos que existem contrapontos que podem ser mais fortes do que os ganhos proporcionados pela supressão. No Brasil, a presença de áreas protegidas por lei são um exemplo visto como bem sucedido para evitar supressões [@barber-2014], e que tem esse efeito mesmo quando localizados próximos a rodovias [@rosa-2013].
 
-In this section I show the identified social actors and how they relate with each other in the dispute over land, determined by NVS. The results will also be represented as diagrams, that will show the relations between the social actors, and the capital of each.
+### Formalização do Modelo Teórico
 
-## Statistical Analysis
+O mecanismo generativo proposto para a {{< glossary "supressão de vegetação natural" display="SVN" >}} é composto por quatro objetos:
 
-In this section I present the results from the quantitative analysis, from the exploratory data analysis to the statistical model predictions and interpretation.
+- Valor: São valores abstratos que podem ser atribuídos a uma determinada vegetação natural, ocupando um determinado espaço num determinado momento;
+- Benefícios: Os benefícios que a supressão de uma determinada vegetação natural (num determinado espaço, num determinado momento) pode proporcionar aos agentes envolvidos na ação de supressão;
+- Malefícios: Os inconvenientes que podem surgir contra o agente, como consequência da sua ação de supressão de uma determinada vegetação natural (num determinado espaço, num determinado tempo);
+- Trabalho: É a manifestação física de um agente social que realiza a ação de supressão da vegetação natural;
+
+O mecanismo causal é a relação entre o valor atribuído à uma vegetação natural, e os benefícios e maleficios resultantes de sua supressão, seguida da possibilidade de execução do trabalho. A {{< glossary "supressão de vegetação natural" display="SVN" >}} se manifestará quando o mecanismo causal for acionado, portanto, quando houver um contexto favorável, e houver a possibilidade de execução da supressão.
+
+De acordo com o paradigma ontológico adotado, este mecanismo generativo situa-se no {{< glossary "domínio real" >}}. Portanto eu assumo que ele é permanente, no sentido em que não se altera no tempo e no espaço, e que o fenômeno analisado, a {{< glossary "supressão de vegetação natural" display="SVN" >}} só se manifesta quando este mecanismo generativo é acionado.
+
+O mecanismo generativo pode ser acionado quando um agente social e a vegetação natural coexistem no mesmo espaço e tempo, surgindo um dilema sobre suprimir ou não a vegetação natural. O contexto da situação em que o mecanismo generativo é acionado, definirá as características do valor, dos benefícios, dos malefícios e da possibilidade de trabalho. Isto significa que, embora o mecanismo gemerativo não se altere ao longo do tempo e do espaço, ele mse manifesta de formas diferentes, de acordo com o contexto em que ele é acionado. A ideia desenvolvida neste parágrafo descreve o {{< glossary "domínio atual" >}} do paradigma ontológico adotado.
+
+A forma em que o mecanismo da {{< glossary "supressão de vegetação natural" display="SVN" >}} se manifestará muda de acordo com o contexto da situação. O valor atribuído à uma vegetação natural, os benefícios e malefícios gerados por sua supressão, e o trabalho exigido para a sua execução nunca são os mesmos. O valor de uma vegetação natural pode ser representado por aspectos culturais dos agentes sociais, enquanto os benefícios e malefícios podem ser representados como aspectos econômicos e sociais dos agentes, e o trabalho pode ser relacionado com a técnologia a disposição.
+
+No entanto, a forma como esses aspectos do mecanismos generativo da {{< glossary "supressão de vegetação natural" display="SVN" >}} são percebidos e interpretados pelos agentes sociais é sempre parcial. O agente social não tem acesso, ou é insensível, a certos valores sobre uma vegetação natural. O agente social tem também uma perceção parcial dos benefícios e malefícios, portanto desconhece todas as consequências da sua ação. Por fim, o trabalho que executou a supressão nem sempre é percebido, pois pode ser involuntário.
+
+## Análise Sociológica
+
+
+
+## Análise Estatística
+
+
 
 ### Exploratory Data Analysis
 

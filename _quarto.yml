@@ -32,6 +32,7 @@ book:
     - 05_conclusions.qmd
   appendices:
     - 10_research_paradigm.qmd
+    - 11_research_data.qmd
 
 glossary:
   path: glossary.yml

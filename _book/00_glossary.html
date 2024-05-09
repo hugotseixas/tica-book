@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="pt" xml:lang="pt"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.3.450">
+<meta name="generator" content="quarto-1.4.554">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -48,7 +48,13 @@ ul.task-list li input[type="checkbox"] {
   "collapse-after": 3,
   "panel-placement": "start",
   "type": "textbox",
-  "limit": 20,
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
   "language": {
     "search-no-results-text": "Nenhum resultado",
     "search-matching-documents-text": "documentos correspondentes",
@@ -57,6 +63,7 @@ ul.task-list li input[type="checkbox"] {
     "search-more-match-text": "mais correspondência neste documento",
     "search-more-matches-text": "mais correspondências neste documento",
     "search-clear-button-title": "Limpar",
+    "search-text-placeholder": "",
     "search-detached-cancel-button-title": "Cancelar",
     "search-submit-button-title": "Enviar",
     "search-label": "Procurar"
@@ -68,6 +75,11 @@ ul.task-list li input[type="checkbox"] {
 }
 </script>
 <script async="" src="https://hypothes.is/embed.js"></script>
+<script>
+  window.document.addEventListener("DOMContentLoaded", function (_event) {
+    document.body.classList.add('hypothesis-enabled');
+  });
+</script>
 
 
 </head>
@@ -78,12 +90,12 @@ ul.task-list li input[type="checkbox"] {
   <header id="quarto-header" class="headroom fixed-top">
   <nav class="quarto-secondary-nav">
     <div class="container-fluid d-flex">
-      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./00_glossary.html">Glossário</a></li></ol></nav>
-      <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
-      </a>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./00_glossary.html">Glossário</a></li></ol></nav>
+        <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
         <i class="bi bi-search"></i>
       </button>
@@ -93,7 +105,7 @@ ul.task-list li input[type="checkbox"] {
 <!-- content -->
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation docked overflow-auto">
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header sidebar-header-stacked">
       <a href="./index.html" class="sidebar-logo-link">
       <img src="./figs/art/logo.png" alt="" class="sidebar-logo py-0 d-lg-inline d-none">
@@ -136,19 +148,19 @@ ul.task-list li input[type="checkbox"] {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./03_results.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Results</span></span></a>
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Resultados</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./04_discussion.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Discussion</span></span></a>
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Discussão</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./05_conclusions.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Conclusions</span></span></a>
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Conclusões</span></span></a>
   </div>
 </li>
         <li class="sidebar-item sidebar-item-section">
@@ -163,7 +175,13 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./10_research_paradigm.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">A</span>&nbsp; <span class="chapter-title">Paradigm</span></span></a>
+ <span class="menu-text"><span class="chapter-number">A</span>&nbsp; <span class="chapter-title">Conceitos Fundamentais</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./11_research_data.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">B</span>&nbsp; <span class="chapter-title">Processamento dos dados</span></span></a>
   </div>
 </li>
       </ul>
@@ -171,7 +189,7 @@ ul.task-list li input[type="checkbox"] {
     </ul>
     </div>
 </nav>
-<div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     
 <!-- main -->
@@ -192,28 +210,30 @@ ul.task-list li input[type="checkbox"] {
   </div>
   
 
+
 </header>
+
 
 <div class="cell">
 <div class="cell-output-display">
-
-<div id="lablzkrhej" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#lablzkrhej table {
+<div>
+<div id="odmwykycgi" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#odmwykycgi table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#lablzkrhej thead, #lablzkrhej tbody, #lablzkrhej tfoot, #lablzkrhej tr, #lablzkrhej td, #lablzkrhej th {
+#odmwykycgi thead, #odmwykycgi tbody, #odmwykycgi tfoot, #odmwykycgi tr, #odmwykycgi td, #odmwykycgi th {
   border-style: none;
 }
 
-#lablzkrhej p {
+#odmwykycgi p {
   margin: 0;
   padding: 0;
 }
 
-#lablzkrhej .gt_table {
+#odmwykycgi .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -239,12 +259,12 @@ ul.task-list li input[type="checkbox"] {
   border-left-color: #D3D3D3;
 }
 
-#lablzkrhej .gt_caption {
+#odmwykycgi .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#lablzkrhej .gt_title {
+#odmwykycgi .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -256,7 +276,7 @@ ul.task-list li input[type="checkbox"] {
   border-bottom-width: 0;
 }
 
-#lablzkrhej .gt_subtitle {
+#odmwykycgi .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -268,7 +288,7 @@ ul.task-list li input[type="checkbox"] {
   border-top-width: 0;
 }
 
-#lablzkrhej .gt_heading {
+#odmwykycgi .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -280,13 +300,13 @@ ul.task-list li input[type="checkbox"] {
   border-right-color: #D3D3D3;
 }
 
-#lablzkrhej .gt_bottom_border {
+#odmwykycgi .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #5F5F5F;
 }
 
-#lablzkrhej .gt_col_headings {
+#odmwykycgi .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #5F5F5F;
@@ -301,7 +321,7 @@ ul.task-list li input[type="checkbox"] {
   border-right-color: #D3D3D3;
 }
 
-#lablzkrhej .gt_col_heading {
+#odmwykycgi .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -321,7 +341,7 @@ ul.task-list li input[type="checkbox"] {
   overflow-x: hidden;
 }
 
-#lablzkrhej .gt_column_spanner_outer {
+#odmwykycgi .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -333,15 +353,15 @@ ul.task-list li input[type="checkbox"] {
   padding-right: 4px;
 }
 
-#lablzkrhej .gt_column_spanner_outer:first-child {
+#odmwykycgi .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#lablzkrhej .gt_column_spanner_outer:last-child {
+#odmwykycgi .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#lablzkrhej .gt_column_spanner {
+#odmwykycgi .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #5F5F5F;
@@ -353,11 +373,11 @@ ul.task-list li input[type="checkbox"] {
   width: 100%;
 }
 
-#lablzkrhej .gt_spanner_row {
+#odmwykycgi .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#lablzkrhej .gt_group_heading {
+#odmwykycgi .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -383,7 +403,7 @@ ul.task-list li input[type="checkbox"] {
   text-align: left;
 }
 
-#lablzkrhej .gt_empty_group_heading {
+#odmwykycgi .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -398,15 +418,15 @@ ul.task-list li input[type="checkbox"] {
   vertical-align: middle;
 }
 
-#lablzkrhej .gt_from_md > :first-child {
+#odmwykycgi .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#lablzkrhej .gt_from_md > :last-child {
+#odmwykycgi .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#lablzkrhej .gt_row {
+#odmwykycgi .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -425,7 +445,7 @@ ul.task-list li input[type="checkbox"] {
   overflow-x: hidden;
 }
 
-#lablzkrhej .gt_stub {
+#odmwykycgi .gt_stub {
   color: #FFFFFF;
   background-color: #5F5F5F;
   font-size: 100%;
@@ -438,7 +458,7 @@ ul.task-list li input[type="checkbox"] {
   padding-right: 5px;
 }
 
-#lablzkrhej .gt_stub_row_group {
+#odmwykycgi .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -452,15 +472,15 @@ ul.task-list li input[type="checkbox"] {
   vertical-align: top;
 }
 
-#lablzkrhej .gt_row_group_first td {
+#odmwykycgi .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#lablzkrhej .gt_row_group_first th {
+#odmwykycgi .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#lablzkrhej .gt_summary_row {
+#odmwykycgi .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -470,16 +490,16 @@ ul.task-list li input[type="checkbox"] {
   padding-right: 5px;
 }
 
-#lablzkrhej .gt_first_summary_row {
+#odmwykycgi .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #5F5F5F;
 }
 
-#lablzkrhej .gt_first_summary_row.thick {
+#odmwykycgi .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#lablzkrhej .gt_last_summary_row {
+#odmwykycgi .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -489,7 +509,7 @@ ul.task-list li input[type="checkbox"] {
   border-bottom-color: #5F5F5F;
 }
 
-#lablzkrhej .gt_grand_summary_row {
+#odmwykycgi .gt_grand_summary_row {
   color: #333333;
   background-color: #D5D5D5;
   text-transform: inherit;
@@ -499,7 +519,7 @@ ul.task-list li input[type="checkbox"] {
   padding-right: 5px;
 }
 
-#lablzkrhej .gt_first_grand_summary_row {
+#odmwykycgi .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -509,7 +529,7 @@ ul.task-list li input[type="checkbox"] {
   border-top-color: #5F5F5F;
 }
 
-#lablzkrhej .gt_last_grand_summary_row_top {
+#odmwykycgi .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -519,11 +539,11 @@ ul.task-list li input[type="checkbox"] {
   border-bottom-color: #5F5F5F;
 }
 
-#lablzkrhej .gt_striped {
+#odmwykycgi .gt_striped {
   background-color: #F4F4F4;
 }
 
-#lablzkrhej .gt_table_body {
+#odmwykycgi .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #5F5F5F;
@@ -532,7 +552,7 @@ ul.task-list li input[type="checkbox"] {
   border-bottom-color: #5F5F5F;
 }
 
-#lablzkrhej .gt_footnotes {
+#odmwykycgi .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -546,7 +566,7 @@ ul.task-list li input[type="checkbox"] {
   border-right-color: #D3D3D3;
 }
 
-#lablzkrhej .gt_footnote {
+#odmwykycgi .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -555,7 +575,7 @@ ul.task-list li input[type="checkbox"] {
   padding-right: 5px;
 }
 
-#lablzkrhej .gt_sourcenotes {
+#odmwykycgi .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -569,7 +589,7 @@ ul.task-list li input[type="checkbox"] {
   border-right-color: #D3D3D3;
 }
 
-#lablzkrhej .gt_sourcenote {
+#odmwykycgi .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -577,99 +597,154 @@ ul.task-list li input[type="checkbox"] {
   padding-right: 5px;
 }
 
-#lablzkrhej .gt_left {
+#odmwykycgi .gt_left {
   text-align: left;
 }
 
-#lablzkrhej .gt_center {
+#odmwykycgi .gt_center {
   text-align: center;
 }
 
-#lablzkrhej .gt_right {
+#odmwykycgi .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#lablzkrhej .gt_font_normal {
+#odmwykycgi .gt_font_normal {
   font-weight: normal;
 }
 
-#lablzkrhej .gt_font_bold {
+#odmwykycgi .gt_font_bold {
   font-weight: bold;
 }
 
-#lablzkrhej .gt_font_italic {
+#odmwykycgi .gt_font_italic {
   font-style: italic;
 }
 
-#lablzkrhej .gt_super {
+#odmwykycgi .gt_super {
   font-size: 65%;
 }
 
-#lablzkrhej .gt_footnote_marks {
+#odmwykycgi .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#lablzkrhej .gt_asterisk {
+#odmwykycgi .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#lablzkrhej .gt_indent_1 {
+#odmwykycgi .gt_indent_1 {
   text-indent: 5px;
 }
 
-#lablzkrhej .gt_indent_2 {
+#odmwykycgi .gt_indent_2 {
   text-indent: 10px;
 }
 
-#lablzkrhej .gt_indent_3 {
+#odmwykycgi .gt_indent_3 {
   text-indent: 15px;
 }
 
-#lablzkrhej .gt_indent_4 {
+#odmwykycgi .gt_indent_4 {
   text-indent: 20px;
 }
 
-#lablzkrhej .gt_indent_5 {
+#odmwykycgi .gt_indent_5 {
   text-indent: 25px;
 }
 </style>
-<table class="gt_table" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
-  
-  <tbody class="gt_table_body">
-    <tr class="gt_group_heading_row">
-      <th colspan="2" class="gt_group_heading" style="font-size: 24px; font-weight: bold; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: transparent;" scope="colgroup" id="H">H</th>
-    </tr>
-    <tr class="gt_row_group_first"><td headers="H  term" class="gt_row gt_left">Habitus</td>
-<td headers="H  definition" class="gt_row gt_left">Habitus é a descrição do efeito da estrutura social sobre a ação de um agente social, que por sua vez possui um potencial efeito transformativo sobre a própria estrutura social. Portanto, habitus pode ser considerado como uma interface entre estrutura social e agente social, em que ambos são mutuamente afetados, ou seja, são interdependentes.</td></tr>
-    <tr class="gt_group_heading_row">
-      <th colspan="2" class="gt_group_heading" style="font-size: 24px; font-weight: bold; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: transparent;" scope="colgroup" id="M">M</th>
-    </tr>
-    <tr class="gt_row_group_first"><td headers="M  term" class="gt_row gt_left gt_striped">Mecanismo Generativo</td>
-<td headers="M  definition" class="gt_row gt_left gt_striped">Mecanismos Generativos são configurações de objetos intransitivos que, quando realizadas, causam a ocorrência de eventos no universo. Esses mecanismos são permanentes e existem independentemente de sua realização.
-</td></tr>
-    <tr class="gt_group_heading_row">
-      <th colspan="2" class="gt_group_heading" style="font-size: 24px; font-weight: bold; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: transparent;" scope="colgroup" id="O">O</th>
-    </tr>
-    <tr class="gt_row_group_first"><td headers="O  term" class="gt_row gt_left">Objeto Transitivo</td>
-<td headers="O  definition" class="gt_row gt_left">É a integralização de conhecimentos sobre determinado objeto, a socialização de tudo que percebemos. Por exemplo, se pensarmos em uma rodovia: o que define ela como rodovia, pra que ela serve, a relação dela com demais objetos, essas são definições sociais que representam a idéia de rodovia como um objeto transitivo. Portanto, objetos transitivos são dependentes do nosso conhecimento sobre eles.
-</td></tr>
-    <tr><td headers="O  term" class="gt_row gt_left gt_striped">Objeto Intransitivo</td>
-<td headers="O  definition" class="gt_row gt_left gt_striped">Objetos intransitivos são entidades que constituem o universo. Tais entidades são permanentes e independentes do nosso conhecimento sobre elas.
-</td></tr>
-    <tr class="gt_group_heading_row">
-      <th colspan="2" class="gt_group_heading" style="font-size: 24px; font-weight: bold; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: transparent;" scope="colgroup" id="S">S</th>
-    </tr>
-    <tr class="gt_row_group_first"><td headers="S  term" class="gt_row gt_left">Supressão de Vegetação Natural</td>
-<td headers="S  definition" class="gt_row gt_left">Supressão de Vegetação Natural (SVN) 
-</td></tr>
-  </tbody>
-  
-  
+
+<table class="gt_table table table-sm table-striped small" data-quarto-postprocess="true" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
+<tbody class="gt_table_body">
+<tr class="odd gt_group_heading_row">
+<td colspan="2" id="C" class="gt_group_heading" data-quarto-table-cell-role="th" style="font-size: 24px; font-weight: bold; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: transparent" scope="colgroup">C</td>
+</tr>
+<tr class="even gt_row_group_first">
+<td class="gt_row gt_left" headers="C  term">Campo Social</td>
+<td class="gt_row gt_left" headers="C  definition">Campo social</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left gt_striped" headers="C  term">Campo do Poder</td>
+<td class="gt_row gt_left gt_striped" headers="C  definition">O campo do poder representa um espaço que permeia todos os campos sociais, aonde ocorrem uma disputas por poder. A autoridade obtida dentro do campo do poder não pode ser reduzida por um tipo de capital especifico em um campo social específico.</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="C  term">Capital</td>
+<td class="gt_row gt_left" headers="C  definition">Capital</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left gt_striped" headers="C  term">Capital Econômico</td>
+<td class="gt_row gt_left gt_striped" headers="C  definition">Capital Econômico</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="C  term">Capital Social</td>
+<td class="gt_row gt_left" headers="C  definition">Capital Social</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left gt_striped" headers="C  term">Capital Cultural</td>
+<td class="gt_row gt_left gt_striped" headers="C  definition">Capital Cultural</td>
+</tr>
+<tr class="even gt_group_heading_row">
+<td colspan="2" id="D" class="gt_group_heading" data-quarto-table-cell-role="th" style="font-size: 24px; font-weight: bold; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: transparent" scope="colgroup">D</td>
+</tr>
+<tr class="odd gt_row_group_first">
+<td class="gt_row gt_left" headers="D  term">Domínio Real</td>
+<td class="gt_row gt_left" headers="D  definition">O domínio real</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left gt_striped" headers="D  term">Domínio Atual</td>
+<td class="gt_row gt_left gt_striped" headers="D  definition">O domínio atual</td>
+</tr>
+<tr class="odd gt_group_heading_row">
+<td colspan="2" id="H" class="gt_group_heading" data-quarto-table-cell-role="th" style="font-size: 24px; font-weight: bold; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: transparent" scope="colgroup">H</td>
+</tr>
+<tr class="even gt_row_group_first">
+<td class="gt_row gt_left" headers="H  term">Habitus</td>
+<td class="gt_row gt_left" headers="H  definition">Habitus é a descrição do efeito da estrutura social sobre a ação de um agente social, que por sua vez possui um potencial efeito transformativo sobre a própria estrutura social. Portanto, habitus pode ser considerado como uma interface entre estrutura social e agente social, em que ambos são mutuamente afetados, ou seja, são interdependentes.</td>
+</tr>
+<tr class="odd gt_group_heading_row">
+<td colspan="2" id="M" class="gt_group_heading" data-quarto-table-cell-role="th" style="font-size: 24px; font-weight: bold; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: transparent" scope="colgroup">M</td>
+</tr>
+<tr class="even gt_row_group_first">
+<td class="gt_row gt_left gt_striped" headers="M  term">Mecanismo Generativo</td>
+<td class="gt_row gt_left gt_striped" headers="M  definition">Mecanismos Generativos são configurações de objetos intransitivos que, quando realizadas, causam a ocorrência de eventos no universo. Esses mecanismos são permanentes e existem independentemente de sua realização.</td>
+</tr>
+<tr class="odd gt_group_heading_row">
+<td colspan="2" id="O" class="gt_group_heading" data-quarto-table-cell-role="th" style="font-size: 24px; font-weight: bold; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: transparent" scope="colgroup">O</td>
+</tr>
+<tr class="even gt_row_group_first">
+<td class="gt_row gt_left" headers="O  term">Objeto Transitivo</td>
+<td class="gt_row gt_left" headers="O  definition">Objetos transitivos são a integralização de conhecimentos sobre determinado objeto, a socialização de tudo que percebemos. Por exemplo, se pensarmos em uma rodovia: o que define ela como rodovia, pra que ela serve, a relação dela com demais objetos, essas são definições sociais que representam a idéia de rodovia como um objeto transitivo. Portanto, objetos transitivos são dependentes do nosso conhecimento sobre eles.</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left gt_striped" headers="O  term">Objeto Intransitivo</td>
+<td class="gt_row gt_left gt_striped" headers="O  definition">Objetos intransitivos são entidades que constituem o universo. Tais entidades são permanentes e independentes do nosso conhecimento sobre elas.</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="O  term">Observação</td>
+<td class="gt_row gt_left" headers="O  definition">Observação</td>
+</tr>
+<tr class="odd gt_group_heading_row">
+<td colspan="2" id="S" class="gt_group_heading" data-quarto-table-cell-role="th" style="font-size: 24px; font-weight: bold; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: transparent" scope="colgroup">S</td>
+</tr>
+<tr class="even gt_row_group_first">
+<td class="gt_row gt_left gt_striped" headers="S  term">Supressão de Vegetação Natural</td>
+<td class="gt_row gt_left gt_striped" headers="S  definition">Supressão de Vegetação Natural (SVN) é uma ação realizada pelo homem, e consiste na transformação de uma área originalmente ocupada por alguma vegetação natural. Essa transformação ocorre pela remoção da vegetação natural a um grau em que esta área não é mais reconhecida como uma formação natural, passando a ser reconhecida como uma ocupação antrópica.</td>
+</tr>
+<tr class="odd gt_group_heading_row">
+<td colspan="2" id="V" class="gt_group_heading" data-quarto-table-cell-role="th" style="font-size: 24px; font-weight: bold; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: transparent" scope="colgroup">V</td>
+</tr>
+<tr class="even gt_row_group_first">
+<td class="gt_row gt_left" headers="V  term">Variável</td>
+<td class="gt_row gt_left" headers="V  definition">Uma variável é uma representação de um objeto transitivo em forma quantitativa ou qualitativa. Ela é representada como uma coluna em uma tabela de dados.</td>
+</tr>
+</tbody>
 </table>
+
+</div>
 </div>
 </div>
 </div>
@@ -756,10 +831,27 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     // clear code selection
     e.clearSelection();
   });
-  function tippyHover(el, contentFn) {
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
     const config = {
       allowHTML: true,
-      content: contentFn,
       maxWidth: 500,
       delay: 100,
       arrow: false,
@@ -769,8 +861,17 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       interactive: true,
       interactiveBorder: 10,
       theme: 'quarto',
-      placement: 'bottom-start'
+      placement: 'bottom-start',
     };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
     window.tippy(el, config); 
   }
   const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
@@ -782,7 +883,130 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       try { href = new URL(href).hash; } catch {}
       const id = href.replace(/^#\/?/, "");
       const note = window.document.getElementById(id);
-      return note.innerHTML;
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
     });
   }
       let selectedAnnoteEl;
@@ -826,6 +1050,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
             }
             div.style.top = top - 2 + "px";
             div.style.height = height + 4 + "px";
+            div.style.left = 0;
             let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
             if (gutterDiv === null) {
               gutterDiv = window.document.createElement("div");
@@ -851,6 +1076,32 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
         });
         selectedAnnoteEl = undefined;
       };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
       // Attach click handler to the DT
       const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
       for (const annoteDlNode of annoteDls) {
@@ -912,17 +1163,18 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./index.html" class="pagination-link">
+      <a href="./index.html" class="pagination-link" aria-label="Prefácio">
         <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Prefácio</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./01_introduction.html" class="pagination-link">
+      <a href="./01_introduction.html" class="pagination-link" aria-label="Introdução">
         <span class="nav-page-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introdução</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
 </div> <!-- /content -->
+
 
 
 

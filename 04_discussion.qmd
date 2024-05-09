@@ -1,4 +1,4 @@
-# Discussion
+# Discussão
 
 I expect to be able to discuss my results with a large range of studies regarding NVS in the Amazon and Cerrado, including small scale case studies and large scale modelling experiments. The discussion must present convergences and divergences between my results and the results found in the literature, and point out how my results can be useful in some way.
 

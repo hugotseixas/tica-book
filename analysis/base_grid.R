@@ -15,7 +15,6 @@ library(cowplot)
 library(scales)
 library(gt)
 library(tidyverse)
-library(tica)
 #
 # CONFLICTS -------------------------------------------------------------------
 #
@@ -29,22 +28,10 @@ conflicts_prefer(dplyr::filter)
 #
 # LOAD BIOME DATA -------------------------------------------------------------
 
-download_aoi()
+base_grid <- read_sf("./data/grid.fgb")
 
-aoi <- read_sf("data/external/aoi/aoi.fgb")
-
-# CREATE AND SAVE GRID --------------------------------------------------------
-
-base_grid <- create_grid(resolution = 30000)
-
-# Save grid polygons as FlatGeobuf file
-write_sf(
-  obj = base_grid,
-  dsn = "data/base_grid.fgb",
-  driver = "FlatGeobuf",
-  append = FALSE,
-  delete_dsn = TRUE
-)
+aoi <- read_sf("./data/raw/biomes/biomes_2019.fgb") |>
+  filter(code_biome %in% c(3, 1))
 
 # CREATE AND SAVE PLOT --------------------------------------------------------
 

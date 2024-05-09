@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="pt" xml:lang="pt"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.3.450">
+<meta name="generator" content="quarto-1.4.554">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -24,6 +24,7 @@ ul.task-list li input[type="checkbox"] {
 div.csl-bib-body { }
 div.csl-entry {
   clear: both;
+  margin-bottom: 0em;
 }
 .hanging-indent div.csl-entry {
   margin-left:2em;
@@ -68,7 +69,13 @@ div.csl-indent {
   "collapse-after": 3,
   "panel-placement": "start",
   "type": "textbox",
-  "limit": 20,
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
   "language": {
     "search-no-results-text": "Nenhum resultado",
     "search-matching-documents-text": "documentos correspondentes",
@@ -77,6 +84,7 @@ div.csl-indent {
     "search-more-match-text": "mais correspondência neste documento",
     "search-more-matches-text": "mais correspondências neste documento",
     "search-clear-button-title": "Limpar",
+    "search-text-placeholder": "",
     "search-detached-cancel-button-title": "Cancelar",
     "search-submit-button-title": "Enviar",
     "search-label": "Procurar"
@@ -88,6 +96,11 @@ div.csl-indent {
 }
 </script>
 <script async="" src="https://hypothes.is/embed.js"></script>
+<script>
+  window.document.addEventListener("DOMContentLoaded", function (_event) {
+    document.body.classList.add('hypothesis-enabled');
+  });
+</script>
 <meta name="mermaid-theme" content="neutral">
 <script src="site_libs/quarto-diagram/mermaid.min.js"></script>
 <script src="site_libs/quarto-diagram/mermaid-init.js"></script>
@@ -102,12 +115,12 @@ div.csl-indent {
   <header id="quarto-header" class="headroom fixed-top">
   <nav class="quarto-secondary-nav">
     <div class="container-fluid d-flex">
-      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./02_methods.html"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Método</span></a></li></ol></nav>
-      <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
-      </a>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./02_methods.html"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Método</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
         <i class="bi bi-search"></i>
       </button>
@@ -117,7 +130,7 @@ div.csl-indent {
 <!-- content -->
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation docked overflow-auto">
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header sidebar-header-stacked">
       <a href="./index.html" class="sidebar-logo-link">
       <img src="./figs/art/logo.png" alt="" class="sidebar-logo py-0 d-lg-inline d-none">
@@ -160,19 +173,19 @@ div.csl-indent {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./03_results.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Results</span></span></a>
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Resultados</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./04_discussion.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Discussion</span></span></a>
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Discussão</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./05_conclusions.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Conclusions</span></span></a>
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Conclusões</span></span></a>
   </div>
 </li>
         <li class="sidebar-item sidebar-item-section">
@@ -187,7 +200,13 @@ div.csl-indent {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./10_research_paradigm.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">A</span>&nbsp; <span class="chapter-title">Paradigm</span></span></a>
+ <span class="menu-text"><span class="chapter-number">A</span>&nbsp; <span class="chapter-title">Conceitos Fundamentais</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./11_research_data.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">B</span>&nbsp; <span class="chapter-title">Processamento dos dados</span></span></a>
   </div>
 </li>
       </ul>
@@ -195,7 +214,7 @@ div.csl-indent {
     </ul>
     </div>
 </nav>
-<div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         <nav id="TOC" role="doc-toc" class="toc-active">
@@ -203,7 +222,7 @@ div.csl-indent {
    
   <ul>
   <li><a href="#visão-geral" id="toc-visão-geral" class="nav-link active" data-scroll-target="#visão-geral"><span class="header-section-number">2.1</span> Visão Geral</a></li>
-  <li><a href="#modelo-teórico" id="toc-modelo-teórico" class="nav-link" data-scroll-target="#modelo-teórico"><span class="header-section-number">2.2</span> Modelo Teórico</a>
+  <li><a href="#sec-methods-modteo" id="toc-sec-methods-modteo" class="nav-link" data-scroll-target="#sec-methods-modteo"><span class="header-section-number">2.2</span> Modelo Teórico</a>
   <ul class="collapse">
   <li><a href="#entrevistas" id="toc-entrevistas" class="nav-link" data-scroll-target="#entrevistas"><span class="header-section-number">2.2.1</span> Entrevistas</a></li>
   <li><a href="#consultas-à-literatura" id="toc-consultas-à-literatura" class="nav-link" data-scroll-target="#consultas-à-literatura"><span class="header-section-number">2.2.2</span> Consultas à Literatura</a></li>
@@ -211,11 +230,11 @@ div.csl-indent {
   <li><a href="#análise-sociológica" id="toc-análise-sociológica" class="nav-link" data-scroll-target="#análise-sociológica"><span class="header-section-number">2.3</span> Análise Sociológica</a></li>
   <li><a href="#análise-estatística" id="toc-análise-estatística" class="nav-link" data-scroll-target="#análise-estatística"><span class="header-section-number">2.4</span> Análise Estatística</a>
   <ul class="collapse">
-  <li><a href="#database-structuring" id="toc-database-structuring" class="nav-link" data-scroll-target="#database-structuring"><span class="header-section-number">2.4.1</span> Database Structuring</a></li>
-  <li><a href="#model-development" id="toc-model-development" class="nav-link" data-scroll-target="#model-development"><span class="header-section-number">2.4.2</span> Model Development</a></li>
+  <li><a href="#estruturação-da-base-de-dados" id="toc-estruturação-da-base-de-dados" class="nav-link" data-scroll-target="#estruturação-da-base-de-dados"><span class="header-section-number">2.4.1</span> Estruturação da Base de Dados</a></li>
+  <li><a href="#desenvolvimento-dos-modelos-estatísticos" id="toc-desenvolvimento-dos-modelos-estatísticos" class="nav-link" data-scroll-target="#desenvolvimento-dos-modelos-estatísticos"><span class="header-section-number">2.4.2</span> Desenvolvimento dos Modelos Estatísticos</a></li>
   </ul></li>
-  <li><a href="#results-interpretation" id="toc-results-interpretation" class="nav-link" data-scroll-target="#results-interpretation"><span class="header-section-number">2.5</span> Results Interpretation</a></li>
-  <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">References</a></li>
+  <li><a href="#interpretação-dos-resultados" id="toc-interpretação-dos-resultados" class="nav-link" data-scroll-target="#interpretação-dos-resultados"><span class="header-section-number">2.5</span> Interpretação dos Resultados</a></li>
+  <li><a href="#referências" id="toc-referências" class="nav-link" data-scroll-target="#referências">Referências</a></li>
   </ul>
 </nav>
     </div>
@@ -237,26 +256,29 @@ div.csl-indent {
   </div>
   
 
+
 </header>
+
 
 <section id="visão-geral" class="level2" data-number="2.1">
 <h2 data-number="2.1" class="anchored" data-anchor-id="visão-geral"><span class="header-section-number">2.1</span> Visão Geral</h2>
-<p>Esse trabalho tem como objetivo central o desenvolvimento e a aplicação de um modelo teórico geral da <button class="glossary" title="Supressão de Vegetação Natural (SVN)">SVN</button>. Para atingir esse objetivo, uma série de atividades serão conduzidas em sequência:</p>
+<p>Esse trabalho tem como objetivo central o desenvolvimento e a aplicação de um modelo teórico geral da <button class="glossary" title="">SVN</button>. Para atingir esse objetivo, uma série de atividades serão conduzidas em sequência:</p>
 <ol type="1">
-<li><p>Desenvolvimento do modelo teórico geral da <button class="glossary" title="Supressão de Vegetação Natural (SVN)">SVN</button> a partir de uma perspectiva do Realismo Crítico:</p>
-<p>Nessa etapa o modelo teórico é criado a partir de entrevistas e leituras de artigos, livros e teses que abordem o tema da <button class="glossary" title="Supressão de Vegetação Natural (SVN)">SVN</button>. A seleção de materiais não é feito de forma sistêmica, e não há um método formal para o desenvolvimento do modelo teórico, esse processo é feito de modo livre e espontâneo, ao contrário de <span class="citation" data-cites="fletcher-2016">Fletcher (<a href="#ref-fletcher-2016" role="doc-biblioref">2016</a>)</span>, que aborda a identificação de mecanismos causais de maneira metodológica.</p></li>
-<li><p>Análise sociológica da <button class="glossary" title="Supressão de Vegetação Natural (SVN)">SVN</button> através da aplicação de conceitos desenvolvidos na Teoria Geral dos Campos de Bourdieu:</p>
-<p>A análise sociológica é feita pela caracterização do campo social da <button class="glossary" title="Supressão de Vegetação Natural (SVN)">SVN</button>, e pela identificação de agentes sociais que fazem parte da disputa dentro desse campo. Esse processo é realizado com base na mesma literatura utilizada no desenvolvimento do modelo teórico. Essa etapa é conduzida através de três passos discutidos por Bourdieu <span class="citation" data-cites="grenfell-2018">(<a href="#ref-grenfell-2018" role="doc-biblioref">Grenfell 2018, 105</a>)</span>: contextualizar o campo social da <button class="glossary" title="Supressão de Vegetação Natural (SVN)">SVN</button> em relação ao campo do poder; identificar as relações entre agentes sociais que fazem parte do campo social da <button class="glossary" title="Supressão de Vegetação Natural (SVN)">SVN</button>; analisar o <button class="glossary" title="">habitus</button> dos agentes sociais dentro do campo social da <button class="glossary" title="Supressão de Vegetação Natural (SVN)">SVN</button>.</p></li>
-<li><p>Análise estatística a partir da aplicação de algorítmos de regressão sobre dados relacionados a <button class="glossary" title="Supressão de Vegetação Natural (SVN)">SVN</button>:</p>
+<li><p>Desenvolvimento do modelo teórico geral da <button class="glossary" title="">SVN</button> a partir de uma perspectiva do Realismo Crítico:</p>
+<p>Nessa etapa o modelo teórico é criado a partir de entrevistas e leituras de artigos, livros e teses que abordem o tema da <button class="glossary" title="">SVN</button>. A seleção de materiais não é feito de forma sistêmica, e não há um método formal para o desenvolvimento do modelo teórico, esse processo é feito de modo livre e espontâneo, ao contrário de <span class="citation" data-cites="fletcher-2016">Fletcher (<a href="#ref-fletcher-2016" role="doc-biblioref">2016</a>)</span>, que aborda a identificação de mecanismos causais de maneira metodológica.</p></li>
+<li><p>Análise sociológica da <button class="glossary" title="">SVN</button> através da aplicação de conceitos desenvolvidos na Teoria Geral dos Campos de Bourdieu:</p>
+<p>A análise sociológica é feita pela caracterização do campo social da <button class="glossary" title="">SVN</button>, e pela identificação de agentes sociais que fazem parte da disputa dentro desse campo. Esse processo é realizado com base na mesma literatura utilizada no desenvolvimento do modelo teórico. Essa etapa é conduzida através de três passos discutidos por Bourdieu <span class="citation" data-cites="grenfell-2018">(<a href="#ref-grenfell-2018" role="doc-biblioref">Grenfell 2018, 105</a>)</span>: contextualizar o campo social da <button class="glossary" title="">SVN</button> em relação ao campo do poder; identificar as relações entre agentes sociais que fazem parte do campo social da <button class="glossary" title="">SVN</button>; analisar o <button class="glossary" title="">habitus</button> dos agentes sociais dentro do campo social da <button class="glossary" title="">SVN</button>.</p></li>
+<li><p>Análise estatística a partir da aplicação de algorítmos de regressão sobre dados relacionados a <button class="glossary" title="">SVN</button>:</p>
 <p>A análise estatística será realizada sobre dados com representação espacial e temporal. A seleção dos dados para a análise é baseada na literatura e disponibilidade dos mesmos, porém, para serem incluídos na análise, eles devem obedecer o mecanismo causal proposto pelo modelo teórico. Já a escolha do algorítmo estatístico não tem relação com o modelo teórico, e é feita a partir de um balanço entre complexidade e custo computacional.</p></li>
 <li><p>Interpretação conjunta dos resultados:</p>
 <p>A interpretação dos resultados das diferentes análises será realizada de maneira conjunta, através da perspectiva ontológica definida pelo Realismo Crítico. A interpretação será feita de maneira que os resultados estejam em sintonia com o modelo teórico proposto, em que serão identificadas lacunas, concordâncias e discordâncias entre os conhecimentos gerados por ambas análises.</p></li>
 </ol>
-<p>A sequência de atividades que compõe a pesquisa é representada na <a href="#fig-method-diagram">Figura&nbsp;<span>2.1</span></a>. Apesar do processo ser realizado de modo sequêncial, ele não é linear, e permite circularidades. Ou seja, o modelo teórico pode ser modificado ao longo da condução da pesquisa, que caso aconteça, força uma atualização de todas as etapas subsequentes.</p>
+<p>A sequência de atividades que compõe a pesquisa é representada na <a href="#fig-method-diagram" class="quarto-xref">Figura&nbsp;<span>2.1</span></a>. Apesar do processo ser realizado de modo sequêncial, ele não é linear, e permite circularidades. Ou seja, o modelo teórico pode ser modificado ao longo da condução da pesquisa, que caso aconteça, força uma atualização de todas as etapas subsequentes.</p>
 <div class="cell" data-fig-responsive="true" data-layout-align="center">
 <div class="cell-output-display">
-<div id="fig-method-diagram" class="quarto-figure quarto-figure-center anchored">
-<figure class="figure">
+<div id="fig-method-diagram" class="quarto-figure quarto-figure-center quarto-float anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-method-diagram-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <div>
 <pre class="mermaid mermaid-js" data-label="fig-method-diagram">flowchart TD
     A[Consulta da Literatura] --&gt; B[Modelo Teórico]
@@ -270,25 +292,25 @@ div.csl-indent {
 
 </pre>
 </div>
-<figcaption class="figure-caption">Figura&nbsp;2.1: Fluxo geral da pesquisa. As atividades realizadas em cada parte da pesquisa são: (1) Consulta da Literatura, Entrevistas, Modelo Teórico; (2) Análise Sociológica; (3) Dados Disponíveis, Estruturação da Base de Dados, Análise Estatística; (4) Interpretação dos Resultados.</figcaption>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-method-diagram-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figura&nbsp;2.1: Fluxo geral da pesquisa. As atividades realizadas em cada parte da pesquisa são: (1) Consulta da Literatura, Entrevistas, Modelo Teórico; (2) Análise Sociológica; (3) Dados Disponíveis, Estruturação da Base de Dados, Análise Estatística; (4) Interpretação dos Resultados.
+</figcaption>
 </figure>
 </div>
 </div>
 </div>
-<p>O método geral do trabalho (como apresentado na <a href="#fig-method-diagram">Figura&nbsp;<span>2.1</span></a>) pode ser caracterizado como um Método Misto Paralelo-Convergente, em que análises quantitativas e qualitativas são conduzidas paralelamente e independentemente (elas não se relacionam de maneira direta), até que seus resultados são interpretados de maneira conjunta. Porém, a idéia central desse trabalho é a adoção de uma perspectiva ontológica e epistemológica única para todas as análises conduzidas. Em teoria, essa idéia é completamente agnóstica em relação aos métodos de análise adotados. Portanto, não é feita uma defesa dos métodos de análise adotados, já que exitiriam uma infinidade de possibilidades metodológicas, mais ou menos apropriadas para o entendimento do fenômeno em questão.</p>
+<p>O método geral do trabalho (como apresentado na <a href="#fig-method-diagram" class="quarto-xref">Figura&nbsp;<span>2.1</span></a>) pode ser caracterizado como um Método Misto Paralelo-Convergente, em que análises quantitativas e qualitativas são conduzidas paralelamente e independentemente (elas não se relacionam de maneira direta), até que seus resultados são interpretados de maneira conjunta. Porém, a idéia central desse trabalho é a adoção de uma perspectiva ontológica e epistemológica única para todas as análises conduzidas. Em teoria, essa idéia é completamente agnóstica em relação aos métodos de análise adotados. Portanto, não é feita uma defesa dos métodos de análise adotados, já que exitiriam uma infinidade de possibilidades metodológicas, mais ou menos apropriadas para o entendimento do fenômeno em questão.</p>
 <p>Nas próximas sessões, cada parte do trabalho é descrita em maiores detalhes.</p>
 </section>
-<section id="modelo-teórico" class="level2" data-number="2.2">
-<h2 data-number="2.2" class="anchored" data-anchor-id="modelo-teórico"><span class="header-section-number">2.2</span> Modelo Teórico</h2>
-<p>O modelo teórico é desenvolvido com base em informações obtidas da literatura técnica e científica e entrevistas realisadas com pesquisadores que atuam no tema da <button class="glossary" title="Supressão de Vegetação Natural (SVN)">SVN</button>. Porém, o desenvolvimento desse modelo teórico também é fortemente afetado pelas minhas experiências pessoais, como exposição à noticias, discussões diversas sobre o tema, e reflexões e indagações pessoais. Portanto, o conteúdo gerado nessa parte da pesquisa não pode ser considerado como produto de um método sistemático e reproduzível. Porém, apesar de se caracterizar como um processo um tanto ametódico, o desenvolvimento do modelo teórico segue uma maneira de se refletir sobre um fenômeno, se inspira em certas proposições metodológicas, e se baseia parcialmente, em uma limitada sistematização de informações.</p>
-<p>A maneira de se refletir sobre um fenômeno, adotada nesse trabalho, é baseada na idéia de retrodução do Realismo Crítico. A retrodução pode ser definida como uma atividade de imaginação em que pensamos nos mecanismos generativos que, se de fato forem reais, irão causar um fenômeno quando tais mecanismos forem manifestados <span class="citation" data-cites="bhaskar-2016">(<a href="#ref-bhaskar-2016" role="doc-biblioref">Bhaskar 2016, 3</a>)</span>. A prática da retrodução implica em um exercício de imaginação que tenta transitar entre os domínios ontológicos do Realismo Crítico, o domínio do empírico, o domínio do atual e o domínio do real <span class="citation" data-cites="akram-2023">(<a href="#ref-akram-2023" role="doc-biblioref">Akram 2023, 53–54</a>)</span>. Uma ilustração geral e superficial do exercício de retrodução feita nessa pesquisa pode ser feita da seguinte forma: em um cenário hipotético, acredita-se que os <button class="glossary" title="Objetos transitivos são a integralização de conhecimentos sobre determinado objeto, a socialização de tudo que percebemos. Por exemplo, se pensarmos em uma rodovia: o que define ela como rodovia, pra que ela serve, a relação dela com demais objetos, essas são definições sociais que representam a idéia de rodovia como um objeto transitivo. Portanto, objetos transitivos são dependentes do nosso conhecimento sobre eles.">objetos transitivos</button> A e B sejam causadores da <button class="glossary" title="Supressão de Vegetação Natural (SVN)">SVN</button>; a partir disso, nos questionamos quais seriam as condições necessárias para que essa relação de A e a <button class="glossary" title="Supressão de Vegetação Natural (SVN)">SVN</button> se manifeste; essas condições são traduzidas como o mecanismo generativo proposto; por consequência, nos questionamos se tal mecanismo generativo consegue explicar a relação de causa de B e a <button class="glossary" title="Supressão de Vegetação Natural (SVN)">SVN</button>. Esse exercício é repetido em qualquer ordem, e a medida que esse processo se sucede, lacunas do mecanismo generativo podem ser identificadas e retificadas, assim como inconsistências podem ser eliminadas, se possível.</p>
-<p>O desenvolvimento do modelo teórico também incorpora algumas idéias do método da Teoria Fundamentada <span class="citation" data-cites="glaser-1968">(<a href="#ref-glaser-1968" role="doc-biblioref">Glaser e Strauss 1968</a>)</span>, e mais especificamente desse método baseado no Realismo Crítico, como proposto por <span class="citation" data-cites="oliver-2011">Oliver (<a href="#ref-oliver-2011" role="doc-biblioref">2011</a>)</span> e <span class="citation" data-cites="hoddy-2018">Hoddy (<a href="#ref-hoddy-2018" role="doc-biblioref">2018</a>)</span>. Nesse projeto, a condução de entrevistas e consultas da literatura são sistematizadas em forma de dados qualitativos estruturados, contendo as idéias centrais obtidas a partir desses materiais. Essa sistematização de dados é feita de maneira concomitante com o desenvolvimento do modelo teórico.</p>
-<p>O processo de sistematização de informação, na forma de dados qualitativos estruturados em tabela, é baseado nas entrevistas e nas consultas à literatura. As entrevistas são feitas de modo a especular sobre possíveis causas da <button class="glossary" title="Supressão de Vegetação Natural (SVN)">SVN</button>, de maneira semelhante ao processo de retrodução ilustrado anteriormente. A partir das indagações feitas durante as entrevistas, são desenvolvidas questões que servem de base para buscas na literatura, que por sua vez fornecem mais informações sobre o fenômeno em questão, a <button class="glossary" title="Supressão de Vegetação Natural (SVN)">SVN</button>. Após cada rodada de entrevistas e de consultas à literatura, a forma de condução das entrevistas seguintes podem ser alteradas de acordo com o conhecimento gerado pelas anteriores.</p>
-<p>Os dados, coletados a partir das entrevistas e consultas à literatura, contém as seguintes informações: identificação da fonte da informação (de forma anônima no caso das entrevistas); os <button class="glossary" title="Objetos transitivos são a integralização de conhecimentos sobre determinado objeto, a socialização de tudo que percebemos. Por exemplo, se pensarmos em uma rodovia: o que define ela como rodovia, pra que ela serve, a relação dela com demais objetos, essas são definições sociais que representam a idéia de rodovia como um objeto transitivo. Portanto, objetos transitivos são dependentes do nosso conhecimento sobre eles.">objetos transitivos</button> identificados como relacionados a <button class="glossary" title="Supressão de Vegetação Natural (SVN)">SVN</button>; a descrição da relação entre os <button class="glossary" title="Objetos transitivos são a integralização de conhecimentos sobre determinado objeto, a socialização de tudo que percebemos. Por exemplo, se pensarmos em uma rodovia: o que define ela como rodovia, pra que ela serve, a relação dela com demais objetos, essas são definições sociais que representam a idéia de rodovia como um objeto transitivo. Portanto, objetos transitivos são dependentes do nosso conhecimento sobre eles.">objetos transitivos</button> com a <button class="glossary" title="Supressão de Vegetação Natural (SVN)">SVN</button>.</p>
+<section id="sec-methods-modteo" class="level2" data-number="2.2">
+<h2 data-number="2.2" class="anchored" data-anchor-id="sec-methods-modteo"><span class="header-section-number">2.2</span> Modelo Teórico</h2>
+<p>O modelo teórico é desenvolvido com base em informações obtidas da literatura técnica e científica e entrevistas realisadas com pesquisadores que atuam no tema da <button class="glossary" title="">SVN</button> (<a href="#fig-theoretical-diagram" class="quarto-xref">Figura&nbsp;<span>2.2</span></a>). Porém, o desenvolvimento desse modelo teórico também é fortemente afetado pelas minhas experiências pessoais, como exposição à noticias, discussões diversas sobre o tema, e reflexões e indagações pessoais. Portanto, o conteúdo gerado nessa parte da pesquisa não pode ser considerado como produto de um método sistemático e reproduzível. Porém, apesar de se caracterizar como um processo um tanto ametódico, o desenvolvimento do modelo teórico segue uma maneira de se refletir sobre um fenômeno, se inspira em certas proposições metodológicas, e se baseia parcialmente, em uma limitada sistematização de informações.</p>
 <div class="cell" data-fig-responsive="true" data-layout-align="center">
 <div class="cell-output-display">
-<div id="fig-theoretical-diagram" class="quarto-figure quarto-figure-center anchored">
-<figure class="figure">
+<div id="fig-theoretical-diagram" class="quarto-figure quarto-figure-center quarto-float anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-theoretical-diagram-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <div>
 <pre class="mermaid mermaid-js" data-label="fig-theoretical-diagram">flowchart TD
     A[Entrevista] --&gt; B[Dados]
@@ -303,40 +325,51 @@ div.csl-indent {
 
 </pre>
 </div>
-<figcaption class="figure-caption">Figura&nbsp;2.2: Fluxo geral do processo de desenvolvimento do modelo teórico.</figcaption>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-theoretical-diagram-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figura&nbsp;2.2: Fluxo geral do processo de desenvolvimento do modelo teórico.
+</figcaption>
 </figure>
 </div>
 </div>
 </div>
+<p>A maneira de se refletir sobre um fenômeno, adotada nesse trabalho, é baseada na idéia de retrodução do Realismo Crítico. A retrodução pode ser definida como uma atividade de imaginação em que pensamos nos mecanismos generativos que, se de fato forem reais, irão causar um fenômeno quando tais mecanismos forem manifestados <span class="citation" data-cites="bhaskar-2016">(<a href="#ref-bhaskar-2016" role="doc-biblioref">Bhaskar 2016, 3</a>)</span>. A prática da retrodução implica em um exercício de imaginação que tenta transitar entre os domínios ontológicos do Realismo Crítico, o domínio do empírico, o domínio do atual e o domínio do real <span class="citation" data-cites="akram-2023">(<a href="#ref-akram-2023" role="doc-biblioref">Akram 2023, 53–54</a>)</span>. Uma ilustração geral e superficial do exercício de retrodução feita nessa pesquisa pode ser feita da seguinte forma: em um cenário hipotético, acredita-se que os <button class="glossary" title="">objetos transitivos</button> A e B sejam causadores da <button class="glossary" title="">SVN</button>; a partir disso, nos questionamos quais seriam as condições necessárias para que essa relação de A e a <button class="glossary" title="">SVN</button> se manifeste; essas condições são traduzidas como o mecanismo generativo proposto; por consequência, nos questionamos se tal mecanismo generativo consegue explicar a relação de causa de B e a <button class="glossary" title="">SVN</button>. Esse exercício é repetido em qualquer ordem, e a medida que esse processo se sucede, lacunas do mecanismo generativo podem ser identificadas e retificadas, assim como inconsistências podem ser eliminadas, se possível.</p>
+<p>O desenvolvimento do modelo teórico também incorpora algumas idéias do método da Teoria Fundamentada <span class="citation" data-cites="glaser-1968">(<a href="#ref-glaser-1968" role="doc-biblioref">Glaser e Strauss 1968</a>)</span>, e mais especificamente desse método baseado no Realismo Crítico, como proposto por <span class="citation" data-cites="oliver-2011">Oliver (<a href="#ref-oliver-2011" role="doc-biblioref">2011</a>)</span> e <span class="citation" data-cites="hoddy-2018">Hoddy (<a href="#ref-hoddy-2018" role="doc-biblioref">2018</a>)</span>. Nesse projeto, a condução de entrevistas e consultas da literatura são sistematizadas em forma de dados qualitativos estruturados, contendo as idéias centrais obtidas a partir desses materiais. Essa sistematização de dados é feita de maneira concomitante com o desenvolvimento do modelo teórico.</p>
+<p>O processo de sistematização de informação, na forma de dados qualitativos estruturados em tabela, é baseado nas entrevistas e nas consultas à literatura. As entrevistas são feitas de modo a especular sobre possíveis causas da <button class="glossary" title="">SVN</button>, de maneira semelhante ao processo de retrodução ilustrado anteriormente. A partir das indagações feitas durante as entrevistas, são desenvolvidas questões que servem de base para buscas na literatura, que por sua vez fornecem mais informações sobre o fenômeno em questão, a <button class="glossary" title="">SVN</button>. Após cada rodada de entrevistas e de consultas à literatura, a forma de condução das entrevistas seguintes podem ser alteradas de acordo com o conhecimento gerado pelas anteriores.</p>
+<p>Os dados, coletados a partir das entrevistas e consultas à literatura, contém as seguintes informações: identificação da fonte da informação (de forma anônima no caso das entrevistas); os <button class="glossary" title="">objetos transitivos</button> identificados como relacionados a <button class="glossary" title="">SVN</button>; a descrição da relação entre os <button class="glossary" title="">objetos transitivos</button> com a <button class="glossary" title="">SVN</button>.</p>
 <p>O processo de desenvolvimento do modelo teórico não apresenta um ponto final determinado. O modelo teórico pode ser modificado caso haja a descoberta de novos conhecimentos que desafiem a lógica do modelo. Porém, nesse projeto, a etapa de desenvolvimento do modelo teórico é interrompida quando as informações obtidas se tornem redundantes o bastante para que não seja necessária a modificação do modelo.</p>
-<p>O modelo teórico será baseado em conceitos do Realismo Crítico, sendo formado sobre especulações da existência de certos <button class="glossary" title="Objetos intransitivos são entidades que constituem o universo. Tais entidades são permanentes e independentes do nosso conhecimento sobre elas.">objetos intransitivos</button>, e da existência de interações entre eles, formando um <button class="glossary" title="">mecanismo generativo</button> da <button class="glossary" title="Supressão de Vegetação Natural (SVN)">SVN</button>.</p>
+<p>O modelo teórico é baseado em conceitos do Realismo Crítico, sendo formado sobre especulações da existência de certos <button class="glossary" title="">objetos intransitivos</button>, e da existência de interações entre eles, formando um <button class="glossary" title="Mecanismos Generativos são configurações de objetos intransitivos que, quando realizadas, causam a ocorrência de eventos no universo. Esses mecanismos são permanentes e existem independentemente de sua realização.">mecanismo generativo</button> da <button class="glossary" title="">SVN</button>.</p>
 <section id="entrevistas" class="level3" data-number="2.2.1">
 <h3 data-number="2.2.1" class="anchored" data-anchor-id="entrevistas"><span class="header-section-number">2.2.1</span> Entrevistas</h3>
-<p>As entrevistas conduzidas nesse projeto, tem o objetivo de obter informações sobre os fatores que afetam a ocorrência da <button class="glossary" title="Supressão de Vegetação Natural (SVN)">SVN</button>. Essas informações servem de base para o desenvolvimento do modelo teórico da <button class="glossary" title="Supressão de Vegetação Natural (SVN)">SVN</button>.</p>
+<p>As entrevistas conduzidas nesse projeto, tem o objetivo de obter informações sobre os fatores que afetam a ocorrência da <button class="glossary" title="">SVN</button>. Essas informações servem de base para o desenvolvimento do modelo teórico da <button class="glossary" title="">SVN</button>.</p>
 <p>O método utilizado é de entrevistas semi-estruturadas. O roteiro das entrevistas é baseado em sugestões propostas por <span class="citation" data-cites="bearman-2019">Bearman (<a href="#ref-bearman-2019" role="doc-biblioref">2019</a>)</span>, em que são priorizadas questões abertas, que incentivam descrições ricas nas respostas dos participantes. Também foram incorporados elementos da metodologia de entrevistas Centradas em Problemas (PCI) <span class="citation" data-cites="witzel-2012">(<a href="#ref-witzel-2012" role="doc-biblioref">Witzel e Reiter 2012</a>)</span>, em que as entrevistas contém uma estrutura definida e centrada no fenômeno de interesse, mas que apresenta uma flexibilidade para incentivar respostas abertas e profundas <span class="citation" data-cites="doringer-2020">(<a href="#ref-doringer-2020" role="doc-biblioref">Döringer 2020</a>)</span>.</p>
-<p>O público alvo para participar nas entrevistas são pesquisadores, de diferentes disciplinas, atuantes no tema da <button class="glossary" title="Supressão de Vegetação Natural (SVN)">SVN</button>. As entrevistas serão feitas a distância, através de vídeo chamadas. Esse meio de entrevista tem sido frequentemente adotado em pesquisas qualitativas, e apesar de apresentarem desvantagens, como falhas técnicas durante as entrevistas, não há evidências claras de que os dados coletados apresentem menor riqueza de informações, em comparação com entrevistas presenciais <span class="citation" data-cites="thunberg-2021">(<a href="#ref-thunberg-2021" role="doc-biblioref">Thunberg e Arnell 2021</a>)</span>. Além disso, o acesso a participantes é mais amplo, devido a falta de necessidade de deslocamento.</p>
-<p>O roteiro das entrevistas pode ser dividido em três partes (<a href="#tbl-schedule">Tabela&nbsp;<span>2.1</span></a>). A parte introdutória da entrevista contém uma exposição sobre o tema e objetivos dessa pesquisa, assim como a motivação para a realização das entrevistas. A parte de desenvolvimento da entrevista contém perguntas inciais que estimulam a criação de uma narrativa por parte dos entrevistados, seguidas por perguntas mais específicas sobre o fenômeno em questão <span class="citation" data-cites="witzel-2012">(<a href="#ref-witzel-2012" role="doc-biblioref">Witzel e Reiter 2012</a>)</span>. Por fim, a conclusão dá a oportunidade aos entrevistados de elaborar reflexões sobre o tema <span class="citation" data-cites="bearman-2019">(<a href="#ref-bearman-2019" role="doc-biblioref">Bearman 2019</a>)</span>.</p>
+<p>O público alvo para participar nas entrevistas são pesquisadores, de diferentes disciplinas, atuantes no tema da <button class="glossary" title="">SVN</button>. As entrevistas serão feitas a distância, através de vídeo chamadas. Esse meio de entrevista tem sido frequentemente adotado em pesquisas qualitativas, e apesar de apresentarem desvantagens, como falhas técnicas durante as entrevistas, não há evidências claras de que os dados coletados apresentem menor riqueza de informações, em comparação com entrevistas presenciais <span class="citation" data-cites="thunberg-2021">(<a href="#ref-thunberg-2021" role="doc-biblioref">Thunberg e Arnell 2021</a>)</span>. Além disso, o acesso a participantes é mais amplo, devido a falta de necessidade de deslocamento.</p>
+<p>O roteiro das entrevistas pode ser dividido em três partes (<a href="#tbl-schedule" class="quarto-xref">Tabela&nbsp;<span>2.1</span></a>). A parte introdutória da entrevista contém uma exposição sobre o tema e objetivos dessa pesquisa, assim como a motivação para a realização das entrevistas. A parte de desenvolvimento da entrevista contém perguntas inciais que estimulam a criação de uma narrativa por parte dos entrevistados, seguidas por perguntas mais específicas sobre o fenômeno em questão <span class="citation" data-cites="witzel-2012">(<a href="#ref-witzel-2012" role="doc-biblioref">Witzel e Reiter 2012</a>)</span>. Por fim, a conclusão dá a oportunidade aos entrevistados de elaborar reflexões sobre o tema <span class="citation" data-cites="bearman-2019">(<a href="#ref-bearman-2019" role="doc-biblioref">Bearman 2019</a>)</span>.</p>
 <div class="cell">
+<div id="tbl-schedule" class="cell quarto-float anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-schedule-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Tabela&nbsp;2.1: Roteiro de entrevistas adotado.
+</figcaption>
+<div aria-describedby="tbl-schedule-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <div class="cell-output-display">
-<div id="tbl-schedule" class="anchored">
-
-<div id="wwfjkxsfgg" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#wwfjkxsfgg table {
+<div id="syylmckapo" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#syylmckapo table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#wwfjkxsfgg thead, #wwfjkxsfgg tbody, #wwfjkxsfgg tfoot, #wwfjkxsfgg tr, #wwfjkxsfgg td, #wwfjkxsfgg th {
+#syylmckapo thead, #syylmckapo tbody, #syylmckapo tfoot, #syylmckapo tr, #syylmckapo td, #syylmckapo th {
   border-style: none;
 }
 
-#wwfjkxsfgg p {
+#syylmckapo p {
   margin: 0;
   padding: 0;
 }
 
-#wwfjkxsfgg .gt_table {
+#syylmckapo .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -362,12 +395,12 @@ div.csl-indent {
   border-left-color: #D3D3D3;
 }
 
-#wwfjkxsfgg .gt_caption {
+#syylmckapo .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#wwfjkxsfgg .gt_title {
+#syylmckapo .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -379,7 +412,7 @@ div.csl-indent {
   border-bottom-width: 0;
 }
 
-#wwfjkxsfgg .gt_subtitle {
+#syylmckapo .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -391,7 +424,7 @@ div.csl-indent {
   border-top-width: 0;
 }
 
-#wwfjkxsfgg .gt_heading {
+#syylmckapo .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -403,13 +436,13 @@ div.csl-indent {
   border-right-color: #D3D3D3;
 }
 
-#wwfjkxsfgg .gt_bottom_border {
+#syylmckapo .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #5F5F5F;
 }
 
-#wwfjkxsfgg .gt_col_headings {
+#syylmckapo .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #5F5F5F;
@@ -424,7 +457,7 @@ div.csl-indent {
   border-right-color: #D3D3D3;
 }
 
-#wwfjkxsfgg .gt_col_heading {
+#syylmckapo .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -444,7 +477,7 @@ div.csl-indent {
   overflow-x: hidden;
 }
 
-#wwfjkxsfgg .gt_column_spanner_outer {
+#syylmckapo .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -456,15 +489,15 @@ div.csl-indent {
   padding-right: 4px;
 }
 
-#wwfjkxsfgg .gt_column_spanner_outer:first-child {
+#syylmckapo .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#wwfjkxsfgg .gt_column_spanner_outer:last-child {
+#syylmckapo .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#wwfjkxsfgg .gt_column_spanner {
+#syylmckapo .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #5F5F5F;
@@ -476,11 +509,11 @@ div.csl-indent {
   width: 100%;
 }
 
-#wwfjkxsfgg .gt_spanner_row {
+#syylmckapo .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#wwfjkxsfgg .gt_group_heading {
+#syylmckapo .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -506,7 +539,7 @@ div.csl-indent {
   text-align: left;
 }
 
-#wwfjkxsfgg .gt_empty_group_heading {
+#syylmckapo .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -521,15 +554,15 @@ div.csl-indent {
   vertical-align: middle;
 }
 
-#wwfjkxsfgg .gt_from_md > :first-child {
+#syylmckapo .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#wwfjkxsfgg .gt_from_md > :last-child {
+#syylmckapo .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#wwfjkxsfgg .gt_row {
+#syylmckapo .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -548,7 +581,7 @@ div.csl-indent {
   overflow-x: hidden;
 }
 
-#wwfjkxsfgg .gt_stub {
+#syylmckapo .gt_stub {
   color: #FFFFFF;
   background-color: #5F5F5F;
   font-size: 100%;
@@ -561,7 +594,7 @@ div.csl-indent {
   padding-right: 5px;
 }
 
-#wwfjkxsfgg .gt_stub_row_group {
+#syylmckapo .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -575,15 +608,15 @@ div.csl-indent {
   vertical-align: top;
 }
 
-#wwfjkxsfgg .gt_row_group_first td {
+#syylmckapo .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#wwfjkxsfgg .gt_row_group_first th {
+#syylmckapo .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#wwfjkxsfgg .gt_summary_row {
+#syylmckapo .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -593,16 +626,16 @@ div.csl-indent {
   padding-right: 5px;
 }
 
-#wwfjkxsfgg .gt_first_summary_row {
+#syylmckapo .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #5F5F5F;
 }
 
-#wwfjkxsfgg .gt_first_summary_row.thick {
+#syylmckapo .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#wwfjkxsfgg .gt_last_summary_row {
+#syylmckapo .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -612,7 +645,7 @@ div.csl-indent {
   border-bottom-color: #5F5F5F;
 }
 
-#wwfjkxsfgg .gt_grand_summary_row {
+#syylmckapo .gt_grand_summary_row {
   color: #333333;
   background-color: #D5D5D5;
   text-transform: inherit;
@@ -622,7 +655,7 @@ div.csl-indent {
   padding-right: 5px;
 }
 
-#wwfjkxsfgg .gt_first_grand_summary_row {
+#syylmckapo .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -632,7 +665,7 @@ div.csl-indent {
   border-top-color: #5F5F5F;
 }
 
-#wwfjkxsfgg .gt_last_grand_summary_row_top {
+#syylmckapo .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -642,11 +675,11 @@ div.csl-indent {
   border-bottom-color: #5F5F5F;
 }
 
-#wwfjkxsfgg .gt_striped {
+#syylmckapo .gt_striped {
   background-color: #F4F4F4;
 }
 
-#wwfjkxsfgg .gt_table_body {
+#syylmckapo .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #5F5F5F;
@@ -655,7 +688,7 @@ div.csl-indent {
   border-bottom-color: #5F5F5F;
 }
 
-#wwfjkxsfgg .gt_footnotes {
+#syylmckapo .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -669,7 +702,7 @@ div.csl-indent {
   border-right-color: #D3D3D3;
 }
 
-#wwfjkxsfgg .gt_footnote {
+#syylmckapo .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -678,7 +711,7 @@ div.csl-indent {
   padding-right: 5px;
 }
 
-#wwfjkxsfgg .gt_sourcenotes {
+#syylmckapo .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -692,7 +725,7 @@ div.csl-indent {
   border-right-color: #D3D3D3;
 }
 
-#wwfjkxsfgg .gt_sourcenote {
+#syylmckapo .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -700,67 +733,67 @@ div.csl-indent {
   padding-right: 5px;
 }
 
-#wwfjkxsfgg .gt_left {
+#syylmckapo .gt_left {
   text-align: left;
 }
 
-#wwfjkxsfgg .gt_center {
+#syylmckapo .gt_center {
   text-align: center;
 }
 
-#wwfjkxsfgg .gt_right {
+#syylmckapo .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#wwfjkxsfgg .gt_font_normal {
+#syylmckapo .gt_font_normal {
   font-weight: normal;
 }
 
-#wwfjkxsfgg .gt_font_bold {
+#syylmckapo .gt_font_bold {
   font-weight: bold;
 }
 
-#wwfjkxsfgg .gt_font_italic {
+#syylmckapo .gt_font_italic {
   font-style: italic;
 }
 
-#wwfjkxsfgg .gt_super {
+#syylmckapo .gt_super {
   font-size: 65%;
 }
 
-#wwfjkxsfgg .gt_footnote_marks {
+#syylmckapo .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#wwfjkxsfgg .gt_asterisk {
+#syylmckapo .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#wwfjkxsfgg .gt_indent_1 {
+#syylmckapo .gt_indent_1 {
   text-indent: 5px;
 }
 
-#wwfjkxsfgg .gt_indent_2 {
+#syylmckapo .gt_indent_2 {
   text-indent: 10px;
 }
 
-#wwfjkxsfgg .gt_indent_3 {
+#syylmckapo .gt_indent_3 {
   text-indent: 15px;
 }
 
-#wwfjkxsfgg .gt_indent_4 {
+#syylmckapo .gt_indent_4 {
   text-indent: 20px;
 }
 
-#wwfjkxsfgg .gt_indent_5 {
+#syylmckapo .gt_indent_5 {
   text-indent: 25px;
 }
 </style>
-<table class="gt_table" data-quarto-disable-processing="false" data-quarto-bootstrap="false"><caption>Tabela&nbsp;2.1:  <p>Roteiro de entrevistas adotado.</p> </caption>
+<table class="gt_table" data-quarto-disable-processing="true" data-quarto-bootstrap="false">
   
   <tbody class="gt_table_body">
     <tr class="gt_group_heading_row">
@@ -797,97 +830,983 @@ div.csl-indent {
 </div>
 </div>
 </div>
+</figure>
 </div>
-<p>Cada entrevista irá fornecer informações que servem de conteúdo para a geração de uma tabela de dados. Nessa tabela, são identificados os <button class="glossary" title="Objetos transitivos são a integralização de conhecimentos sobre determinado objeto, a socialização de tudo que percebemos. Por exemplo, se pensarmos em uma rodovia: o que define ela como rodovia, pra que ela serve, a relação dela com demais objetos, essas são definições sociais que representam a idéia de rodovia como um objeto transitivo. Portanto, objetos transitivos são dependentes do nosso conhecimento sobre eles.">objetos transitivos</button> associados com a <button class="glossary" title="Supressão de Vegetação Natural (SVN)">SVN</button>, e são descritas as condições necessárias para que essa associação ocorra.</p>
+</div>
+<p>Cada entrevista irá fornecer informações que servem de conteúdo para a geração de uma tabela de dados. Nessa tabela, são identificados os <button class="glossary" title="">objetos transitivos</button> associados com a <button class="glossary" title="">SVN</button>, e são descritas as condições necessárias para que essa associação ocorra.</p>
 <div class="cell">
+<div id="tbl-interviewdata" class="cell quarto-float anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-interviewdata-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Tabela&nbsp;2.2: Ilustração da tabela de dados gerada com base nas informações obtidas através das entrevistas.
+</figcaption>
+<div aria-describedby="tbl-interviewdata-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <div class="cell-output-display">
-<div id="tbl-interviewdata" class="anchored">
+<div id="djkorwavrn" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#djkorwavrn table {
+  font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
 
-<div id="vbmzopmoor" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-  
-  <table class="gt_table" data-quarto-disable-processing="false" data-quarto-bootstrap="true" style="-webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji'; display: table; border-collapse: collapse; line-height: normal; margin-left: auto; margin-right: auto; color: #333333; font-size: 14px; font-weight: normal; font-style: normal; background-color: #FFFFFF; width: 90%; border-top-style: solid; border-top-width: 2px; border-top-color: #000000; border-right-style: none; border-right-width: 2px; border-right-color: #D3D3D3; border-bottom-style: solid; border-bottom-width: 2px; border-bottom-color: #000000; border-left-style: none; border-left-width: 2px; border-left-color: #D3D3D3;" width="90%" bgcolor="#FFFFFF"><caption>Tabela&nbsp;2.2:  <p>Ilustração da tabela de dados gerada com base nas informações obtidas
-através das entrevistas.</p> </caption>
-  <thead style="border-style: none;">
-    <tr class="gt_col_headings" style="border-style: none; border-top-style: solid; border-top-width: 2px; border-top-color: #5F5F5F; border-bottom-style: solid; border-bottom-width: 2px; border-bottom-color: #5F5F5F; border-left-style: none; border-left-width: 1px; border-left-color: #D3D3D3; border-right-style: none; border-right-width: 1px; border-right-color: #D3D3D3;">
-      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="id" style="border-style: none; color: #333333; background-color: #FFFFFF; font-size: 100%; font-weight: normal; text-transform: inherit; border-left-style: none; border-left-width: 1px; border-left-color: #D3D3D3; border-right-style: none; border-right-width: 1px; border-right-color: #D3D3D3; vertical-align: bottom; padding-top: 5px; padding-bottom: 6px; padding-left: 5px; padding-right: 5px; overflow-x: hidden; text-align: right; font-variant-numeric: tabular-nums;" bgcolor="#FFFFFF" valign="bottom" align="right">id</th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" scope="col" id="participante" style="border-style: none; color: #333333; background-color: #FFFFFF; font-size: 100%; font-weight: normal; text-transform: inherit; border-left-style: none; border-left-width: 1px; border-left-color: #D3D3D3; border-right-style: none; border-right-width: 1px; border-right-color: #D3D3D3; vertical-align: bottom; padding-top: 5px; padding-bottom: 6px; padding-left: 5px; padding-right: 5px; overflow-x: hidden; text-align: left;" bgcolor="#FFFFFF" valign="bottom" align="left">participante</th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" scope="col" id="objeto" style="border-style: none; color: #333333; background-color: #FFFFFF; font-size: 100%; font-weight: normal; text-transform: inherit; border-left-style: none; border-left-width: 1px; border-left-color: #D3D3D3; border-right-style: none; border-right-width: 1px; border-right-color: #D3D3D3; vertical-align: bottom; padding-top: 5px; padding-bottom: 6px; padding-left: 5px; padding-right: 5px; overflow-x: hidden; text-align: left;" bgcolor="#FFFFFF" valign="bottom" align="left">objeto</th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" scope="col" id="condição" style="border-style: none; color: #333333; background-color: #FFFFFF; font-size: 100%; font-weight: normal; text-transform: inherit; border-left-style: none; border-left-width: 1px; border-left-color: #D3D3D3; border-right-style: none; border-right-width: 1px; border-right-color: #D3D3D3; vertical-align: bottom; padding-top: 5px; padding-bottom: 6px; padding-left: 5px; padding-right: 5px; overflow-x: hidden; text-align: left;" bgcolor="#FFFFFF" valign="bottom" align="left">condição</th>
+#djkorwavrn thead, #djkorwavrn tbody, #djkorwavrn tfoot, #djkorwavrn tr, #djkorwavrn td, #djkorwavrn th {
+  border-style: none;
+}
+
+#djkorwavrn p {
+  margin: 0;
+  padding: 0;
+}
+
+#djkorwavrn .gt_table {
+  display: table;
+  border-collapse: collapse;
+  line-height: normal;
+  margin-left: auto;
+  margin-right: auto;
+  color: #333333;
+  font-size: 14px;
+  font-weight: normal;
+  font-style: normal;
+  background-color: #FFFFFF;
+  width: 90%;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #000000;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #000000;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+}
+
+#djkorwavrn .gt_caption {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+#djkorwavrn .gt_title {
+  color: #333333;
+  font-size: 125%;
+  font-weight: initial;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-color: #FFFFFF;
+  border-bottom-width: 0;
+}
+
+#djkorwavrn .gt_subtitle {
+  color: #333333;
+  font-size: 85%;
+  font-weight: initial;
+  padding-top: 3px;
+  padding-bottom: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-color: #FFFFFF;
+  border-top-width: 0;
+}
+
+#djkorwavrn .gt_heading {
+  background-color: #FFFFFF;
+  text-align: center;
+  border-bottom-color: #FFFFFF;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#djkorwavrn .gt_bottom_border {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #5F5F5F;
+}
+
+#djkorwavrn .gt_col_headings {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #5F5F5F;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #5F5F5F;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#djkorwavrn .gt_col_heading {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 6px;
+  padding-left: 5px;
+  padding-right: 5px;
+  overflow-x: hidden;
+}
+
+#djkorwavrn .gt_column_spanner_outer {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+#djkorwavrn .gt_column_spanner_outer:first-child {
+  padding-left: 0;
+}
+
+#djkorwavrn .gt_column_spanner_outer:last-child {
+  padding-right: 0;
+}
+
+#djkorwavrn .gt_column_spanner {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #5F5F5F;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  overflow-x: hidden;
+  display: inline-block;
+  width: 100%;
+}
+
+#djkorwavrn .gt_spanner_row {
+  border-bottom-style: hidden;
+}
+
+#djkorwavrn .gt_group_heading {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #5F5F5F;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #5F5F5F;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  text-align: left;
+}
+
+#djkorwavrn .gt_empty_group_heading {
+  padding: 0.5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #5F5F5F;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #5F5F5F;
+  vertical-align: middle;
+}
+
+#djkorwavrn .gt_from_md > :first-child {
+  margin-top: 0;
+}
+
+#djkorwavrn .gt_from_md > :last-child {
+  margin-bottom: 0;
+}
+
+#djkorwavrn .gt_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin: 10px;
+  border-top-style: none;
+  border-top-width: 1px;
+  border-top-color: #D5D5D5;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D5D5D5;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D5D5D5;
+  vertical-align: middle;
+  overflow-x: hidden;
+}
+
+#djkorwavrn .gt_stub {
+  color: #FFFFFF;
+  background-color: #5F5F5F;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #5F5F5F;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#djkorwavrn .gt_stub_row_group {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+  vertical-align: top;
+}
+
+#djkorwavrn .gt_row_group_first td {
+  border-top-width: 2px;
+}
+
+#djkorwavrn .gt_row_group_first th {
+  border-top-width: 2px;
+}
+
+#djkorwavrn .gt_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#djkorwavrn .gt_first_summary_row {
+  border-top-style: solid;
+  border-top-color: #5F5F5F;
+}
+
+#djkorwavrn .gt_first_summary_row.thick {
+  border-top-width: 2px;
+}
+
+#djkorwavrn .gt_last_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #5F5F5F;
+}
+
+#djkorwavrn .gt_grand_summary_row {
+  color: #333333;
+  background-color: #D5D5D5;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#djkorwavrn .gt_first_grand_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-style: double;
+  border-top-width: 6px;
+  border-top-color: #5F5F5F;
+}
+
+#djkorwavrn .gt_last_grand_summary_row_top {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: double;
+  border-bottom-width: 6px;
+  border-bottom-color: #5F5F5F;
+}
+
+#djkorwavrn .gt_striped {
+  background-color: #F4F4F4;
+}
+
+#djkorwavrn .gt_table_body {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #5F5F5F;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #5F5F5F;
+}
+
+#djkorwavrn .gt_footnotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#djkorwavrn .gt_footnote {
+  margin: 0px;
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#djkorwavrn .gt_sourcenotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#djkorwavrn .gt_sourcenote {
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#djkorwavrn .gt_left {
+  text-align: left;
+}
+
+#djkorwavrn .gt_center {
+  text-align: center;
+}
+
+#djkorwavrn .gt_right {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+#djkorwavrn .gt_font_normal {
+  font-weight: normal;
+}
+
+#djkorwavrn .gt_font_bold {
+  font-weight: bold;
+}
+
+#djkorwavrn .gt_font_italic {
+  font-style: italic;
+}
+
+#djkorwavrn .gt_super {
+  font-size: 65%;
+}
+
+#djkorwavrn .gt_footnote_marks {
+  font-size: 75%;
+  vertical-align: 0.4em;
+  position: initial;
+}
+
+#djkorwavrn .gt_asterisk {
+  font-size: 100%;
+  vertical-align: 0;
+}
+
+#djkorwavrn .gt_indent_1 {
+  text-indent: 5px;
+}
+
+#djkorwavrn .gt_indent_2 {
+  text-indent: 10px;
+}
+
+#djkorwavrn .gt_indent_3 {
+  text-indent: 15px;
+}
+
+#djkorwavrn .gt_indent_4 {
+  text-indent: 20px;
+}
+
+#djkorwavrn .gt_indent_5 {
+  text-indent: 25px;
+}
+</style>
+<table class="gt_table" data-quarto-disable-processing="true" data-quarto-bootstrap="false">
+  <thead>
+    <tr class="gt_col_headings">
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="id">id</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" scope="col" id="participante">participante</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" scope="col" id="objeto">objeto</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" scope="col" id="condição">condição</th>
     </tr>
   </thead>
-  <tbody class="gt_table_body" style="border-style: none; border-top-style: solid; border-top-width: 2px; border-top-color: #5F5F5F; border-bottom-style: solid; border-bottom-width: 2px; border-bottom-color: #5F5F5F;">
-    <tr style="border-style: none;"><td headers="id" class="gt_row gt_right" style="border-style: none; padding-top: 8px; padding-bottom: 8px; padding-left: 5px; padding-right: 5px; margin: 10px; border-top-style: none; border-top-width: 1px; border-top-color: #D5D5D5; border-left-style: none; border-left-width: 1px; border-left-color: #D5D5D5; border-right-style: none; border-right-width: 1px; border-right-color: #D5D5D5; vertical-align: middle; overflow-x: hidden; text-align: right; font-variant-numeric: tabular-nums;" valign="middle" align="right">1</td>
-<td headers="participante" class="gt_row gt_left" style="border-style: none; padding-top: 8px; padding-bottom: 8px; padding-left: 5px; padding-right: 5px; margin: 10px; border-top-style: none; border-top-width: 1px; border-top-color: #D5D5D5; border-left-style: none; border-left-width: 1px; border-left-color: #D5D5D5; border-right-style: none; border-right-width: 1px; border-right-color: #D5D5D5; vertical-align: middle; overflow-x: hidden; text-align: left;" valign="middle" align="left">Entrevistado 1</td>
-<td headers="objeto" class="gt_row gt_left" style="border-style: none; padding-top: 8px; padding-bottom: 8px; padding-left: 5px; padding-right: 5px; margin: 10px; border-top-style: none; border-top-width: 1px; border-top-color: #D5D5D5; border-left-style: none; border-left-width: 1px; border-left-color: #D5D5D5; border-right-style: none; border-right-width: 1px; border-right-color: #D5D5D5; vertical-align: middle; overflow-x: hidden; text-align: left;" valign="middle" align="left">Objeto A</td>
-<td headers="condição" class="gt_row gt_left" style="border-style: none; padding-top: 8px; padding-bottom: 8px; padding-left: 5px; padding-right: 5px; margin: 10px; border-top-style: none; border-top-width: 1px; border-top-color: #D5D5D5; border-left-style: none; border-left-width: 1px; border-left-color: #D5D5D5; border-right-style: none; border-right-width: 1px; border-right-color: #D5D5D5; vertical-align: middle; overflow-x: hidden; text-align: left;" valign="middle" align="left">Condições X, Y e Z</td></tr>
-    <tr style="border-style: none;"><td headers="id" class="gt_row gt_right gt_striped" style="border-style: none; padding-top: 8px; padding-bottom: 8px; padding-left: 5px; padding-right: 5px; margin: 10px; border-top-style: none; border-top-width: 1px; border-top-color: #D5D5D5; border-left-style: none; border-left-width: 1px; border-left-color: #D5D5D5; border-right-style: none; border-right-width: 1px; border-right-color: #D5D5D5; vertical-align: middle; overflow-x: hidden; background-color: #F4F4F4; text-align: right; font-variant-numeric: tabular-nums;" valign="middle" bgcolor="#F4F4F4" align="right">2</td>
-<td headers="participante" class="gt_row gt_left gt_striped" style="border-style: none; padding-top: 8px; padding-bottom: 8px; padding-left: 5px; padding-right: 5px; margin: 10px; border-top-style: none; border-top-width: 1px; border-top-color: #D5D5D5; border-left-style: none; border-left-width: 1px; border-left-color: #D5D5D5; border-right-style: none; border-right-width: 1px; border-right-color: #D5D5D5; vertical-align: middle; overflow-x: hidden; background-color: #F4F4F4; text-align: left;" valign="middle" bgcolor="#F4F4F4" align="left">Entrevistado 1</td>
-<td headers="objeto" class="gt_row gt_left gt_striped" style="border-style: none; padding-top: 8px; padding-bottom: 8px; padding-left: 5px; padding-right: 5px; margin: 10px; border-top-style: none; border-top-width: 1px; border-top-color: #D5D5D5; border-left-style: none; border-left-width: 1px; border-left-color: #D5D5D5; border-right-style: none; border-right-width: 1px; border-right-color: #D5D5D5; vertical-align: middle; overflow-x: hidden; background-color: #F4F4F4; text-align: left;" valign="middle" bgcolor="#F4F4F4" align="left">Objeto B</td>
-<td headers="condição" class="gt_row gt_left gt_striped" style="border-style: none; padding-top: 8px; padding-bottom: 8px; padding-left: 5px; padding-right: 5px; margin: 10px; border-top-style: none; border-top-width: 1px; border-top-color: #D5D5D5; border-left-style: none; border-left-width: 1px; border-left-color: #D5D5D5; border-right-style: none; border-right-width: 1px; border-right-color: #D5D5D5; vertical-align: middle; overflow-x: hidden; background-color: #F4F4F4; text-align: left;" valign="middle" bgcolor="#F4F4F4" align="left">Condições W e K</td></tr>
-    <tr style="border-style: none;"><td headers="id" class="gt_row gt_right" style="border-style: none; padding-top: 8px; padding-bottom: 8px; padding-left: 5px; padding-right: 5px; margin: 10px; border-top-style: none; border-top-width: 1px; border-top-color: #D5D5D5; border-left-style: none; border-left-width: 1px; border-left-color: #D5D5D5; border-right-style: none; border-right-width: 1px; border-right-color: #D5D5D5; vertical-align: middle; overflow-x: hidden; text-align: right; font-variant-numeric: tabular-nums;" valign="middle" align="right">3</td>
-<td headers="participante" class="gt_row gt_left" style="border-style: none; padding-top: 8px; padding-bottom: 8px; padding-left: 5px; padding-right: 5px; margin: 10px; border-top-style: none; border-top-width: 1px; border-top-color: #D5D5D5; border-left-style: none; border-left-width: 1px; border-left-color: #D5D5D5; border-right-style: none; border-right-width: 1px; border-right-color: #D5D5D5; vertical-align: middle; overflow-x: hidden; text-align: left;" valign="middle" align="left">Entrevistado 2</td>
-<td headers="objeto" class="gt_row gt_left" style="border-style: none; padding-top: 8px; padding-bottom: 8px; padding-left: 5px; padding-right: 5px; margin: 10px; border-top-style: none; border-top-width: 1px; border-top-color: #D5D5D5; border-left-style: none; border-left-width: 1px; border-left-color: #D5D5D5; border-right-style: none; border-right-width: 1px; border-right-color: #D5D5D5; vertical-align: middle; overflow-x: hidden; text-align: left;" valign="middle" align="left">Objeto A</td>
-<td headers="condição" class="gt_row gt_left" style="border-style: none; padding-top: 8px; padding-bottom: 8px; padding-left: 5px; padding-right: 5px; margin: 10px; border-top-style: none; border-top-width: 1px; border-top-color: #D5D5D5; border-left-style: none; border-left-width: 1px; border-left-color: #D5D5D5; border-right-style: none; border-right-width: 1px; border-right-color: #D5D5D5; vertical-align: middle; overflow-x: hidden; text-align: left;" valign="middle" align="left">Condições P e I</td></tr>
+  <tbody class="gt_table_body">
+    <tr><td headers="id" class="gt_row gt_right">1</td>
+<td headers="participante" class="gt_row gt_left">Entrevistado 1</td>
+<td headers="objeto" class="gt_row gt_left">Objeto A</td>
+<td headers="condição" class="gt_row gt_left">Condições X, Y e Z</td></tr>
+    <tr><td headers="id" class="gt_row gt_right gt_striped">2</td>
+<td headers="participante" class="gt_row gt_left gt_striped">Entrevistado 1</td>
+<td headers="objeto" class="gt_row gt_left gt_striped">Objeto B</td>
+<td headers="condição" class="gt_row gt_left gt_striped">Condições W e K</td></tr>
+    <tr><td headers="id" class="gt_row gt_right">3</td>
+<td headers="participante" class="gt_row gt_left">Entrevistado 2</td>
+<td headers="objeto" class="gt_row gt_left">Objeto A</td>
+<td headers="condição" class="gt_row gt_left">Condições P e I</td></tr>
   </tbody>
   
   
 </table>
 </div>
 </div>
+</div>
+</figure>
 </div>
 </div>
 </section>
 <section id="consultas-à-literatura" class="level3" data-number="2.2.2">
 <h3 data-number="2.2.2" class="anchored" data-anchor-id="consultas-à-literatura"><span class="header-section-number">2.2.2</span> Consultas à Literatura</h3>
-<p>Assim como as entrevistas, a consulta à literatura tem o objetivo de obter informações sobre os fatores que afetam a ocorrência da <button class="glossary" title="Supressão de Vegetação Natural (SVN)">SVN</button>, servindo de base para o desenvolvimento do modelo teórico.</p>
-<p>A literatura consultada é de natureza diversa, podem ser artigos publicadas em periódicos científicos, livros, documentos técnicos, dissertações e teses, não sendo limitadas entre essas citadas. O motivo para essa abrangência é a de ter amplo acesso a documentos diversos sobre qualquer conteúdo relacionado à <button class="glossary" title="Supressão de Vegetação Natural (SVN)">SVN</button>.</p>
+<p>Assim como as entrevistas, a consulta à literatura tem o objetivo de obter informações sobre os fatores que afetam a ocorrência da <button class="glossary" title="">SVN</button>, servindo de base para o desenvolvimento do modelo teórico.</p>
+<p>A literatura consultada é de natureza diversa, podem ser artigos publicadas em periódicos científicos, livros, documentos técnicos, dissertações e teses, não sendo limitadas entre essas citadas. O motivo para essa abrangência é a de ter amplo acesso a documentos diversos sobre qualquer conteúdo relacionado à <button class="glossary" title="">SVN</button>.</p>
 <p>A busca por tais documentos é feita através de ferramenta de buscas amplas, ou mais específicas de documentos acadêmicos. O processo de buscas não apresenta um método sistemático, e é feita de maneira livre. A forma das buscas é feita através do uso de palavras-chave, identificadas em indagações feitas com base em informações obtidas através das entrevistas e consultas à literatura anteriores. As buscas também são feitas com bases em citações encontradas em documentos consultados.</p>
-<p>Na medida do possível, as informações obtidas através das consultas são sistematizadas em uma tabela. Isso tem o objetivo de facilitar comparações entre os conteúdos de diferentes fontes. Essa tabela contém informações semelhantes a <a href="#tbl-interviewdata">Tabela&nbsp;<span>2.2</span></a>, porém, com dados adicionais que permitem a identificação da origem do dado (<a href="#tbl-literaturedata">Tabela&nbsp;<span>2.3</span></a>).</p>
+<p>Na medida do possível, as informações obtidas através das consultas são sistematizadas em uma tabela. Isso tem o objetivo de facilitar comparações entre os conteúdos de diferentes fontes. Essa tabela contém informações semelhantes a <a href="#tbl-interviewdata" class="quarto-xref">Tabela&nbsp;<span>2.2</span></a>, porém, com dados adicionais que permitem a identificação da origem do dado (<a href="#tbl-literaturedata" class="quarto-xref">Tabela&nbsp;<span>2.3</span></a>).</p>
 <div class="cell">
+<div id="tbl-literaturedata" class="cell quarto-float anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-literaturedata-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Tabela&nbsp;2.3: Ilustração da tabela de dados gerada com base nas informações obtidas através das consultas à literatura.
+</figcaption>
+<div aria-describedby="tbl-literaturedata-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <div class="cell-output-display">
-<div id="tbl-literaturedata" class="anchored">
+<div id="ywxlnlgkrl" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#ywxlnlgkrl table {
+  font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
 
-<div id="ptdzleonej" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-  
-  <table class="gt_table" data-quarto-disable-processing="false" data-quarto-bootstrap="true" style="-webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji'; display: table; border-collapse: collapse; line-height: normal; margin-left: auto; margin-right: auto; color: #333333; font-size: 14px; font-weight: normal; font-style: normal; background-color: #FFFFFF; width: 90%; border-top-style: solid; border-top-width: 2px; border-top-color: #000000; border-right-style: none; border-right-width: 2px; border-right-color: #D3D3D3; border-bottom-style: solid; border-bottom-width: 2px; border-bottom-color: #000000; border-left-style: none; border-left-width: 2px; border-left-color: #D3D3D3;" width="90%" bgcolor="#FFFFFF"><caption>Tabela&nbsp;2.3:  <p>Ilustração da tabela de dados gerada com base nas informações obtidas
-através das consultas à literatura.</p> </caption>
-  <thead style="border-style: none;">
-    <tr class="gt_col_headings" style="border-style: none; border-top-style: solid; border-top-width: 2px; border-top-color: #5F5F5F; border-bottom-style: solid; border-bottom-width: 2px; border-bottom-color: #5F5F5F; border-left-style: none; border-left-width: 1px; border-left-color: #D3D3D3; border-right-style: none; border-right-width: 1px; border-right-color: #D3D3D3;">
-      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="id" style="border-style: none; color: #333333; background-color: #FFFFFF; font-size: 100%; font-weight: normal; text-transform: inherit; border-left-style: none; border-left-width: 1px; border-left-color: #D3D3D3; border-right-style: none; border-right-width: 1px; border-right-color: #D3D3D3; vertical-align: bottom; padding-top: 5px; padding-bottom: 6px; padding-left: 5px; padding-right: 5px; overflow-x: hidden; text-align: right; font-variant-numeric: tabular-nums;" bgcolor="#FFFFFF" valign="bottom" align="right">id</th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" scope="col" id="doi" style="border-style: none; color: #333333; background-color: #FFFFFF; font-size: 100%; font-weight: normal; text-transform: inherit; border-left-style: none; border-left-width: 1px; border-left-color: #D3D3D3; border-right-style: none; border-right-width: 1px; border-right-color: #D3D3D3; vertical-align: bottom; padding-top: 5px; padding-bottom: 6px; padding-left: 5px; padding-right: 5px; overflow-x: hidden; text-align: left;" bgcolor="#FFFFFF" valign="bottom" align="left">doi</th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" scope="col" id="autor" style="border-style: none; color: #333333; background-color: #FFFFFF; font-size: 100%; font-weight: normal; text-transform: inherit; border-left-style: none; border-left-width: 1px; border-left-color: #D3D3D3; border-right-style: none; border-right-width: 1px; border-right-color: #D3D3D3; vertical-align: bottom; padding-top: 5px; padding-bottom: 6px; padding-left: 5px; padding-right: 5px; overflow-x: hidden; text-align: left;" bgcolor="#FFFFFF" valign="bottom" align="left">autor</th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" scope="col" id="titulo" style="border-style: none; color: #333333; background-color: #FFFFFF; font-size: 100%; font-weight: normal; text-transform: inherit; border-left-style: none; border-left-width: 1px; border-left-color: #D3D3D3; border-right-style: none; border-right-width: 1px; border-right-color: #D3D3D3; vertical-align: bottom; padding-top: 5px; padding-bottom: 6px; padding-left: 5px; padding-right: 5px; overflow-x: hidden; text-align: left;" bgcolor="#FFFFFF" valign="bottom" align="left">titulo</th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="ano" style="border-style: none; color: #333333; background-color: #FFFFFF; font-size: 100%; font-weight: normal; text-transform: inherit; border-left-style: none; border-left-width: 1px; border-left-color: #D3D3D3; border-right-style: none; border-right-width: 1px; border-right-color: #D3D3D3; vertical-align: bottom; padding-top: 5px; padding-bottom: 6px; padding-left: 5px; padding-right: 5px; overflow-x: hidden; text-align: right; font-variant-numeric: tabular-nums;" bgcolor="#FFFFFF" valign="bottom" align="right">ano</th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" scope="col" id="local" style="border-style: none; color: #333333; background-color: #FFFFFF; font-size: 100%; font-weight: normal; text-transform: inherit; border-left-style: none; border-left-width: 1px; border-left-color: #D3D3D3; border-right-style: none; border-right-width: 1px; border-right-color: #D3D3D3; vertical-align: bottom; padding-top: 5px; padding-bottom: 6px; padding-left: 5px; padding-right: 5px; overflow-x: hidden; text-align: left;" bgcolor="#FFFFFF" valign="bottom" align="left">local</th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" scope="col" id="objeto" style="border-style: none; color: #333333; background-color: #FFFFFF; font-size: 100%; font-weight: normal; text-transform: inherit; border-left-style: none; border-left-width: 1px; border-left-color: #D3D3D3; border-right-style: none; border-right-width: 1px; border-right-color: #D3D3D3; vertical-align: bottom; padding-top: 5px; padding-bottom: 6px; padding-left: 5px; padding-right: 5px; overflow-x: hidden; text-align: left;" bgcolor="#FFFFFF" valign="bottom" align="left">objeto</th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" scope="col" id="condição" style="border-style: none; color: #333333; background-color: #FFFFFF; font-size: 100%; font-weight: normal; text-transform: inherit; border-left-style: none; border-left-width: 1px; border-left-color: #D3D3D3; border-right-style: none; border-right-width: 1px; border-right-color: #D3D3D3; vertical-align: bottom; padding-top: 5px; padding-bottom: 6px; padding-left: 5px; padding-right: 5px; overflow-x: hidden; text-align: left;" bgcolor="#FFFFFF" valign="bottom" align="left">condição</th>
+#ywxlnlgkrl thead, #ywxlnlgkrl tbody, #ywxlnlgkrl tfoot, #ywxlnlgkrl tr, #ywxlnlgkrl td, #ywxlnlgkrl th {
+  border-style: none;
+}
+
+#ywxlnlgkrl p {
+  margin: 0;
+  padding: 0;
+}
+
+#ywxlnlgkrl .gt_table {
+  display: table;
+  border-collapse: collapse;
+  line-height: normal;
+  margin-left: auto;
+  margin-right: auto;
+  color: #333333;
+  font-size: 14px;
+  font-weight: normal;
+  font-style: normal;
+  background-color: #FFFFFF;
+  width: 90%;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #000000;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #000000;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+}
+
+#ywxlnlgkrl .gt_caption {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+#ywxlnlgkrl .gt_title {
+  color: #333333;
+  font-size: 125%;
+  font-weight: initial;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-color: #FFFFFF;
+  border-bottom-width: 0;
+}
+
+#ywxlnlgkrl .gt_subtitle {
+  color: #333333;
+  font-size: 85%;
+  font-weight: initial;
+  padding-top: 3px;
+  padding-bottom: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-color: #FFFFFF;
+  border-top-width: 0;
+}
+
+#ywxlnlgkrl .gt_heading {
+  background-color: #FFFFFF;
+  text-align: center;
+  border-bottom-color: #FFFFFF;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#ywxlnlgkrl .gt_bottom_border {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #5F5F5F;
+}
+
+#ywxlnlgkrl .gt_col_headings {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #5F5F5F;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #5F5F5F;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#ywxlnlgkrl .gt_col_heading {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 6px;
+  padding-left: 5px;
+  padding-right: 5px;
+  overflow-x: hidden;
+}
+
+#ywxlnlgkrl .gt_column_spanner_outer {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+#ywxlnlgkrl .gt_column_spanner_outer:first-child {
+  padding-left: 0;
+}
+
+#ywxlnlgkrl .gt_column_spanner_outer:last-child {
+  padding-right: 0;
+}
+
+#ywxlnlgkrl .gt_column_spanner {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #5F5F5F;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  overflow-x: hidden;
+  display: inline-block;
+  width: 100%;
+}
+
+#ywxlnlgkrl .gt_spanner_row {
+  border-bottom-style: hidden;
+}
+
+#ywxlnlgkrl .gt_group_heading {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #5F5F5F;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #5F5F5F;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  text-align: left;
+}
+
+#ywxlnlgkrl .gt_empty_group_heading {
+  padding: 0.5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #5F5F5F;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #5F5F5F;
+  vertical-align: middle;
+}
+
+#ywxlnlgkrl .gt_from_md > :first-child {
+  margin-top: 0;
+}
+
+#ywxlnlgkrl .gt_from_md > :last-child {
+  margin-bottom: 0;
+}
+
+#ywxlnlgkrl .gt_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin: 10px;
+  border-top-style: none;
+  border-top-width: 1px;
+  border-top-color: #D5D5D5;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D5D5D5;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D5D5D5;
+  vertical-align: middle;
+  overflow-x: hidden;
+}
+
+#ywxlnlgkrl .gt_stub {
+  color: #FFFFFF;
+  background-color: #5F5F5F;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #5F5F5F;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#ywxlnlgkrl .gt_stub_row_group {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+  vertical-align: top;
+}
+
+#ywxlnlgkrl .gt_row_group_first td {
+  border-top-width: 2px;
+}
+
+#ywxlnlgkrl .gt_row_group_first th {
+  border-top-width: 2px;
+}
+
+#ywxlnlgkrl .gt_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#ywxlnlgkrl .gt_first_summary_row {
+  border-top-style: solid;
+  border-top-color: #5F5F5F;
+}
+
+#ywxlnlgkrl .gt_first_summary_row.thick {
+  border-top-width: 2px;
+}
+
+#ywxlnlgkrl .gt_last_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #5F5F5F;
+}
+
+#ywxlnlgkrl .gt_grand_summary_row {
+  color: #333333;
+  background-color: #D5D5D5;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#ywxlnlgkrl .gt_first_grand_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-style: double;
+  border-top-width: 6px;
+  border-top-color: #5F5F5F;
+}
+
+#ywxlnlgkrl .gt_last_grand_summary_row_top {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: double;
+  border-bottom-width: 6px;
+  border-bottom-color: #5F5F5F;
+}
+
+#ywxlnlgkrl .gt_striped {
+  background-color: #F4F4F4;
+}
+
+#ywxlnlgkrl .gt_table_body {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #5F5F5F;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #5F5F5F;
+}
+
+#ywxlnlgkrl .gt_footnotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#ywxlnlgkrl .gt_footnote {
+  margin: 0px;
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#ywxlnlgkrl .gt_sourcenotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#ywxlnlgkrl .gt_sourcenote {
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#ywxlnlgkrl .gt_left {
+  text-align: left;
+}
+
+#ywxlnlgkrl .gt_center {
+  text-align: center;
+}
+
+#ywxlnlgkrl .gt_right {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+#ywxlnlgkrl .gt_font_normal {
+  font-weight: normal;
+}
+
+#ywxlnlgkrl .gt_font_bold {
+  font-weight: bold;
+}
+
+#ywxlnlgkrl .gt_font_italic {
+  font-style: italic;
+}
+
+#ywxlnlgkrl .gt_super {
+  font-size: 65%;
+}
+
+#ywxlnlgkrl .gt_footnote_marks {
+  font-size: 75%;
+  vertical-align: 0.4em;
+  position: initial;
+}
+
+#ywxlnlgkrl .gt_asterisk {
+  font-size: 100%;
+  vertical-align: 0;
+}
+
+#ywxlnlgkrl .gt_indent_1 {
+  text-indent: 5px;
+}
+
+#ywxlnlgkrl .gt_indent_2 {
+  text-indent: 10px;
+}
+
+#ywxlnlgkrl .gt_indent_3 {
+  text-indent: 15px;
+}
+
+#ywxlnlgkrl .gt_indent_4 {
+  text-indent: 20px;
+}
+
+#ywxlnlgkrl .gt_indent_5 {
+  text-indent: 25px;
+}
+</style>
+<table class="gt_table" data-quarto-disable-processing="true" data-quarto-bootstrap="false">
+  <thead>
+    <tr class="gt_col_headings">
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="id">id</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" scope="col" id="doi">doi</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" scope="col" id="autor">autor</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" scope="col" id="titulo">titulo</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="ano">ano</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" scope="col" id="local">local</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" scope="col" id="objeto">objeto</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" scope="col" id="condição">condição</th>
     </tr>
   </thead>
-  <tbody class="gt_table_body" style="border-style: none; border-top-style: solid; border-top-width: 2px; border-top-color: #5F5F5F; border-bottom-style: solid; border-bottom-width: 2px; border-bottom-color: #5F5F5F;">
-    <tr style="border-style: none;"><td headers="id" class="gt_row gt_right" style="border-style: none; padding-top: 8px; padding-bottom: 8px; padding-left: 5px; padding-right: 5px; margin: 10px; border-top-style: none; border-top-width: 1px; border-top-color: #D5D5D5; border-left-style: none; border-left-width: 1px; border-left-color: #D5D5D5; border-right-style: none; border-right-width: 1px; border-right-color: #D5D5D5; vertical-align: middle; overflow-x: hidden; text-align: right; font-variant-numeric: tabular-nums;" valign="middle" align="right">1</td>
-<td headers="doi" class="gt_row gt_left" style="border-style: none; padding-top: 8px; padding-bottom: 8px; padding-left: 5px; padding-right: 5px; margin: 10px; border-top-style: none; border-top-width: 1px; border-top-color: #D5D5D5; border-left-style: none; border-left-width: 1px; border-left-color: #D5D5D5; border-right-style: none; border-right-width: 1px; border-right-color: #D5D5D5; vertical-align: middle; overflow-x: hidden; text-align: left;" valign="middle" align="left">https://doi.org/...1</td>
-<td headers="autor" class="gt_row gt_left" style="border-style: none; padding-top: 8px; padding-bottom: 8px; padding-left: 5px; padding-right: 5px; margin: 10px; border-top-style: none; border-top-width: 1px; border-top-color: #D5D5D5; border-left-style: none; border-left-width: 1px; border-left-color: #D5D5D5; border-right-style: none; border-right-width: 1px; border-right-color: #D5D5D5; vertical-align: middle; overflow-x: hidden; text-align: left;" valign="middle" align="left">Fulano</td>
-<td headers="titulo" class="gt_row gt_left" style="border-style: none; padding-top: 8px; padding-bottom: 8px; padding-left: 5px; padding-right: 5px; margin: 10px; border-top-style: none; border-top-width: 1px; border-top-color: #D5D5D5; border-left-style: none; border-left-width: 1px; border-left-color: #D5D5D5; border-right-style: none; border-right-width: 1px; border-right-color: #D5D5D5; vertical-align: middle; overflow-x: hidden; text-align: left;" valign="middle" align="left">Algo sobre algo</td>
-<td headers="ano" class="gt_row gt_right" style="border-style: none; padding-top: 8px; padding-bottom: 8px; padding-left: 5px; padding-right: 5px; margin: 10px; border-top-style: none; border-top-width: 1px; border-top-color: #D5D5D5; border-left-style: none; border-left-width: 1px; border-left-color: #D5D5D5; border-right-style: none; border-right-width: 1px; border-right-color: #D5D5D5; vertical-align: middle; overflow-x: hidden; text-align: right; font-variant-numeric: tabular-nums;" valign="middle" align="right">1968</td>
-<td headers="local" class="gt_row gt_left" style="border-style: none; padding-top: 8px; padding-bottom: 8px; padding-left: 5px; padding-right: 5px; margin: 10px; border-top-style: none; border-top-width: 1px; border-top-color: #D5D5D5; border-left-style: none; border-left-width: 1px; border-left-color: #D5D5D5; border-right-style: none; border-right-width: 1px; border-right-color: #D5D5D5; vertical-align: middle; overflow-x: hidden; text-align: left;" valign="middle" align="left">Lá longe</td>
-<td headers="objeto" class="gt_row gt_left" style="border-style: none; padding-top: 8px; padding-bottom: 8px; padding-left: 5px; padding-right: 5px; margin: 10px; border-top-style: none; border-top-width: 1px; border-top-color: #D5D5D5; border-left-style: none; border-left-width: 1px; border-left-color: #D5D5D5; border-right-style: none; border-right-width: 1px; border-right-color: #D5D5D5; vertical-align: middle; overflow-x: hidden; text-align: left;" valign="middle" align="left">Objeto A</td>
-<td headers="condição" class="gt_row gt_left" style="border-style: none; padding-top: 8px; padding-bottom: 8px; padding-left: 5px; padding-right: 5px; margin: 10px; border-top-style: none; border-top-width: 1px; border-top-color: #D5D5D5; border-left-style: none; border-left-width: 1px; border-left-color: #D5D5D5; border-right-style: none; border-right-width: 1px; border-right-color: #D5D5D5; vertical-align: middle; overflow-x: hidden; text-align: left;" valign="middle" align="left">Condições X, Y e Z</td></tr>
-    <tr style="border-style: none;"><td headers="id" class="gt_row gt_right gt_striped" style="border-style: none; padding-top: 8px; padding-bottom: 8px; padding-left: 5px; padding-right: 5px; margin: 10px; border-top-style: none; border-top-width: 1px; border-top-color: #D5D5D5; border-left-style: none; border-left-width: 1px; border-left-color: #D5D5D5; border-right-style: none; border-right-width: 1px; border-right-color: #D5D5D5; vertical-align: middle; overflow-x: hidden; background-color: #F4F4F4; text-align: right; font-variant-numeric: tabular-nums;" valign="middle" bgcolor="#F4F4F4" align="right">2</td>
-<td headers="doi" class="gt_row gt_left gt_striped" style="border-style: none; padding-top: 8px; padding-bottom: 8px; padding-left: 5px; padding-right: 5px; margin: 10px; border-top-style: none; border-top-width: 1px; border-top-color: #D5D5D5; border-left-style: none; border-left-width: 1px; border-left-color: #D5D5D5; border-right-style: none; border-right-width: 1px; border-right-color: #D5D5D5; vertical-align: middle; overflow-x: hidden; background-color: #F4F4F4; text-align: left;" valign="middle" bgcolor="#F4F4F4" align="left">https://doi.org/...1</td>
-<td headers="autor" class="gt_row gt_left gt_striped" style="border-style: none; padding-top: 8px; padding-bottom: 8px; padding-left: 5px; padding-right: 5px; margin: 10px; border-top-style: none; border-top-width: 1px; border-top-color: #D5D5D5; border-left-style: none; border-left-width: 1px; border-left-color: #D5D5D5; border-right-style: none; border-right-width: 1px; border-right-color: #D5D5D5; vertical-align: middle; overflow-x: hidden; background-color: #F4F4F4; text-align: left;" valign="middle" bgcolor="#F4F4F4" align="left">Fulano</td>
-<td headers="titulo" class="gt_row gt_left gt_striped" style="border-style: none; padding-top: 8px; padding-bottom: 8px; padding-left: 5px; padding-right: 5px; margin: 10px; border-top-style: none; border-top-width: 1px; border-top-color: #D5D5D5; border-left-style: none; border-left-width: 1px; border-left-color: #D5D5D5; border-right-style: none; border-right-width: 1px; border-right-color: #D5D5D5; vertical-align: middle; overflow-x: hidden; background-color: #F4F4F4; text-align: left;" valign="middle" bgcolor="#F4F4F4" align="left">Algo sobre algo</td>
-<td headers="ano" class="gt_row gt_right gt_striped" style="border-style: none; padding-top: 8px; padding-bottom: 8px; padding-left: 5px; padding-right: 5px; margin: 10px; border-top-style: none; border-top-width: 1px; border-top-color: #D5D5D5; border-left-style: none; border-left-width: 1px; border-left-color: #D5D5D5; border-right-style: none; border-right-width: 1px; border-right-color: #D5D5D5; vertical-align: middle; overflow-x: hidden; background-color: #F4F4F4; text-align: right; font-variant-numeric: tabular-nums;" valign="middle" bgcolor="#F4F4F4" align="right">1968</td>
-<td headers="local" class="gt_row gt_left gt_striped" style="border-style: none; padding-top: 8px; padding-bottom: 8px; padding-left: 5px; padding-right: 5px; margin: 10px; border-top-style: none; border-top-width: 1px; border-top-color: #D5D5D5; border-left-style: none; border-left-width: 1px; border-left-color: #D5D5D5; border-right-style: none; border-right-width: 1px; border-right-color: #D5D5D5; vertical-align: middle; overflow-x: hidden; background-color: #F4F4F4; text-align: left;" valign="middle" bgcolor="#F4F4F4" align="left">Lá longe</td>
-<td headers="objeto" class="gt_row gt_left gt_striped" style="border-style: none; padding-top: 8px; padding-bottom: 8px; padding-left: 5px; padding-right: 5px; margin: 10px; border-top-style: none; border-top-width: 1px; border-top-color: #D5D5D5; border-left-style: none; border-left-width: 1px; border-left-color: #D5D5D5; border-right-style: none; border-right-width: 1px; border-right-color: #D5D5D5; vertical-align: middle; overflow-x: hidden; background-color: #F4F4F4; text-align: left;" valign="middle" bgcolor="#F4F4F4" align="left">Objeto B</td>
-<td headers="condição" class="gt_row gt_left gt_striped" style="border-style: none; padding-top: 8px; padding-bottom: 8px; padding-left: 5px; padding-right: 5px; margin: 10px; border-top-style: none; border-top-width: 1px; border-top-color: #D5D5D5; border-left-style: none; border-left-width: 1px; border-left-color: #D5D5D5; border-right-style: none; border-right-width: 1px; border-right-color: #D5D5D5; vertical-align: middle; overflow-x: hidden; background-color: #F4F4F4; text-align: left;" valign="middle" bgcolor="#F4F4F4" align="left">Condições W e K</td></tr>
-    <tr style="border-style: none;"><td headers="id" class="gt_row gt_right" style="border-style: none; padding-top: 8px; padding-bottom: 8px; padding-left: 5px; padding-right: 5px; margin: 10px; border-top-style: none; border-top-width: 1px; border-top-color: #D5D5D5; border-left-style: none; border-left-width: 1px; border-left-color: #D5D5D5; border-right-style: none; border-right-width: 1px; border-right-color: #D5D5D5; vertical-align: middle; overflow-x: hidden; text-align: right; font-variant-numeric: tabular-nums;" valign="middle" align="right">3</td>
-<td headers="doi" class="gt_row gt_left" style="border-style: none; padding-top: 8px; padding-bottom: 8px; padding-left: 5px; padding-right: 5px; margin: 10px; border-top-style: none; border-top-width: 1px; border-top-color: #D5D5D5; border-left-style: none; border-left-width: 1px; border-left-color: #D5D5D5; border-right-style: none; border-right-width: 1px; border-right-color: #D5D5D5; vertical-align: middle; overflow-x: hidden; text-align: left;" valign="middle" align="left">https://doi.org/...2</td>
-<td headers="autor" class="gt_row gt_left" style="border-style: none; padding-top: 8px; padding-bottom: 8px; padding-left: 5px; padding-right: 5px; margin: 10px; border-top-style: none; border-top-width: 1px; border-top-color: #D5D5D5; border-left-style: none; border-left-width: 1px; border-left-color: #D5D5D5; border-right-style: none; border-right-width: 1px; border-right-color: #D5D5D5; vertical-align: middle; overflow-x: hidden; text-align: left;" valign="middle" align="left">Sicrano et al.</td>
-<td headers="titulo" class="gt_row gt_left" style="border-style: none; padding-top: 8px; padding-bottom: 8px; padding-left: 5px; padding-right: 5px; margin: 10px; border-top-style: none; border-top-width: 1px; border-top-color: #D5D5D5; border-left-style: none; border-left-width: 1px; border-left-color: #D5D5D5; border-right-style: none; border-right-width: 1px; border-right-color: #D5D5D5; vertical-align: middle; overflow-x: hidden; text-align: left;" valign="middle" align="left">Isto sobre aquilo</td>
-<td headers="ano" class="gt_row gt_right" style="border-style: none; padding-top: 8px; padding-bottom: 8px; padding-left: 5px; padding-right: 5px; margin: 10px; border-top-style: none; border-top-width: 1px; border-top-color: #D5D5D5; border-left-style: none; border-left-width: 1px; border-left-color: #D5D5D5; border-right-style: none; border-right-width: 1px; border-right-color: #D5D5D5; vertical-align: middle; overflow-x: hidden; text-align: right; font-variant-numeric: tabular-nums;" valign="middle" align="right">2001</td>
-<td headers="local" class="gt_row gt_left" style="border-style: none; padding-top: 8px; padding-bottom: 8px; padding-left: 5px; padding-right: 5px; margin: 10px; border-top-style: none; border-top-width: 1px; border-top-color: #D5D5D5; border-left-style: none; border-left-width: 1px; border-left-color: #D5D5D5; border-right-style: none; border-right-width: 1px; border-right-color: #D5D5D5; vertical-align: middle; overflow-x: hidden; text-align: left;" valign="middle" align="left">Logo ali</td>
-<td headers="objeto" class="gt_row gt_left" style="border-style: none; padding-top: 8px; padding-bottom: 8px; padding-left: 5px; padding-right: 5px; margin: 10px; border-top-style: none; border-top-width: 1px; border-top-color: #D5D5D5; border-left-style: none; border-left-width: 1px; border-left-color: #D5D5D5; border-right-style: none; border-right-width: 1px; border-right-color: #D5D5D5; vertical-align: middle; overflow-x: hidden; text-align: left;" valign="middle" align="left">Objeto A</td>
-<td headers="condição" class="gt_row gt_left" style="border-style: none; padding-top: 8px; padding-bottom: 8px; padding-left: 5px; padding-right: 5px; margin: 10px; border-top-style: none; border-top-width: 1px; border-top-color: #D5D5D5; border-left-style: none; border-left-width: 1px; border-left-color: #D5D5D5; border-right-style: none; border-right-width: 1px; border-right-color: #D5D5D5; vertical-align: middle; overflow-x: hidden; text-align: left;" valign="middle" align="left">Condições P e I</td></tr>
+  <tbody class="gt_table_body">
+    <tr><td headers="id" class="gt_row gt_right">1</td>
+<td headers="doi" class="gt_row gt_left">https://doi.org/...1</td>
+<td headers="autor" class="gt_row gt_left">Fulano</td>
+<td headers="titulo" class="gt_row gt_left">Algo sobre algo</td>
+<td headers="ano" class="gt_row gt_right">1968</td>
+<td headers="local" class="gt_row gt_left">Lá longe</td>
+<td headers="objeto" class="gt_row gt_left">Objeto A</td>
+<td headers="condição" class="gt_row gt_left">Condições X, Y e Z</td></tr>
+    <tr><td headers="id" class="gt_row gt_right gt_striped">2</td>
+<td headers="doi" class="gt_row gt_left gt_striped">https://doi.org/...1</td>
+<td headers="autor" class="gt_row gt_left gt_striped">Fulano</td>
+<td headers="titulo" class="gt_row gt_left gt_striped">Algo sobre algo</td>
+<td headers="ano" class="gt_row gt_right gt_striped">1968</td>
+<td headers="local" class="gt_row gt_left gt_striped">Lá longe</td>
+<td headers="objeto" class="gt_row gt_left gt_striped">Objeto B</td>
+<td headers="condição" class="gt_row gt_left gt_striped">Condições W e K</td></tr>
+    <tr><td headers="id" class="gt_row gt_right">3</td>
+<td headers="doi" class="gt_row gt_left">https://doi.org/...2</td>
+<td headers="autor" class="gt_row gt_left">Sicrano et al.</td>
+<td headers="titulo" class="gt_row gt_left">Isto sobre aquilo</td>
+<td headers="ano" class="gt_row gt_right">2001</td>
+<td headers="local" class="gt_row gt_left">Logo ali</td>
+<td headers="objeto" class="gt_row gt_left">Objeto A</td>
+<td headers="condição" class="gt_row gt_left">Condições P e I</td></tr>
   </tbody>
   
   
@@ -895,127 +1814,116 @@ através das consultas à literatura.</p> </caption>
 </div>
 </div>
 </div>
+</figure>
 </div>
-<p>É importante reforçar que, o desenvolvimento do modelo teórico, não é baseado restritamente aos dados presentes nas tabelas <a href="#tbl-interviewdata"><span>2.2</span></a> e <a href="#tbl-literaturedata"><span>2.3</span></a>. Isso proporciona uma maior liberdade para o processo de reflexão de desenvolvimento do modelo teórico, que também é afetado pelos métodos de análise adotados.</p>
-<p>Além disso, a justificativa para a adoção de um processo ametódico de consulta à literatura, se baseia na vantagem de proporcionar maior liberdade de pensamento, mas também na ausência de um motivo forte para a realização de um processo metódico. Por exemplo, caso o objetivo da consulta à literatura fosse identificar as causas da <button class="glossary" title="Supressão de Vegetação Natural (SVN)">SVN</button> mais citadas na literatura científica, seria então aconselhável adotar um método de revisão sistemática. Esse não é o caso dessa pesquisa.</p>
+</div>
+<p>É importante reforçar que, o desenvolvimento do modelo teórico, não é baseado restritamente aos dados presentes nas tabelas <a href="#tbl-interviewdata" class="quarto-xref"><span>2.2</span></a> e <a href="#tbl-literaturedata" class="quarto-xref"><span>2.3</span></a>. Isso proporciona uma maior liberdade para o processo de reflexão de desenvolvimento do modelo teórico, que também é afetado pelos métodos de análise adotados.</p>
+<p>Além disso, a justificativa para a adoção de um processo ametódico de consulta à literatura, se baseia na vantagem de proporcionar maior liberdade de pensamento, mas também na ausência de um motivo forte para a realização de um processo metódico. Por exemplo, caso o objetivo da consulta à literatura fosse identificar as causas da <button class="glossary" title="">SVN</button> mais citadas na literatura científica, seria então aconselhável adotar um método de revisão sistemática. Esse não é o caso dessa pesquisa.</p>
 </section>
 </section>
 <section id="análise-sociológica" class="level2" data-number="2.3">
 <h2 data-number="2.3" class="anchored" data-anchor-id="análise-sociológica"><span class="header-section-number">2.3</span> Análise Sociológica</h2>
-<p>A análise sociológica será feita através da Teoria Geral dos Campos desenvolvida por Bourdieu, aplicada como perspectiva analítica do modelo teórico da <button class="glossary" title="Supressão de Vegetação Natural (SVN)">SVN</button>. A análise será conduzida através da adaptação de três passos, identificados por <span class="citation" data-cites="grenfell-2018">Grenfell (<a href="#ref-grenfell-2018" role="doc-biblioref">2018</a>)</span>:</p>
+<p>A análise sociológica é feita através da Teoria Geral dos Campos desenvolvida por Bourdieu, aplicada como perspectiva analítica do modelo teórico da <button class="glossary" title="">SVN</button>. A análise é conduzida através da adaptação de três passos, identificados por <span class="citation" data-cites="grenfell-2018">Grenfell (<a href="#ref-grenfell-2018" role="doc-biblioref">2018</a>)</span>:</p>
 <ol type="1">
-<li><p>Descrever a posição do <button class="glossary" title="">campo</button> analisado em relação ao <button class="glossary" title="O campo do poder representa um espaço que permeia todos os campos sociais, aonde ocorrem uma disputas por poder. A autoridade obtida dentro do campo do poder não pode ser reduzida por um tipo de capital especifico em um campo específico.">campo do poder</button>;</p></li>
-<li><p>Descrever as posições ocupadas pelos <button class="glossary" title="">agentes sociais</button> que participam do das disputas dentro do <button class="glossary" title="">campo</button> analisado. E caracterizar as relações entre cada posição ocupada por cada <button class="glossary" title="">agente social</button>. As posições são caracterizadas pelo <button class="glossary" title="">capital</button> de cada <button class="glossary" title="">agente social</button>, pelo objetivo do <button class="glossary" title="">agente social</button> em relação ao fenômeno de interesse, e pela forma como um certo tipo de <button class="glossary" title="">capital</button> influencia um <button class="glossary" title="">agente social</button> a atingir seu objetivo;</p></li>
-<li><p>Caracterizar as disposições dos <button class="glossary" title="">agentes sociais</button> em relação ao fenômeno de interesse, e como essas disposições influênciam as ações tomadas com o objetivo desses agentes. Isso é feito através do conceito de <button class="glossary" title="">habitus</button>.</p></li>
+<li><p>Descrever a posição do <button class="glossary" title="">campo social</button> analisado em relação ao <button class="glossary" title="O campo do poder representa um espaço que permeia todos os campos sociais, aonde ocorrem uma disputas por poder. A autoridade obtida dentro do campo do poder não pode ser reduzida por um tipo de capital especifico em um campo social específico.">campo do poder</button>:</p>
+<p>A relação é descrita de forma a estabelecer como a acumulação de poder dentro de um <button class="glossary" title="">campo social</button> influencia na acumulação de poder de forma mais abrangente, dentro do <button class="glossary" title="O campo do poder representa um espaço que permeia todos os campos sociais, aonde ocorrem uma disputas por poder. A autoridade obtida dentro do campo do poder não pode ser reduzida por um tipo de capital especifico em um campo social específico.">campo do poder</button>. Aqui, poder não é descrito apenas como o <button class="glossary" title="">capital</button>, mas uma forma de legitimação de um <button class="glossary" title="">agente social</button>, e de persistência de sua pŕopira existência.</p></li>
+<li><p>Identificar os principais agentes sociais <button class="glossary" title="">agentes sociais</button> que participam do <button class="glossary" title="">campo social</button> analisado. Descrever as posições que cada um ocupa dentro desse campo. E caracterizar as relações entre cada posição ocupada por cada <button class="glossary" title="">agente social</button>:</p>
+<p>As posições são caracterizadas pelo <button class="glossary" title="">capital</button> de cada <button class="glossary" title="">agente social</button>, pelo objetivo do agente em relação ao fenômeno de interesse, e pela forma como um certo tipo de <button class="glossary" title="">capital</button> influencia o agente a atingir seu objetivo;</p></li>
+<li><p>Caracterizar as disposições dos <button class="glossary" title="">agentes sociais</button> em relação ao fenômeno de interesse, e como essas disposições influênciam as ações tomadas com o objetivo desses agentes. Isso é feito através do conceito de <button class="glossary" title="">habitus</button>:</p>
+<p>As disposições são descritas de acordo com contextos históricos dos <button class="glossary" title="">agentes sociais</button> e de suas posições dentro do <button class="glossary" title="">campo social</button> analisado.</p></li>
 </ol>
+<p>Todas as etapas descritas acima serão feitas com base em informações obtidas das consultas à literatura. Portanto, conceitos como <button class="glossary" title="">capital</button> não serão representados de forma numérica ou como categorias qualitativas, mas de forma abstrata a partir de informações coletadas da literatura. Já o conceito de <button class="glossary" title="">habitus</button> será descrito a partir de informações históricas relacionadas à um certo <button class="glossary" title="">agente social</button>, e não por meio de entrevistas, como é comum de se observar em pesquisas feitas com base na Teoria Geral dos Campos desenvolvida por Bourdieu. Essa forma de análise se justifica pela dificuldade de obtenção de informações de maneiras convencionais, já que o tema da <button class="glossary" title="">SVN</button> abrange <button class="glossary" title="">agentes sociais</button> de difícil acesso.</p>
 </section>
 <section id="análise-estatística" class="level2" data-number="2.4">
 <h2 data-number="2.4" class="anchored" data-anchor-id="análise-estatística"><span class="header-section-number">2.4</span> Análise Estatística</h2>
-<p>The statistical analysis is responsible for exploring relationships of observed variables within the exercise of predicting NVS. It is performed by structuring a database of observed variables that are considered to be a possible cause of the NVS, followed by a selection of variables according to the theoretical model, and finally the prediction of NVS.</p>
-<section id="database-structuring" class="level3" data-number="2.4.1">
-<h3 data-number="2.4.1" class="anchored" data-anchor-id="database-structuring"><span class="header-section-number">2.4.1</span> Database Structuring</h3>
-<p>The database contains data from different social and natural dimensions, which can be available in diverse formats and structures. To make the modeling process more efficient and transparent, all variables of interest must be organized coherently.</p>
-<p>The process to create the database consists of accessing the data sources, downloading the data to the local environment, transforming and organizing the data to the grid, and store in the local environment.</p>
+<p>A análise estatística tem como o objetivo a aplicação do modelo teórico de forma numérica. Esse processo é conduzido através da coleta e do processamento de dados quantitativos e qualitativos (que representam os <button class="glossary" title="">objetos transitivos</button>), e posteriormente na execução de um modelo de regressão sobre esses dados. No entanto, antes desse processo, é feita uma triagem de quais dados serão coletados e urilizados.</p>
+<p>A triagem é feita com base em dados que foram identificados na literatura consultada. A partir dessa lista de possíveis dados, é feita uma avaliação, que consiste na verificação da adequação do <button class="glossary" title="">objeto transitivo</button>, representado pelo dado, com relação ao modelo teórico. Ou seja, mesmo que o dado tenha sido considerado como correlacionado com a <button class="glossary" title="">SVN</button>, não significa que ele obedece as regras impostas pelo modelo teórico. Caso um dado indicado pela literatura obedeça as regras do modelo teórico, ele é selecionado para ser utilizado no modelo estatístico, passando a ser considerado como uma <button class="glossary" title="Uma variável é uma representação de um objeto transitivo em forma quantitativa ou qualitativa. Ela é representada como uma coluna em uma tabela de dados.">variável</button>.</p>
+<section id="estruturação-da-base-de-dados" class="level3" data-number="2.4.1">
+<h3 data-number="2.4.1" class="anchored" data-anchor-id="estruturação-da-base-de-dados"><span class="header-section-number">2.4.1</span> Estruturação da Base de Dados</h3>
+<p>O processo para a criação do banco de dados consiste em acessar e extrair os dados de suas fontes, processar e transformar os dados em uma grade regular, e armazena-los em ambiente computacional local (<a href="#fig-data-diagram" class="quarto-xref">Figura&nbsp;<span>2.3</span></a>).</p>
 <div class="cell" data-fig-responsive="true" data-layout-align="center">
 <div class="cell-output-display">
-<div id="fig-data-diagram" class="quarto-figure quarto-figure-center anchored">
-<figure class="figure">
+<div id="fig-data-diagram" class="quarto-figure quarto-figure-center quarto-float anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-data-diagram-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <div>
 <pre class="mermaid mermaid-js" data-label="fig-data-diagram">flowchart TD
-    A[Data Source] --&gt; E[Pre Processing]
-    B[Base Grid] --&gt; E[Pre Processing]
-    E[Pre Processing] --&gt; F[Gridded Data]
-    F[Gridded Data] --&gt; G[Database]
+    A[Fonte do Dado] --&gt; E[Pré Processamento]
+    B[Grade Regular] --&gt; E
+    E --&gt; F[Dados Estruturados em Grade]
+    F --&gt; G[Banco de Dados]
 
 </pre>
 </div>
-<figcaption class="figure-caption">Figura&nbsp;2.3: Diagram of the process to create the project database.</figcaption>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-data-diagram-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figura&nbsp;2.3: Fluxo do processamento dos dados.
+</figcaption>
 </figure>
 </div>
 </div>
 </div>
-<p>The data are stored in a nested directories database with hive-style partitioning. The database is composed of a collection of parquet files, a format with high compression, that facilitates processing large volumes of data. The main partition stores the variables, which means that each variable will be stored in a separate directory. If necessary, the data will be partitioned by further variables (as a rule of thumb, each parquet file should not be smaller than 20MB and not bigger than 2GB).</p>
-<p>To structure a collection of data that presents different natures, I must transform all the variables into a standard grid system. The grid system will be composed of 0.2 degrees cells (40km x 40km), which should be a balanced compromise between detail and computational cost.</p>
-<p>Each grid cell contains one observation, for each year, for all the variables.</p>
+<p>O processamento de cada dado varia com seu formato (tabular, vetorial ou matricial), e de sua organização original. O detalhamento dos dados, como sua fonte e formato, e seu processamento, podem ser lidos na sessão <a href="11_research_data.html" class="quarto-xref"><span>Apêndice B</span></a>. No final do processamento, cada dado é estruturado dentro de um grade regular hexagonal (<a href="#fig-base-grid" class="quarto-xref">Figura&nbsp;<span>2.4</span></a>), em que cada exagono possui 140 mil hectares, aproximadamente.</p>
+<div class="cell">
+<div class="cell-output-display">
+<div id="fig-base-grid" class="quarto-figure quarto-figure-center quarto-float anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-base-grid-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="02_methods_files/figure-html/fig-base-grid-1.png" class="img-fluid figure-img" width="672">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-base-grid-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figura&nbsp;2.4: Representação da grade regular em que os dados são transformados, e posteriormente utilizados no modelo estatístico.
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
 </section>
-<section id="model-development" class="level3" data-number="2.4.2">
-<h3 data-number="2.4.2" class="anchored" data-anchor-id="model-development"><span class="header-section-number">2.4.2</span> Model Development</h3>
-<p>The statistical model follow the standard approach to develop supervised models.</p>
-<p>The variables selection will be performed according to available data of possible causes of NVS (as stated in the theoretical model), the selection will also be performed to remove variables that can induce unwanted bias in the results, such as colliders and mediators.</p>
-<p>The data splitting between training and training, validation and testing groups will be performed in order to avoid spatial and temporal correlation between observations.</p>
-<p>The parameters adjustments will be performed by cross validation methods for resampling and racing techniques for parameter optimization. In this process, validation data will be used for parameter adjustments.</p>
-<p>After the final model fit, accuracy metrics will be calculated in order to estimate the error of the statistical model. Along with the accuracy assessment, a series of model interpretation techniques will be applied in order to understand the model results.</p>
-<p>The main steps are shown in <a href="#fig-model-diagram">Figura&nbsp;<span>2.4</span></a>.</p>
+<section id="desenvolvimento-dos-modelos-estatísticos" class="level3" data-number="2.4.2">
+<h3 data-number="2.4.2" class="anchored" data-anchor-id="desenvolvimento-dos-modelos-estatísticos"><span class="header-section-number">2.4.2</span> Desenvolvimento dos Modelos Estatísticos</h3>
+<p>O desenvolvimento dos modelos segue as práticas padrão usual de algorítmos de regressão supervisionados (<a href="#fig-model-diagram" class="quarto-xref">Figura&nbsp;<span>2.5</span></a>). Nesse método, os dados disponíveis são separados entre dados de treinamento, responsáveis por treinar os modelos, dados de validação, utilizados para ajustes dos parâmetros dos modelos, e dados de teste, que são utilizados para a aplicação dos modelos e comparação dos resultados.</p>
 <div class="cell" data-fig-responsive="true" data-layout-align="center">
 <div class="cell-output-display">
-<div id="fig-model-diagram" class="quarto-figure quarto-figure-center anchored">
-<figure class="figure">
+<div id="fig-model-diagram" class="quarto-figure quarto-figure-center quarto-float anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-model-diagram-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <div>
 <pre class="mermaid mermaid-js" data-label="fig-model-diagram">flowchart TD
-    A[Database] --&gt; B[Variables Selection]
-    B[Variables Selection] --&gt; C[Data Split]
-    C[Data Split] --&gt; D[Training Data]
-    D[Training Data] --&gt; E[Pre Processing]
-    E[Pre Processing] --&gt; F[Initial Model Fit]
-    C[Data Split] --&gt; G[Validation Data]
-    C[Data Split] --&gt; H[Test Data]
-    F[Initial Model Fit] --&gt; I[Parameters Adjustments]
-    G[Validation Data] --&gt; I[Parameters Adjustments]
-    I[Parameters Adjustments] --&gt; J[Final Model Fit]
-    H[Test Data] --&gt; K[Model Assessment]
-    J[Final Model Fit] --&gt; K[Model Assessment]
-    J[Final Model Fit] --&gt; L[Model Interpretation]
-    K[Model Assessment] --&gt; L[Model Interpretation]
+    A[Banco de dados] --&gt; C[Divisão dos Dados]
+    C --&gt; D[Dados de Treinamento]
+    D --&gt; F[Ajuste Inicial do Modelo]
+    C --&gt; G[Dados de Validação]
+    C --&gt; H[Dados de Teste]
+    F --&gt; I[Ajuste de Parâmetros]
+    G --&gt; I
+    I --&gt; J[Ajuste Final do Modelo]
+    H --&gt; K[Avaliação do Modelo]
+    J --&gt; K
+    J --&gt; L[Interpretação do Modelo]
+    K --&gt; L
 
 </pre>
 </div>
-<figcaption class="figure-caption">Figura&nbsp;2.4: Diagram of the modelling process.</figcaption>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-model-diagram-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figura&nbsp;2.5: Diagram of the modelling process.
+</figcaption>
 </figure>
 </div>
 </div>
 </div>
-<p>The regression algorithms used to predict NVS are based on Decision Trees (DT) and ensemble techniques, that are Random Forest (RF), Bayesian Additive Regression Trees (BART) and Gradient Boosting Decision Trees (GBDT). Using models with different complexity, but a common framework is useful to interpret the results.</p>
-<div class="callout callout-style-default callout-important callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Importante
-</div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
-</div>
-<div id="callout-1" class="callout-1-contents callout-collapse collapse">
-<div class="callout-body-container callout-body">
-<p>READ: spatial models</p>
-<ul>
-<li><a href="https://doi.org/10.3390/ijgi10090600" class="uri">https://doi.org/10.3390/ijgi10090600</a></li>
-<li><a href="https://doi.org/10.1007/s00168-021-01101-x" class="uri">https://doi.org/10.1007/s00168-021-01101-x</a></li>
-</ul>
-<p>READ: causality for feature selection</p>
-<ul>
-<li><a href="https://arxiv.org/pdf/2207.04053.pdf" class="uri">https://arxiv.org/pdf/2207.04053.pdf</a></li>
-<li><a href="https://doi.org/10.1145/3409382" class="uri">https://doi.org/10.1145/3409382</a></li>
-</ul>
-<p>READ: variables related to NVS</p>
-<ul>
-<li><a href="https://doi.org/10.1371/journal.pone.0269729" class="uri">https://doi.org/10.1371/journal.pone.0269729</a></li>
-</ul>
-</div>
-</div>
-</div>
+<p>Os algorítmos de regressão usados para predição da <button class="glossary" title="">SVN</button> são: Decision Trees (DT), Random Forest (RF), Bayesian Additive Regression Trees (BART) e Gradient Boosting Decision Trees (GBDT). Os modelos mencionados possuem diferentes complexidades.</p>
 </section>
 </section>
-<section id="results-interpretation" class="level2" data-number="2.5">
-<h2 data-number="2.5" class="anchored" data-anchor-id="results-interpretation"><span class="header-section-number">2.5</span> Results Interpretation</h2>
-<p>The interpretation of quantitative and qualitative results are performed in conjunction to find underlying mechanisms of how the dispute between social actors also influence the variables that cause NVS. The interpretation is done by comparing the results from the sociological and statistical analysis, searching for convergences, divergences and possible gaps in the explanation of the causes of NVS.</p>
-<p>This interpretation allows the development of an updated theoretical model of NVS.</p>
+<section id="interpretação-dos-resultados" class="level2" data-number="2.5">
+<h2 data-number="2.5" class="anchored" data-anchor-id="interpretação-dos-resultados"><span class="header-section-number">2.5</span> Interpretação dos Resultados</h2>
+<p>A interpretação dos resultados da análise sociológica e estatistica é feita pela comparação de objetos em comum entre ambas.</p>
 </section>
-<section id="references" class="level1 unnumbered">
-<h1 class="unnumbered">References</h1>
+<section id="referências" class="level1 unnumbered">
+<h1 class="unnumbered">Referências</h1>
 
 
-<div id="refs" class="references csl-bib-body hanging-indent" role="list">
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
 <div id="ref-akram-2023" class="csl-entry" role="listitem">
 Akram, Sadiya. 2023. <em>Bourdieu, Habitus and Field: A Critical Realist Approach</em>. <em>Palgrave Studies in Relational Sociology</em>. Springer International Publishing. <a href="https://doi.org/10.1007/978-3-031-41846-4">https://doi.org/10.1007/978-3-031-41846-4</a>.
 </div>
@@ -1132,10 +2040,27 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     // clear code selection
     e.clearSelection();
   });
-  function tippyHover(el, contentFn) {
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
     const config = {
       allowHTML: true,
-      content: contentFn,
       maxWidth: 500,
       delay: 100,
       arrow: false,
@@ -1145,8 +2070,17 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       interactive: true,
       interactiveBorder: 10,
       theme: 'quarto',
-      placement: 'bottom-start'
+      placement: 'bottom-start',
     };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
     window.tippy(el, config); 
   }
   const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
@@ -1158,7 +2092,130 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       try { href = new URL(href).hash; } catch {}
       const id = href.replace(/^#\/?/, "");
       const note = window.document.getElementById(id);
-      return note.innerHTML;
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
     });
   }
       let selectedAnnoteEl;
@@ -1202,6 +2259,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
             }
             div.style.top = top - 2 + "px";
             div.style.height = height + 4 + "px";
+            div.style.left = 0;
             let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
             if (gutterDiv === null) {
               gutterDiv = window.document.createElement("div");
@@ -1227,6 +2285,32 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
         });
         selectedAnnoteEl = undefined;
       };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
       // Attach click handler to the DT
       const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
       for (const annoteDlNode of annoteDls) {
@@ -1288,17 +2372,18 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./01_introduction.html" class="pagination-link">
+      <a href="./01_introduction.html" class="pagination-link" aria-label="Introdução">
         <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introdução</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./03_results.html" class="pagination-link">
-        <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Results</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./03_results.html" class="pagination-link" aria-label="Resultados">
+        <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Resultados</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
 </div> <!-- /content -->
+
 
 
 
