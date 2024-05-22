@@ -1,0 +1,12 @@
+variable,source,creator,format,license
+Biomes,IPEA,IBGE,Spatial Vector,
+Deforestation,Mapbiomas,Mapbiomas,Spatial Matrix,
+Natural Vegetation,Mapbiomas,Mapbiomas,Spatial Matrix ,
+Antropic Cover,Mapbiomas,Mapbiomas,Spatial Matrix ,
+Conservation Units,IPEA,MMAMC,Spatial Vector,
+Indigenous Lands,FUNAI,FUNAI,Spatial Vector,
+Roads,DNIT,,Spatial Vector,
+Rural Property Limits,MMAMC,,Spatial Vector,
+Population,IBGE,,Tabular,
+Public Policies,,,Text,
+Agricultural Production,,,Tabular,

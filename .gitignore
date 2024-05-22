@@ -5,4 +5,9 @@
 
 /.quarto/
 
-/data/
+/data/gridded/
+/data/merged/
+/data/raw/
+/data/results/
+/data/grid.fgb
+
