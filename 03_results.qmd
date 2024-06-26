@@ -167,6 +167,12 @@ Em resumo, especulo que Áreas Protegidas podem afetar a ocorrência de {{< glos
 
 #### Desenvolvimento Final
 
+Para o desenvolvimento final do modelo teórico da {{< glossary "supressão de vegetação natural" display="SVN" >}}, fazemos a pergunta sobre quais são as condições necessárias para que a {{< glossary "supressão de vegetação natural" display="SVN" >}} seja manifestada, e quais as condições para que ela são seja manifestada?
+
+Pela análise dos documentos na literatura ciêntifica e outras fontes de informação, é possível identificar alguns fatores que se relacionam com um embate entre o desenvolvimento humano e a conservação da natureza. O crescimento populacional, tanto rural quanto urbano, é frequentemente associado como uma possível causa da {{< glossary "supressão de vegetação natural" display="SVN" >}} [@allen-1985; @armenteras-2006; @reydon-2020]. Assim como a população bruta, em que áreas próximas de centros com maiores números de habitantes são mais propensas à sofrerem {{< glossary "supressão de vegetação natural" display="SVN" >}} [@nelson-1997; @laurance-2002; @mas-2004; @armenteras-2006; @santos-2021]. A proximidade com centros urbanos e estruturas como rodovias, ferrovias e hidrovias, e industrias [@ludeke-1990; @reydon-2020; @west-2021] são considerados como facilitadores da ocorrência de {{< glossary "supressão de vegetação natural" display="SVN" >}}. A ampliação de centros urbanos, estruturas de transporte, e o aumento da demanda por produtos e recursos naturais [@richards-2014; @wagner-2024], representam essa necessidade de desenvolvimento humano, que se choca com a presença de formações de vegetação natural que ocupam espaços úteis para o avanço de uma certa perspectiva de desenvolvimento.
+
+O surgimento do embate de agentes sociais com formações de vegetação natural ocorre a partir de uma oportunidade de avanço de uma perspectiva de desenvolvimento que é beneficiada pela supressão da formação de vegetação natural.
+
 ### Formalização do Modelo Teórico
 
 O mecanismo generativo proposto para a {{< glossary "supressão de vegetação natural" display="SVN" >}} é composto por cinco objetos:
@@ -222,8 +228,6 @@ A realização do MSF no {{< glossary "domínio empírico" >}} se manifesta atra
 Por exemplo, o agravamento do aquecimento global pela {{< glossary "supressão de vegetação natural" display="SVN" >}}, devido à emissão de gases do efeito estufa, já foi informada em algum instante a grande parte da população humana global. Porém, agentes sociais fortemente envolvidos na condução da {{< glossary "supressão de vegetação natural" display="SVN" >}} podem ser insensíveis à esse Malefício, ou até mesmo desacreditar completamente de sua existência. Portanto, a importância do aquecimento global como Malefício, é percebido por um agente social de maneira completamente diferente de outros agentes sociais.
 
 É importante destacar que o resultado da manifestação do MSF também é afetado pela interação entre percepções diversas, de diferentes agentes sociais, sobre os objetos que compõe o MSF. A partir disso, há o surgimento de conflitos entre agentes sociais relacionados com a {{< glossary "supressão de vegetação natural" display="SVN" >}}, que ṕr sua vez também são afetados pela natureza retroativa do MSF.
-
-
 
 ::: {.callout-note appearance="simple"}
 
