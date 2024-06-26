@@ -1,5 +1,142 @@
 # Processamento dos dados {#sec-data}
 
-Processamento dos dados
+A obtenção e processamento dos dados utilizados na análise estatística  seguem os seguintes passos:
 
-# Referências
+ 1. Download e persistência local dos dados em sua forma bruta;
+
+ 2. Processamento inicial e tranformação dos dados brutos em uma grade espacial regular;
+
+ 3. União das variáveis de interesse em uma matriz tabular;
+
+ O conjunto de dados acessados e processados são listados na @tbl-datatable, que mostra a desrição de cada conjunto dedados utilizados, assim como suas fontes.
+
+```{r}
+#| label: tbl-datatable
+#| tbl-cap: Tabela com a descrição dos dados processados e utilizados na análise estatística.
+#| echo: false
+
+readxl::read_xlsx("./analysis/functions_arguments.xlsx") |>
+  tidyr::drop_na(data_description) |>
+  dplyr::select(data_description, data_source, source_url) |>
+  tidyr::separate_wider_delim(
+    cols = "source_url",
+    delim = "\n",
+    names_sep = "_",
+    too_few = "align_start"
+  ) |>
+  dplyr::mutate(
+    dplyr::across(
+      dplyr::all_of(c("data_source")),
+      ~ stringr::str_replace_all(., "\n", "<br><br>")
+    ),
+    dplyr::across(
+      dplyr::contains("source_url"),
+      \(x) dplyr::if_else(!is.na(x), paste0("[", stringr::str_sub(x, 1, 30), "...]", "(", x, ")"), x)
+    )
+  ) |>
+  tidyr::unite(
+    col = "source_url", 
+    dplyr::contains("source_url"), 
+    sep = "<br><br>",
+    na.rm = TRUE
+  ) |>
+  gt::gt() |>
+  gt::tab_options(
+    table.font.size = 14,
+    table.width = gt::pct(90),
+    quarto.disable_processing = TRUE
+  ) |>
+  gt::cols_label(
+    data_description = "Descrição do Dado",
+    data_source = "Fonte do Dado",
+    source_url = "URL de Acesso"
+  ) |>
+  gt::fmt_markdown(columns = dplyr::everything()) |>
+  gt::opt_stylize(style = 1, color = "gray", add_row_striping = TRUE)
+
+```
+
+Os conjuntos de dados são disponibilizados em uma diversidade de formatos, que são tratados de forma individual na etapa de persistência dos dados brutos em máquina local. A etapa de processamento também é realizada de forma individual para cada conjunto de dados. Essas duas etapas são descritas para cada conjunto de dados nas sessões seguintes.
+
+## Delimitação de Biomas
+
+Os dados dos Biomas Brasileiros é disponibilizado pelo Instituto Brasileiro de Geografia e Estatística (IBGE). A primeira determinação dos limites dos biomas foi feita em 2003, com a revisão dos limites em 2019. Portanto, ambas versões desse conjunto de dados foram obtidas e processadas, a fim de representar a mudança legal e institucional dos limites dos biomas.
+
+O processamento desse conjunto de dados foi feito pela intersecção dos limites dos biomas com a grade regular (@fig-base-grid), sendo que o bioma selecionado para representar uma célula foi aquele que apresentou a maior área dentro dela. O produto final é uma série temporal de 2003 a 2019, contendo a nome do bioma predominante de cada célula da grade regular.
+
+## Delimitação de Municipios
+
+A delimitação de municipios sofreu diversas alterações ao longo dos anos. Dados disponíveis pelo IBGE contém a delimitação de municípios a partir do ano de 2000. Já os dados compilados e disponíveis pelo Instituto de Pesquisa Econômica Aplicada (IPEA) contém um histórico de delimitação a partir do ano de 1872. Devido ao maior alcance temporal, os dados disponibilizados pelo IPEA foram utilizados.
+
+Apesar de que a delimitação dos municipios não é uma variável explanatória utilizada na análise estatística (@sec-methods-stat), ela serve de base para a representação de políticas públicas, como a lista negra do desmatamento. Portanto, a delimitação dos municipios é utilizada apenas em seu estado bruto, sem a necessidade de realizar sua tranformação para a grade regular (@fig-base-grid).
+
+## Classificação de Uso e Cobertura
+
+Os dados de classificação de uso e cobertura do MapBiomas (Coleção 8) cobre um período de 1985 até 2022. Os dados de cada ano foram obtidos em seu formato original. Porém, em seu processamento, os dados foram transformados para uma resolução espacial mais grosseira, de 30 para 300 metros. A legenda das classes de uso e ocupação da terra também foi modificada para uma forma simplificada (@tbl-lulc-legend).
+
+```{r}
+#| label: tbl-lulc-legend
+#| tbl-cap: Tabela com a descrição das mudanças feitas nas classes de uso e cobertura do solo.
+#| echo: false
+
+tibble::tribble(
+  ~classe_modificada, ~codigo_original, ~classe_original,
+  "Formação Florestal", "3", "Formação Florestal",
+  "Formação Savânica", "4", "Formação Savânica",
+  "Formação Campestre", "12", "Formação Campestre",
+  "Outras Formações Naturais", "5, 6, 49, 11, 32, 29, 50, 13", "Mangue, Floresta Alagável, Restinga Arbórea, Campo Alagado e Área Pantanosa, Apicum, Afloramento Rochoso, Restinga Herbácea, Outras Formações não Florestais",
+  "Pastagem", "15", "Pastagem",
+  "Agricultura Temporária", "39, 20, 40, 62, 41", "Soja, Cana, Arroz, Algodão, Outras Lavouras Temporárias",
+  "Agricultura Perene", "46, 47, 35, 48", "Café, Citrus, Dendê, Outras Lavouras Perenes",
+  "Silvicultura", "9", "Silvicultura",
+  "Mosaico de Agropecuária", "21", "Mosaico de Usos",
+  "Área Urbanizada", "24", "Área Urbanizada",
+  "Mineração", "30", "Mineração"
+) |>
+  dplyr::mutate(
+    dplyr::across(
+      dplyr::all_of(c("codigo_original", "classe_original")),
+      ~ stringr::str_replace_all(., ", ", "<br><br>")
+    ),
+  ) |>
+  gt::gt() |>
+  gt::tab_options(
+    table.font.size = 14,
+    table.width = gt::pct(90),
+    quarto.disable_processing = TRUE
+  ) |>
+  gt::cols_label(
+    classe_modificada = "Classe Modificada",
+    codigo_original = "Código Original",
+    classe_original = "Classe Original"
+  ) |>
+  gt::fmt_markdown(columns = dplyr::everything()) |>
+  gt::opt_stylize(style = 1, color = "gray", add_row_striping = TRUE)
+
+```
+
+A área de cada classe foi calculada para cada célula da grade espacial (@fig-base-grid), para cada ano entre 1985 e 2022.
+
+## Malha Rodoviária
+
+Os dados da malha rodoviária do Brasil são disponibilizados pelo Departamento Nacional de Infraestrutura de Transportes (DNIT). O conjunto é formado por diversas tabelas publicadas em diferentes anos, contendo a evolução da malha rodoviária de 1994 até 2023. Também são disponibilizados vetores espaciais contendo o traçado georeferênciado da malha rodoviária.
+
+As tabelas da malha rodoviária foram salvas separadamente, em conjunto como a versão de vetores espaciais de 2023. Para o processamento, foi feita a compatibilização dos nomes das colunas das tabelas de cada ano, e posteriormente foi feita a união entre todas as tabelas. As rodovias em estágio de planejamento foram descartadas.
+
+Como as datas dos estágios e condições de rodovias não apresentam uma consistência temporal, foi adotada uma regra de que o ano de implementação da estrada considerado foi o mais antigo, independente do estado de sua superfície (pavimentado ou não). Após o processamento das tabelas, foi feita a extração do traçado georeferênciado de cada rodovia para o ano de sua implementação.
+
+A transformação da malha ferroviária para a grade regular, foi feita pela intersecção dos traçados das rodovias com cada célula da grade, calculando-se o comprimento do traçado situado dentro da célula.
+
+## Delimitação de Territórios Indígenas
+
+
+
+## Delimitação de Unidades de Conservação
+
+## Delimitação de Territórios Quilombolas
+
+## Lista Negra do Desmatamento
+
+## Classificação do Desmatamento
+
+# Referências {.unnumbered}

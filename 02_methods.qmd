@@ -77,7 +77,7 @@ Os dados, coletados a partir das entrevistas e consultas à literatura, contém 
 
 O processo de desenvolvimento do modelo teórico não apresenta um ponto final determinado. O modelo teórico pode ser modificado caso haja a descoberta de novos conhecimentos que desafiem a lógica do modelo. Porém, nesse projeto, a etapa de desenvolvimento do modelo teórico é interrompida quando as informações obtidas se tornem redundantes o bastante para que não seja necessária a modificação do modelo.
 
-O modelo teórico é baseado em conceitos do Realismo Crítico, sendo formado sobre especulações da existência de certos {{< glossary "objeto intransitivo" display="objetos intransitivos" >}}, e da existência de interações entre eles, formando um {{< glossary "mecanismo generativo" >}} da {{< glossary "supressão de vegetação natural" display="SVN" >}}.
+O modelo teórico é baseado em conceitos do Realismo Crítico, sendo formado sobre especulações da existência de certos {{< glossary "objeto intransitivo" display="objetos intransitivos" >}}, e da existência de interações entre eles, formando um {{< glossary "mecanismo generativo" >}} da {{< glossary "supressão de vegetação natural" display="SVN" >}}. O modelo teórico, e seu {{< glossary "mecanismo generativo" >}}, se situam na camada social da realidade, de acordo com a estratificação da realidade proposta pelo Realismo Crítico.
 
 ### Entrevistas
 
@@ -220,9 +220,11 @@ A análise sociológica é feita através da Teoria Geral dos Campos desenvolvid
 
 Todas as etapas descritas acima serão feitas com base em informações obtidas das consultas à literatura. Portanto, conceitos como {{< glossary "capital" >}} não serão representados de forma numérica ou como categorias qualitativas, mas de forma abstrata a partir de informações coletadas da literatura. Já o conceito de {{< glossary "habitus" >}} será descrito a partir de informações históricas relacionadas à um certo {{< glossary "agente social" >}}, e não por meio de entrevistas, como é comum de se observar em pesquisas feitas com base na Teoria Geral dos Campos desenvolvida por Bourdieu. Essa forma de análise se justifica pela dificuldade de obtenção de informações de maneiras convencionais, já que o tema da {{< glossary "supressão de vegetação natural" display="SVN" >}} abrange {{< glossary "agente social" display="agentes sociais" >}} de difícil acesso.
 
-## Análise Estatística
+A análise sociológica através da Teoria dos Campos de Bourdieu, será informada pelo modelo teórico e seu paradigma filosófico através da centralização da {{< glossary "supressão de vegetação natural" display="SVN" >}} nas disputas dentro do campo social analisado, e como as disposições dos agentes sociais afetama ocorrência da {{< glossary "supressão de vegetação natural" display="SVN" >}}.
 
-A análise estatística tem como o objetivo a aplicação do modelo teórico de forma numérica. Esse processo é conduzido através da coleta e do processamento de dados quantitativos e qualitativos (que representam os {{< glossary "objeto transitivo" display="objetos transitivos" >}}), e posteriormente na execução de um modelo de regressão sobre esses dados. No entanto, antes desse processo, é feita uma triagem de quais dados serão coletados e urilizados.
+## Análise Estatística {#sec-methods-stat}
+
+A análise estatística tem como o objetivo a aplicação do modelo teórico de forma numérica. Esse processo é conduzido através da obtenção e do processamento de dados quantitativos e qualitativos (que representam os {{< glossary "objeto transitivo" display="objetos transitivos" >}}), e posteriormente na execução de um modelo de regressão sobre esses dados. No entanto, antes desse processo, é feita uma triagem de quais dados serão coletados e urilizados.
 
 A triagem é feita com base em dados que foram identificados na literatura consultada. A partir dessa lista de possíveis dados, é feita uma avaliação, que consiste na verificação da adequação do {{< glossary "objeto transitivo" >}}, representado pelo dado, com relação ao modelo teórico. Ou seja, mesmo que o dado tenha sido considerado como correlacionado com a {{< glossary "supressão de vegetação natural" display="SVN" >}}, não significa que ele obedece as regras impostas pelo modelo teórico. Caso um dado indicado pela literatura obedeça as regras do modelo teórico, ele é selecionado para ser utilizado no modelo estatístico, passando a ser considerado como uma {{< glossary "variável" >}}.
 
@@ -289,6 +291,6 @@ Os algorítmos de regressão usados para predição da {{< glossary "supressão 
 
 ## Interpretação dos Resultados
 
-A interpretação dos resultados da análise sociológica e estatistica é feita pela comparação de objetos em comum entre ambas.
+A interpretação dos resultados da análise sociológica e estatistica é feita pela comparação de objetos que se relacionam entre ambas análises.
 
 # Referências {.unnumbered}

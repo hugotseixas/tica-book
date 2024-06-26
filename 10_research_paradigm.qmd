@@ -1,64 +1,53 @@
 # Conceitos Fundamentais {#sec-paradigm}
 
-The research paradigm of this work is made explicit to inform the ontological and epistemological foundations of the project, and to justify the adopted methodologies, that will serve to answer the research questions. The research philosophy follows the Critical Realism, which defines the ontology and epistemology. The research methodology is a mixed method approach, applying a combination of grounded theory, field theory of Bourdieu, and statistical regression algorithms.
+Esse trabalho é desenvolvido com base num paradigma filosófico de maneira explícita, com o objetivo de informar os fundamentos ontológicos e epistemológicos do projeto, e justificar os métodos de análise adotados. O paradigma filosófico adotado é o Realismo Crítico, que define a ontologia e a epistemologia do projeto. A metodologia desenvolvida é uma abordagem de método misto, em que um modelo teórico é desenvolvido através da perspectiva do Realismo Crítico e aplicado através da teoria dos campos de Bourdieu, e por algoritmos de regressão estatística.
 
-In this chapter I explain the Critical Realism as the research philosophy, and justify the alignment of the methodology with the philosophical ontology and epistemology.
+Nessa seção, é feita uma descrição dos conceitos fundamentais do Realismo Crítico, da Teoria dos Campos de Bourdieu, e de Algorítmos de Regressão Estatística.
 
-## Critical Realism {#sec-cr}
+## Realismo Crítico {#sec-cr}
 
-Critical realism is a philosophy of science that may serve as a framework for developing research methodologies [@fletcher-2016]. It is a perspective that negates the duality between the social and the natural, as also negates the determination of the social by the natural [@gorski-2013], and neither the other way around [@fletcher-2016]. Instead, its focus is on the inference of causal mechanisms [@lawani-2020], which dictates the natural and the social altogether. In this section, I define the ontology and epistemology, based on the paradigm of critical realism, adopted in this work, and how they justify the methodology.
+O Realismo Crítico é uma linha da filosofia que pode servir como uma base para o desenvolvimento de metodologias de pesquisa [@fletcher-2016]. É uma perspectiva que nega a dualidade entre o social e o natural, como também nega a redução do mundo social pelo natural [@gorski-2013], e nem o contrário [@fletcher-2016]. O foco desse paradigma filosófico está na identificação e descrição de mecanismos causais [@lawani-2020].
 
--   Ontology: There are three ontological domains, in other words, reality is stratified: the domain of the real, formed by the generative mechanisms that act as causal forces to produce events [@fletcher-2016]; the domain of the actual, that contains the realization of the real domain, when the generative mechanisms are activated and occurs whether or not these realizations can be perceived or measured; the domain of the empirical where the actual domain is observed, in other words, is where the events caused by the activation of generative mechanisms of the real domain are perceived or measured;
+A posição do Realismo Crítico em relação à outros paradigmas filosóficos é de uma alternativa ao embate entre os paradigmas empiricistas e os idealistas [@lawani-2020; @gorski-2013; @bhaskar-2016]. O Realismo Crítico nega que a realidade pode ser reduzida ao nosso conhecimento sobre ela, ou seja, a redução da ontologia à epistemologia [@bhaskar-2016], além disso, também nega que a realidade é inteiramente uma construção da percepção humana [@bhaskar-2016. @lawani-2020]. Para evitar o que Roy Bhaskar nomeou de falácia epistêmica (redução da ontologia à epistemologia) [@bhaskar-2016], o Realismo Crítico defende que existe uma realidade que existe independente da nossa percepção sobre ela, e que não é completamente acessível à nossa percepção.
 
--   Epistemology: Knowldge is obtained by interpreting patterns and tendencies of perceived and measured events, with the objective of explaining the phenomena of interest by the generative mechanisms that dictates it [@lawani-2020; @wynn-2012].
+De acordo com o Realismo Crítico, existem três domínios da realidade: o domínio do real, formado pelos mecanismos geradores que atuam como forças causais para produzir eventos [@fletcher-2016]; o domínio do atual, que contém a realização do domínio real, quando os mecanismos geradores são ativados, e ocorre independentemente se essas realizações podem ou não ser percebidas ou medidas; o domínio do empírico, onde os eventos causados pela ativação dos mecanismos geradores do domínio real são percebidos ou medidos.
 
-::: {.callout-important collapse="true"}
-READ:
+Segundo o Realismo Crítico, a realidade também é composta por camadas, que vão desde um nível mais baixo (micro) como os mecanismos físicos, até níveis mais altos (macro) como os mecanismos sociais. As camadas da realidade não são independentes uma das outras, porém, nenhuma tem o poder de determinar a outra. Isso quer dizer que cada camada da realidade opera segundo seus próprios mecanismos causais, mesmo que de maneira dependente de mecanismos causais de outra camada. Essa propriedade das camadas da realidade é chamada de emergência [@pratten-2013; @danermark-2002]. Como exemplo, @danermark-2002 ilustra esse conceito através do seguinte cenário em pesquisas sobre deficiências auditivas: a ocorrência de uma certa deficiência auditiva é causada por mecanismos no nível biológico, porém, a experiência de uma pessoa  em relação à essa deficiência é resultado de mecanismos do nível psicológico. Portanto, duas pessoas com amesma deficiência auditiva irão ter experiências diferentes, ou seja, os mecanismos do nível biológico afetam, mas não são determinantes dos mecanismos do nível psicológico.
 
--   https://doi.org/10.1007/s11191-018-9983-x
+O desenvolvimento de conhecimento ocorre por meio da interpretação de padrões e tendências de eventos percebidos e medidos, com o objetivo de explicar os fenômenos de interesse pelos mecanismos geradores que os determinam [@lawani-2020; @wynn-2012]. Porém, todo o conhecimento gerado sobre os mecanismos geradores (que operam no domínio do real) são uma produção social e serão sempre falíveis. Nesse aspecto existem dois conceitos de importância no Realismo Crítico, a dimensão intransitiva, que é a realidade que existe independente da percepção humana, e os conhecimentos falíveis que desenvolvemos sobre essa realidade, chamado de dimensão transitiva [@danermark-2002; @gorski-2013].
 
-<!-- -->
+Em resumo os conceitos fundamentais do Realismo Crítico, explorados nesse trabalho, são:
 
--   https://doi.org/10.1186/s12889-019-7760-7
--   https://doi.org/10.1177/15586898211049847
--   https://doi.org/10.1558/aleth.v5i1.56
--   https://doi.org/10.1177/1368431015590700
--   https://doi.org/10.1111/1468-5914.00127
--   https://doi.org/10.1016/j.cpa.2016.03.001
--   https://doi.org/10.1111/1467-954X.00407
--   https://doi.org/10.1558/jcr.v3i1.133
--   https://doi.org/10.1111/0735-2751.00064
--   https://doi.org/10.1177/0018726718767952
-:::
+ * Divisão da realidade em domínios ontológicos: o domínio real, o domínio atual e o domínio empírico;
 
-## Sociological Field Theory {#sec-bourdieu}
+ * Estratificação da realidade em camadas emergentes: nível social, nível psicológico, nível biológico, entre outros;
 
-The field theory is a method of analysis that describes social arenas where actors pursue an objective at stake, interacting with other actors to achieve their goals [@kluttz-2016]. Bourdieu is a recognized sociologist that influenced the Sociological Field Theory, having developed the concepts of field, habitus, capital and doxa. His theory is widely applied in diverse areas of study due to its generalized nature.
+ * Existência de uma realidade independente de nosa percepção sobre ela: a dimensão intransitiva;
 
-The concept of field in the perspective of Bourdieu is that fields are arenas of disputes between different social actors [@kluttz-2016]. The social actors occupy a certain position in the field, and are in dispute towards an objective at stake [@thomson-2014]. Each field functions according to it's own logic, or in other words, present specific "rules of the game" [@kluttz-2016; @thomson-2014].
+ * A construção de conhecimento sobre a realidade é sempre falível: dimensão transitiva;
 
-The capital is the manifestation of different types of power, that can be economic, cultural or social [@kluttz-2016].
+ A consequência final da adoção do Realismo Crítico em um projeto de pesquisa, é que o desenvolvimento de um conhecimento sobre certo tema estará sempre em desenvolvimento e sob constante avaliação crítica.
 
-The habitus is a property of social actors, that along with the capital and the field, shapes the practices of these social actors [@maton-2014]. It describes a dynamic process of action performed in the field, formed by subjective constructions and objective dispositions, in a sense that the habitus of these social actors is affected by and also affects the social structures of a field [@kluttz-2016].
+## Teoria dos Campos de Bourdieu {#sec-bourdieu}
 
-The doxa can be considered as implicit rules operating within a field. It the result of conquests of social actors that set rules, laws, discursive forms, normative beliefs, expected actions and behaviors and barriers to entry in a specific field [@deer-2014].
+A teoria dos campos de Bourdieu é um método de análise que descreve arenas sociais em que agentes sociais disputam entre si por alcançar um objetivo em jogo, interagindo com outros agentes para atingir suas metas [@kluttz-2016]. Bourdieu é um reconhecido sociólogo que influenciou a Teoria Sociológica de Campo, tendo desenvolvido os conceitos de campo, habitus, capital e doxa. Sua teoria é amplamente aplicada em diversas áreas de estudo devido à sua natureza generalizada.
 
-::: {.callout-important collapse="true"}
-READ:
+O conceito de campo sociais na perspectiva de Bourdieu é que os campos são arenas de disputas entre diferentes agentes sociais [@kluttz-2016]. Os agentes sociais ocupam uma determinada posição no campo, definida por diferentes formas de capital, e estão em disputa por um objetivo em jogo [@thomson-2014]. Cada campo funciona de acordo com sua própria lógica ou, em outras palavras, apresenta "regras do jogo" específicas [@kluttz-2016; @thomson-2014].
 
--   <https://doi.org/10.1016/j.cpa.2016.03.001>
+O capital é a manifestação de diferentes tipos de poder, que pode ser econômico, cultural, social ou simbólico [@kluttz-2016].
 
--   <https://doi.org/10.1111/1468-5914.00127>
+O habitus é uma propriedade dos agentes sociais que, juntamente com o capital e o campo, molda as práticas desses agentes sociais [@maton-2014]. Ele descreve um processo dinâmico de ação realizado no campo social, formado por construções subjetivas e disposições objetivas, em um sentido em que o habitus desses atores sociais é afetado por e também afeta as estruturas sociais de um campo [@kluttz-2016].
 
--   <https://doi.org/10.1177/0018726718767952>
-:::
+A doxa pode ser considerada como regras implícitas que operam em um campo. É o resultado de conquistas de agentes sociais que estabelecem regras, leis, formas discursivas, crenças normativas, ações e comportamentos esperados e barreiras à entrada em um campo específico [@deer-2014].
 
-## Statistical Modeling {#sec-stats}
+## Análise Estatística {#sec-stats}
 
-Statistical modeling can be useful for explaining and predicting an observable phenomena. When creating a statistical model, we accept (implicitly or explicitly) a diverse number of assumptions that should be true for the model to represent reality correctly. However, the correctness of all the assumptions is impossible, so we are limited to make estimations about the phenomena of interest. Following this reasoning, we should not condition the reality to the statistical models that we create, in reality, it should be the other way around, theories about reality should condition our statistical models.
+Na análise estatística, modelos de regressão são utilizados para determinar um suposto efeito de variáveis explanatórias (independentes) sobre uma variável de resposta (dependente) [@fahrmeir-2013; @james-2021]. Em uma regressão linear simples, essa influência é representada por uma função que descreve uma linha, essa função é a determinação do efeito das variáveis explanatórias sobre a média condicional da variável de resposta (componente sistemático), mais os devios observados em relação aos valores esperados por essa função (componente aleatório) denominados como erros aleatórios [@fahrmeir-2013].
 
-The use of statistical causal inference methods is a possible way to develop a statistical model informed by causal theory, and is usually applied when the objective is to explain certain phenomena. Statistical algorithms can also be used solely for prediction, with the goal of minimizing prediction errors, but not taking to account causal mechanisms of the phenomena of interest. However, both approaches do not need to be completely separated, prediction exercises can also be informed by causal inference techniques, in order to create fair statistical models, which can be useful for exploration of a phenomena.
+A complexidade de modelos de regressão vai muito além de uma regressão linear simples, entre uma variável explanatória contínua e uma variável de resposta também contínua. Modelos de regressão podem determinar relações não lineares de diversas variáveis explanatórias, de diversas naturezas, sobre uma variável de resposta de diversas naturezas.
 
-The statistical perspective is coherent with the ontological perspective of Critical Realism. Statistical inference aims to propose models of data generating process, which are the causal mechanisms that forms the real domain. In statistics we are only able to perform these inferences based on observable events triggered by the activation of certain causal mechanisms, and our estimations of that event is an imperfect representation of the actual domain. The "distance" between the empirical and the actual domains is defined as the error of a statistical model, and integrates estimates and model errors.
+No caso da modelagem estatística de fenômenos complexos, como é o caso da ocorrência da {{< glossary "supressão de vegetação natural" display="SVN" >}}, modelos de regressão lineares podem falhar na descrição da complexidade da relação entre as variáveis explanatórias e a variável de resposta. Nesse caso, modelos com pressupostos mais flexíveis que os de regressões lineares clássicas, como é o caso de Modelos Aditivos Generalizados (GAMs), que permitem representar relações não lineares entre as variáveis explanatórias e de resposta [@james-2021; @fahrmeir-2013]. Porém, no caso dos GAMs, interações entre variáveis explanatórias não são levadas em consideração, exceto no caso dessas interações serem manualmente representadas como variáveis adicionais ou funções adicionais [@james-2021].
 
-# References
+Algumas opções de escolha de modelos, ainda mais flexíveis que os GAMs, são o Random Forest (RF) e o Boosting (BDT), que são completamente não paramétricos [@james-2021; @berk-2006]. Ambos são derivados do modelo de Árvores de Decisão (DT). Os modelos baseados em DT funcionam através da partição dos dados em análise de maneira sucessiva, que normalmente tem a descrição gráfica na forma de uma árvore invertida [@deville-2013]. As vantagens desses tipos de modelos são a sua flexibilidade e facilidade de interpretação de seus resultados. Porém, é reconhecido que DTs geralmente sofrem por apresentarem uma menor acurácia de predição da variável de resposta. Alternativamente, RFs e BDTs são possíveis opções que normalmente apresentam maior acurácia de prediçãodo que DTs [@james-2021; @biau-2016].
+
+# Referências {.unnumbered}

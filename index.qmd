@@ -4,6 +4,11 @@ toc: false
 
 # Prefácio {.unnumbered}
 
+> *"Observação é criação,*
+> *criação é realidade..."*
+>
+> Astral Dawn, Saturnus
+
 Esse trabalho é fruto de um esforço para desenvolver uma teoria interdisciplinar sobre a Supressão de Vegetação Natural (SVN)[^index-1]. Uma teoria interdisciplinar seria aquela que consegue unir o conhecimento de diversas áreas de conhecimento (como a Sociologia, a Geografia e a Biologia). Caso uma teoria interdisciplinar seja bem sucedida, esperamos que ela possa fornecer uma nova perspectiva sobre um problema complexo (como a SVN), e possívelmente até servir de fomento para a idealização de novas soluções.
 
 [^index-1]: Estou considerando a SVN como a supressão de qualquer tipo de vegetação considerada natural, causada pela atividade humana. Essas vegetações podem ser florestas, savanas, campos, pântanos ou qualquer outro tipo formação vegetal. Esse fenômeno também é geralmente chamado de desmatamento.
