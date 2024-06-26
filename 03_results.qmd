@@ -217,7 +217,11 @@ Apesar da grande tendência favorável pela supressão da formação de vegetaç
 
 #### Explicação do Modelo Teórico no Domínio Empírico {#sec-results-mtde}
 
-A realização do MSF no domínio empírico se manifesta através da percepção de agentes sociais sobre os objetos que compõe o MSF. A forma como esses objetos do MSF são percebidos e interpretados pelos agentes sociais é sempre parcial. O agente social não percebe, ou é insensível, a certos Valores sobre uma formação de vegetação natural. O agente social também tem uma perceção parcial dos benefícios e malefícios, portanto desconhece ou é insensível a todas as consequências da condução da {{< glossary "supressão de vegetação natural" display="SVN" >}}.
+A realização do MSF no {{< glossary "domínio empírico" >}} se manifesta através da percepção de agentes sociais sobre os objetos que compõe o MSF. A forma como esses objetos do MSF são percebidos e interpretados pelos agentes sociais é sempre parcial. O agente social não percebe, ou é insensível, a certos Valores sobre uma formação de vegetação natural. O agente social também tem uma perceção parcial dos Benefícios e Malefícios, portanto desconhece ou é insensível a todas as consequências da condução da {{< glossary "supressão de vegetação natural" display="SVN" >}}. 
+
+Por exemplo, o agravamento do aquecimento global pela {{< glossary "supressão de vegetação natural" display="SVN" >}}, devido à emissão de gases do efeito estufa, já foi informada em algum instante a grande parte da população humana global. Porém, agentes sociais fortemente envolvidos na condução da {{< glossary "supressão de vegetação natural" display="SVN" >}} podem ser insensíveis à esse Malefício, ou até mesmo desacreditar completamente de sua existência. Portanto, a importância do aquecimento global como Malefício, é percebido por um agente social de maneira completamente diferente de outros agentes sociais.
+
+É importante destacar que o resultado da manifestação do MSF também é afetado pela interação entre percepções diversas, de diferentes agentes sociais, sobre os objetos que compõe o MSF. A partir disso, há o surgimento de conflitos entre agentes sociais relacionados com a {{< glossary "supressão de vegetação natural" display="SVN" >}}, que ṕr sua vez também são afetados pela natureza retroativa do MSF.
 
 
 
