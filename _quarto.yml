@@ -37,7 +37,9 @@ glossary:
   popup: hover
   show: true
 
-bibliography: references.bib
+bibliography: 
+  - references.bib
+  - grateful-refs.bib
 
 format:
   html:

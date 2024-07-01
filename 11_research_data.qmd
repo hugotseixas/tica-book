@@ -129,14 +129,38 @@ A transformação da malha ferroviária para a grade regular, foi feita pela int
 
 ## Delimitação de Territórios Indígenas
 
+Os dados de delimitação de Territórios Indígenas são disponibilizados pela Fundação Nacional dos Povos Indígenas (FUNAI), com informações gerais sobre a demarcação dos territórios, assim como as datas portarias que formalizam cada dase do processo de demarcação. Para definir a data em que os dados serão representados na grade regular, foram consideradas apenas as datas das fases de regularização, homologação, declaração e delimitação, selecionando a data mais antiga para representação no modelo estatístico.
 
+Para a transformação dos dados de Territórios Indígenas para a grade regular, foi feita a intersecção dos polígonos de demarcação com as células da grade, calculando-se a área total de Territórios Indígenas dentro de cada célula.
 
 ## Delimitação de Unidades de Conservação
 
+Os dados de delimitação de Unidades de Conservação são disponibilizados pelo Ministério do Meio Ambiente e Mudança do Clima (MMAMC). Os dados contém a caracterização das categorias das Unidades de Conservação, sua esfera administrativa, e o ano de criação de cada unidade. No processamento dos dados, todas categorias foram contempladas sem distinção.
+
+Para a transformação dos dados de Unidades de Conservação para a grade regular, foi feita a intersecção dos limites das unidades com as células da grade. Porém, com a existência de áreas de sobreposição entre diferentes Unidades de Conservação, foi feita uma operação de recorte das áreas sobrepostas, e remoção da área sobreposta com ano de criação mais recente. Por fim, foi feito o cálculo da área total de Unidades de Conservação dentro de cada célula da grade regular.
+
 ## Delimitação de Territórios Quilombolas
+
+Os dados de delimitação de Territórios Quilombolas são disponibilizados pelo Instituto Nacional de Colonização e Reforma Agrária (INCRA). Os dados contém informações sobre o processo de demarcação e titulação de Territórios Quilombolas.
+
+Os dados foram filtrados para remover os territórios que não possuem informações sobre data de titutalçao ou data do decreto, ou dos territórios que tiveram seu título anulado. A data utilizada para representação na análise estatística foi preferencialmente a data de titulação, e na falta dessa, foi utilizada a data do decreto. Devido a presença de sobreposições, foi feita a remoção de áreas sobrepostas que tiveram sua data de titulação mais recente. Por fim, foi feito o cálculo da área total de Territórios Quilombolas dentro de cada célula da grade regular.
 
 ## Lista Negra do Desmatamento
 
+A Lista Negra do desmatamento, da Amazônia e do Cerrado, é atualizada pelo Diário Oficial da União (DOU), e determina a identificação de municípios com taxas elevadas de desmatamento. Mais detalhes sobre essa política pública pode ser obtida em @bizzo-2017. 
+
+Os critérios de inclusão de um município na lista da Amazônia são: área total de floresta desmatada; área total de floresta desmatada nos últimos três anos; aumento da taxa de desmatamento em pelo menos três, dos últimos cinco anos; e  área total de alertas de degradação florestal (adicionado em 2023, pelo decreto [Decreto nº 11.687](https://www.planalto.gov.br/ccivil_03/_Ato2023-2026/2023/Decreto/D11687.htm#art7), de 5 de Setembro de 2023). As consequências da inclusão na lista são: maior monitoramento e fiscalização; não aprovação de créditos para atividade agropecuária; embargo de atividades relacionadas ao desmatamento; aplicação de multas; divulgação de dados do imóvel rural em que ocorreu a infração, e seu titular. Para a remoção da lista, o município deve: Possuir 80% de seu território, em propriedades rurais, monitorado pelo Cadastro Ambiental Rural (CAR); e manter taxa de desmatamento anual abaixo do limite estabelecido em portaria do Ministério do Meio Ambiente.
+
+Os critérios de inclusão para os municípios do Cerrado são: média de desmatamento dos últimos dois anos superior a 25 quilômetros quadrados; desmatamento acima de 20% em áreas de vegetação nativa remanescente no município; ou a exploração da madeira em áreas protegidas. Para o Cerrado, não foram estabelecidos critérios para exclusão da lista.
+
+A lista foi compilada em uma tabela estruturada através do acesso ao DOU [@seixas-2023], e está disponível de forma aberta em [https://zenodo.org/doi/10.5281/zenodo.8412144](https://zenodo.org/doi/10.5281/zenodo.8412144).
+
+Para a transformação desses dados para a grade regular, foi feita a união da tabela da Lista Negra do Desmatamento com os limites geográficos dos municípios, seguida pela intersecção dos dados gerados com as células da grade regular. Por fim, foi feito o cálculo da área de municípios incluídos como prioritários ou monitorados dentro de cada célula da grade regular.
+
 ## Classificação do Desmatamento
+
+Os dados de Classificação de Desmatamento são gerados e disponibilizados pelo MapBiomas. Os dados possuem resolução espacial de 30 metros, e vão de 1987 até 2020.
+
+Para a transformação das matrizes espaciais para a grade regular, foi feito o recorte para cada célula, seguido da vetorização da matriz para polígonos. Os dados foram filtrados para conter apenas o desmatamento de vegetação primária (valores entre 400 e 499) e vegetação secundária (valores entre 600 e 699). Por fim, foi feito o cálculo da área total de desmatamento dentro de cada célula da grade regular.
 
 # Referências {.unnumbered}

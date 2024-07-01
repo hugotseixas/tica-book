@@ -224,9 +224,49 @@ A análise sociológica através da Teoria dos Campos de Bourdieu, será informa
 
 ## Análise Estatística {#sec-methods-stat}
 
-A análise estatística tem como o objetivo a aplicação do modelo teórico de forma numérica. Esse processo é conduzido através da obtenção e do processamento de dados quantitativos e qualitativos (que representam os {{< glossary "objeto transitivo" display="objetos transitivos" >}}), e posteriormente na execução de um modelo de regressão sobre esses dados. No entanto, antes desse processo, é feita uma triagem de quais dados serão coletados e urilizados.
+A análise estatística tem como o objetivo a aplicação do modelo teórico de forma numérica. Esse processo é conduzido através da obtenção e do processamento de dados quantitativos e qualitativos (que representam os {{< glossary "objeto transitivo" display="objetos transitivos" >}}), e posteriormente na execução de um modelo de regressão sobre esses dados. No entanto, antes desse processo, é feita uma triagem de quais dados serão coletados e utilizados.
 
 A triagem é feita com base em dados que foram identificados na literatura consultada. A partir dessa lista de possíveis dados, é feita uma avaliação, que consiste na verificação da adequação do {{< glossary "objeto transitivo" >}}, representado pelo dado, com relação ao modelo teórico. Ou seja, mesmo que o dado tenha sido considerado como correlacionado com a {{< glossary "supressão de vegetação natural" display="SVN" >}}, não significa que ele obedece as regras impostas pelo modelo teórico. Caso um dado indicado pela literatura obedeça as regras do modelo teórico, ele é selecionado para ser utilizado no modelo estatístico, passando a ser considerado como uma {{< glossary "variável" >}}.
+
+A análise estatística é conduzida através de um programa (em desenvolvimento) na forma de um pacote da linguagem de programação R [@base]. O programa é de código aberto, podendo ser acessado em [https://github.com/hugotseixas/tica](https://github.com/hugotseixas/tica). O desenvolvimento desse pacote possui diversas dependências para seu funcionamento.
+
+```{r}
+#| label: tbl-packages
+#| tbl-cap: Dependências do pacote criado para condução da análise estatística.
+#| echo: false
+
+library(tica)
+
+tibble::tibble(
+  grateful::cite_packages(
+    output = "table",
+    out.dir = ".",
+    pkgs = c(
+      "base", "dplyr", "janitor", "purrr", "tibble", "readxl",
+      "stringr", "glue", "fs", "tidyr", "curl", "lubridate",
+      "rlang", "forcats", "tidyselect", "arrow",
+      "sf", "stars", "ggplot2", "scales", "scico", "cowplot",
+      "ragg", "gt"
+    ),
+    cite.tidyverse = FALSE
+  )
+) |>
+  gt::gt() |>
+  gt::tab_options(
+    table.font.size = 14,
+    table.width = gt::pct(90)
+  ) |>
+  gt::cols_label(
+    Package ~ "Pacote",
+    Version ~ "Versão",
+    Citation ~ "Citação"
+  ) |>
+  gt::fmt_markdown(columns = dplyr::everything()) |>
+  gt::opt_stylize(style = 1, color = "gray", add_row_striping = FALSE)
+
+```
+
+O programa computacional é responsável pela realização do acesso e persistência dos dados, pelo processamento dos dados, pela operacionalização do modelo estatístico, e pela produção de visualizações.
 
 ### Estruturação da Base de Dados
 
