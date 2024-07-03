@@ -285,43 +285,25 @@ Tendo em mente a relação entre diferentes formas de capital, com a posse, uso 
 
 Os principais agentes que participam do COUT são:
 
- * População Indígena;
+ * População Indígena:
 
- * Grandes fazendeiros;
+    A População Indígena é fortemente relacionada à questão da {{< glossary "supressão de vegetação natural" display="SVN" >}} no Brasil, em que formações de vegetação natural fornecem recursos naturais para subsistência para grande parte dessa população, assim como espaço de reprodução cultural e religiosa. A População Indígena também está institucionalmente relacionada à {{< glossary "supressão de vegetação natural" display="SVN" >}} por meio do reconhecimento legal dos Territórios Indígenas, que tem em sua concepção o objetivo de conservação de formações de vegetação natural. Em geral, esse agente social se posiciona de forma favorável à conservação de formações de vegetação natural, e de forma contrária à {{< glossary "supressão de vegetação natural" display="SVN" >}} em larga escala.
 
- * Colonos assentados;
+ * Fazendeiros:
 
- * Madereiras;
+    Fazendeiros são um agente social representado por produtores agropecuários, voltados para a obtenção de lucros financeiros e expansão de suas atividades, que não são obtidos exclusivamente pela produção agropecuária [@fearnside-2008]. Em grande parte, esse grupo é formado por migrantes de diferentes períodos e movidos por diferentes motivações para a ocupação de áreas na Amazônia [@fearnside-2008] e no Cerrado [@jepson-2010; @brannstrom-2008], muito incentivados por programas de colonização de ambos biomas. Em geral, esse agente social se posiciona de forma favorável à {{< glossary "supressão de vegetação natural" display="SVN" >}} em maiores escalas.
 
- * Trabalhadores do desmatamento;
+ * Trabalhadores do Desmatamento:
 
- * População Quilombola;
+    Os Trabalhadores do Desmatamento são as pessoas que realizam o ato de supressão diretamente. Na Amazônia e no Cerrado, existe uma predominância de emprego de mão de obra vulnerável em situações de trabalho precárias e frequentemente de caráter forçado [@fearnside-2008; @costa-2022; @soares-2004]. Em geral, esses trabalhadores operam tratores de construção civil para derrubar e remover vegetação natural, ou operam serras elétricas para a derrubada de árvores. 
 
- * Mineradoras;
-
- * Garimpeiros;
-
- * Industria de maquinário agrícola e de construção civil;
-
- * Forças armadas;
-
- * Forças auxiliares;
-
- * População ribeirinha;
-
- * Grileiros;
-
- * Ambientalistas;
-
- * Instituições ambientais;
-
- * Bancos;
+ Também serão analisados outros agentes sociais, como colonos assentados, madereiras, População Quilombola, mineradoras, garimpeiros, Industria de maquinário agrícola e de construção civil, forças armadas, forças auxiliares, população ribeirinha, grileiros, ambientalistas, instituições ambientais e bancos.
 
 ### Descrição do Habitus dos Agentes Sociais
 
 * População Indígena
 
-* Forças Armadas
+* Fazendeiros
 
 * Trabalhadores do desmatamento
 

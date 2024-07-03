@@ -39,7 +39,7 @@ glossary:
 
 bibliography: 
   - references.bib
-  - grateful-refs.bib
+  - references_packages.bib
 
 format:
   html:

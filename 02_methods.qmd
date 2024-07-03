@@ -220,7 +220,7 @@ A análise sociológica é feita através da Teoria Geral dos Campos desenvolvid
 
 Todas as etapas descritas acima serão feitas com base em informações obtidas das consultas à literatura. Portanto, conceitos como {{< glossary "capital" >}} não serão representados de forma numérica ou como categorias qualitativas, mas de forma abstrata a partir de informações coletadas da literatura. Já o conceito de {{< glossary "habitus" >}} será descrito a partir de informações históricas relacionadas à um certo {{< glossary "agente social" >}}, e não por meio de entrevistas, como é comum de se observar em pesquisas feitas com base na Teoria Geral dos Campos desenvolvida por Bourdieu. Essa forma de análise se justifica pela dificuldade de obtenção de informações de maneiras convencionais, já que o tema da {{< glossary "supressão de vegetação natural" display="SVN" >}} abrange {{< glossary "agente social" display="agentes sociais" >}} de difícil acesso.
 
-A análise sociológica através da Teoria dos Campos de Bourdieu, será informada pelo modelo teórico e seu paradigma filosófico através da centralização da {{< glossary "supressão de vegetação natural" display="SVN" >}} nas disputas dentro do campo social analisado, e como as disposições dos agentes sociais afetama ocorrência da {{< glossary "supressão de vegetação natural" display="SVN" >}}.
+A análise sociológica através da Teoria dos Campos de Bourdieu, será informada pelo modelo teórico e seu paradigma filosófico através da centralização da {{< glossary "supressão de vegetação natural" display="SVN" >}} nas disputas dentro do campo social analisado, e como as disposições dos agentes sociais afetam a ocorrência da {{< glossary "supressão de vegetação natural" display="SVN" >}}. A análise sociólogica é responsável pela contextualização histórica da manifestação da {{< glossary "supressão de vegetação natural" display="SVN" >}} de acordo com o modelo teórico.
 
 ## Análise Estatística {#sec-methods-stat}
 
@@ -248,7 +248,8 @@ tibble::tibble(
       "sf", "stars", "ggplot2", "scales", "scico", "cowplot",
       "ragg", "gt"
     ),
-    cite.tidyverse = FALSE
+    cite.tidyverse = FALSE,
+    bib.file = "references_packages"
   )
 ) |>
   gt::gt() |>
