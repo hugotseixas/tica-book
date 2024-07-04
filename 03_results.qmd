@@ -271,7 +271,7 @@ O uso e ocupação da terra também fornece capital para algum agente social, me
 
 Portanto é possível afirmar que o capital concedido pela posse, uso e ocupação da terra, não se limita apenas ao valor monetário do hectare de terra. Esse fenômeno gera capital econômico na economia local, assim como participa do mercado financeiro global, ele também é o espaço de reprodução e estabelecimento de culturas, ou em outras palavras, de modos de vida.
 
-Tendo em mente a relação entre diferentes formas de capital, com a posse, uso e ocupação da terra, é possível desenvolver a afirmação de que o COUT se posiciona em relação ao {{< glossary "campo do poder" >}}, na Amazônia e no Cerrado, das seguintes maneiras:
+Tendo em mente as diferentes formas de capital, com a posse, uso e ocupação da terra, é possível desenvolver a afirmação de que o COUT se posiciona em relação ao {{< glossary "campo do poder" >}}, na Amazônia e no Cerrado, das seguintes maneiras:
 
   * O COUT fornece capital econômico diretamente ou indiretamente para agentes sociais que conquistam direitos (de maneira instutucional ou não) de posse, uso e ocupação da terra;
 
@@ -282,6 +282,10 @@ Tendo em mente a relação entre diferentes formas de capital, com a posse, uso 
   * O COUT fornece capital social através da construção de conexões socias, ou até mesmo alianças, que se estabelecem por objetivos em comum entre agentes sociais em relação à posse, uso e ocupação da terra.
 
 ### Identificação dos Agentes Sociais e seu Capital
+
+Os agentes sociais envolvidos no COUT possuem diferentes posições em relação a {{< glossary "supressão de vegetação natural" display="SVN" >}}, em certos contextos, agentes sociais específicos podem ter posições favoráveis ou desfavoráveis à ocorrência da supressão, obtendo vantagens dentro da COUT dependendo do resultado das disputas envolvendo a SVN.
+
+Dependendo do resultado final de uma disputa em relação à {{< glossary "supressão de vegetação natural" display="SVN" >}}, os agentes sociais envolvidos se reorganizam para tentar mudar o contexto do COUT em que estão inseridos (seguindo a lógica da natureza retroativa do MSF explicado na [@sec-results-mtdr]), como forma de alcançar seus objetivos em relação à SVN. O modo em que essa reorganização ocorre irá depender das formas de capital os agentes sociais possuem dentro da COUT.
 
 Os principais agentes que participam do COUT são:
 
@@ -300,6 +304,8 @@ Os principais agentes que participam do COUT são:
  Também serão analisados outros agentes sociais, como colonos assentados, madereiras, População Quilombola, mineradoras, garimpeiros, Industria de maquinário agrícola e de construção civil, forças armadas, forças auxiliares, população ribeirinha, grileiros, ambientalistas, instituições ambientais e bancos.
 
 ### Descrição do Habitus dos Agentes Sociais
+
+O Habitus dos agentes sociais envolvidos na {{< glossary "supressão de vegetação natural" display="SVN" >}} descreve a percepção desse agente sobre as formações de vegetação natural, e das consequências de sua supressão. Essa percepção é produto de uma consrução histórica da identidade de um agente social, que afeta na sua percepção de Valores, Benefícios e Malefícios do MSF. 
 
 * População Indígena
 
