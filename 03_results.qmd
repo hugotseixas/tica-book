@@ -24,7 +24,7 @@ lapply(file_names, load, .GlobalEnv)
 
 ### Desenvolvimento do Modelo Teórico
 
-O desenvolvimento do modelo teórico é parcialmente conduzido com base nos dados levantados pelas consultas à literatura e pelas entrevistas. Esses dados refletem minha interpretação do que foi escrito ou dito nos conteúdos disponíveis.
+O desenvolvimento do modelo teórico é conduzido com base nos dados levantados pelas consultas à literatura e pelas entrevistas. Esses dados refletem minha interpretação do que foi escrito ou dito nos conteúdos disponíveis.
 
 A (@tbl-literatureresults) mostra parte das informações encontradas na literatura. Nela, é possível encontrar os objetos relacionados à {{< glossary "supressão de vegetação natural" display="SVN" >}}, e qual é a descrição da relação entre ambos.
 
