@@ -165,7 +165,7 @@ Em resumo, especulo que Áreas Protegidas podem afetar a ocorrência de {{< glos
 
     + Populações que habitam legalmente as Áreas Protegidas podem se aliar e incentivar práticas de extração que levam à ocorrência de {{< glossary "supressão de vegetação natural" display="SVN" >}}.
 
-#### Desenvolvimento Final
+#### Desenvolvimento Final do Modelo Teórico
 
 Para o desenvolvimento final do modelo teórico da {{< glossary "supressão de vegetação natural" display="SVN" >}}, fazemos a pergunta sobre quais são as condições necessárias para que a {{< glossary "supressão de vegetação natural" display="SVN" >}} seja manifestada, e quais as condições para que ela são seja manifestada?
 
@@ -175,7 +175,7 @@ O surgimento do embate de agentes sociais com formações de vegetação natural
 
 Para que a {{< glossary "supressão de vegetação natural" display="SVN" >}} seja materializada, é necessário que o agente social tenha acesso à essa formação de vegetação natural. O acesso pode ser providenciado por estruturas de transporte, como rodovias e estradas [@vayda-1998; @laurance-2002; @rosa-2013; @miyamoto-2020; @west-2021; @wagner-2024] e rios navegáveis [@laurance-2002; @barber-2014]. Além do acesso, a prática de supressão requer o emprego de técnologias, como motoserras [@soares-2004; @reporterbrasil-monitor-2022], tratores [@reporterbrasil-maquinas-2022; @reporterbrasil-monitor-2022; @brasildefato-desmatamento-2021] e produtos como herbicidas [@brasildefato-desmatamento-2021]. Além de estruturas de transporte e equipamentos, também são necessários recursos humanos, ou seja, pessoas dispostas a realizar o trabalho de supressão, que envolve uma diversidade de riscos [@soares-2004]. Esses são alguns fatores que possibilitam a ocorrência da {{< glossary "supressão de vegetação natural" display="SVN" >}} quando há uma oportunidade para tal.
 
-A atuação de agentes sociais no processo de {{< glossary "supressão de vegetação natural" display="SVN" >}} deve ser motivada por interesses internos e externos relacionados à esses agentes. Em relação a fazendeiros, existe a motivação de expansão de suas propriedades devido a ganhos financeiros consequentes de aumento de produção e valorização de seuas propriedades [@fearnside-1983; @richards-2014]. As madereiras exploram formações vegetais e promovem a SVN para obter ganhos financeiros da extração de recursos naturais das formações de vegetação natural [@wagner-2024]. Para trabalhadores que realizam a SVN diretamente, dentro das formações de vegetação natural, a motivação vem de ganhos financeiros ou por itens de subsistência, apesar dos riscos envolvidos e das condições de trabalho precárias [@soares-2004], além da possibilidade de sofrer ameaças e violência [@reporterbrasil-trabalho-2017]. Portanto, a realização da SVN envolvem motivações de benefícios e malefícios consequêntes da ação de supressão. A percepção desses benefícios e malefícios podem ser fortemente distorcidas por relações de exploração do trabalho, feitas de forma de violência física ou simbólica. 
+A atuação de agentes sociais no processo de {{< glossary "supressão de vegetação natural" display="SVN" >}} deve ser motivada por interesses internos e externos relacionados à esses agentes. Em relação a fazendeiros, existe a motivação de expansão de suas propriedades devido a ganhos financeiros consequentes de aumento de produção e valorização de seuas propriedades [@fearnside-1983; @richards-2014]. As madereiras exploram formações vegetais e promovem a SVN para obter ganhos financeiros da extração de recursos naturais das formações de vegetação natural [@wagner-2024]. Para trabalhadores que realizam a SVN diretamente, dentro das formações de vegetação natural, a motivação vem de ganhos financeiros ou por itens de subsistência, apesar dos riscos envolvidos e das condições de trabalho precárias [@soares-2004], além da possibilidade de sofrer ameaças e violência [@reporterbrasil-trabalho-2017]. Portanto, a realização da SVN envolvem motivações de benefícios e malefícios consequêntes da ação de supressão. A percepção desses bônus e ônus podem ser fortemente distorcidas por relações de exploração do trabalho, feitas de forma de violência física ou simbólica. 
 
 Existem situações em que, apesar dos benefícios práticos concebidos pela {{< glossary "supressão de vegetação natural" display="SVN" >}}, outros tipos de motivações impedem a ocorrência da supressão. Essas motivações podem ser de natureza de valores culturais, visão de desenvolvimento e progresso relacionados com a {{< glossary "supressão de vegetação natural" display="SVN" >}}, e valores de beleza atribuídos à formações de vegetação natural [@hoelle-2018]. Existem também questão religiosas que envolvem a preservação de formações de vegetação natural, podendo inclusive ser considerados como espaços sagrados, desincentivando sua supressão [@dudley-2009; @maru-2022].
 
@@ -187,7 +187,7 @@ O mecanismo generativo proposto para a {{< glossary "supressão de vegetação n
 
 - **Possibilidade**: É a possibilidade da manifestação física de uma ação de supressão que o SSS realiza contra contra a FNS;
 
-- **Valor**: São valores abstratos do SSS que podem ser atribuídos a uma determinada FNS;
+- **Valor**: São valores morais e éticos do SSS que podem ser atribuídos a uma determinada FNS;
 
 - **Benefícios**: Os benefícios que a supressão de uma determinada FNS pode proporcionar aos SSS envolvidos na ação de supressão;
 
@@ -295,7 +295,7 @@ Os principais agentes que participam do COUT são:
 
  * Fazendeiros:
 
-    Fazendeiros são um agente social representado por produtores agropecuários, voltados para a obtenção de lucros financeiros e expansão de suas atividades, que não são obtidos exclusivamente pela produção agropecuária [@fearnside-2008]. Em grande parte, esse grupo é formado por migrantes de diferentes períodos e movidos por diferentes motivações para a ocupação de áreas na Amazônia [@fearnside-2008] e no Cerrado [@jepson-2010; @brannstrom-2008], muito incentivados por programas de colonização de ambos biomas. Em geral, esse agente social se posiciona de forma favorável à {{< glossary "supressão de vegetação natural" display="SVN" >}} em maiores escalas.
+    Fazendeiros são um agente social representado por produtores agropecuários, voltados para a obtenção de lucros financeiros e expansão de suas atividades, que não são obtidos exclusivamente pela produção agropecuária [@fearnside-2008]. Em grande parte, esse grupo é formado por migrantes de diferentes períodos e lugares, sendo influenciados por diferentes motivações para a ocupação de áreas na Amazônia [@fearnside-2008] e no Cerrado [@jepson-2010; @brannstrom-2008], muito incentivados por programas de colonização de ambos biomas. Em geral, esse agente social se posiciona de forma favorável à {{< glossary "supressão de vegetação natural" display="SVN" >}} em maiores escalas.
 
  * Trabalhadores do Desmatamento:
 
