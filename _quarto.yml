@@ -19,6 +19,9 @@ book:
     style: "docked"
     search: true
     logo: /figs/art/logo.png
+  comments:
+    hypothesis:
+      theme: clean
   chapters:
     - index.qmd
     - 00_glossary.qmd
