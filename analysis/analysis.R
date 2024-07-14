@@ -36,13 +36,18 @@ merged_data <- tica::merge_data()
 # Fill merged data
 filled_data <- tica::fill_data(merged_data)
 
-sampled_data <- tica::sample_data(filled_data, 1)
-
-model_predictions <- tica::run_model(filled_data, sampled_data)
-
-tica::eda_nas_timeseries(filled_data)
-
+# Create EDA visualizations
 tica::loop_function(
   function_name = "create_visualization",
-  arguments_subset = 1:4
+  arguments_subset = c(1:17)
 )
+
+sampled_data <-
+  tica::sample_data(
+    filled_data,
+    year_min = 1995,
+    year_max = 2021,
+    seed = 1
+  )
+
+model_predictions <- tica::run_model(filled_data, sampled_data)

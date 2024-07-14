@@ -139,7 +139,7 @@ Os dados de delimitação de Unidades de Conservação são disponibilizados pel
 
 Para a transformação dos dados de Unidades de Conservação para a grade regular, foi feita a intersecção dos limites das unidades com as células da grade. Porém, com a existência de áreas de sobreposição entre diferentes Unidades de Conservação, foi feita uma operação de recorte das áreas sobrepostas, e remoção da área sobreposta com ano de criação mais recente. Por fim, foi feito o cálculo da área total de Unidades de Conservação dentro de cada célula da grade regular.
 
-## Delimitação de Territórios Quilombolas
+## Delimitação de Territórios Quilombolas {#sec-data-quilomb}
 
 Os dados de delimitação de Territórios Quilombolas são disponibilizados pelo Instituto Nacional de Colonização e Reforma Agrária (INCRA). Os dados contém informações sobre o processo de demarcação e titulação de Territórios Quilombolas.
 
