@@ -37,7 +37,7 @@ A escolha desses biomas se deu pela oportunidade singular que eles oferecem, ape
 
 ```{r}
 #| label: fig-cerrado-hex
-#| fig-cap: Representation of the Cerrado biome.
+#| fig-cap: Representação do Bioma Cerrado.
 #| echo: false
 #| dev: "ragg_png"
 
