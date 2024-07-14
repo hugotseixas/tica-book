@@ -24,7 +24,8 @@ yaml::read_yaml(file = "./glossary.yml") |>
   gt::gt(groupname_col = "letter") |>
   gt::tab_options(
     table.font.size = 14,
-    column_labels.hidden = TRUE
+    column_labels.hidden = TRUE,
+    quarto.disable_processing = TRUE
   ) |>
   gt::tab_style(
     style = list(
