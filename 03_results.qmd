@@ -497,7 +497,7 @@ eda_consunit_hist
 
 #### Delimitação de Territórios Quilombolas
 
-Os Territórios Quilombolas apresentam uma distribuição limitada em ambios biomas [@fig-quilomb-spatial]. Alguns territórios não foram contemplados nessa análise devido à falta de informações sobre a data de rechonhecimento destes [@sec-data-quilomb].
+Os Territórios Quilombolas apresentam uma distribuição limitada em ambos biomas [@fig-quilomb-spatial]. Alguns territórios não foram contemplados nessa análise devido à falta de informações sobre a data de rechonhecimento destes [@sec-data-quilomb].
 
 ```{r}
 #| label: fig-quilomb-spatial
@@ -512,7 +512,7 @@ eda_quilomb_spatial
 
 ```
 
-
+As áreas de Territórios Quilombolas apresentou um aumento significativo após 1999 na Amazônia, e após 2009 no Cerrado [@fig-quilomb-timeseries]. Na última década, observamos uma estagnação na área de Territórios Quilombolas.
 
 ```{r}
 #| label: fig-quilomb-timeseries
@@ -527,7 +527,7 @@ eda_quilomb_timeseries
 
 ```
 
-
+A distribuição de valores de áreas de Territórios Quilombolas mostram uma maior frequência de valores mais altos na Amazônia, em relação ao Cerrado [@fig-quilomb-hist]. Porém, essa distribuição não reflete a realidade da ocupação e efeito de populações Quilombolas em ambos biomas, devido à dificuldades de titulação desses territórios e pela falta de informações nos dados do processo de reconhecimento e institucionalização dos Territórios Quilombolas.  
 
 ```{r}
 #| label: fig-quilomb-hist
@@ -544,6 +544,8 @@ eda_quilomb_hist
 
 #### Malha Rodoviária
 
+A distribuição espacial da Malha Rodoviária nos biomas mostra uma maior quantidade de rodovias dispersas pelo Cerrado, em comparação com a Amazônia [@fig-highways-spatial]. Porém, esses dados representam apenas rodovias oficiais do Departamento Nacional de Infraestrutura de Transportes, mas temos o conhecimento da presença e da importância da presença de estradas não oficiais, que não são incluídas nessa análise pela falta de informações sobre a data de construção dessas estradas.
+
 ```{r}
 #| label: fig-highways-spatial
 #| fig-cap: "Distribuição espacial da Malha Rodoviária em 2021."
@@ -557,6 +559,8 @@ eda_highways_spatial
 
 ```
 
+A série temporal do comprimento total da Malha Rodoviária na Amazônia e no Cerrado mostra que ambos biomas apresentam um crescimento quase linear de rodovias ao longo do período analisado [@fig-highways-timeseries].
+
 ```{r}
 #| label: fig-highways-timeseries
 #| fig-cap: "Série temporal da Malha Rodoviária."
@@ -569,6 +573,8 @@ load("./figs/eda/eda_highways_timeseries.rdata")
 eda_highways_timeseries
 
 ```
+
+A distribuição dos valores do comprimento total da Malha Rodoviária, por célula da grade regular, mostra uma maior frequência de valores mais altos de quantidade de rodovia [@fig-highways-hist], o que está de acordo com a própria distribuição espacial dessa variável, que é concentrada em faixas de grandes rodovias.
 
 ```{r}
 #| label: fig-highways-hist
@@ -585,6 +591,112 @@ eda_highways_hist
 
 ### Resultados do Modelo
 
+Os resultados do modelo estatístico é composto por 800 combinações de amostragens, sendo 20 amostragens espaciais, e 40 amostragens temporais. Portanto, o resultado do modelo são 800 predições para cada célula da grade regular, para cada ano entre 1995 e 2021. Para avaliar as estimativas do modelo, o resultado final é calculado como a mediana das 800 esrtimativas de cada célula e cada ano.
 
+A distribuição espacial das estimativas da {{< glossary "supressão de vegetação natural" display="SVN" >}} mostra a somatória de supressão as longo da série histórica analisada [@fig-results-spatial]. Os resultados para a Amazônia mostram um padrão de supressão similar ao dos dados de referência [@fig-nvs-spatial], em que células com a presença de rodovias apresentaram valores mais altos de supressão, e células com a maior presença de Áreas Protegidas apresentaram menores valores de supresssão total. Porém, as estimativas de SVN acumuladas entre 1995 e 2021 não chegaram a valores altos como nos dados de referência, indicando uma incapacidade do modelo de estimar valores extremos de SVN. No Cerrado, os valores estimados pelo modelo estatístico apresentaram uma distribuição espacial diferente aos dados de referência [@fig-nvs-spatial], a NSV estimada foi mais alta na ao sul do bioma, ao contrário dos valores de referência, que apresenram menores áreas suprimidas nessa região.
+
+```{r}
+#| label: fig-results-spatial
+#| fig-cap: "Distrbuição espacial dos valores estimados de Supressão da Vegetação Natural. Os valores são resultados da mediana das 800 estimativas de cada observação, seguida pela somatória dos valores da série histórica analisada, entre 1995 e 2021."
+#| echo: false
+#| out-width: 100%
+#| dev: "ragg_png"
+
+load("./figs/eda/results_spatial.rdata")
+
+results_spatial
+
+```
+
+O Erro Médio Acaumulado de cada célula da grade regular mostra pontos com maior erro dispersos pela Amazônia, em que valores extremos não foram corretamente estimados pelo modelo estatístico [@fig-mae-spatial]. No Cerrado, maiores erros foram observados ao Sul do bioma.
+
+```{r}
+#| label: fig-mae-spatial
+#| fig-cap: "Distribuição espacial do Erro Médio Absoluto dos valores estimados de Supressão da Vegetação Natural."
+#| echo: false
+#| out-width: 100%
+#| dev: "ragg_png"
+
+load("./figs/eda/results_mae_spatial.rdata")
+
+results_mae_spatial
+
+```
+
+A análise da sétie temporal dos valores estimados de {{< glossary "supressão de vegetação natural" display="SVN" >}} mostra uma incapacidade do modelo estatístico em estimar corretamente os padrões temporais de supressão anual entre 1995 e 2021 [@fig-results-timeseries]. Nos dois biomas, foi estimado um aumento significativo na área suprimida após 2009, um ano após a implementação da lista negra do desmatamento, em que municípios com altos valores de SVN eram incorporados em uma lista para maior fiscalização e punições. O modo de representação dessa variável pode ter criado um viés no modelo, que associou altas taxas de supressão com a implementação dessa política pública. A falta de mais variáveis para caracterizar elementos temporais da SVN, como outras políticas públicas, pode ter contribuído para a incapacidade do modelo de rpresentar a variação temporal da supressão corretamente.
+
+```{r}
+#| label: fig-results-timeseries
+#| fig-cap: "Série temporal dos valores estimados de Supressão da Vegetação Natural anual."
+#| echo: false
+#| out-width: 100%
+#| dev: "ragg_png"
+
+load("./figs/eda/results_timeseries.rdata")
+
+results_timeseries
+
+```
+
+O Erro Médio Absoluto para cada ano mostra maiores erros no ano de 2003, e nos anos após 2009 [@fig-mae-timeseries]. Esses são anos que necessitarão de análises aprofundadas para compreender as razões da incapacidade do modelo estatístico em estimar corretamente os padrões temporais da {{< glossary "supressão de vegetação natural" display="SVN" >}}.
+
+```{r}
+#| label: fig-mae-timeseries
+#| fig-cap: "Série temporal do Erro Médio Absoluto dos valores estimados de Supressão da Vegetação Natural. Os pontos representam a média do Erro Médio Absoluto, e as linhas o desvio padrão."
+#| echo: false
+#| out-width: 100%
+#| dev: "ragg_png"
+
+load("./figs/eda/results_mae_timeseries.rdata")
+
+results_mae_timeseries
+
+```
+
+A dispersão entre os valores estimados pelo modelo estatístico, e os valores de referência, mostra uma tendência de superestimativa de valores menores da {{< glossary "supressão de vegetação natural" display="SVN" >}}, e uma subestimativa de valores maiores de supressão [@fig-results-scatterplot].
+
+```{r}
+#| label: fig-results-scatterplot
+#| fig-cap: "Gráfico de dispersão dos valores estimados de Supressão da Vegetação Natural."
+#| echo: false
+#| out-width: 100%
+#| dev: "ragg_png"
+
+load("./figs/eda/results_scatterplot.rdata")
+
+results_scatterplot
+
+```
+
+A distribuição do Erro Médio Absoluto mostra uma maior frequência de erros abaixo de 1000 hectares de supressão, que apesar de serem relativamente pequenos em relação a {{< glossary "supressão de vegetação natural" display="SVN" >}} anual, acabam impactando negativamente a acurácia do modelo, pela soma desses erros.
+
+```{r}
+#| label: fig-results-mae
+#| fig-cap: "Distribuição do Erro Médio Absoluto dos valores estimados de Supressão da Vegetação Natural"
+#| echo: false
+#| out-width: 100%
+#| dev: "ragg_png"
+
+load("./figs/eda/results_mae.rdata")
+
+results_mae
+
+```
+
+::: {.callout-note appearance="simple"}
+
+## Pŕoximos Passos
+
+ - Revisão das variáveis;
+
+ - Adição de novas variáveis;
+
+ - Revisão do método de amostragem;
+
+ - Revisão do algorítmo utilizado;
+
+ - Implementação de técnicas de interpretação de modelos de regressão;
+
+:::
 
 # Referências {.unnumbered}
