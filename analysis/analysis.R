@@ -51,3 +51,12 @@ sampled_data <-
   )
 
 model_predictions <- tica::run_model(filled_data, sampled_data)
+
+# Create results visualizations
+tica::loop_function(
+  function_name = "create_visualization",
+  arguments_subset = c(18:23)
+)
+
+arrow::read_parquet("./data/results/model_pred.parquet") |>
+  dplyr::distinct(sample)
