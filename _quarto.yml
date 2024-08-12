@@ -22,8 +22,8 @@ book:
   chapters:
     - index.qmd
     - 00_glossary.qmd
-    - 10_research_paradigm.qmd
     - 01_introduction.qmd
+    - 10_research_paradigm.qmd
     - 02_methods.qmd
     - 03_results.qmd
   appendices:

@@ -148,7 +148,7 @@ reactable::reactable(
 
 ```
 
-A partir das informações disponíveis, o modelo teórico foi desenvolvido através da repetição de um exercício de retrodução, como explicado na @sec-methods-modteo. Nos pŕoximos paragráfos farei uma descrição do processo de retrodução para alguns objetos identificados na literatura e nas entrevistas.
+A partir das informações disponíveis, o modelo teórico foi desenvolvido através da repetição de um exercício de retrodução, como explicado na @sec-methods-modteo. Nos próximos paragráfos farei uma descrição do processo de retrodução para alguns objetos identificados na literatura e nas entrevistas.
 
 #### O caso das rodovias
 
@@ -248,7 +248,7 @@ Outro atributo fundamental do MSF é de sua natureza retroativa. Esse atributo f
 
 A realização do MSF no {{< glossary "domínio atual" >}} pode ser caracterizada pelo contexto de sua manifestação. O contexto da situação em que o mecanismo generativo é acionado, definirá as tendências da Oportunidade, da Possibilidade, do Valor, dos Benefícios, e dos Malefícios. Isto significa que, embora o mecanismo generativo não se altere ao longo do tempo e do espaço, ele se manifesta de formas diferentes, de acordo com o contexto em que ele é acionado.
 
-No caso desse estudo, o SSS é a humanidade moderna e a FNS é a idéia de uma formação vegetal natural concebida pela pŕopria humanidade. A Oportunidade se manifesta pelo embate entre homem e natureza causado pela necessidade de desenvolvimento econômico, técnológico e social, e não é limitado por distâncias, já que no mundo globalizado, humanos fora de contato direto com formações de vegetação natural são também criadores desse embate. A Possibilidade se manifesta por capacidades técnológicas para a realização de supressão de grandes áreas, e condições de acesso à formações vegetais naturais. O Valor é manifestado através da atribuição de grandezas financeiras, serviços ecossistêmicos, beleza estética, sentimentos de afeto ou desafeto, práticas culturais, e de visões religiosas sobre formações de vegetação natural. Os Benefícios se manifestam através de ganhos financeiros, obtenção de posse de terras, extração de recursos naturais e de dominação ideológica, obtidos pela ocorrência da {{< glossary "supressão de vegetação natural" display="SVN" >}}. Os Malefícios se manifestam por através de perdas financeiras causadas por multas, embargos e apreensões, assim como na deterioração de reputação pública, riscos de morte ou acidentes, sofrimento emocional, e pela degradação ambiental.
+No caso desse estudo, o SSS é a humanidade moderna e a FNS é a idéia de uma formação vegetal natural concebida pela própria humanidade. A Oportunidade se manifesta pelo embate entre homem e natureza causado pela necessidade de desenvolvimento econômico, técnológico e social, e não é limitado por distâncias, já que no mundo globalizado, humanos fora de contato direto com formações de vegetação natural são também criadores desse embate. A Possibilidade se manifesta por capacidades técnológicas para a realização de supressão de grandes áreas, e condições de acesso à formações vegetais naturais. O Valor é manifestado através da atribuição de grandezas financeiras, serviços ecossistêmicos, beleza estética, sentimentos de afeto ou desafeto, práticas culturais, e de visões religiosas sobre formações de vegetação natural. Os Benefícios se manifestam através de ganhos financeiros, obtenção de posse de terras, extração de recursos naturais e de dominação ideológica, obtidos pela ocorrência da {{< glossary "supressão de vegetação natural" display="SVN" >}}. Os Malefícios se manifestam por através de perdas financeiras causadas por multas, embargos e apreensões, assim como na deterioração de reputação pública, riscos de morte ou acidentes, sofrimento emocional, e pela degradação ambiental.
 
 A natureza retroativa do MSF pode ser elaborada em maior detalhe quando analisanmos sua manifestação no {{< glossary "domínio atual" >}}. Em um cenário hipotético, em que um agente social está em embate com uma formação vegetal natural, os objetos que compõe o MSF se manifestam da seguinte maneira:
 
@@ -274,7 +274,7 @@ Por exemplo, o agravamento do aquecimento global pela {{< glossary "supressão d
 
 ::: {.callout-note appearance="simple"}
 
-## Pŕoximos Passos
+## Próximos Passos
 
  - Realização das entrevistas;
 
@@ -358,7 +358,7 @@ O Habitus dos agentes sociais envolvidos na {{< glossary "supressão de vegetaç
 
 ::: {.callout-note appearance="simple"}
 
-## Pŕoximos Passos
+## Próximos Passos
 
  - Expansão da identificação dos agentes sociais;
 
@@ -672,7 +672,7 @@ magick::image_read("./figs/assessment/results_scatterplot.png")
 
 ### Interpretação do Modelo
 
-
+Os valores SHAP calculados para as Unidades de Conservação mostram que essa variável atua, majoritariamente, como uma preditora de diminuição das predições da {{< glossary "supressão de vegetação natural" display="SVN" >}}, já que a média dos valores SHAP é negativa [@fig-explain-summary-consunit]. Porém, é possível observar a presença de predições em que Unidades de Conservação foram consideradas como uma preditora de aumento da SVN, especialmente em células da grade regular que apresentam menores áreas de Unidades de Conservação. O resultado esperado, pelo menos em teoria, é que o algorítmo de predição deveria sempre relacionar a presença de Unidades de Conservação como uma preditora de diminuição da SVN, já que a literatura científica aponta que essa variável apresenta um efeito causal na diminuição da SVN. Mais investigações devem ser conduzidas para esclarecer esse padrão apresentado pelo algorítmo.
 
 ```{r}
 #| label: fig-explain-summary-consunit
@@ -685,7 +685,7 @@ magick::image_read("./figs/explain/explain_consunit_summary.png")
 
 ```
 
-
+A dispersão de valores SHAP, em relação aos valores de área de Unidades de Conservação, mostra uma tendência em que quanto maior a área de Unidades de Conservação dentro de uma célula da grade regular, mais negativa é a contribuição dessa variável para a predição da {{< glossary "supressão de vegetação natural" display="SVN" >}} [@fig-explain-dependence-consunit].
 
 ```{r}
 #| label: fig-explain-dependence-consunit
@@ -700,7 +700,7 @@ magick::image_read("./figs/explain/explain_consunit_dependence.png")
 
 ::: {.callout-note appearance="simple"}
 
-## Pŕoximos Passos
+## Próximos Passos
 
  - Revisão das variáveis;
 
