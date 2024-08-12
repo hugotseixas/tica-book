@@ -67,5 +67,5 @@ model_predictions <-
 # Create results visualizations
 tica::loop_function(
   function_name = "create_visualization",
-  arguments_subset = c(4)
+  arguments_subset = c(1:34)
 )
