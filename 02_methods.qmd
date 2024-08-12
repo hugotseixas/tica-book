@@ -298,10 +298,7 @@ O processamento de cada dado varia com seu formato (tabular, vetorial ou matrici
 #| out-width: 100%
 #| dev: "ragg_png"
 
-load("./figs/methods/method_grid_area.rdata")
-
-grid::grid.newpage()
-grid::grid.draw(method_grid_area)
+magick::image_read("./figs/methods/method_grid_area.png")
 
 ```
 
@@ -342,10 +339,7 @@ A etapa de amostragem é conduzida pela realização de uma sequência de amostr
 #| out-width: 100%
 #| dev: "ragg_png"
 
-load("./figs/methods/method_sample.rdata")
-
-grid::grid.newpage()
-grid::grid.draw(method_sample)
+magick::image_read("./figs/methods/method_sample.png")
 
 ```
 
