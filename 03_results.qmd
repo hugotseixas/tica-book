@@ -14,44 +14,74 @@ A (@tbl-literatureresults) mostra parte das informações encontradas na literat
 
 ```{r}
 #| label: tbl-literatureresults
-#| tbl-cap: Tabela de dados resultante das consultas à bibliografia. A coluna "Identificação" mostra informações para identificar e facilitar o acesso do material em sua forma original, essa coluna pode ser expandida para revelar o conteúdo das demais colunas. A coluna "Objeto" mostra o objeto identificado como uma possível causa da SVN no material analisado. A coluna "Descrição" apresenta a descrição (caso presente no material analisado) do processo que descreve o objeto como uma causa da SVN.
+#| tbl-cap: Tabela de dados resultante das consultas à bibliografia. Cada linha da tabela representa um material analisado na revisão, os detalhes dos materias podem ser visualizados clicando na seta preta no início de cada linha, revelando uma sub-tabela. Na sub-tabela, a coluna "Objeto" mostra o objeto identificado como uma possível causa da SVN no material analisado. A coluna "Descrição" apresenta a descrição (caso presente no material analisado) do processo que descreve o objeto como uma causa da SVN.
 #| echo: false
 
-readxl::read_xlsx("./data/literature.xlsx") |>
+table_data <- readxl::read_xlsx("./data/literature.xlsx") |>
   dplyr::arrange(year) |>
   dplyr::mutate(
     url = glue::glue("<a href={url}>{url}</a>"),
     id = dplyr::cur_group_id(), .by = "id"
   ) |>
   dplyr::select(!file) |>
-  tidyr::unite(col = "id", id, url, type, author, title, year, location, sep = "<br> <br>") |>
-  reactable::reactable(
-    groupBy = "id", 
-    paginationType = "jump",
-    defaultPageSize = 1,
-    showPageSizeOptions = TRUE,
-    pageSizeOptions = c(1, 5, 10, 20),
-    striped = TRUE,
-    highlight = TRUE,
-    columns = list(
-      id = reactable::colDef(
-        name = "Identificação",
-        html = TRUE,
-        grouped = reactable::JS("function(cellInfo) {return cellInfo.value}"),
-        filterable = TRUE
-      ),
-      object = reactable::colDef(name = "Objeto", filterable = TRUE),
-      condition = reactable::colDef(name = "Descrição", filterable = TRUE)
-    ),
-    language = reactable::reactableLang(
-      filterPlaceholder = "Procurar...",
-      pageSizeOptions = "Mostrar {rows}",
-      pageInfo = "Mostrando {rowStart}\u2013{rowEnd} de {rows} itens",
-      pagePrevious = "Anterior",
-      pageNext = "Próxima",
-      pageNumbers = "{page} de {pages}"
-    )
+  tidyr::drop_na(object) |>
+  dplyr::mutate(
+    condition = dplyr::if_else(is.na(condition), "", condition)
   )
+
+headers_data <- table_data |>
+    dplyr::summarise(
+      object = stringr::str_c(object, collapse = ""),
+      condition = stringr::str_c(condition, collapse = ""),
+      .by = id:location
+    )
+
+reactable::reactable(
+  data = headers_data,
+  paginationType = "jump",
+  defaultPageSize = 5,
+  showPageSizeOptions = TRUE,
+  pageSizeOptions = c(1, 5, 10, 25, 50),
+  striped = TRUE,
+  highlight = TRUE,
+  searchable = TRUE,
+  columns = list(
+    url = reactable::colDef(
+      name = "Referência",
+      html = TRUE
+    ),
+    id = reactable::colDef(name = "Identificação"),
+    type = reactable::colDef(name = "Tipo"),
+    author = reactable::colDef(name = "Autor"),
+    title = reactable::colDef(name = "Título"),
+    year = reactable::colDef(name = "Ano"),
+    location = reactable::colDef(name = "Local"),
+    object = reactable::colDef(show = FALSE, searchable = TRUE),
+    condition = reactable::colDef(show = FALSE, searchable = TRUE)
+  ),
+  language = reactable::reactableLang(
+    searchPlaceholder = "Procurar...",
+    pageSizeOptions = "Mostrar {rows}",
+    pageInfo = "Mostrando {rowStart}\u2013{rowEnd} de {rows} itens",
+    pagePrevious = "Anterior",
+    pageNext = "Próxima",
+    pageNumbers = "{page} de {pages}"
+  ),
+  details = function(index) {
+    subtable_data <- table_data[table_data$id == headers_data$id[index], ] |>
+      dplyr::select(dplyr::all_of(c("object", "condition")))
+    htmltools::div(style = "padding: 1rem",
+      reactable::reactable(
+        data = subtable_data, 
+        outlined = TRUE,
+        columns = list(
+          object = reactable::colDef(name = "Objeto"),
+          condition = reactable::colDef(name = "Descrição")
+        )
+      )
+    )
+  }
+)
 
 ```
 
@@ -59,39 +89,62 @@ A (@tbl-interviewresults) mostra as informações obtidas através das entrevist
 
 ```{r}
 #| label: tbl-interviewresults
-#| tbl-cap: Tabela de dados resultante das entrevistas. A coluna "Participante" mostra a identificação anônima de cada participante das entrevistas, essa coluna pode ser expandida para revelar o conteúdo das demais colunas. A coluna "Objeto" mostra o objeto identificado como uma possível causa da SVN pelo participante. A coluna "Descrição" apresenta a descrição (caso feita pelo participante) do processo que descreve o objeto como uma causa da SVN.
+#| tbl-cap: Tabela de dados resultante das entrevistas. Cada linha da tabela representa um participante das entrevistas, os detalhes de cada entrevista podem ser visualizados clicando na seta preta no início de cada linha, revelando uma sub-tabela. Na sub-tabela, a coluna "Objeto" mostra o objeto identificado como uma possível causa da SVN pelo participante. A coluna "Descrição" apresenta a descrição (caso feita pelo participante) do processo que descreve o objeto como uma causa da SVN.
 #| echo: false
 
-readxl::read_xlsx("./data/interview.xlsx") |>
-  tidyr::drop_na(object) |>
-  tidyr::unite(col = "id", id, participant, sep = "<br> <br>") |>
-  reactable::reactable(
-    groupBy = "id", 
-    paginationType = "jump",
-    defaultPageSize = 1,
-    showPageSizeOptions = TRUE,
-    pageSizeOptions = c(1, 5),
-    striped = TRUE,
-    highlight = TRUE,
-    columns = list(
-      id = reactable::colDef(
-        name = "Participante",
-        html = TRUE,
-        grouped = reactable::JS("function(cellInfo) {return cellInfo.value}"),
-        filterable = TRUE
-      ),
-      object = reactable::colDef(name = "Objeto", filterable = TRUE),
-      condition = reactable::colDef(name = "Descrição", filterable = TRUE)
-    ),
-    language = reactable::reactableLang(
-      filterPlaceholder = "Procurar...",
-      pageSizeOptions = "Mostrar {rows}",
-      pageInfo = "Mostrando {rowStart}\u2013{rowEnd} de {rows} itens",
-      pagePrevious = "Anterior",
-      pageNext = "Próxima",
-      pageNumbers = "{page} de {pages}"
-    )
+table_data <- readxl::read_xlsx("./data/interview.xlsx") |>
+  dplyr::mutate(
+    id = dplyr::cur_group_id(), .by = "id"
+  ) |>
+  dplyr::mutate(
+    condition = dplyr::if_else(is.na(condition), "", condition)
   )
+
+headers_data <- table_data |>
+    dplyr::summarise(
+      object = stringr::str_c(object, collapse = ""),
+      condition = stringr::str_c(condition, collapse = ""),
+      .by = id:participant
+    )
+
+reactable::reactable(
+  data = headers_data,
+  paginationType = "jump",
+  defaultPageSize = 5,
+  showPageSizeOptions = TRUE,
+  pageSizeOptions = c(1, 5, 10, 25, 50),
+  striped = TRUE,
+  highlight = TRUE,
+  searchable = TRUE,
+  columns = list(
+    id = reactable::colDef(name = "Identificação"),
+    participant = reactable::colDef(name = "Participante"),
+    object = reactable::colDef(show = FALSE, searchable = TRUE),
+    condition = reactable::colDef(show = FALSE, searchable = TRUE)
+  ),
+  language = reactable::reactableLang(
+    searchPlaceholder = "Procurar...",
+    pageSizeOptions = "Mostrar {rows}",
+    pageInfo = "Mostrando {rowStart}\u2013{rowEnd} de {rows} itens",
+    pagePrevious = "Anterior",
+    pageNext = "Próxima",
+    pageNumbers = "{page} de {pages}"
+  ),
+  details = function(index) {
+    subtable_data <- table_data[table_data$id == headers_data$id[index], ] |>
+      dplyr::select(dplyr::all_of(c("object", "condition")))
+    htmltools::div(style = "padding: 1rem",
+      reactable::reactable(
+        data = subtable_data, 
+        outlined = TRUE,
+        columns = list(
+          object = reactable::colDef(name = "Objeto"),
+          condition = reactable::colDef(name = "Descrição")
+        )
+      )
+    )
+  }
+)
 
 ```
 
@@ -99,13 +152,13 @@ A partir das informações disponíveis, o modelo teórico foi desenvolvido atra
 
 #### O caso das rodovias
 
-Um dos objetos mais discutidos na literatura são as rodovias e estradas (aqui chamadas somente como rodovias), sendo consideradas como um dos fatores mais importantes para a ocorrência da {{< glossary "supressão de vegetação natural" display="SVN" >}}. Já sendo um objeto de relevância conhecida, agora é necessário realizar a seguinte pergunta: se a presença de rodovias causa a supressão, quais são as condições necessárias para que essa relação seja real? A partir dessa pergunta refletimos se a simples presença de uma rodovia em proximidade à um remanecente de vegetação nativa irá necessariamente causar sua supressão. Em seguida, realizamos outra pergunta: Embora a relação entre a presença de rodovias e a ocorrência da supressão seja real, em quais condições essa relação não irá se manifestar? 
+Um dos objetos discutidos na literatura são as rodovias e estradas (aqui chamadas somente como rodovias), sendo consideradas como um dos fatores mais importantes para a ocorrência da {{< glossary "supressão de vegetação natural" display="SVN" >}}. Já sendo um objeto de relevância conhecida, agora é necessário realizar a seguinte pergunta: se a presença de rodovias causa a supressão, quais são as condições necessárias para que essa relação seja real? A partir dessa pergunta refletimos se a simples presença de uma rodovia em proximidade à um remanecente de vegetação nativa irá necessariamente causar sua supressão. Em seguida, realizamos outra pergunta: Embora a relação entre a presença de rodovias e a ocorrência da supressão seja real, em quais condições essa relação não irá se manifestar? 
 
-As rodovias servem como um meio de transporte de pessoas, maquinários e bens de consumo, portanto elas podem oferecer uma facilidade tanto para o acesso à um remanecente de vegetação natural e a execução de sua supressão, quanto para o transporte dos recursos extraídos da área aonde a supressão ocorreu [@laurance-2002; @rosa-2013; @miyamoto-2020]. Somente a facilidade de acesso e transporte de bens não seriam as únicas vantagens oferecidas pela presença de rodovias, a apropriação e venda das áreas suprimidas também é um possível ganho financeiro proporcionado pela  {{< glossary "supressão de vegetação natural" display="SVN" >}} [@fearnside-1983]. Porém, mesmo com vantagens financeiras aparentes, nem todos os remanecentes de vegetação nativa nas proximidades de rodovias sofrem supressão, portanto imaginamos que existem contrapontos que podem ser mais fortes do que os ganhos proporcionados pela supressão. No Brasil, a presença de áreas protegidas por lei são um exemplo visto como bem sucedido para evitar supressões [@barber-2014], e que tem esse efeito mesmo quando localizados próximos a rodovias [@rosa-2013; @milien-2021; @silva-2023]. 
+As rodovias servem como um meio de transporte de pessoas, maquinários e bens de consumo, portanto elas podem oferecer uma facilidade tanto para o acesso à um remanecente de vegetação natural e a execução de sua supressão, quanto para o transporte dos recursos extraídos da área aonde a supressão ocorreu [@laurance-2002; @rosa-2013; @miyamoto-2020]. Somente a facilidade de acesso e transporte de bens não seriam as únicas vantagens oferecidas pela presença de rodovias, a apropriação e venda das áreas suprimidas também é um possível ganho financeiro proporcionado pela  {{< glossary "supressão de vegetação natural" display="SVN" >}} [@fearnside-1983]. Porém, mesmo com vantagens financeiras aparentes, nem todos os remanecentes de vegetação nativa nas proximidades de rodovias sofrem supressão, portanto imaginamos que existem contrapontos que podem ser mais fortes do que os ganhos proporcionados pela supressão. No Brasil, a presença de áreas protegidas por lei são um exemplo visto como bem sucedido para evitar supressões [@barber-2014; @bicudo-2023], e que tem esse efeito mesmo quando localizados próximos a rodovias [@rosa-2013; @milien-2021; @silva-2023]. 
 
-O efeito da presença de rodovias no aumento da supressão da vegetação natural nem sempre é observado através de estudos empíricos, @deng-2011 encontraram resultados ambíguos dependendo da metodologia empregada, os autores concluem o estudo com a afirmação de que a presença de rodovias não afetaram a área de florestas na província de Jiangxi, na China. No mesmo estudo, @deng-2011 discutem a possibilidade que a presença de estradas, em regiões pouco ocupadas e de baixa densidade populacional, podem servir como via de escoamento para produtos florestais e não florestais, reduzindo os custos de produção dessa região, e consequentemente aliviando a pressão para expansão de produções para novas áreas, originalmente ocupadas por vegetação natural. Segundo @deng-2011, as rodovias também atuam como forma de transporte de migração para fora de uma certa região, assim como possibilita o acesso a tecnologias que aumentem a produção local, incentivando uma exploração intensiva em áreas reduzidas.
+O efeito da presença de rodovias no aumento da {{< glossary "supressão de vegetação natural" display="SVN" >}} nem sempre é observado através de estudos empíricos, @deng-2011 chegaram à conclusão de que a presença de rodovias não causaram diminuição da área de florestas na província de Jiangxi, na China, entre 1995 e 2000. Nesse estudo, @deng-2011 discutem a possibilidade de que a presença de estradas, em regiões pouco ocupadas e de baixa densidade populacional, podem servir como via de escoamento para produtos, reduzindo os custos de produção agrícola dessa região, e consequentemente aliviando a pressão para expansão de produções para novas áreas.
 
-Em resumo, especulo que a presença de rodovias pode afetar a ocorrência de {{< glossary "supressão de vegetação natural" display="SVN" >}} das seguintes maneiras:
+Em resumo, especulo que a presença de rodovias pode causar a ocorrência de {{< glossary "supressão de vegetação natural" display="SVN" >}} das seguintes maneiras:
 
   * Aumentando a ocorrência de {{< glossary "supressão de vegetação natural" display="SVN" >}}:
 
@@ -115,23 +168,29 @@ Em resumo, especulo que a presença de rodovias pode afetar a ocorrência de {{<
 
 * Diminuindo a ocorrência de {{< glossary "supressão de vegetação natural" display="SVN" >}}:
 
-    + Em contextos específicos, a presença de estradas pode diminuir custos de produção, aumentando a rentabilidade econômica de atividades locais e desincentivando a expansão das atividades sobre áreas de vegetação natural;
+    + Em contextos específicos, a presença de estradas pode diminuir custos de produção agrícola, aumentando a rentabilidade econômica de atividades locais e desincentivando a expansão das atividades sobre áreas de vegetação natural;
 
 #### O caso das Áreas Protegidas
 
 As Áreas Protegidas são consideradas como uma importante ferramenta para evitar a {{< glossary "supressão de vegetação natural" display="SVN" >}}. Uma grande quantidade de evidências foram levantadas a favor do efeito das Áreas Protegidas em evitar a {{< glossary "supressão de vegetação natural" display="SVN" >}} [@pfaff-2015; @andam-2008; @pfaff-2014; @nolte-2013; @gaveau-2009], sendo que esse efeito é variável de acordo com o contexto espacial e temporal [@bernard-2014; @pfaff-2015].
 
-Apesar da importância da implementação e gestão de Áreas Protegidas ser reconhecida na literatura científica, há uma escassez na caracterização na forma como essas áreas atuam na preservação da vegetação natural. Tal escassez pode ser justificada pela singularidade da implementação e administração de cada Áreas Protegidas. O sucesso de uma Áreas Protegidas depende fortemente em sua legitimização pela comunidade local e da estratégia de gestão adotada [@gonçalves-2011].
+Apesar da importância da implementação e gestão de Áreas Protegidas ser reconhecida na literatura científica, há uma escassez na caracterização na forma como essas áreas atuam na preservação da vegetação natural. Tal escassez pode ser justificada pela singularidade da implementação e administração de cada Área Protegida. O sucesso de uma Áreas Protegidas depende fortemente em sua legitimização pela comunidade local e da estratégia de gestão adotada [@gonçalves-2011].
 
-No Brasil, as Áreas Protegidas formalmente reconhecidas são as Unidades de Conservação, os Territórios Indígenas e os Territórios Quilombolas. Outros tipos de Áreas Protegidas, como Áreas de Preservação Permanente e Reservas Legais são tratadas no âmbito local de um ecossistema, e cumpre a função de conectividade entre fragmentos naturais e entre Áreas Protegidas. As Unidades de Conservação são submetidas a administração e fiscalização pelo estado [@medeiros-2006], atualmente são divididas em duas classes, Unidades de Proteção Integral, em que é permitido apenas o uso indireto de seus recursos naturais, e Unidades de Uso Sustentável, que permitem o uso sustentável de parte de seus recursos naturais [@medeiros-2006; @drummond-2009].
+No Brasil, as Áreas Protegidas formalmente reconhecidas são as Unidades de Conservação, os Territórios Indígenas e os Territórios Quilombolas. Outros tipos de Áreas Protegidas, como Áreas de Preservação Permanente e Reservas Legais são tratadas no âmbito local de um ecossistema, e cumprem a função de conectividade entre fragmentos naturais e entre Áreas Protegidas. As Unidades de Conservação são submetidas a administração e fiscalização pelo estado [@medeiros-2006], atualmente são divididas em duas classes, Unidades de Proteção Integral, em que é permitido apenas o uso indireto de seus recursos naturais, e Unidades de Uso Sustentável, que permitem o uso sustentável de parte de seus recursos naturais [@medeiros-2006; @drummond-2009].
 
-Existem casos em que apesar do estabelecimento e reconhecimento de uma Área Protegida, ainda ocorrem atividades ilegais relacionadas a {{< glossary "supressão de vegetação natural" display="SVN" >}}. No Brasil, o Território Indígena Apyterewa apresentou uma grande área de {{< glossary "supressão de vegetação natural" display="SVN" >}} ilegal, conduzida por populações não indígenas [@imazon-apyterewa-2022]. O processo de ocorrência de atividades ilegais dentro desse território é fruto de uma história complexa do processo de homologação do Território Indígena Apyterewa, marcada por pressões políticas e judiciais contra os interesses da população indígenas, assim como a atuação de empresas madereiras e mineradoras e de populações não indígenas na região [@torres-2022, p.212-221]. Pressões externas e falta de apoio institucional são fatores que contribuíram para os altos números de {{< glossary "supressão de vegetação natural" display="SVN" >}} ilegal no Território Indígena Apyterewa, porém, através de operações de retirada de invasores, o território apresentou uma redução expressiva na taxa de {{< glossary "supressão de vegetação natural" display="SVN" >}} [@gov-apyterewa-2024].
+Existem casos em que apesar do estabelecimento e reconhecimento de uma Área Protegida, ainda ocorrem atividades ilegais relacionadas a {{< glossary "supressão de vegetação natural" display="SVN" >}}. No Brasil, o Território Indígena Apyterewa apresentou uma grande área de {{< glossary "supressão de vegetação natural" display="SVN" >}} ilegal entre 2019 e 2022, conduzida por populações não indígenas [@imazon-apyterewa-2022; @gov-apyterewa-2024-b]. O processo de ocorrência de atividades ilegais dentro desse território é fruto de uma história complexa do processo de homologação do Território Indígena Apyterewa, marcada por pressões políticas e judiciais contra os interesses da população indígenas, assim como a atuação de empresas madereiras e mineradoras e de populações não indígenas na região [@torres-2022, p.212-221]. Pressões externas e falta de apoio institucional são fatores que contribuíram para os altos números de {{< glossary "supressão de vegetação natural" display="SVN" >}} ilegal no Território Indígena Apyterewa, porém, através de operações de retirada de invasores, o território apresentou uma redução expressiva na taxa de {{< glossary "supressão de vegetação natural" display="SVN" >}} em 2024 [@gov-apyterewa-2024-a].
 
 Em Benin, dados coletados em um Parque Nacional demonstram padrões espaciais e temporais de atividades ilegais dentro da Área Protegida, como pastoreio, agricultura, caça e extração de madeira [@tchetan-2018]. Foi observado que em contextos que dificultavam a atividade de patrulhamento, devido a estação chuvosa, a ocorrência de atividades ilegais era maior, assim como ocorreu em anos em que houveram dificuldades dificuldades financeiras e técnicas para a gestão de funcionários do Parque Nacional [@tchetan-2018]. O patrulhamento do Parque Nacional é um desencentivo para práticas ilegais pela possibilidade de punições como prisões e apreensões.
 
-Ao redor do mundo, áreas de proteção também se relacionam com questões religiosas e locais sagrados [@dudley-2009], sendo que o mutualismo entre conservação institucional e a perspectiva de natureza através de religiões, pode ter um efeito positivo na desincentivação da ocorrência de {{< glossary "supressão de vegetação natural" display="SVN" >}} [@dudley-2009; @maru-2022; @mcleod-2015]. As religiões podem cumprir um papel de definição da relação do homem com a natureza, influenciando em suas atitudes em relação ao ambiente em que habita [@mcleod-2015], consequentemente, valores religiosos associados a formações de vegetação natural podem ter influência em sua conservação.
+Ao redor do mundo, áreas de proteção também se relacionam com questões religiosas e locais sagrados [@dudley-2009], sendo que o mutualismo entre conservação institucional e a perspectiva de natureza através de religiões, pode ter um efeito positivo no desincentivo da {{< glossary "supressão de vegetação natural" display="SVN" >}} [@dudley-2009; @maru-2022; @mcleod-2015]. As religiões podem cumprir um papel de definição da relação do homem com a natureza, influenciando em suas atitudes em relação ao ambiente em que habita [@mcleod-2015]. Consequentemente, valores religiosos associados a formações de vegetação natural podem ter influência em sua conservação.
 
-Em resumo, especulo que Áreas Protegidas podem afetar a ocorrência de {{< glossary "supressão de vegetação natural" display="SVN" >}} das seguintes maneiras:
+Em resumo, especulo que Áreas Protegidas podem causar a ocorrência de {{< glossary "supressão de vegetação natural" display="SVN" >}} das seguintes maneiras:
+
+  * Aumentando a ocorrência de {{< glossary "supressão de vegetação natural" display="SVN" >}}:
+
+    + A implementação e formalização de uma Área Protegida pode levar à uma corrida pela extração de seus recursos antes do establecimento adequado da gestão dessa Área Protegida;
+
+    + Populações que habitam legalmente as Áreas Protegidas podem se aliar e incentivar práticas de extração que levam à ocorrência de {{< glossary "supressão de vegetação natural" display="SVN" >}}.
 
   * Diminuindo a ocorrência de {{< glossary "supressão de vegetação natural" display="SVN" >}}:
 
@@ -143,25 +202,19 @@ Em resumo, especulo que Áreas Protegidas podem afetar a ocorrência de {{< glos
 
     + A vegetação natural dentro de uma Área Protegida pode ter sua percepção de valor aumentada em relação a vegetação natural fora de àreas Protegidas. A consequência disso é que a vegetação natural dentro de Áreas Protegidas podem ser poupadas em detrimento da vegetação natural fora desse espaço;
 
-  * Aumentando a ocorrência de {{< glossary "supressão de vegetação natural" display="SVN" >}}:
-
-    + A implementação e formalização de uma Área Protegida pode levar à uma corrida pela extração de seus recursos antes do establecimento adequado da gestão dessa Área Protegida;
-
-    + Populações que habitam legalmente as Áreas Protegidas podem se aliar e incentivar práticas de extração que levam à ocorrência de {{< glossary "supressão de vegetação natural" display="SVN" >}}.
-
 #### Desenvolvimento Final do Modelo Teórico
 
-Para o desenvolvimento final do modelo teórico da {{< glossary "supressão de vegetação natural" display="SVN" >}}, fazemos a pergunta sobre quais são as condições necessárias para que a {{< glossary "supressão de vegetação natural" display="SVN" >}} seja manifestada, e quais as condições para que ela são seja manifestada?
+Para o desenvolvimento final do modelo teórico da {{< glossary "supressão de vegetação natural" display="SVN" >}}, fazemos a pergunta sobre quais são as condições necessárias para que a SVN seja manifestada, e quais as condições para que ela são seja manifestada?
 
-Pela análise dos documentos na literatura ciêntifica e outras fontes de informação, é possível identificar alguns fatores que se relacionam com um embate entre o desenvolvimento humano e a conservação da natureza. O crescimento populacional, tanto rural quanto urbano, é frequentemente associado como uma possível causa da {{< glossary "supressão de vegetação natural" display="SVN" >}} [@allen-1985; @armenteras-2006; @reydon-2020]. Assim como a população bruta, em que áreas próximas de centros com maiores números de habitantes são mais propensas à sofrerem {{< glossary "supressão de vegetação natural" display="SVN" >}} [@nelson-1997; @laurance-2002; @mas-2004; @armenteras-2006; @santos-2021]. A proximidade com centros urbanos e estruturas como rodovias, ferrovias e hidrovias, e industrias [@ludeke-1990; @reydon-2020; @west-2021; @pfaff-2015] são considerados como facilitadores da ocorrência de {{< glossary "supressão de vegetação natural" display="SVN" >}}. A ampliação de centros urbanos, estruturas de transporte, e o aumento da demanda por produtos e recursos naturais [@richards-2014; @wagner-2024], representam essa necessidade de desenvolvimento humano, que se choca com a presença de formações de vegetação natural que ocupam espaços úteis para o avanço de uma certa perspectiva de desenvolvimento.
+Pela análise dos documentos na literatura ciêntifica e outras fontes de informação, é possível identificar alguns fatores que se relacionam com um embate entre o desenvolvimento humano e a conservação da natureza. O crescimento populacional, tanto rural quanto urbano, é frequentemente associado como uma possível causa da {{< glossary "supressão de vegetação natural" display="SVN" >}} [@allen-1985; @armenteras-2006; @reydon-2020]. A população total também é associado como causa da SVN, em que áreas de vegetação natural, próximas de centros altamente populosos, são mais propensas à sofrerem supressões [@nelson-1997; @laurance-2002; @mas-2004; @armenteras-2006; @santos-2021]. A proximidade com centros urbanos e estruturas como rodovias, ferrovias e hidrovias, e industrias [@ludeke-1990; @reydon-2020; @west-2021; @pfaff-2015] são considerados como facilitadores da ocorrência de SVN. A ampliação de centros urbanos, estruturas de transporte, e o aumento da demanda por produtos e recursos naturais [@richards-2014; @wagner-2024], representam essa necessidade de desenvolvimento humano, que se choca com a presença de formações de vegetação natural que ocupam espaços úteis para o avanço de uma certa perspectiva de desenvolvimento.
 
 O surgimento do embate de agentes sociais com formações de vegetação natural ocorre a partir de uma oportunidade de avanço de uma perspectiva de desenvolvimento que é beneficiada pela supressão de formações de vegetação natural. Com a realização da possibilidade da ocorrência da {{< glossary "supressão de vegetação natural" display="SVN" >}}, é intuitivo o questionamento de como e porque, pois apenas a oportunidade não seria capaz de promover a ação de supressão.
 
-Para que a {{< glossary "supressão de vegetação natural" display="SVN" >}} seja materializada, é necessário que o agente social tenha acesso à essa formação de vegetação natural. O acesso pode ser providenciado por estruturas de transporte, como rodovias e estradas [@vayda-1998; @laurance-2002; @rosa-2013; @miyamoto-2020; @west-2021; @wagner-2024] e rios navegáveis [@laurance-2002; @barber-2014]. Além do acesso, a prática de supressão requer o emprego de técnologias, como motoserras [@soares-2004; @reporterbrasil-monitor-2022], tratores [@reporterbrasil-maquinas-2022; @reporterbrasil-monitor-2022; @brasildefato-desmatamento-2021] e produtos como herbicidas [@brasildefato-desmatamento-2021]. Além de estruturas de transporte e equipamentos, também são necessários recursos humanos, ou seja, pessoas dispostas a realizar o trabalho de supressão, que envolve uma diversidade de riscos [@soares-2004]. Esses são alguns fatores que possibilitam a ocorrência da {{< glossary "supressão de vegetação natural" display="SVN" >}} quando há uma oportunidade para tal.
+Para que a {{< glossary "supressão de vegetação natural" display="SVN" >}} seja materializada, é necessário que o agente social tenha acesso à essa formação de vegetação natural. O acesso pode ser providenciado por estruturas de transporte, como rodovias e estradas [@vayda-1998; @laurance-2002; @rosa-2013; @miyamoto-2020; @west-2021; @wagner-2024] e rios navegáveis [@laurance-2002; @barber-2014]. Além do acesso, a prática de supressão requer o emprego de técnologias, como motoserras [@soares-2004; @reporterbrasil-monitor-2022], tratores [@reporterbrasil-maquinas-2022; @reporterbrasil-monitor-2022; @brasildefato-desmatamento-2021] e produtos como herbicidas [@brasildefato-desmatamento-2021]. Além de estruturas de transporte e equipamentos, também são necessários recursos humanos, ou seja, pessoas dispostas a realizar o trabalho de supressão, que envolve uma diversidade de riscos [@soares-2004]. Esses são alguns fatores que possibilitam a ocorrência da SVN quando há uma oportunidade para tal.
 
-A atuação de agentes sociais no processo de {{< glossary "supressão de vegetação natural" display="SVN" >}} deve ser motivada por interesses internos e externos relacionados à esses agentes. Em relação a fazendeiros, existe a motivação de expansão de suas propriedades devido a ganhos financeiros consequentes de aumento de produção e valorização de seuas propriedades [@fearnside-1983; @richards-2014]. As madereiras exploram formações vegetais e promovem a SVN para obter ganhos financeiros da extração de recursos naturais das formações de vegetação natural [@wagner-2024]. Para trabalhadores que realizam a SVN diretamente, dentro das formações de vegetação natural, a motivação vem de ganhos financeiros ou por itens de subsistência, apesar dos riscos envolvidos e das condições de trabalho precárias [@soares-2004], além da possibilidade de sofrer ameaças e violência [@reporterbrasil-trabalho-2017]. Portanto, a realização da SVN envolvem motivações de benefícios e malefícios consequêntes da ação de supressão. A percepção desses bônus e ônus podem ser fortemente distorcidas por relações de exploração do trabalho, feitas de forma de violência física ou simbólica. 
+A atuação de agentes sociais no processo de {{< glossary "supressão de vegetação natural" display="SVN" >}} deve ser motivada por interesses internos e externos relacionados à esses agentes. Em relação a fazendeiros, existe a motivação de expansão de suas áreas produtivas, devido a ganhos financeiros consequentes de aumento de produção e valorização de suas propriedades [@fearnside-1983; @richards-2014]. As madereiras exploram formações vegetais e promovem a SVN para obter ganhos financeiros através da extração de recursos naturais das formações de vegetação natural [@wagner-2024]. Para trabalhadores que realizam a SVN diretamente, dentro das formações de vegetação natural, a motivação vem de ganhos financeiros ou por itens de subsistência, apesar dos riscos envolvidos e das condições de trabalho precárias [@soares-2004], além da possibilidade de sofrer ameaças e violência [@reporterbrasil-trabalho-2017]. Portanto, a realização da SVN envolvem motivações de benefícios e malefícios consequêntes da ação de supressão. A percepção desses bônus e ônus podem ser fortemente distorcidas por relações de exploração do trabalho, feitas de forma de violência física ou simbólica.
 
-Existem situações em que, apesar dos benefícios práticos concebidos pela {{< glossary "supressão de vegetação natural" display="SVN" >}}, outros tipos de motivações impedem a ocorrência da supressão. Essas motivações podem ser de natureza de valores culturais, visão de desenvolvimento e progresso relacionados com a {{< glossary "supressão de vegetação natural" display="SVN" >}}, e valores de beleza atribuídos à formações de vegetação natural [@hoelle-2018]. Existem também questão religiosas que envolvem a preservação de formações de vegetação natural, podendo inclusive ser considerados como espaços sagrados, desincentivando sua supressão [@dudley-2009; @maru-2022].
+Existem situações em que, apesar dos benefícios práticos concebidos pela {{< glossary "supressão de vegetação natural" display="SVN" >}}, outros tipos de motivações impedem a ocorrência da supressão. Essas motivações podem ser de natureza ética e moral, como valores culturais, visão de desenvolvimento e progresso relacionados com a {{< glossary "supressão de vegetação natural" display="SVN" >}}, e valores de beleza atribuídos à formações de vegetação natural [@hoelle-2018]. Existem também questões religiosas que envolvem a preservação de formações de vegetação natural, podendo inclusive ser considerados como espaços sagrados, desincentivando sua supressão [@dudley-2009; @maru-2022].
 
 ### Formalização do Modelo Teórico
 
@@ -183,13 +236,13 @@ Nas seções seguintes, a manifestação do mecanismo generativo é descrita em 
 
 #### Explicação do Modelo Teórico no Domínio Real {#sec-results-mtdr}
 
-Esse mecanismo, chamado a partir de agora como Mecanismo de Supressão de Formações Não Sentientes (MSF), opera no {{< glossary "domínio real" >}} e no nível social da realidade. Isso significa que a ativação do MSF, e seu resultado consequente, não são determinados por percepções psicológicas de individuos isolados, apesar de não ser independente do nível psicológico da realidade. O MSF é ativado por relações e disposições sociais entre grupos de individuos que formam o SSS.
+Esse mecanismo, chamado a partir de agora como Mecanismo de Supressão de Formações Não Sentientes (MSF), opera no {{< glossary "domínio real" >}} e no nível social da realidade. Isso significa que a ativação do MSF, e seu resultado consequente em relação à {{< glossary "supressão de vegetação natural" display="SVN" >}}, não são completamente determinados por percepções psicológicas de individuos isolados, apesar de não ser independente do nível psicológico da realidade.
 
-O MSF pode ser acionado quando um SSS e uma FNS coexistem no espaço e tempo. A ativação do mecanismo ocorre através de tendências manifestadas pelos objetos que compõe o MSF, que podem ser positivas ou negativas em relação a ocorrência da supressão. A integralização das tendências dos objetos da MSF irá determinar o resultado final da ativação do mecanismo.
+O MSF pode ser acionado quando um SSS e uma FNS coexistem no espaço e tempo. A ativação do mecanismo ocorre através de tendências manifestadas pelos objetos que compõe o MSF (Oportunidade, Possibilidade, Valor, Benefícios e Malefícios), que podem ser positivas ou negativas em relação a ocorrência da supressão. A integralização das tendências dos objetos do MSF irá determinar o resultado final da ativação do mecanismo.
 
 Um atributo importante do MSF é da ausência de uma sequência temporal de manifestação dos objetos que compõe a MSF, ou seja, seria incoerente (em relação à lógica do modelo proposto) afirmar que a manifestação de valor em relação a uma FNS ocorre apenas depois da manifestação da oportunidade. Portanto, todos os objetos se manifestam de maneira desordenada e fora de fase na manifestação do MSF.
 
-Outro atributo fundamental do MSF é de sua natureza retroativa. Esse atributo faz com que, mesmo quando a ativação do mecanismo cria uma tendência geral positiva para a manifestação da supressão, essa supressão pode ser interrompida pela configuração negativa de um objeto específico, porém, deixando uma tendência positiva latente em favor da supressão. Como exemplo, em um cenário hipotético, a Oportunidade, o Valor, os Benefícios e os Malefícios manifestam tendências favoráveis à ocorrência da supressão, porém, a uma manifestação negativa de Possibilidade pode interromper a ocorrência da supressão. Porém, a consequência é uma força latente e residual que permanece devido à tendência positiva para a ocorrência da supressão, que leva a uma reorganização social por parte do SSS para alterar as tendências necessárias para a manifestação da supressão. Um esclarecimento dessa propriedade será feita com maiores detalhes na @sec-results-mtda e @sec-results-mtde.
+Outro atributo fundamental do MSF é de sua natureza retroativa. Esse atributo faz com que, mesmo quando a ativação do mecanismo cria uma tendência geral positiva para a manifestação da supressão, essa supressão pode ser interrompida pela configuração negativa de um objeto específico, porém, deixando uma tendência positiva latente em favor da supressão. Como exemplo, em um cenário hipotético, a Oportunidade, o Valor, os Benefícios e os Malefícios manifestam tendências favoráveis à ocorrência da supressão, porém, uma manifestação negativa de Possibilidade pode interromper a ocorrência da supressão. Mesmo que o resultado final do MSF, nesse exemplo, não tenha sido na manifestação da {{< glossary "supressão de vegetação natural" display="SVN" >}}, uma força latente e residual permaneceu devido à tendência positiva (de Oportunidade, Valor, Benfícios e Malefícios) para a ocorrência da supressão, que leva a uma reorganização por parte do SSS para alterar as condições necessárias para a manifestação da supressão. Um esclarecimento dessa propriedade será feita com maiores detalhes na @sec-results-mtda e @sec-results-mtde.
 
 #### Explicação do Modelo Teórico no Domínio Atual {#sec-results-mtda} 
 
@@ -209,11 +262,11 @@ A natureza retroativa do MSF pode ser elaborada em maior detalhe quando analisan
 
 * A Possibilidade se manifestou como uma força contrária à ocorrência da supressão, pois a comunidade não dominava técnologias necessárias para a realização do trabalho de supressão. A formação de vegetação natural era majoritariamente formada por grandes árvores de difícil supressão;
 
-Apesar da grande tendência favorável pela supressão da formação de vegetação natural hipotética, a supressão foi impossibilitada pela absência de Possibilidade. Nesse contexto, a natureza retroativa do MSF faz com que a comunidade se reorganize a fim de mudar esse contexto para um estado que a Possibilidade de execução da supressão seja positiva. É importante notar que esse processo ocorre em conjunto com inúmeros outros fenômenos sociais, sendo que o MSF não será o único determinante de transformações sociais, pois ele não se manifesta em um sistema fechado e não pode ser isolado de outros mecanismos.
+Apesar da grande tendência favorável pela supressão da formação de vegetação natural hipotética, a supressão foi impossibilitada pela tendência negativa da Possibilidade. Nesse contexto, a natureza retroativa do MSF faz com que a comunidade se reorganize a fim de mudar esse contexto para um estado que a Possibilidade de execução da supressão seja positiva. É importante notar que esse processo ocorre em conjunto com inúmeros outros fenômenos sociais, sendo que o MSF não será o único mecanismo influênciando transformações sociais, pois ele não se manifesta em um sistema fechado e não pode ser isolado de outros mecanismos.
 
 #### Explicação do Modelo Teórico no Domínio Empírico {#sec-results-mtde}
 
-A realização do MSF no {{< glossary "domínio empírico" >}} se manifesta através da percepção de agentes sociais sobre os objetos que compõe o MSF. A forma como esses objetos do MSF são percebidos e interpretados pelos agentes sociais é sempre parcial. O agente social não percebe, ou é insensível, a certos Valores sobre uma formação de vegetação natural. O agente social também tem uma perceção parcial dos Benefícios e Malefícios, portanto desconhece ou é insensível a todas as consequências da condução da {{< glossary "supressão de vegetação natural" display="SVN" >}}. 
+A realização do MSF no {{< glossary "domínio empírico" >}} se manifesta através da percepção de agentes sociais sobre os objetos que compõe o MSF. A forma como esses objetos do MSF são percebidos e interpretados pelos agentes sociais é sempre parcial. O agente social não percebe, ou é insensível, a certos Valores sobre uma formação de vegetação natural. O agente social também tem uma perceção parcial dos Benefícios e Malefícios, portanto desconhece ou é insensível à certas consequências da condução da {{< glossary "supressão de vegetação natural" display="SVN" >}}.
 
 Por exemplo, o agravamento do aquecimento global pela {{< glossary "supressão de vegetação natural" display="SVN" >}}, devido à emissão de gases do efeito estufa, já foi informada em algum instante a grande parte da população humana global. Porém, agentes sociais fortemente envolvidos na condução da {{< glossary "supressão de vegetação natural" display="SVN" >}} podem ser insensíveis à esse Malefício, ou até mesmo desacreditar completamente de sua existência. Portanto, a importância do aquecimento global como Malefício, é percebido por um agente social de maneira completamente diferente de outros agentes sociais.
 
@@ -241,13 +294,13 @@ O campo social proposto para análise é formado pela disputa da ocupação e us
 
 Nesse projeto, a análise sobre o COUT é realizada especificamente sobre o processo de {{< glossary "supressão de vegetação natural" display="SVN" >}} nos biomas Amazônia e Cerrado. A {{< glossary "supressão de vegetação natural" display="SVN" >}} pode atuar tanto como meio quanto como fim dentro desse campo. Ela atua como meio quando é empregada para remover a vegetação natural de uma área e substitui-la por outra cobertura, como a agropecuária. Já sua atuação como fim se dá quando ocorre com o objetivo de utilização da vegetação natural como recurso, que pode ser para construções, combustível, ou como bem comercial.
 
-A disputa que ocorre no COUT é fortemente determinada pela legislação, políticas públicas e processos judiciários. Porém, a forma de disputa na COUT vai além dos limites institucionais do estado, elas se dão por relações não formalizadas, porém legitimizadas, entre agentes sociais. Por exemplo, a questão de propriedade de uma área para a ocorrência de atividade de garimpo ilegal, existe um agente social considerado como o proprietário dessa área, mesmo que isso não seja reconhecido pelo estado, mas que é legitimizado por outros agentes sociais envolvidos nessa atividade. Essas relações podem ser estabelecidas através de poder econômico, que dá acesso à compra de maquinário para a ocorrência do garimpo, mas também através de emprego da violência, tanto física quanto simbólica.
+A disputa que ocorre no COUT é fortemente determinada pela legislação, políticas públicas e processos judiciários. Porém, a forma de disputa na COUT vai além dos limites institucionais do estado, elas se dão por relações não formalizadas, porém reconhecidas entre agentes sociais. Por exemplo, a questão de propriedade de uma área para a ocorrência de atividade de garimpo ilegal, existe um agente social considerado como o proprietário dessa área, mesmo que isso não seja reconhecido pelo estado, mas que é legitimizado por outros agentes sociais envolvidos nessa atividade. Essas relações podem ser estabelecidas através de poder econômico, que dá acesso à compra de maquinário para a ocorrência do garimpo, mas também através de emprego da violência, tanto física quanto simbólica.
 
 ### Posição do Campo do Uso e Ocupação da Terra em Relação ao Campo do Poder
 
 A questão de posse, uso e ocupação da terra está envolvida com o acúmulo de capital em suas diversas formas. 
 
-Podemos considerar que o direito de posse de um espaço confere capital econômico pelo valor de venda da terra. Essa afirmação pode ser esclarecida pela análise do processo de grilagem de terras na Amazônia e no Cerrado, em que a apropriação ilegal de terras é utilizada como meio de valorização dessas áreas, e consequentemente o enriquecimento financeiro dos agentes sociais envolvidos nesse processo. A posse de terras nem sempre é diretamente relacionada com sua ocupação e uso, por exemplo, o processo de arrendamento de terras, em que o proprietário de uma área obtem ganhos financeiros exclusivamente pelo fato de possuir a terra como propriedade privada. 
+Podemos considerar que o direito de posse de um espaço confere capital econômico pelo valor de venda da terra. Essa afirmação pode ser esclarecida pela análise do processo de grilagem de terras na Amazônia e no Cerrado, em que a apropriação ilegal de terras é utilizada como meio de valorização dessas áreas, e consequentemente o enriquecimento financeiro dos agentes sociais envolvidos nesse processo. A posse de terras nem sempre é diretamente relacionada com sua ocupação e uso, por exemplo, no processo de arrendamento de terras, o proprietário de uma área obtem ganhos financeiros exclusivamente pelo fato de possuir a terra como propriedade privada, cedendo o espaço para terceiros realizarem atividades comerciais nessa área. 
 
 Por outra perspectiva, a posse da terra não confere apenas vantagens econômicas, no caso de Territórios Indígenas, o capital conquistado pela posse dessas terras não está atrelado ao valor financeiro da terra em si, mas sim pelo direito de usofruto e legitimação de uma população e sua cultura. Essa questão, de legitimação de uma população especifica e da manutenção de sua cultura, também pode ser analisada sobre produtores agropecuários ligados ao agronegócio, em que o direito de posse, ocupação e uso de áreas extensas é uma condição para a reprodução e estabelecimento de suas formas de produção e suas manifestções culturais, garantindo à esse grupo social uma posição vantajosa no {{< glossary "campo do poder" >}}. Além disso, a questão de manutenção de uma população e sua cultura também está relacionada ao uso da terra, por exemplo, a importância de alguma espécie de cultivo e o seu manejo, como é o caso dos seringueiros e populações ribeirinhas.
 
@@ -283,19 +336,25 @@ Os principais agentes que participam do COUT são:
 
  * Trabalhadores do Desmatamento:
 
-    Os Trabalhadores do Desmatamento são as pessoas que realizam o ato de supressão diretamente. Na Amazônia e no Cerrado, existe uma predominância de emprego de mão de obra vulnerável em situações de trabalho precárias e frequentemente de caráter forçado [@fearnside-2008; @costa-2022; @soares-2004]. Em geral, esses trabalhadores operam tratores de construção civil para derrubar e remover vegetação natural, ou operam serras elétricas para a derrubada de árvores. 
+    Os Trabalhadores do Desmatamento são as pessoas que realizam o ato de supressão diretamente. Na Amazônia e no Cerrado, existe uma predominância de emprego de mão de obra vulnerável em situações de trabalho precárias e frequentemente de caráter forçado [@fearnside-2008; @costa-2022; @soares-2004]. Em geral, esses trabalhadores operam tratores de construção civil para derrubar e remover vegetação natural, ou operam serras elétricas para a derrubada de árvores.
 
  Também serão analisados outros agentes sociais, como colonos assentados, madereiras, População Quilombola, mineradoras, garimpeiros, Industria de maquinário agrícola e de construção civil, forças armadas, forças auxiliares, população ribeirinha, grileiros, ambientalistas, instituições ambientais e bancos.
 
 ### Descrição do Habitus dos Agentes Sociais
 
-O Habitus dos agentes sociais envolvidos na {{< glossary "supressão de vegetação natural" display="SVN" >}} descreve a percepção desse agente sobre as formações de vegetação natural, e das consequências de sua supressão. Essa percepção é produto de uma consrução histórica da identidade de um agente social, que afeta na sua percepção de Valores, Benefícios e Malefícios do MSF. 
+O Habitus dos agentes sociais envolvidos na {{< glossary "supressão de vegetação natural" display="SVN" >}} descreve a percepção desse agente sobre as formações de vegetação natural, e das consequências de sua supressão. Essa percepção é produto de uma construção histórica da identidade de um agente social, que afeta na sua percepção de Valores, Benefícios e Malefícios do MSF. 
 
-* População Indígena
+* Trabalhadores do Desmatamento:
 
-* Fazendeiros
+    O Habitus dos Trabalhadores do Desmatamento deve ser descrito levando em consideração o histórico desses agentes sociais antes de seu engajamento com a {{< glossary "supressão de vegetação natural" display="SVN" >}}. Os documentos analisados mostram um perfil comum desses trabalhadores, que em sua maioria são homens adultos que migraram de outros estados em busca de novas oportunidades de emprego e ascensão social. Muitos desses trabalhadores já estiveram envolvidos em outros tipos de trabalhos manuais, muitas vezes em condições precárias, como na construção civil, ou em carvoarias. Portanto, podemos especular uma parcela significativa dessas pessoas não possuí um vínculo forte com as formações de vegetação natural, como é o caso de Castanheiros, Seringueiros, Populações Quilombolas e Indígenas. Porém, depoímentos de alguns desses trabalhadores mostram que eles tem consciência dos impactos negativos da SVN, e da importância da conservação de formações de vegetação natural. Mesmo assim, são movidos pela necessidade de sustento financeiro através da atividade de supressão, necessidade que é reforçada por uma suposta falta de oportunidades.
 
-* Trabalhadores do desmatamento
+    A percepção de Benefícios da {{< glossary "supressão de vegetação natural" display="SVN" >}} para Trabalhadores do Desmatamento pode ser formada pela expectativa de ganhos financeiros através dessa atividade, apesar de que os documentos mostram que essa expectativa não é realizada, já que boa parte desses trabalhadores são inseridos em situações de exploração do trabalho análogos à escravidão. 
+    
+    A percepção de Malefícios pode ser composta pelo alto riscos da atividade de supressão, que envolvem casos frequentes de acidentes que podem até causar mortes, e também pela consciência dos impactos ambientais negativos causados pela SVN. 
+    
+    A percepção de Valores pode se caracterizar por uma visão de ganhos financeiros e desenvolvimento atrelados à SVN, mas também de um reconhecimento da importância e beleza de formações de vegetação natural, especialmente de florestas tropicais. Porém, podemos especular que a origem desses trabalhadores afeta sua percepção de valores sobre a conservação de uma formação de vegetação natural, especialmente quando suas experiências de trabalho anteriores eram relacionadas a atividades como construção civil e carvoaria, que reforçam uma visão de desenvolvimento que pode ser contrária à conservação de paisagens naturais.
+
+    Apesar da consciência dos impactos negativos da {{< glossary "supressão de vegetação natural" display="SVN" >}}, da importância da conservação de formações de vegetação natural, e de um retorno financeiro precário, ainda sim os Trabalhadores do Desmatamento continuam inseridos nessa atividade, e prosseguem com a SVN. Podemos especular que o balanço entre Malefícios, Benefícios e Valores são distorcidos por relações de trabalho abusivas, que envolvem coação, violência e ameaças. Essas condições de trabalhos podem ser facilitadas pela carência de capital econômico, cultural e social dos Trabalhadores do Desmatamento. Muitos desses trabalhadores são homens de baixa renda, que deixam suas famílias em busca de oportunidades, não possuem uma organização formal para defender seus direitos e não conhecem ou não tem acesso à dispositivos legais que podem retira-los de sua situação de trabalho precário. Portanto, os Trabalhadores do Desmatamento são agentes sociais extremamente vulneráveis no COUT.
 
 ::: {.callout-note appearance="simple"}
 
@@ -328,7 +387,8 @@ A cobertura temporal da análise estatística é limitada pela disponibilidade d
 
 load("./figs/eda/eda_observations.rdata")
 
-eda_observations
+grid::grid.newpage()
+grid::grid.draw(eda_observations)
 
 ```
 
@@ -361,7 +421,8 @@ A {{< glossary "supressão de vegetação natural" display="SVN" >}} apresenta u
 
 load("./figs/eda/eda_nvs_spatial.rdata")
 
-eda_nvs_spatial
+grid::grid.newpage()
+grid::grid.draw(eda_nvs_spatial)
 
 ```
 
@@ -378,7 +439,8 @@ Entre os anos de 1995 e 2021, a Amazônia apresentou o maior valor de {{< glossa
 
 load("./figs/eda/eda_nvs_timeseries.rdata")
 
-eda_nvs_timeseries
+grid::grid.newpage()
+grid::grid.draw(eda_nvs_timeseries)
 
 ```
 
@@ -395,7 +457,8 @@ As distribuições dos valores anuais da {{< glossary "supressão de vegetação
 
 load("./figs/eda/eda_nvs_hist.rdata")
 
-eda_nvs_hist
+grid::grid.newpage()
+grid::grid.draw(eda_nvs_hist)
 
 ```
 
@@ -414,7 +477,8 @@ Os Territórios Indígenas estão majoritáriamente localizados na Amazônia [@f
 
 load("./figs/eda/eda_indilands_spatial.rdata")
 
-eda_indilands_spatial
+grid::grid.newpage()
+grid::grid.draw(eda_indilands_spatial)
 
 ```
 
@@ -429,7 +493,8 @@ Entre 1995 e 2021, a área total de Territórios Indígenas apresentou um aument
 
 load("./figs/eda/eda_indilands_timeseries.rdata")
 
-eda_indilands_timeseries
+grid::grid.newpage()
+grid::grid.draw(eda_indilands_timeseries)
 
 ```
 
@@ -444,7 +509,8 @@ A distribuição dos valores de área demarcadas como Territórios Indígenas mo
 
 load("./figs/eda/eda_indilands_hist.rdata")
 
-eda_indilands_hist
+grid::grid.newpage()
+grid::grid.draw(eda_indilands_hist)
 
 ```
 
@@ -461,7 +527,8 @@ A distribuição espacial de Unidades de Conservação na Amazônia e no Cerrado
 
 load("./figs/eda/eda_consunit_spatial.rdata")
 
-eda_consunit_spatial
+grid::grid.newpage()
+grid::grid.draw(eda_consunit_spatial)
 
 ```
 
@@ -476,7 +543,8 @@ A área ocupada por Unidades de Conservação apresentou um rápido crescimento 
 
 load("./figs/eda/eda_consunit_timeseries.rdata")
 
-eda_consunit_timeseries
+grid::grid.newpage()
+grid::grid.draw(eda_consunit_timeseries)
 
 ```
 
@@ -491,7 +559,8 @@ A distribuição dos valores de área ocupada por Unidades de Conservação most
 
 load("./figs/eda/eda_consunit_hist.rdata")
 
-eda_consunit_hist
+grid::grid.newpage()
+grid::grid.draw(eda_consunit_hist)
 
 ```
 
@@ -508,7 +577,8 @@ Os Territórios Quilombolas apresentam uma distribuição limitada em ambos biom
 
 load("./figs/eda/eda_quilomb_spatial.rdata")
 
-eda_quilomb_spatial
+grid::grid.newpage()
+grid::grid.draw(eda_quilomb_spatial)
 
 ```
 
@@ -523,7 +593,8 @@ As áreas de Territórios Quilombolas apresentou um aumento significativo após 
 
 load("./figs/eda/eda_quilomb_timeseries.rdata")
 
-eda_quilomb_timeseries
+grid::grid.newpage()
+grid::grid.draw(eda_quilomb_timeseries)
 
 ```
 
@@ -538,7 +609,8 @@ A distribuição de valores de áreas de Territórios Quilombolas mostram uma ma
 
 load("./figs/eda/eda_quilomb_hist.rdata")
 
-eda_quilomb_hist
+grid::grid.newpage()
+grid::grid.draw(eda_quilomb_hist)
 
 ```
 
@@ -555,7 +627,8 @@ A distribuição espacial da Malha Rodoviária nos biomas mostra uma maior quant
 
 load("./figs/eda/eda_highways_spatial.rdata")
 
-eda_highways_spatial
+grid::grid.newpage()
+grid::grid.draw(eda_highways_spatial)
 
 ```
 
@@ -570,7 +643,8 @@ A série temporal do comprimento total da Malha Rodoviária na Amazônia e no Ce
 
 load("./figs/eda/eda_highways_timeseries.rdata")
 
-eda_highways_timeseries
+grid::grid.newpage()
+grid::grid.draw(eda_highways_timeseries)
 
 ```
 
@@ -585,15 +659,14 @@ A distribuição dos valores do comprimento total da Malha Rodoviária, por cél
 
 load("./figs/eda/eda_highways_hist.rdata")
 
-eda_highways_hist
+grid::grid.newpage()
+grid::grid.draw(eda_highways_hist)
 
 ```
 
 ### Resultados do Modelo
 
-Os resultados do modelo estatístico é composto por 800 combinações de amostragens, sendo 20 amostragens espaciais, e 40 amostragens temporais. Portanto, o resultado do modelo são 800 predições para cada célula da grade regular, para cada ano entre 1995 e 2021. Para avaliar as estimativas do modelo, o resultado final é calculado como a mediana das 800 esrtimativas de cada célula e cada ano.
-
-A distribuição espacial das estimativas da {{< glossary "supressão de vegetação natural" display="SVN" >}} mostra a somatória de supressão as longo da série histórica analisada [@fig-results-spatial]. Os resultados para a Amazônia mostram um padrão de supressão similar ao dos dados de referência [@fig-nvs-spatial], em que células com a presença de rodovias apresentaram valores mais altos de supressão, e células com a maior presença de Áreas Protegidas apresentaram menores valores de supresssão total. Porém, as estimativas de SVN acumuladas entre 1995 e 2021 não chegaram a valores altos como nos dados de referência, indicando uma incapacidade do modelo de estimar valores extremos de SVN. No Cerrado, os valores estimados pelo modelo estatístico apresentaram uma distribuição espacial diferente aos dados de referência [@fig-nvs-spatial], a NSV estimada foi mais alta na ao sul do bioma, ao contrário dos valores de referência, que apresenram menores áreas suprimidas nessa região.
+A distribuição espacial das estimativas da {{< glossary "supressão de vegetação natural" display="SVN" >}} mostra a somatória de supressão as longo da série histórica analisada [@fig-results-spatial]. Os resultados para a Amazônia mostram um padrão de supressão similar ao dos dados de referência [@fig-nvs-spatial], em que células com a presença de rodovias apresentaram valores mais altos de supressão, e células com a maior presença de Áreas Protegidas apresentaram menores valores de supresssão total. Porém, as estimativas de SVN acumuladas entre 1995 e 2021 não chegaram a valores altos como nos dados de referência, indicando uma incapacidade do modelo de estimar valores extremos de SVN. No Cerrado, os valores estimados pelo modelo estatístico também apresentaram uma distribuição espacial similar aos dados de referência [@fig-nvs-spatial].
 
 ```{r}
 #| label: fig-results-spatial
@@ -602,13 +675,14 @@ A distribuição espacial das estimativas da {{< glossary "supressão de vegeta�
 #| out-width: 100%
 #| dev: "ragg_png"
 
-load("./figs/eda/results_spatial.rdata")
+load("./figs/assessment/results_spatial.rdata")
 
-results_spatial
+grid::grid.newpage()
+grid::grid.draw(results_spatial)
 
 ```
 
-O Erro Médio Acaumulado de cada célula da grade regular mostra pontos com maior erro dispersos pela Amazônia, em que valores extremos não foram corretamente estimados pelo modelo estatístico [@fig-mae-spatial]. No Cerrado, maiores erros foram observados ao Sul do bioma.
+O Erro Médio Acaumulado de cada célula da grade regular mostra pontos com maior erro dispersos pela Amazônia, especialmente nas áreas com maior ocorrência de supressão, em que valores extremos não foram corretamente estimados pelo modelo estatístico [@fig-mae-spatial]. No Cerrado, maiores erros foram observados em regiões concentrados à Leste do Bioma.
 
 ```{r}
 #| label: fig-mae-spatial
@@ -617,13 +691,14 @@ O Erro Médio Acaumulado de cada célula da grade regular mostra pontos com maio
 #| out-width: 100%
 #| dev: "ragg_png"
 
-load("./figs/eda/results_mae_spatial.rdata")
+load("./figs/assessment/results_mae_spatial.rdata")
 
-results_mae_spatial
+grid::grid.newpage()
+grid::grid.draw(results_mae_spatial)
 
 ```
 
-A análise da sétie temporal dos valores estimados de {{< glossary "supressão de vegetação natural" display="SVN" >}} mostra uma incapacidade do modelo estatístico em estimar corretamente os padrões temporais de supressão anual entre 1995 e 2021 [@fig-results-timeseries]. Nos dois biomas, foi estimado um aumento significativo na área suprimida após 2009, um ano após a implementação da lista negra do desmatamento, em que municípios com altos valores de SVN eram incorporados em uma lista para maior fiscalização e punições. O modo de representação dessa variável pode ter criado um viés no modelo, que associou altas taxas de supressão com a implementação dessa política pública. A falta de mais variáveis para caracterizar elementos temporais da SVN, como outras políticas públicas, pode ter contribuído para a incapacidade do modelo de rpresentar a variação temporal da supressão corretamente.
+A análise da sétie temporal dos valores estimados de {{< glossary "supressão de vegetação natural" display="SVN" >}} mostra que modelo estatístico foi capaz de representar as tendências temporais de supressão anual, porém, flutuações intra-anuais não foram corretamente representadas [@fig-results-timeseries]. A falta de mais variáveis para caracterizar elementos temporais da SVN, como políticas públicas, pode ter contribuído para a incapacidade do modelo de representar a variação temporal da supressão corretamente.
 
 ```{r}
 #| label: fig-results-timeseries
@@ -632,24 +707,10 @@ A análise da sétie temporal dos valores estimados de {{< glossary "supressão 
 #| out-width: 100%
 #| dev: "ragg_png"
 
-load("./figs/eda/results_timeseries.rdata")
+load("./figs/assessment/results_timeseries.rdata")
 
-results_timeseries
-
-```
-
-O Erro Médio Absoluto para cada ano mostra maiores erros no ano de 2003, e nos anos após 2009 [@fig-mae-timeseries]. Esses são anos que necessitarão de análises aprofundadas para compreender as razões da incapacidade do modelo estatístico em estimar corretamente os padrões temporais da {{< glossary "supressão de vegetação natural" display="SVN" >}}.
-
-```{r}
-#| label: fig-mae-timeseries
-#| fig-cap: "Série temporal do Erro Médio Absoluto dos valores estimados de Supressão da Vegetação Natural. Os pontos representam a média do Erro Médio Absoluto, e as linhas o desvio padrão."
-#| echo: false
-#| out-width: 100%
-#| dev: "ragg_png"
-
-load("./figs/eda/results_mae_timeseries.rdata")
-
-results_mae_timeseries
+grid::grid.newpage()
+grid::grid.draw(results_timeseries)
 
 ```
 
@@ -662,24 +723,44 @@ A dispersão entre os valores estimados pelo modelo estatístico, e os valores d
 #| out-width: 100%
 #| dev: "ragg_png"
 
-load("./figs/eda/results_scatterplot.rdata")
+load("./figs/assessment/results_scatterplot.rdata")
 
-results_scatterplot
+grid::grid.newpage()
+grid::grid.draw(results_scatterplot)
 
 ```
 
-A distribuição do Erro Médio Absoluto mostra uma maior frequência de erros abaixo de 1000 hectares de supressão, que apesar de serem relativamente pequenos em relação a {{< glossary "supressão de vegetação natural" display="SVN" >}} anual, acabam impactando negativamente a acurácia do modelo, pela soma desses erros.
+### Interpretação do Modelo
+
+
 
 ```{r}
-#| label: fig-results-mae
-#| fig-cap: "Distribuição do Erro Médio Absoluto dos valores estimados de Supressão da Vegetação Natural"
+#| label: fig-explain-summary-consunit
+#| fig-cap: "Valores SHAP das Unidades de Conservação."
 #| echo: false
 #| out-width: 100%
 #| dev: "ragg_png"
 
-load("./figs/eda/results_mae.rdata")
+load("./figs/explain/explain_consunit_summary.rdata")
 
-results_mae
+grid::grid.newpage()
+grid::grid.draw(explain_consunit_summary)
+
+```
+
+
+
+```{r}
+#| label: fig-explain-dependence-consunit
+#| fig-cap: "Valores SHAP das Unidades de Conservação."
+#| echo: false
+#| out-width: 100%
+#| dev: "ragg_png"
+
+load("./figs/explain/explain_consunit_dependence.rdata")
+
+grid::grid.newpage()
+grid::grid.draw(explain_consunit_dependence)
 
 ```
 

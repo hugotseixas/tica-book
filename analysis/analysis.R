@@ -36,27 +36,36 @@ merged_data <- tica::merge_data()
 # Fill merged data
 filled_data <- tica::fill_data(merged_data)
 
+# Create Methods visualizations
+tica::loop_function(
+  function_name = "create_visualization",
+  arguments_subset = c(3)
+)
+
 # Create EDA visualizations
 tica::loop_function(
   function_name = "create_visualization",
-  arguments_subset = c(1:17)
+  arguments_subset = c(4:20)
 )
 
+# Sample data
 sampled_data <-
   tica::sample_data(
-    filled_data,
-    year_min = 1995,
-    year_max = 2021,
-    seed = 1
+    filled_data = sf::read_sf("./data/merged/filled_data.fgb"),
+    year_min = 1995, # Set start year of the timeseries
+    year_max = 2021, # Set end year of the timeseries
+    seed = 1 # For reproducibility
   )
 
-model_predictions <- tica::run_model(filled_data, sampled_data)
+# Run model
+model_predictions <-
+  tica::run_model_ensemble(
+    filled_data = sf::read_sf("./data/merged/filled_data.fgb"),
+    sampled_data = arrow::read_parquet("./data/sampled_data.parquet")
+  )
 
 # Create results visualizations
 tica::loop_function(
   function_name = "create_visualization",
-  arguments_subset = c(18:23)
+  arguments_subset = c(33:34)
 )
-
-arrow::read_parquet("./data/results/model_pred.parquet") |>
-  dplyr::distinct(sample)

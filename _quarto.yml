@@ -25,11 +25,11 @@ book:
   chapters:
     - index.qmd
     - 00_glossary.qmd
+    - 10_research_paradigm.qmd
     - 01_introduction.qmd
     - 02_methods.qmd
     - 03_results.qmd
   appendices:
-    - 10_research_paradigm.qmd
     - 11_research_data.qmd
 
 glossary:
@@ -45,11 +45,8 @@ format:
   html:
     theme: lux
     toc: true
-    toc-depth: 3
+    toc-depth: 4
     toc-title: Content
     reference-location: margin
     mermaid:
       theme: neutral
-
-execute:
-  freeze: auto

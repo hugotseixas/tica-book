@@ -6,7 +6,7 @@ Esse trabalho tem como objetivo central o desenvolvimento e a aplicação de um 
 
 1.  Desenvolvimento do modelo teórico geral da {{< glossary "supressão de vegetação natural" display="SVN" >}} a partir de uma perspectiva do Realismo Crítico:
 
-    Nessa etapa o modelo teórico é criado a partir de entrevistas e leituras de artigos, livros, teses reportagens, documentários, e outros materiais audiovisuais que abordem o tema da {{< glossary "supressão de vegetação natural" display="SVN" >}}. A seleção de materiais não é feito de forma sistêmica, mas são feitas através de pesquisas baseadas no surgimento de questionamentos ao longo do desenvolvimento do modelo teórico.
+    Nessa etapa o modelo teórico é criado a partir de entrevistas e leituras de artigos, livros, teses reportagens, documentários, e outros materiais audiovisuais que abordem o tema da {{< glossary "supressão de vegetação natural" display="SVN" >}}. A seleção de materiais não é feito de forma sistemática, mas são feitas através de pesquisas baseadas no surgimento de questionamentos ao longo do desenvolvimento do modelo teórico.
 
 2.  Análise sociológica da {{< glossary "supressão de vegetação natural" display="SVN" >}} através da aplicação de conceitos desenvolvidos na Teoria Geral dos Campos de Bourdieu:
 
@@ -57,7 +57,7 @@ O modelo teórico é desenvolvido com base em informações obtidas da literatur
 flowchart TD
     A[Entrevista] --> B[Dados]
     C[Questões] --> D[Consulta da Literatura]
-    D --> E[Data]
+    D --> E[Dados]
     B --> F[Modelo Teórico]
     A --> F
     D --> F
@@ -71,11 +71,11 @@ A maneira de se refletir sobre um fenômeno, adotada nesse trabalho, é baseada 
 
 O desenvolvimento do modelo teórico também incorpora algumas idéias do método da Teoria Fundamentada [@glaser-1968], e mais especificamente desse método baseado no Realismo Crítico, como proposto por @oliver-2011 e @hoddy-2018. Nesse projeto, a condução de entrevistas e consultas da literatura são sistematizadas em forma de dados qualitativos estruturados, contendo as idéias centrais obtidas a partir desses materiais. Essa sistematização de dados é feita de maneira concomitante com o desenvolvimento do modelo teórico.
 
-O processo de sistematização de informação, na forma de dados qualitativos estruturados em tabela, é baseado nas entrevistas e nas consultas à literatura. As entrevistas são feitas de modo a especular sobre possíveis causas da {{< glossary "supressão de vegetação natural" display="SVN" >}}, de maneira semelhante ao processo de retrodução ilustrado anteriormente. A partir das indagações feitas durante as entrevistas, são desenvolvidas questões que servem de base para buscas na literatura, que por sua vez fornecem mais informações sobre o fenômeno em questão, a {{< glossary "supressão de vegetação natural" display="SVN" >}}. Após cada rodada de entrevistas e de consultas à literatura, a forma de condução das entrevistas seguintes podem ser alteradas de acordo com o conhecimento gerado pelas anteriores.
+O processo de sistematização de informação, na forma de dados qualitativos estruturados em tabela, é baseado nas entrevistas e nas consultas à literatura. As entrevistas são feitas de modo a especular sobre possíveis causas da {{< glossary "supressão de vegetação natural" display="SVN" >}}, de maneira semelhante ao processo de retrodução ilustrado anteriormente. A partir das indagações feitas durante as entrevistas, são desenvolvidas questões que servem de base para buscas na literatura, que por sua vez fornecem mais informações sobre o fenômeno em questão, a {{< glossary "supressão de vegetação natural" display="SVN" >}}.
 
 Os dados, coletados a partir das entrevistas e consultas à literatura, contém as seguintes informações: identificação da fonte da informação (de forma anônima no caso das entrevistas); os {{< glossary "objeto transitivo" display="objetos transitivos" >}} identificados como relacionados a {{< glossary "supressão de vegetação natural" display="SVN" >}}; a descrição da relação entre os  {{< glossary "objeto transitivo" display="objetos transitivos" >}} com a {{< glossary "supressão de vegetação natural" display="SVN" >}}.
 
-O processo de desenvolvimento do modelo teórico não apresenta um ponto final determinado. O modelo teórico pode ser modificado caso haja a descoberta de novos conhecimentos que desafiem a lógica do modelo. Porém, nesse projeto, a etapa de desenvolvimento do modelo teórico é interrompida quando as informações obtidas se tornem redundantes o bastante para que não seja necessária a modificação do modelo.
+O processo de desenvolvimento do modelo teórico não apresenta um ponto final determinado. O modelo teórico pode ser modificado caso haja a descoberta de novos conhecimentos que desafiem a lógica do modelo. Porém, nesse projeto, a etapa de desenvolvimento do modelo teórico é interrompida quando novas informações obtidas não contribuam mais com a descrição ou modificação do modelo teórico.
 
 O modelo teórico é baseado em conceitos do Realismo Crítico, sendo formado sobre especulações da existência de certos {{< glossary "objeto intransitivo" display="objetos intransitivos" >}}, e da existência de interações entre eles, formando um {{< glossary "mecanismo generativo" >}} da {{< glossary "supressão de vegetação natural" display="SVN" >}}. O modelo teórico, e seu {{< glossary "mecanismo generativo" >}}, se situam na camada social da realidade, de acordo com a estratificação da realidade proposta pelo Realismo Crítico.
 
@@ -85,7 +85,9 @@ As entrevistas conduzidas nesse projeto, tem o objetivo de obter informações s
 
 O método utilizado é de entrevistas semi-estruturadas. O roteiro das entrevistas é baseado em sugestões propostas por @bearman-2019, em que são priorizadas questões abertas, que incentivam descrições ricas nas respostas dos participantes. Também foram incorporados elementos da metodologia de entrevistas Centradas em Problemas (PCI) [@witzel-2012], em que as entrevistas contém uma estrutura definida e centrada no fenômeno de interesse, mas que apresenta uma flexibilidade para incentivar respostas abertas e profundas [@doringer-2020].
 
-O público alvo para participar nas entrevistas são pesquisadores, de diferentes disciplinas, atuantes no tema da {{< glossary "supressão de vegetação natural" display="SVN" >}}. As entrevistas serão feitas a distância, através de vídeo chamadas. Esse meio de entrevista tem sido frequentemente adotado em pesquisas qualitativas, e apesar de apresentarem desvantagens, como falhas técnicas durante as entrevistas, não há evidências claras de que os dados coletados apresentem menor riqueza de informações, em comparação com entrevistas presenciais [@thunberg-2021]. Além disso, o acesso a participantes é mais amplo, devido a falta de necessidade de deslocamento.
+O público alvo para participar nas entrevistas são profissionais, de diferentes áreas, atuantes no tema da {{< glossary "supressão de vegetação natural" display="SVN" >}}. A seleção de candidatos é feita com a identificação de membros de organizações relevantes em relação a SVN, como órgãos públicos, ONGs e associações privadas, em que um membro representativo dessas organizações será selecionado como candidato. As seleção das organizações e seus membros prioriza a máxima variação de perfil dos candidatos [@palinkas-2013], levando em consideração o bioma em que o participante é atuante, e o tipo de organização em que o mesmo participa.
+
+As entrevistas são realizadas a distância, através de vídeo chamadas. Esse meio de entrevista tem sido frequentemente adotado em pesquisas qualitativas, e apesar de apresentarem desvantagens, como falhas técnicas durante as entrevistas, não há evidências claras de que os dados coletados apresentem menor riqueza de informações, em comparação com entrevistas presenciais [@thunberg-2021]. Além disso, o acesso a participantes é mais amplo, devido a falta de necessidade de deslocamento.
 
 O roteiro das entrevistas pode ser dividido em três partes (@tbl-schedule). A parte introdutória da entrevista contém uma exposição sobre o tema e objetivos dessa pesquisa, assim como a motivação para a realização das entrevistas. A parte de desenvolvimento da entrevista contém perguntas inciais que estimulam a criação de uma narrativa por parte dos entrevistados, seguidas por perguntas mais específicas sobre o fenômeno em questão [@witzel-2012]. Por fim, a conclusão dá a oportunidade aos entrevistados de elaborar reflexões sobre o tema [@bearman-2019].
 
@@ -96,19 +98,19 @@ O roteiro das entrevistas pode ser dividido em três partes (@tbl-schedule). A p
 
 tibble::tribble(
   ~id, ~section, ~description, ~sub,
-  1, "Introdução", "Introdução à pesquisa e ao autor", 0,
+  1, "Introdução", "Introdução à pesquisa e ao entrevistador", 0,
   2, "Introdução", "Clarificação dos objetivos da pesquisa", 0,
   3, "Introdução", "Clarificação da motivação das entrevistas", 0,
   4, "Introdução", "Checagem de consentimento e do tempo disponível para a entrevista", 0,
   5, "Desenvolvimento", "Contextualização de experiências prévias do participante com o tema da SVN", 0,
   5, "Desenvolvimento", "- Quais foram suas experiências mais importantes dentro do tema da SVN?", 1,
   5, "Desenvolvimento", "- Quais foram as regiões que você desenvolveu projetos dentro do tema da SVN?", 1,
-  6, "Desenvolvimento", "Identificação de objetos que afetam a SVN", 0,
+  6, "Desenvolvimento", "Identificação de objetos que causam a SVN", 0,
   6, "Desenvolvimento", "- Qual é a sua perspectiva sobre a importância da SVN, em relação a sustentabilidade e desenvolvimento?", 1,
-  6, "Desenvolvimento", "- De acordo com sua experiência, quais são os fatores mais importantes que afetam a SVN?", 1,
+  6, "Desenvolvimento", "- De acordo com sua experiência, quais são os fatores mais importantes que causam a SVN?", 1,
   7, "Desenvolvimento", "Identificação das relações entre os objetos e a SVN", 0,
-  7, "Desenvolvimento", "- Quais são as condições necessárias para que tal fator tenha um impacto importante na SVN?", 1,
-  7, "Desenvolvimento", "- Quais são os grupos de pessoas que participam desse fator? E como elas acabam afetando a SVN?", 1,
+  7, "Desenvolvimento", "- Quais são as condições necessárias para que tal objeto tenha um impacto importante na SVN?", 1,
+  7, "Desenvolvimento", "- Quais são os grupos de pessoas que participam desse objeto? E como elas acabam afetando a SVN?", 1,
   8, "Conclusão", "Reflexões sobre a SVN", 0,
   8, "Conclusão", "- Você acredita na possibilidade de que a SVN seja suprimida a ponto de não ser um problema socioambiental?", 1,
   8, "Conclusão", "- Na sua opinião, existem condições em que a SVN é justificável apesar de seus impactos?", 1,
@@ -171,9 +173,9 @@ tibble::tribble(
 
 Assim como as entrevistas, a consulta à literatura tem o objetivo de obter informações sobre os fatores que afetam a ocorrência da {{< glossary "supressão de vegetação natural" display="SVN" >}}, servindo de base para o desenvolvimento do modelo teórico.
 
-A literatura consultada é de natureza diversa, podem ser artigos publicadas em periódicos científicos, livros, documentos técnicos, dissertações e teses, reportagens, documentários e outros materiais audiovisuais, não sendo limitadas entre essas citadas. O motivo para essa abrangência é a de ter amplo acesso a documentos diversos sobre qualquer conteúdo relacionado à {{< glossary "supressão de vegetação natural" display="SVN" >}}.
+A literatura consultada é de natureza diversa, podem ser artigos publicados em periódicos científicos, livros, documentos técnicos, dissertações e teses, reportagens, documentários e outros materiais audiovisuais, não sendo limitadas entre essas citadas. O motivo para essa abrangência é a de ter amplo acesso a documentos diversos sobre qualquer conteúdo relacionado à {{< glossary "supressão de vegetação natural" display="SVN" >}}.
 
-A busca por tais documentos é feita através de ferramenta de buscas amplas, ou mais específicas de documentos acadêmicos. O processo de buscas não apresenta um método sistemático, e é feita de maneira livre. A forma das buscas é feita através do uso de palavras-chave, identificadas em indagações feitas com base em informações obtidas através das entrevistas e consultas à literatura anteriores. As buscas também são feitas com bases em citações encontradas em documentos consultados.
+A busca por tais documentos é feita através das ferramentas de busca da Google e Google Scholar. O processo de buscas se caracteriza como uma revisão crítica [@grant-2009], que tem como o objtivo a interpretação de documentos para a elaboração de um produto considerado como um ponto de partida para avaliação futura. Portanto, a revisão adotada não tem como o objetivo realizar inferências sobre o corpo dos documentos analisados, nem de testar hipóteses associadas à esses materiais. A forma das buscas é baseada em indagações feitas através de informações obtidas nas entrevistas e consultas à literatura anteriores. As buscas também são feitas com bases em citações encontradas em documentos consultados.
 
 As informações obtidas através das consultas são sistematizadas em uma tabela. Isso tem o objetivo de facilitar comparações entre os conteúdos de diferentes fontes. Essa tabela contém informações semelhantes a @tbl-interviewdata, porém, com dados adicionais que permitem a identificação da origem do dado (@tbl-literaturedata).
 
@@ -218,7 +220,7 @@ A análise sociológica é feita através da Teoria Geral dos Campos desenvolvid
 
     As disposições são descritas de acordo com contextos históricos dos {{< glossary "agente social" display="agentes sociais" >}} e de suas posições dentro do {{< glossary "campo social" >}} analisado.
 
-Todas as etapas descritas acima serão feitas com base em informações obtidas das consultas à literatura. Portanto, conceitos como {{< glossary "capital" >}} não serão representados de forma numérica ou como categorias qualitativas, mas de forma abstrata a partir de informações coletadas da literatura. Já o conceito de {{< glossary "habitus" >}} será descrito a partir de informações históricas relacionadas à um certo {{< glossary "agente social" >}}, e não por meio de entrevistas, como é comum de se observar em pesquisas feitas com base na Teoria Geral dos Campos desenvolvida por Bourdieu. Essa forma de análise se justifica pela dificuldade de obtenção de informações de maneiras convencionais, já que o tema da {{< glossary "supressão de vegetação natural" display="SVN" >}} abrange {{< glossary "agente social" display="agentes sociais" >}} de difícil acesso.
+Todas as etapas descritas acima serão feitas com base em informações obtidas das consultas à literatura. Portanto, conceitos como {{< glossary "capital" >}} não serão representados de forma numérica ou como categorias qualitativas, mas de forma abstrata a partir de informações coletadas da literatura. Já o conceito de {{< glossary "habitus" >}} será descrito a partir de informações históricas relacionadas à um certo {{< glossary "agente social" >}}, e não por meio de entrevistas, como é comum de se observar em pesquisas feitas com base na Teoria Geral dos Campos desenvolvida por Bourdieu. Essa forma de análise se justifica pela dificuldade de obtenção de informações de maneiras convencionais, já que o tema da {{< glossary "supressão de vegetação natural" display="SVN" >}} abrange {{< glossary "agente social" display="agentes sociais" >}} de difícil acesso, como fazendeiros envolvidos com a SVN e militares.
 
 A análise sociológica através da Teoria dos Campos de Bourdieu, será informada pelo modelo teórico e seu paradigma filosófico através da centralização da {{< glossary "supressão de vegetação natural" display="SVN" >}} nas disputas dentro do campo social analisado, e como as disposições dos agentes sociais afetam a ocorrência da {{< glossary "supressão de vegetação natural" display="SVN" >}}. A análise sociólogica é responsável pela contextualização histórica da manifestação da {{< glossary "supressão de vegetação natural" display="SVN" >}} de acordo com o modelo teórico.
 
@@ -226,9 +228,9 @@ A análise sociológica através da Teoria dos Campos de Bourdieu, será informa
 
 A análise estatística tem como o objetivo a aplicação do modelo teórico de forma numérica. Esse processo é conduzido através da obtenção e do processamento de dados quantitativos e qualitativos (que representam os {{< glossary "objeto transitivo" display="objetos transitivos" >}}), e posteriormente na execução de um modelo de regressão sobre esses dados. No entanto, antes desse processo, é feita uma triagem de quais dados serão coletados e utilizados.
 
-A triagem é feita com base em dados que foram identificados na literatura consultada. A partir dessa lista de possíveis dados, é feita uma avaliação, que consiste na verificação da adequação do {{< glossary "objeto transitivo" >}}, representado pelo dado, com relação ao modelo teórico. Ou seja, mesmo que o dado tenha sido considerado como correlacionado com a {{< glossary "supressão de vegetação natural" display="SVN" >}}, não significa que ele obedece as regras impostas pelo modelo teórico. Caso um dado indicado pela literatura obedeça as regras do modelo teórico, ele é selecionado para ser utilizado no modelo estatístico, passando a ser considerado como uma {{< glossary "variável" >}}.
+A triagem é feita com base em dados que foram identificados na literatura consultada. A partir dessa lista de possíveis dados, é feita uma avaliação, que consiste na verificação da adequação do {{< glossary "objeto transitivo" >}}, representado pelo dado, com relação ao modelo teórico. Ou seja, mesmo que o dado tenha sido considerado como correlacionado com a {{< glossary "supressão de vegetação natural" display="SVN" >}}, não significa que ele obedece as regras impostas pelo modelo teórico. Como exemplo hipotético desse processo, caso a temperatura média histórica seja apontada como correlacionada à SVN na literatura, mas essa relação não consiga ser explicada pelo modelo teórico, os dados de temperatura não serão incluídos no modelo estatístico. Caso um dado indicado pela literatura tenha sua relação com a SVN explicada através das regras do modelo teórico, ele é selecionado para ser utilizado no modelo estatístico, passando a ser considerado como uma {{< glossary "variável" >}}.
 
-A análise estatística é conduzida através de um programa (em desenvolvimento) na forma de um pacote da linguagem de programação R [@base]. O programa é de código aberto, podendo ser acessado em [https://github.com/hugotseixas/tica](https://github.com/hugotseixas/tica). O desenvolvimento desse pacote possui diversas dependências para seu funcionamento.
+A análise estatística é conduzida através de um programa (em desenvolvimento) na forma de um pacote da linguagem de programação R [@base]. O programa é de código aberto, podendo ser acessado em [https://github.com/hugotseixas/tica](https://github.com/hugotseixas/tica). Esse pacote possui diversas dependências para seu funcionamento.
 
 ```{r}
 #| label: tbl-packages
@@ -287,22 +289,23 @@ flowchart TD
 
 ```
 
-O processamento de cada dado varia com seu formato (tabular, vetorial ou matricial), e de sua organização original. O detalhamento dos dados, como sua fonte e formato, e seu processamento, podem ser lidos na sessão @sec-data. No final do processamento, cada dado é estruturado dentro de um grade regular hexagonal (@fig-base-grid), em que cada exagono possui 140 mil hectares, aproximadamente.
+O processamento de cada dado varia com seu formato (tabular, vetorial ou matricial), e de sua organização original. O detalhamento dos dados, como sua fonte e formato, e seu processamento, podem ser lidos na sessão @sec-data. No final do processamento, cada dado é estruturado dentro de um grade regular hexagonal (@fig-base-grid), em que cada exagono possui 140 mil hectares, aproximadamente. A grade hexagonal facilita a criação de variáveis que representam vizinhança entre células da grade, já que a distância entre essas vizinhanças é constante. Já o tamanho de cada célula foi determinado por um balanço entre detalhamento dos dados e custo computacional.
 
 ```{r}
 #| label: fig-base-grid
 #| fig-cap: "Representação da grade regular em que os dados são transformados, e posteriormente utilizados no modelo estatístico."
-#| fig-asp: 1
 #| echo: false
+#| out-width: 100%
 #| dev: "ragg_png"
 
-load("./figs/base_grid.rdata")
+load("./figs/methods/method_grid_area.rdata")
 
-viz_grid
+grid::grid.newpage()
+grid::grid.draw(method_grid_area)
 
 ```
 
-### Desenvolvimento dos Modelos Estatísticos
+### Desenvolvimento do Modelo Estatístico
 
 O desenvolvimento dos modelos segue as práticas padrão usual de algorítmos de regressão supervisionados (@fig-model-diagram). Nesse método, os dados disponíveis são separados entre dados de treinamento, responsáveis por treinar os modelos, dados de validação, utilizados para ajustes dos parâmetros dos modelos, e dados de teste, que são utilizados para a aplicação dos modelos e comparação dos resultados.
 
@@ -316,7 +319,7 @@ flowchart TD
     A[Banco de dados] --> C[Divisão dos Dados]
     C --> D[Dados de Treinamento]
     D --> F[Ajuste Inicial do Modelo]
-    C --> G[Dados de Validação]
+    D --> G[Dados de Validação]
     C --> H[Dados de Teste]
     F --> I[Ajuste de Parâmetros]
     G --> I
@@ -328,10 +331,32 @@ flowchart TD
 
 ```
 
-Os algorítmos de regressão usados para predição da {{< glossary "supressão de vegetação natural" display="SVN" >}} são: Decision Trees (DT), Random Forest (RF), Bayesian Additive Regression Trees (BART) e Gradient Boosting Decision Trees (GBDT). Os modelos mencionados possuem diferentes complexidades.
+O algorítmo de regressão usado para predição da {{< glossary "supressão de vegetação natural" display="SVN" >}} é o Random Forest, um algorítmo utilizado extensamente em tarefas de regressão e classificação, que tem a capacidade de representar relações não lineares entre as variáveis, e que não necessita de um processo de parametrização extenso em comparação à outros algorítmos.
+
+A etapa de amostragem é conduzida pela realização de uma sequência de amostras espaciais e temporais, feita para treino e teste do modelo estatístico, realizada 100 vezes, para garantir uma quantidade razoavel de cenários amostrais em que o modelo estatístico é aplicado. Para diminuir o viés nos resultados do modelo, devido à dependência espacial e temporal dos dados, observações amostradas para cada grupo apresentam uma distância espacial de no mínimo 80 quilômetros, e uma diferença temporal de um ano [@fig-sample-grid].
+
+```{r}
+#| label: fig-sample-grid
+#| fig-cap: "Representação da grade regular em que os dados são transformados, e posteriormente utilizados no modelo estatístico."
+#| echo: false
+#| out-width: 100%
+#| dev: "ragg_png"
+
+load("./figs/methods/method_sample.rdata")
+
+grid::grid.newpage()
+grid::grid.draw(method_sample)
+
+```
+
+A parametrização do modelo estatístico é feita pelo ajuste dos parâmetros em cada uma das 100 amostragens, ilustradas na [@fig-sample-grid]. Os parâmetros são, o número de variáveis preditoras que são selecionadas na criação das árvores de decisão, e quantidade de observações amostradas para serem utilizadas ao longo das árvores de decisão do algorítmo. O ajuste dos parâmetros é realizado através de amostragens aleatórias (bootstrap) dos dados de treino como observações de validação, seguida pelo teste de 30 valores aleatórios para cada parâmetro do algorítmo. Os valores dos parâmetros para a aplicação final do modelo estatísticosão determinados pela combinação de valores que apresentou o menor Erro Quadrático Médio (RMSE) em relação à predição dos dados de validação.
+
+A avaliação dos resultados do modelo é feita através de visualizações espaciais e temporais dos valores preditos da {{< glossary "supressão de vegetação natural" display="SVN" >}}, e da distribuição e valores médios do Erro Médio Absoluto (MAE) das predições.
+
+A interpetação dos resultados do modelo estatístico é feito pela aplicação do método nomeado como SHAP [@lundberg-2018], utilizado como ferramenta de interpretação local e global de modelos de regressão e classificação.
 
 ## Interpretação dos Resultados
 
-A interpretação dos resultados é feita a partir da leitura de como o efeito de um objeto transitivo, pela perspectiva de uma análise sociológica ou estatística, obedece o modelo teórico. Ou seja, é a transposição do resultado da análise empírica para o dominio ontológico do real. Nessa etapa, serão identificados objetos contemplados na análise estatística, que sejam relacionados com agentes sociais contemplados na análise sociológica. A partir desse cruzamento de informações obtidas nos resultados, espera-se alcançar um aprofundamento das discussões sobre as causas da ocorrência da {{< glossary "supressão de vegetação natural" display="SVN" >}}.
+A interpretação final dos resultados é feita a partir da leitura de como o efeito de um objeto transitivo, pela perspectiva de uma análise sociológica ou estatística, é explicado pelo modelo teórico. Ou seja, é a transposição do resultado da análise empírica para o dominio ontológico do real. Nessa etapa, serão identificados objetos contemplados na análise estatística, que sejam relacionados com agentes sociais contemplados na análise sociológica. A partir desse cruzamento de informações obtidas nos resultados, espera-se alcançar um aprofundamento das discussões sobre as causas da ocorrência da {{< glossary "supressão de vegetação natural" display="SVN" >}}.
 
 # Referências {.unnumbered}

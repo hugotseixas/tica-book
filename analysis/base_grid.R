@@ -54,6 +54,7 @@ ggsave2(
 save(viz_grid, file = "./figs/base_grid.rdata")
 
 cell_area <- base_grid |>
+  mutate(cell_area = as.numeric(st_area(geometry)) / 10000) |>
   slice_min(
     order_by = abs(cell_area - mean(cell_area)),
     with_ties = FALSE
@@ -111,16 +112,16 @@ viz_cell_area <- cell_area |>
     aes(
       label = scales::number(
         percentage_area,
-        suffix = " ha",
+        suffix = " mil ha",
         accuracy = 1,
-        scale_cut = cut_short_scale()
+        scale = 1e-3
       )
     ),
     size = 4,
-    nudge_y = -25000
+    nudge_y = -27000
   ) +
-  scico::scale_fill_scico(begin = 0.3) +
-  scico::scale_color_scico(begin = 0.3) +
+  scico::scale_fill_scico(end = 0.7, direction = -1) +
+  scico::scale_color_scico(end = 0.7, direction = -1) +
   coord_sf(clip = "off") +
   theme_void() +
   theme(

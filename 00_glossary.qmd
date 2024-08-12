@@ -34,6 +34,12 @@ yaml::read_yaml(file = "./glossary.yml") |>
     ),
     locations = gt::cells_row_groups()
   ) |>
+  gt::tab_style(
+    style = list(
+      gt::cell_text(weight = "bold")
+    ),
+    locations = gt::cells_body(columns = term)
+  ) |>
   gt::opt_stylize(
     style = 1,
     color = "gray"
