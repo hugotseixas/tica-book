@@ -1,0 +1,15 @@
+# Conceitos Fundamentais {.unnumbered}
+
+## Teoria dos Campos de Bourdieu {#sec-bourdieu}
+
+A teoria dos campos de Bourdieu é um método de análise que descreve arenas sociais em que {{< glossary "agente social" display="agentes sociais" >}} disputam entre si por alcançar um objetivo em jogo, interagindo com outros agentes para atingir suas metas [@kluttz-2016]. Bourdieu é um reconhecido sociólogo que influenciou a Teoria Sociológica de Campo, tendo desenvolvido os conceitos de {{< glossary "campo social" >}}, {{< glossary "habitus" >}}, {{< glossary "capital" >}} e doxa. Sua teoria é amplamente aplicada em diversas áreas de estudo devido à sua natureza generalizada.
+
+O conceito de {{< glossary "campo social" >}}, na perspectiva de Bourdieu, é que os campos são arenas de disputas entre diferentes {{< glossary "agente social" display="agentes sociais" >}} [@kluttz-2016]. Os agentes sociais ocupam uma determinada posição no campo, definida por diferentes formas de {{< glossary "capital" >}}, e estão em disputa por um objetivo em jogo [@thomson-2014]. Cada campo funciona de acordo com sua própria lógica ou, em outras palavras, apresenta "regras do jogo" específicas [@kluttz-2016; @thomson-2014].
+
+O {{< glossary "capital" >}} é a manifestação de diferentes tipos de poder, que pode ser econômico, cultural, social ou simbólico [@kluttz-2016].
+
+O {{< glossary "habitus" >}} é uma propriedade dos {{< glossary "agente social" display="agentes sociais" >}} que, juntamente com o {{< glossary "capital" >}} e o campo, molda as práticas desses agentes sociais [@maton-2014]. Ele descreve um processo dinâmico de ação realizado no {{< glossary "campo social" >}}, formado por construções subjetivas e disposições objetivas, em um sentido em que o habitus desses atores sociais é afetado por e também afeta as estruturas sociais de um campo [@kluttz-2016].
+
+A doxa pode ser considerada como regras implícitas que operam em um {{< glossary "campo social" >}}. É o resultado de conquistas de {{< glossary "agente social" display="agentes sociais" >}} que estabelecem regras, leis, formas discursivas, crenças normativas, ações e comportamentos esperados e barreiras à entrada em um campo específico [@deer-2014].
+
+# Referências {.unnumbered}

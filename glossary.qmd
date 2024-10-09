@@ -1,0 +1,48 @@
+---
+toc: false
+---
+
+# Glossário {.unnumbered}
+
+```{r}
+#| label: glossary
+#| echo: false
+#| warning: false
+#| dev: "ragg_png"
+
+yaml::read_yaml(file = "./glossary.yml") |>
+  tibble::as_tibble() |>
+  tidyr::pivot_longer(
+    dplyr::everything(),
+    names_to = "term",
+    values_to = "definition"
+  ) |>
+  dplyr::mutate(
+    letter = stringr::str_sub(term, start = 1, end = 1)
+  ) |>
+  dplyr::arrange(letter) |>
+  gt::gt(groupname_col = "letter") |>
+  gt::tab_options(
+    table.font.size = 14,
+    column_labels.hidden = TRUE,
+    quarto.disable_processing = TRUE
+  ) |>
+  gt::tab_style(
+    style = list(
+      gt::cell_text(weight = "bold", size = gt::px(24)),
+      gt::cell_borders(sides = "bottom", color = NULL)
+    ),
+    locations = gt::cells_row_groups()
+  ) |>
+  gt::tab_style(
+    style = list(
+      gt::cell_text(weight = "bold")
+    ),
+    locations = gt::cells_body(columns = term)
+  ) |>
+  gt::opt_stylize(
+    style = 1,
+    color = "gray"
+  )
+
+```

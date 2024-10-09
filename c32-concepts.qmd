@@ -1,0 +1,13 @@
+# Conceitos Fundamentais {.unnumbered}
+
+## Análise Estatística {#sec-stats}
+
+Na análise estatística, modelos de regressão são utilizados para determinar um suposto efeito de variáveis explanatórias (independentes) sobre uma variável de resposta (dependente) [@fahrmeir-2013; @james-2021]. Em uma regressão linear simples, essa influência é representada por uma função que descreve uma linha, essa função é a determinação do efeito das variáveis explanatórias sobre a média condicional da variável de resposta (componente sistemático), mais os devios observados em relação aos valores esperados por essa função (componente aleatório) denominados como erros aleatórios [@fahrmeir-2013].
+
+A complexidade de modelos de regressão vai muito além de uma regressão linear simples, entre uma variável explanatória contínua e uma variável de resposta também contínua. Modelos de regressão podem determinar relações não lineares de diversas variáveis explanatórias, de diversas naturezas, sobre uma variável de resposta de diversas naturezas.
+
+No caso da modelagem estatística de fenômenos complexos, como é o caso da ocorrência da {{< glossary "supressão de vegetação natural" display="SVN" >}}, modelos de regressão lineares podem falhar na descrição da complexidade da relação entre as variáveis explanatórias e a variável de resposta. Nesse caso, modelos com pressupostos mais flexíveis que os de regressões lineares clássicas, podem ser mais apropriados, como é o caso de Modelos Aditivos Generalizados (GAMs), que permitem representar relações não lineares entre as variáveis explanatórias e de resposta [@james-2021; @fahrmeir-2013]. Porém, no caso dos GAMs, interações entre variáveis explanatórias não são levadas em consideração, exceto no caso dessas interações serem manualmente representadas como variáveis adicionais ou funções adicionais [@james-2021].
+
+Algumas opções de escolha de modelos, ainda mais flexíveis que os GAMs, são o Random Forest (RF) e o Boosting (BDT), que são completamente não paramétricos [@james-2021; @berk-2006]. Ambos são derivados do modelo de Árvores de Decisão (DT). Os modelos baseados em DT funcionam através da partição dos dados em análise de maneira sucessiva, que normalmente tem a descrição gráfica na forma de uma árvore invertida [@deville-2013]. As vantagens desses tipos de modelos são a sua flexibilidade e facilidade de interpretação de seus resultados. Porém, é reconhecido que DTs geralmente sofrem por apresentarem uma menor acurácia de predição da variável de resposta. Alternativamente, RFs e BDTs são possíveis opções que normalmente apresentam maior acurácia de prediçãodo que DTs [@james-2021; @biau-2016].
+
+# Referências {.unnumbered}

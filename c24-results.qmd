@@ -1,0 +1,71 @@
+# Resultados {.unnumbered}
+
+## Descrição do Campo do Uso e Ocupação da Terra
+
+O campo social proposto para análise é formado pela disputa da ocupação e uso  da terra, chamado de agora em diante como Campo da Ocupação e Uso da Terra (COUT). Dentro do COUT, os agentes sociais envolvidos disputam por recursos providos diretamente ou indiretamente por processos de uso e ocupação da terra. Ou seja, um agente social pode obter algum capital através de sua ocupação duradoura em uma área, como a possibilidade de estabelecer agricultura, ou então a possibilidade de extrair recursos de maneira temporária, como a extração de madeira.
+
+Nesse projeto, a análise sobre o COUT é realizada especificamente sobre o processo de {{< glossary "supressão de vegetação natural" display="SVN" >}} nos biomas Amazônia e Cerrado. A {{< glossary "supressão de vegetação natural" display="SVN" >}} pode atuar tanto como meio quanto como fim dentro desse campo. Ela atua como meio quando é empregada para remover a vegetação natural de uma área e substitui-la por outra cobertura, como a agropecuária. Já sua atuação como fim se dá quando ocorre com o objetivo de utilização da vegetação natural como recurso, que pode ser para construções, combustível, ou como bem comercial.
+
+A disputa que ocorre no COUT é fortemente determinada pela legislação, políticas públicas e processos judiciários. Porém, a forma de disputa na COUT vai além dos limites institucionais do estado, elas se dão por relações não formalizadas, porém reconhecidas entre agentes sociais. Por exemplo, a questão de propriedade de uma área para a ocorrência de atividade de garimpo ilegal, existe um agente social considerado como o proprietário dessa área, mesmo que isso não seja reconhecido pelo estado, mas que é legitimizado por outros agentes sociais envolvidos nessa atividade. Essas relações podem ser estabelecidas através de poder econômico, que dá acesso à compra de maquinário para a ocorrência do garimpo, mas também através de emprego da violência, tanto física quanto simbólica.
+
+## Posição do Campo do Uso e Ocupação da Terra em Relação ao Campo do Poder
+
+A questão de posse, uso e ocupação da terra está envolvida com o acúmulo de capital em suas diversas formas. 
+
+Podemos considerar que o direito de posse de um espaço confere capital econômico pelo valor de venda da terra. Essa afirmação pode ser esclarecida pela análise do processo de grilagem de terras na Amazônia e no Cerrado, em que a apropriação ilegal de terras é utilizada como meio de valorização dessas áreas, e consequentemente o enriquecimento financeiro dos agentes sociais envolvidos nesse processo. A posse de terras nem sempre é diretamente relacionada com sua ocupação e uso, por exemplo, no processo de arrendamento de terras, o proprietário de uma área obtem ganhos financeiros exclusivamente pelo fato de possuir a terra como propriedade privada, cedendo o espaço para terceiros realizarem atividades comerciais nessa área. 
+
+Por outra perspectiva, a posse da terra não confere apenas vantagens econômicas, no caso de Territórios Indígenas, o capital conquistado pela posse dessas terras não está atrelado ao valor financeiro da terra em si, mas sim pelo direito de usofruto e legitimação de uma população e sua cultura. Essa questão, de legitimação de uma população especifica e da manutenção de sua cultura, também pode ser analisada sobre produtores agropecuários ligados ao agronegócio, em que o direito de posse, ocupação e uso de áreas extensas é uma condição para a reprodução e estabelecimento de suas formas de produção e suas manifestções culturais, garantindo à esse grupo social uma posição vantajosa no {{< glossary "campo do poder" >}}. Além disso, a questão de manutenção de uma população e sua cultura também está relacionada ao uso da terra, por exemplo, a importância de alguma espécie de cultivo e o seu manejo, como é o caso dos seringueiros e populações ribeirinhas.
+
+O uso e ocupação da terra também fornece capital para algum agente social, mesmo quando esse não tem o direito de posse sobre essa terra, mas faz seu uso. Podemos citar como exemplo trabalhadores intermitentes, como os vaqueiros, que através do uso da terra adquirem seu sustento financeiro e reproduzem suas manifestações culturais e seu modo de vida, legitimando esse tipo de trabalhadores como um grupo reconhecido.
+
+Portanto é possível afirmar que o capital concedido pela posse, uso e ocupação da terra, não se limita apenas ao valor monetário do hectare de terra. Esse fenômeno gera capital econômico na economia local, assim como participa do mercado financeiro global, ele também é o espaço de reprodução e estabelecimento de culturas, ou em outras palavras, de modos de vida.
+
+Tendo em mente as diferentes formas de capital, com a posse, uso e ocupação da terra, é possível desenvolver a afirmação de que o COUT se posiciona em relação ao {{< glossary "campo do poder" >}}, na Amazônia e no Cerrado, das seguintes maneiras:
+
+  * O COUT fornece capital econômico diretamente ou indiretamente para agentes sociais que conquistam direitos (de maneira instutucional ou não) de posse, uso e ocupação da terra;
+
+  * O COUT fornece um capital simbólico pela posse da terra, que pode ser feito de maneira institucionalizada da propriedade privada, e da garantia de usofruto de terras da união;
+
+  * O COUT fornece capital cultural através da possibilidade de desenvolvimento de práticas, conhecimento, habilidades e rituais por meio do uso e da ocupação da terra, ou por sua disputa;
+
+  * O COUT fornece capital social através da construção de conexões socias, ou até mesmo alianças, que se estabelecem por objetivos em comum entre agentes sociais em relação à posse, uso e ocupação da terra.
+
+## Identificação dos Agentes Sociais e seu Capital
+
+Os agentes sociais envolvidos no COUT possuem diferentes posições em relação a {{< glossary "supressão de vegetação natural" display="SVN" >}}, em certos contextos, agentes sociais específicos podem ter posições favoráveis ou desfavoráveis à ocorrência da supressão, obtendo vantagens dentro da COUT dependendo do resultado das disputas envolvendo a SVN.
+
+Dependendo do resultado final de uma disputa em relação à {{< glossary "supressão de vegetação natural" display="SVN" >}}, os agentes sociais envolvidos se reorganizam para tentar mudar o contexto do COUT em que estão inseridos (seguindo a lógica da natureza retroativa do MSF explicado na [@sec-results-mtdr]), como forma de alcançar seus objetivos em relação à SVN. O modo em que essa reorganização ocorre irá depender das formas de capital os agentes sociais possuem dentro da COUT.
+
+Os principais agentes que participam do COUT são:
+
+ * População Indígena:
+
+    A População Indígena é fortemente relacionada à questão da {{< glossary "supressão de vegetação natural" display="SVN" >}} no Brasil, em que formações de vegetação natural fornecem recursos naturais para subsistência para grande parte dessa população, assim como espaço de reprodução cultural e religiosa. A População Indígena também está institucionalmente relacionada à {{< glossary "supressão de vegetação natural" display="SVN" >}} por meio do reconhecimento legal dos Territórios Indígenas, que tem em sua concepção o objetivo de conservação de formações de vegetação natural. Em geral, esse agente social se posiciona de forma favorável à conservação de formações de vegetação natural, e de forma contrária à {{< glossary "supressão de vegetação natural" display="SVN" >}} em larga escala.
+
+ * Fazendeiros:
+
+    Fazendeiros são um agente social representado por produtores agropecuários, voltados para a obtenção de lucros financeiros e expansão de suas atividades, que não são obtidos exclusivamente pela produção agropecuária [@fearnside-2008]. Em grande parte, esse grupo é formado por migrantes de diferentes períodos e lugares, sendo influenciados por diferentes motivações para a ocupação de áreas na Amazônia [@fearnside-2008] e no Cerrado [@jepson-2010; @brannstrom-2008], muito incentivados por programas de colonização de ambos biomas. Em geral, esse agente social se posiciona de forma favorável à {{< glossary "supressão de vegetação natural" display="SVN" >}} em maiores escalas.
+
+ * Trabalhadores do Desmatamento:
+
+    Os Trabalhadores do Desmatamento são as pessoas que realizam o ato de supressão diretamente. Na Amazônia e no Cerrado, existe uma predominância de emprego de mão de obra vulnerável em situações de trabalho precárias e frequentemente de caráter forçado [@fearnside-2008; @costa-2022; @soares-2004]. Em geral, esses trabalhadores operam tratores de construção civil para derrubar e remover vegetação natural, ou operam serras elétricas para a derrubada de árvores.
+
+ Também serão analisados outros agentes sociais, como colonos assentados, madereiras, População Quilombola, mineradoras, garimpeiros, Industria de maquinário agrícola e de construção civil, forças armadas, forças auxiliares, população ribeirinha, grileiros, ambientalistas, instituições ambientais e bancos.
+
+## Descrição do Habitus dos Agentes Sociais
+
+O Habitus dos agentes sociais envolvidos na {{< glossary "supressão de vegetação natural" display="SVN" >}} descreve a percepção desse agente sobre as formações de vegetação natural, e das consequências de sua supressão. Essa percepção é produto de uma construção histórica da identidade de um agente social, que afeta na sua percepção de Valores, Benefícios e Malefícios do MSF. 
+
+* Trabalhadores do Desmatamento:
+
+    O Habitus dos Trabalhadores do Desmatamento deve ser descrito levando em consideração o histórico desses agentes sociais antes de seu engajamento com a {{< glossary "supressão de vegetação natural" display="SVN" >}}. Os documentos analisados mostram um perfil comum desses trabalhadores, que em sua maioria são homens adultos que migraram de outros estados em busca de novas oportunidades de emprego e ascensão social. Muitos desses trabalhadores já estiveram envolvidos em outros tipos de trabalhos manuais, muitas vezes em condições precárias, como na construção civil, ou em carvoarias. Portanto, podemos especular uma parcela significativa dessas pessoas não possuí um vínculo forte com as formações de vegetação natural, como é o caso de Castanheiros, Seringueiros, Populações Quilombolas e Indígenas. Porém, depoímentos de alguns desses trabalhadores mostram que eles tem consciência dos impactos negativos da SVN, e da importância da conservação de formações de vegetação natural. Mesmo assim, são movidos pela necessidade de sustento financeiro através da atividade de supressão, necessidade que é reforçada por uma suposta falta de oportunidades.
+
+    A percepção de Benefícios da {{< glossary "supressão de vegetação natural" display="SVN" >}} para Trabalhadores do Desmatamento pode ser formada pela expectativa de ganhos financeiros através dessa atividade, apesar de que os documentos mostram que essa expectativa não é realizada, já que boa parte desses trabalhadores são inseridos em situações de exploração do trabalho análogos à escravidão. 
+    
+    A percepção de Malefícios pode ser composta pelo alto riscos da atividade de supressão, que envolvem casos frequentes de acidentes que podem até causar mortes, e também pela consciência dos impactos ambientais negativos causados pela SVN. 
+    
+    A percepção de Valores pode se caracterizar por uma visão de ganhos financeiros e desenvolvimento atrelados à SVN, mas também de um reconhecimento da importância e beleza de formações de vegetação natural, especialmente de florestas tropicais. Porém, podemos especular que a origem desses trabalhadores afeta sua percepção de valores sobre a conservação de uma formação de vegetação natural, especialmente quando suas experiências de trabalho anteriores eram relacionadas a atividades como construção civil e carvoaria, que reforçam uma visão de desenvolvimento que pode ser contrária à conservação de paisagens naturais.
+
+    Apesar da consciência dos impactos negativos da {{< glossary "supressão de vegetação natural" display="SVN" >}}, da importância da conservação de formações de vegetação natural, e de um retorno financeiro precário, ainda sim os Trabalhadores do Desmatamento continuam inseridos nessa atividade, e prosseguem com a SVN. Podemos especular que o balanço entre Malefícios, Benefícios e Valores são distorcidos por relações de trabalho abusivas, que envolvem coação, violência e ameaças. Essas condições de trabalhos podem ser facilitadas pela carência de capital econômico, cultural e social dos Trabalhadores do Desmatamento. Muitos desses trabalhadores são homens de baixa renda, que deixam suas famílias em busca de oportunidades, não possuem uma organização formal para defender seus direitos e não conhecem ou não tem acesso à dispositivos legais que podem retira-los de sua situação de trabalho precário. Portanto, os Trabalhadores do Desmatamento são agentes sociais extremamente vulneráveis no COUT.
+
+# Referências {.unnumbered}

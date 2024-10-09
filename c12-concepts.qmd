@@ -1,0 +1,27 @@
+# Conceitos Fundamentais {.unnumbered}
+
+## Realismo Crítico
+
+O Realismo Crítico é uma linha da filosofia que pode servir como uma base para o desenvolvimento de metodologias de pesquisa [@fletcher-2016]. É uma perspectiva que nega a dualidade entre o social e o natural, como também nega a redução do mundo social pelo natural [@gorski-2013], e nem o contrário [@fletcher-2016]. O foco desse paradigma filosófico está na identificação e descrição de mecanismos causais [@lawani-2020].
+
+A posição do Realismo Crítico em relação à outros paradigmas filosóficos é de uma alternativa ao embate entre os paradigmas empiricistas e os idealistas [@lawani-2020; @gorski-2013; @bhaskar-2016]. O Realismo Crítico nega que a realidade pode ser reduzida ao nosso conhecimento sobre ela, ou seja, a redução da ontologia à epistemologia [@bhaskar-2016], além disso, também nega que a realidade é inteiramente uma construção da percepção humana [@bhaskar-2016. @lawani-2020]. Para evitar o que Roy Bhaskar nomeou de falácia epistêmica (redução da ontologia à epistemologia) [@bhaskar-2016], o Realismo Crítico defende que existe uma realidade que existe independente da nossa percepção sobre ela, e que não é completamente acessível à nossa percepção.
+
+De acordo com o Realismo Crítico, existem três domínios da realidade: o {{< glossary "domínio real" >}}, formado pelos {{< glossary "mecanismo generativo" display="mecanismos generativos" >}} que atuam como forças que produzem eventos [@fletcher-2016]; o {{< glossary "domínio atual" >}}, que contém a realização do domínio real, quando os mecanismos generativos são ativados, e ocorre independentemente se essas realizações podem ou não ser percebidas ou medidas; o {{< glossary "domínio empírico" >}}, onde os eventos causados pela ativação dos mecanismos generativos do domínio real são percebidos ou medidos.
+
+Segundo o Realismo Crítico, a realidade também é composta por camadas, que vão desde um nível mais baixo (micro) como os mecanismos físicos, até níveis mais altos (macro) como os mecanismos sociais. As camadas da realidade não são independentes uma das outras, porém, nenhuma tem o poder de determinar a outra. Isso quer dizer que cada camada da realidade opera segundo seus próprios {{< glossary "mecanismo generativo" display="mecanismos generativos" >}}, mesmo que de maneira dependente de mecanismos de outra camada. Essa propriedade das camadas da realidade é chamada de emergência [@pratten-2013; @danermark-2002]. Como exemplo, @danermark-2002 ilustra esse conceito através do seguinte cenário em pesquisas sobre deficiências auditivas: a ocorrência de uma certa deficiência auditiva é causada por mecanismos no nível biológico, porém, a experiência de uma pessoa  em relação à essa deficiência é resultado de mecanismos do nível psicológico. Portanto, duas pessoas com amesma deficiência auditiva irão ter experiências diferentes, ou seja, os mecanismos do nível biológico afetam, mas não são determinantes dos mecanismos do nível psicológico.
+
+O desenvolvimento de conhecimento ocorre por meio da interpretação de padrões e tendências de eventos percebidos e medidos, com o objetivo de explicar os fenômenos de interesse pelos {{< glossary "mecanismo generativo" display="mecanismos generativos" >}} que os determinam [@lawani-2020; @wynn-2012]. Porém, todo o conhecimento gerado sobre os mecanismos geradores (que operam no domínio do real) são uma produção social e serão sempre falíveis. Nesse aspecto existem dois conceitos de importância no Realismo Crítico, a dimensão intransitiva, que é a realidade que existe independente da percepção humana, e os conhecimentos falíveis que desenvolvemos sobre essa realidade, chamado de dimensão transitiva [@danermark-2002; @gorski-2013].
+
+Em resumo os conceitos fundamentais do Realismo Crítico, explorados nesse trabalho, são:
+
+ * Divisão da realidade em domínios ontológicos: o domínio real, o domínio atual e o domínio empírico;
+
+ * Estratificação da realidade em camadas emergentes: nível social, nível psicológico, nível biológico, entre outros;
+
+ * Existência de uma realidade independente de nosa percepção sobre ela: a dimensão intransitiva;
+
+ * A construção de conhecimento sobre a realidade é sempre falível: dimensão transitiva;
+
+ A consequência final da adoção do Realismo Crítico em um projeto de pesquisa, é que o desenvolvimento de um conhecimento sobre certo tema estará sempre em desenvolvimento e sob constante avaliação crítica.
+
+# Referências {.unnumbered}

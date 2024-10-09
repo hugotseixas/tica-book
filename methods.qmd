@@ -1,0 +1,43 @@
+# Método Geral {.unnumbered}
+
+Esse trabalho tem como objetivo central o desenvolvimento e a aplicação de um modelo teórico da {{< glossary "supressão de vegetação natural" display="SVN" >}}. Para atingir esse objetivo, uma série de atividades serão conduzidas em sequência:
+
+1.  Desenvolvimento do modelo teórico da {{< glossary "supressão de vegetação natural" display="SVN" >}} a partir de uma perspectiva do Realismo Crítico:
+
+    Nessa etapa o modelo teórico é criado a partir de entrevistas e leituras de artigos, livros, teses reportagens, documentários, e outros materiais audiovisuais que abordem o tema da {{< glossary "supressão de vegetação natural" display="SVN" >}}. A seleção de materiais não é feito de forma sistemática, mas são feitas através de pesquisas baseadas no surgimento de questionamentos ao longo do desenvolvimento do  modelo teórico.
+
+2.  Análise sociológica da {{< glossary "supressão de vegetação natural" display="SVN" >}} através da aplicação de conceitos desenvolvidos na Teoria Geral dos Campos de Bourdieu:
+
+    A análise sociológica é feita pela caracterização do campo social, em que a {{< glossary "supressão de vegetação natural" display="SVN" >}} faz parte como instrumento para obtenção de poder, e pela identificação de agentes sociais que fazem parte da disputa dentro desse campo. Esse processo é realizado com base na mesma literatura utilizada no desenvolvimento do  modelo teórico. Essa etapa é conduzida através de três passos discutidos por Bourdieu [@grenfell-2018, p.105]: contextualizar o campo social da {{< glossary "supressão de vegetação natural" display="SVN" >}} em relação ao campo do poder; identificar as posições ocupadas pelos agentes sociais que fazem parte do campo social da {{< glossary "supressão de vegetação natural" display="SVN" >}}; analisar o {{< glossary habitus >}} dos agentes sociais dentro do campo social analisado.  
+
+3.  Análise estatística a partir da aplicação de algorítmos de regressão sobre dados relacionados a {{< glossary "supressão de vegetação natural" display="SVN" >}}:
+
+    A análise estatística será realizada sobre dados com representação espacial e temporal. A seleção dos dados para a análise é baseada na literatura e disponibilidade dos mesmos, porém, para serem incluídos na análise, eles devem obedecer o mecanismo generativo proposto. Já a escolha do algorítmo estatístico é feita a partir de um balanço entre complexidade e custo computacional.
+
+4.  Interpretação conjunta dos resultados:
+
+    A interpretação dos resultados das análises empíricas é feita pela transposição dos resultados empíricos para o modelo teórico.
+
+A sequência de atividades que compõe a pesquisa é representada na @fig-method-diagram. Apesar do processo ser realizado de modo sequêncial, ele não é linear, e permite circularidades. Ou seja, o modelo teórico pode ser modificado ao longo da condução da pesquisa, que caso aconteça, força uma atualização de todas as etapas subsequentes.
+
+```{mermaid}
+%%| label: fig-method-diagram
+%%| fig-cap: "Fluxo geral da pesquisa. As atividades realizadas em cada parte da pesquisa são: (1) Consulta da Literatura, Entrevistas, Modelo Teórico; (2) Análise Sociológica; (3) Dados Disponíveis, Estruturação da Base de Dados, Análise Estatística; (4) Interpretação dos Resultados."
+%%| fig-responsive: true
+%%| fig-align: center
+
+flowchart TD
+    A[Consulta da Literatura] --> B[Modelo Teórico]
+    C[Entrevistas] --> B
+    B --> D[Estruturação da Base de Dados]
+    E[Dados Disponíveis] --> D
+    B --> F[Análise Sociológica]
+    D --> G[Análise Estatística]
+    F --> H[Interpretação dos Resultados]
+    G --> H
+
+```
+
+O método geral do trabalho (como apresentado na @fig-method-diagram) pode ser caracterizado como um Método Misto Paralelo-Convergente, em que análises quantitativas e qualitativas são conduzidas paralelamente e independentemente (elas não se relacionam de maneira direta), até que seus resultados são interpretados de maneira conjunta. Porém, a idéia central desse trabalho é a adoção de uma perspectiva ontológica e epistemológica única para todas as análises conduzidas. Em teoria, essa idéia é completamente agnóstica em relação aos métodos de análise adotados. Portanto, não é feita uma defesa dos métodos de análise adotados, já que exitiriam uma infinidade de possibilidades metodológicas, mais ou menos apropriadas para o entendimento do fenômeno em questão.
+
+# Referências {.unnumbered}

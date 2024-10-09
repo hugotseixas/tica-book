@@ -1,0 +1,291 @@
+# Método {.unnumbered}
+
+A análise estatística tem como o objetivo a aplicação do modelo teórico de forma numérica. Esse processo é conduzido através da obtenção e do processamento de dados quantitativos e qualitativos (que representam os {{< glossary "objeto transitivo" display="objetos transitivos" >}}), e posteriormente na execução de um modelo de regressão sobre esses dados. No entanto, antes desse processo, é feita uma triagem de quais dados serão coletados e utilizados.
+
+A triagem é feita com base em dados que foram identificados na literatura consultada. A partir dessa lista de possíveis dados, é feita uma avaliação, que consiste na verificação da adequação do {{< glossary "objeto transitivo" >}}, representado pelo dado, com relação ao modelo teórico. Ou seja, mesmo que o dado tenha sido considerado como correlacionado com a {{< glossary "supressão de vegetação natural" display="SVN" >}}, não significa que ele obedece as regras impostas pelo modelo teórico. Como exemplo hipotético desse processo, caso a temperatura média histórica seja apontada como correlacionada à SVN na literatura, mas essa relação não consiga ser explicada pelo modelo teórico, os dados de temperatura não serão incluídos no modelo estatístico. Caso um dado indicado pela literatura tenha sua relação com a SVN explicada através das regras do modelo teórico, ele é selecionado para ser utilizado no modelo estatístico, passando a ser considerado como uma {{< glossary "variável" >}}.
+
+A análise estatística é conduzida através de um programa (em desenvolvimento) na forma de um pacote da linguagem de programação R [@base]. O programa é de código aberto, podendo ser acessado em [https://github.com/hugotseixas/tica](https://github.com/hugotseixas/tica). Esse pacote possui diversas dependências para seu funcionamento.
+
+```{r}
+#| label: tbl-packages
+#| tbl-cap: Dependências do pacote criado para condução da análise estatística.
+#| echo: false
+
+library(tica)
+
+tibble::tibble(
+  grateful::cite_packages(
+    output = "table",
+    out.dir = ".",
+    pkgs = c(
+      "base", "dplyr", "janitor", "purrr", "tibble", "readxl",
+      "stringr", "glue", "fs", "tidyr", "curl", "lubridate",
+      "rlang", "forcats", "tidyselect", "arrow",
+      "sf", "stars", "ggplot2", "scales", "scico", "cowplot",
+      "ragg", "gt"
+    ),
+    cite.tidyverse = FALSE,
+    bib.file = "references_packages"
+  )
+) |>
+  gt::gt() |>
+  gt::tab_options(
+    table.font.size = 14,
+    table.width = gt::pct(90)
+  ) |>
+  gt::cols_label(
+    Package ~ "Pacote",
+    Version ~ "Versão",
+    Citation ~ "Citação"
+  ) |>
+  gt::fmt_markdown(columns = dplyr::everything()) |>
+  gt::opt_stylize(style = 1, color = "gray", add_row_striping = FALSE)
+
+```
+
+O programa computacional é responsável pela realização do acesso e persistência dos dados, pelo processamento dos dados, pela operacionalização do modelo estatístico, e pela produção de visualizações.
+
+## Estruturação da Base de Dados
+
+O processo para a criação do banco de dados consiste em acessar e extrair os dados de suas fontes, processar e transformar os dados em uma grade regular, e armazena-los em ambiente computacional local (@fig-data-diagram).
+
+```{mermaid}
+%%| label: fig-data-diagram
+%%| fig-cap: Fluxo do processamento dos dados.
+%%| fig-responsive: true
+%%| fig-align: center
+
+flowchart TD
+    A[Fonte do Dado] --> E[Pré Processamento]
+    B[Grade Regular] --> E
+    E --> F[Dados Estruturados em Grade]
+    F --> G[Banco de Dados]
+
+```
+
+O processamento de cada dado varia com seu formato (tabular, vetorial ou matricial), e de sua organização original. O detalhamento dos dados, como sua fonte e formato, e seu processamento, podem ser lidos na sessão @sec-data. No final do processamento, cada dado é estruturado dentro de um grade regular hexagonal (@fig-base-grid), em que cada exagono possui 140 mil hectares, aproximadamente. A grade hexagonal facilita a criação de variáveis que representam vizinhança entre células da grade, já que a distância entre essas vizinhanças é constante. Já o tamanho de cada célula foi determinado por um balanço entre detalhamento dos dados e custo computacional.
+
+```{r}
+#| label: fig-base-grid
+#| fig-cap: "Representação da grade regular em que os dados são transformados, e posteriormente utilizados no modelo estatístico."
+#| echo: false
+#| out-width: 100%
+#| dev: "ragg_png"
+
+magick::image_read("./figs/methods/method_grid_area.png")
+
+```
+
+## Desenvolvimento do Modelo Estatístico
+
+O desenvolvimento dos modelos segue as práticas padrão usual de algorítmos de regressão supervisionados (@fig-model-diagram). Nesse método, os dados disponíveis são separados entre dados de treinamento, responsáveis por treinar os modelos, dados de validação, utilizados para ajustes dos parâmetros dos modelos, e dados de teste, que são utilizados para a aplicação dos modelos e comparação dos resultados.
+
+```{mermaid}
+%%| label: fig-model-diagram
+%%| fig-cap: Diagram of the modelling process.
+%%| fig-responsive: true
+%%| fig-align: center
+
+flowchart TD
+    A[Banco de dados] --> C[Divisão dos Dados]
+    C --> D[Dados de Treinamento]
+    D --> F[Ajuste Inicial do Modelo]
+    D --> G[Dados de Validação]
+    C --> H[Dados de Teste]
+    F --> I[Ajuste de Parâmetros]
+    G --> I
+    I --> J[Ajuste Final do Modelo]
+    H --> K[Avaliação do Modelo]
+    J --> K
+    J --> L[Interpretação do Modelo]
+    K --> L
+
+```
+
+O algorítmo de regressão usado para predição da {{< glossary "supressão de vegetação natural" display="SVN" >}} é o Random Forest, um algorítmo utilizado extensamente em tarefas de regressão e classificação, que tem a capacidade de representar relações não lineares entre as variáveis, e que não necessita de um processo de parametrização extenso em comparação à outros algorítmos.
+
+A etapa de amostragem é conduzida pela realização de uma sequência de amostras espaciais e temporais, feita para treino e teste do modelo estatístico, realizada 100 vezes, para garantir uma quantidade razoavel de cenários amostrais em que o modelo estatístico é aplicado. Para diminuir o viés nos resultados do modelo, devido à dependência espacial e temporal dos dados, observações amostradas para cada grupo apresentam uma distância espacial de no mínimo 80 quilômetros, e uma diferença temporal de um ano [@fig-sample-grid].
+
+```{r}
+#| label: fig-sample-grid
+#| fig-cap: "Representação da grade regular em que os dados são transformados, e posteriormente utilizados no modelo estatístico."
+#| echo: false
+#| out-width: 100%
+#| dev: "ragg_png"
+
+magick::image_read("./figs/methods/method_sample.png")
+
+```
+
+A parametrização do modelo estatístico é feita pelo ajuste dos parâmetros em cada uma das 100 amostragens, ilustradas na [@fig-sample-grid]. Os parâmetros são, o número de variáveis preditoras que são selecionadas na criação das árvores de decisão, e quantidade de observações amostradas para serem utilizadas ao longo das árvores de decisão do algorítmo. O ajuste dos parâmetros é realizado através de amostragens aleatórias (bootstrap) dos dados de treino como observações de validação, seguida pelo teste de 30 valores aleatórios para cada parâmetro do algorítmo. Os valores dos parâmetros para a aplicação final do modelo estatísticosão determinados pela combinação de valores que apresentou o menor Erro Quadrático Médio (RMSE) em relação à predição dos dados de validação.
+
+A avaliação dos resultados do modelo é feita através de visualizações espaciais e temporais dos valores preditos da {{< glossary "supressão de vegetação natural" display="SVN" >}}, e da distribuição e valores médios do Erro Médio Absoluto (MAE) das predições.
+
+A interpetação dos resultados do modelo estatístico é feito pela aplicação do método nomeado como SHAP [@lundberg-2018], utilizado como ferramenta de interpretação local e global de modelos de regressão e classificação.
+
+# Processamento dos dados {#sec-data}
+
+A obtenção e processamento dos dados utilizados na análise estatística  seguem os seguintes passos:
+
+ 1. Download e persistência local dos dados em sua forma bruta;
+
+ 2. Processamento inicial e tranformação dos dados brutos em uma grade espacial regular;
+
+ 3. União das variáveis de interesse em uma matriz tabular;
+
+ O conjunto de dados acessados e processados são listados na @tbl-datatable, que mostra a desrição de cada conjunto dedados utilizados, assim como suas fontes.
+
+```{r}
+#| label: tbl-datatable
+#| tbl-cap: Tabela com a descrição dos dados processados e utilizados na análise estatística.
+#| echo: false
+
+readxl::read_xlsx("./analysis/functions_arguments.xlsx") |>
+  tidyr::drop_na(data_description) |>
+  dplyr::select(data_description, data_source, source_url) |>
+  tidyr::separate_wider_delim(
+    cols = "source_url",
+    delim = "\n",
+    names_sep = "_",
+    too_few = "align_start"
+  ) |>
+  dplyr::mutate(
+    dplyr::across(
+      dplyr::all_of(c("data_source")),
+      ~ stringr::str_replace_all(., "\n", "<br><br>")
+    ),
+    dplyr::across(
+      dplyr::contains("source_url"),
+      \(x) dplyr::if_else(!is.na(x), paste0("[", stringr::str_sub(x, 1, 30), "...]", "(", x, ")"), x)
+    )
+  ) |>
+  tidyr::unite(
+    col = "source_url", 
+    dplyr::contains("source_url"), 
+    sep = "<br><br>",
+    na.rm = TRUE
+  ) |>
+  gt::gt() |>
+  gt::tab_options(
+    table.font.size = 14,
+    table.width = gt::pct(90),
+    quarto.disable_processing = TRUE
+  ) |>
+  gt::cols_label(
+    data_description = "Descrição do Dado",
+    data_source = "Fonte do Dado",
+    source_url = "URL de Acesso"
+  ) |>
+  gt::fmt_markdown(columns = dplyr::everything()) |>
+  gt::opt_stylize(style = 1, color = "gray", add_row_striping = TRUE)
+
+```
+
+Os conjuntos de dados são disponibilizados em uma diversidade de formatos, que são tratados de forma individual na etapa de persistência dos dados brutos em máquina local. A etapa de processamento também é realizada de forma individual para cada conjunto de dados. Essas duas etapas são descritas para cada conjunto de dados nas sessões seguintes.
+
+## Delimitação de Biomas
+
+Os dados dos Biomas Brasileiros é disponibilizado pelo Instituto Brasileiro de Geografia e Estatística (IBGE). A primeira determinação dos limites dos biomas foi feita em 2003, com a revisão dos limites em 2019. Portanto, ambas versões desse conjunto de dados foram obtidas e processadas, a fim de representar a mudança legal e institucional dos limites dos biomas.
+
+O processamento desse conjunto de dados foi feito pela intersecção dos limites dos biomas com a grade regular (@fig-base-grid), sendo que o bioma selecionado para representar uma célula foi aquele que apresentou a maior área dentro dela. O produto final é uma série temporal de 2003 a 2019, contendo a nome do bioma predominante de cada célula da grade regular.
+
+## Delimitação de Municipios
+
+A delimitação de municipios sofreu diversas alterações ao longo dos anos. Dados disponíveis pelo IBGE contém a delimitação de municípios a partir do ano de 2000. Já os dados compilados e disponíveis pelo Instituto de Pesquisa Econômica Aplicada (IPEA) contém um histórico de delimitação a partir do ano de 1872. Devido ao maior alcance temporal, os dados disponibilizados pelo IPEA foram utilizados.
+
+Apesar de que a delimitação dos municipios não é uma variável explanatória utilizada na análise estatística (@sec-methods-stat), ela serve de base para a representação de políticas públicas, como a lista negra do desmatamento. Portanto, a delimitação dos municipios é utilizada apenas em seu estado bruto, sem a necessidade de realizar sua tranformação para a grade regular (@fig-base-grid).
+
+## Classificação de Uso e Cobertura
+
+Os dados de classificação de uso e cobertura do MapBiomas (Coleção 8) cobre um período de 1985 até 2022. Os dados de cada ano foram obtidos em seu formato original. Porém, em seu processamento, os dados foram transformados para uma resolução espacial mais grosseira, de 30 para 300 metros. A legenda das classes de uso e ocupação da terra também foi modificada para uma forma simplificada (@tbl-lulc-legend).
+
+```{r}
+#| label: tbl-lulc-legend
+#| tbl-cap: Tabela com a descrição das mudanças feitas nas classes de uso e cobertura do solo.
+#| echo: false
+
+tibble::tribble(
+  ~classe_modificada, ~codigo_original, ~classe_original,
+  "Formação Florestal", "3", "Formação Florestal",
+  "Formação Savânica", "4", "Formação Savânica",
+  "Formação Campestre", "12", "Formação Campestre",
+  "Outras Formações Naturais", "5, 6, 49, 11, 32, 29, 50, 13", "Mangue, Floresta Alagável, Restinga Arbórea, Campo Alagado e Área Pantanosa, Apicum, Afloramento Rochoso, Restinga Herbácea, Outras Formações não Florestais",
+  "Pastagem", "15", "Pastagem",
+  "Agricultura Temporária", "39, 20, 40, 62, 41", "Soja, Cana, Arroz, Algodão, Outras Lavouras Temporárias",
+  "Agricultura Perene", "46, 47, 35, 48", "Café, Citrus, Dendê, Outras Lavouras Perenes",
+  "Silvicultura", "9", "Silvicultura",
+  "Mosaico de Agropecuária", "21", "Mosaico de Usos",
+  "Área Urbanizada", "24", "Área Urbanizada",
+  "Mineração", "30", "Mineração"
+) |>
+  dplyr::mutate(
+    dplyr::across(
+      dplyr::all_of(c("codigo_original", "classe_original")),
+      ~ stringr::str_replace_all(., ", ", "<br><br>")
+    ),
+  ) |>
+  gt::gt() |>
+  gt::tab_options(
+    table.font.size = 14,
+    table.width = gt::pct(90),
+    quarto.disable_processing = TRUE
+  ) |>
+  gt::cols_label(
+    classe_modificada = "Classe Modificada",
+    codigo_original = "Código Original",
+    classe_original = "Classe Original"
+  ) |>
+  gt::fmt_markdown(columns = dplyr::everything()) |>
+  gt::opt_stylize(style = 1, color = "gray", add_row_striping = TRUE)
+
+```
+
+A área de cada classe foi calculada para cada célula da grade espacial (@fig-base-grid), para cada ano entre 1985 e 2022.
+
+## Malha Rodoviária
+
+Os dados da malha rodoviária do Brasil são disponibilizados pelo Departamento Nacional de Infraestrutura de Transportes (DNIT). O conjunto é formado por diversas tabelas publicadas em diferentes anos, contendo a evolução da malha rodoviária de 1994 até 2023. Também são disponibilizados vetores espaciais contendo o traçado georeferênciado da malha rodoviária.
+
+As tabelas da malha rodoviária foram salvas separadamente, em conjunto como a versão de vetores espaciais de 2023. Para o processamento, foi feita a compatibilização dos nomes das colunas das tabelas de cada ano, e posteriormente foi feita a união entre todas as tabelas. As rodovias em estágio de planejamento foram descartadas.
+
+Como as datas dos estágios e condições de rodovias não apresentam uma consistência temporal, foi adotada uma regra de que o ano de implementação da estrada considerado foi o mais antigo, independente do estado de sua superfície (pavimentado ou não). Após o processamento das tabelas, foi feita a extração do traçado georeferênciado de cada rodovia para o ano de sua implementação.
+
+A transformação da malha ferroviária para a grade regular, foi feita pela intersecção dos traçados das rodovias com cada célula da grade, calculando-se o comprimento do traçado situado dentro da célula.
+
+## Delimitação de Territórios Indígenas
+
+Os dados de delimitação de Territórios Indígenas são disponibilizados pela Fundação Nacional dos Povos Indígenas (FUNAI), com informações gerais sobre a demarcação dos territórios, assim como as datas portarias que formalizam cada dase do processo de demarcação. Para definir a data em que os dados serão representados na grade regular, foram consideradas apenas as datas das fases de regularização, homologação, declaração e delimitação, selecionando a data mais antiga para representação no modelo estatístico.
+
+Para a transformação dos dados de Territórios Indígenas para a grade regular, foi feita a intersecção dos polígonos de demarcação com as células da grade, calculando-se a área total de Territórios Indígenas dentro de cada célula.
+
+## Delimitação de Unidades de Conservação
+
+Os dados de delimitação de Unidades de Conservação são disponibilizados pelo Ministério do Meio Ambiente e Mudança do Clima (MMAMC). Os dados contém a caracterização das categorias das Unidades de Conservação, sua esfera administrativa, e o ano de criação de cada unidade. No processamento dos dados, todas categorias foram contempladas sem distinção.
+
+Para a transformação dos dados de Unidades de Conservação para a grade regular, foi feita a intersecção dos limites das unidades com as células da grade. Porém, com a existência de áreas de sobreposição entre diferentes Unidades de Conservação, foi feita uma operação de recorte das áreas sobrepostas, e remoção da área sobreposta com ano de criação mais recente. Por fim, foi feito o cálculo da área total de Unidades de Conservação dentro de cada célula da grade regular.
+
+## Delimitação de Territórios Quilombolas {#sec-data-quilomb}
+
+Os dados de delimitação de Territórios Quilombolas são disponibilizados pelo Instituto Nacional de Colonização e Reforma Agrária (INCRA). Os dados contém informações sobre o processo de demarcação e titulação de Territórios Quilombolas.
+
+Os dados foram filtrados para remover os territórios que não possuem informações sobre data de titutalçao ou data do decreto, ou dos territórios que tiveram seu título anulado. A data utilizada para representação na análise estatística foi preferencialmente a data de titulação, e na falta dessa, foi utilizada a data do decreto. Devido a presença de sobreposições, foi feita a remoção de áreas sobrepostas que tiveram sua data de titulação mais recente. Por fim, foi feito o cálculo da área total de Territórios Quilombolas dentro de cada célula da grade regular.
+
+## Lista Negra do Desmatamento
+
+A Lista Negra do desmatamento, da Amazônia e do Cerrado, é atualizada pelo Diário Oficial da União (DOU), e determina a identificação de municípios com taxas elevadas de desmatamento. Mais detalhes sobre essa política pública pode ser obtida em @bizzo-2017. 
+
+Os critérios de inclusão de um município na lista da Amazônia são: área total de floresta desmatada; área total de floresta desmatada nos últimos três anos; aumento da taxa de desmatamento em pelo menos três, dos últimos cinco anos; e  área total de alertas de degradação florestal (adicionado em 2023, pelo decreto [Decreto nº 11.687](https://www.planalto.gov.br/ccivil_03/_Ato2023-2026/2023/Decreto/D11687.htm), de 5 de Setembro de 2023). As consequências da inclusão na lista são: maior monitoramento e fiscalização; não aprovação de créditos para atividade agropecuária; embargo de atividades relacionadas ao desmatamento; aplicação de multas; divulgação de dados do imóvel rural em que ocorreu a infração, e seu titular. Para a remoção da lista, o município deve: Possuir 80% de seu território, em propriedades rurais, monitorado pelo Cadastro Ambiental Rural (CAR); e manter taxa de desmatamento anual abaixo do limite estabelecido em portaria do Ministério do Meio Ambiente.
+
+Os critérios de inclusão para os municípios do Cerrado são: média de desmatamento dos últimos dois anos superior a 25 quilômetros quadrados; desmatamento acima de 20% em áreas de vegetação nativa remanescente no município; ou a exploração da madeira em áreas protegidas. Para o Cerrado, não foram estabelecidos critérios para exclusão da lista.
+
+A lista foi compilada em uma tabela estruturada através do acesso ao DOU [@seixas-2023], e está disponível de forma aberta em [https://zenodo.org/doi/10.5281/zenodo.8412144](https://zenodo.org/doi/10.5281/zenodo.8412144).
+
+Para a transformação desses dados para a grade regular, foi feita a união da tabela da Lista Negra do Desmatamento com os limites geográficos dos municípios, seguida pela intersecção dos dados gerados com as células da grade regular. Por fim, foi feito o cálculo da área de municípios incluídos como prioritários ou monitorados dentro de cada célula da grade regular.
+
+## Classificação do Desmatamento
+
+Os dados de Classificação de Desmatamento são gerados e disponibilizados pelo MapBiomas. Os dados possuem resolução espacial de 30 metros, e vão de 1987 até 2020.
+
+Para a transformação das matrizes espaciais para a grade regular, foi feito o recorte para cada célula, seguido da vetorização da matriz para polígonos. Os dados foram filtrados para conter apenas o desmatamento de vegetação primária (valores entre 400 e 499) e vegetação secundária (valores entre 600 e 699). Por fim, foi feito o cálculo da área total de desmatamento dentro de cada célula da grade regular.
+
+# Referências {.unnumbered}

@@ -5,29 +5,48 @@ project:
 lang: pt
 
 book:
-  title: "Explorando dimensões da Supressão de Vegetação Natural através de uma teoria geral"
+  title: "Desenvolvimento e aplicações de um mecanismo generativo da Supressão de Vegetação Natural"
   author:
   - name: Hugo Tameirão Seixas
     email: seixas.hugo@protonmail.com
     url: hugotseixas.com
-    affiliations:
-      - name: Universidade Estadual de Campinas
-  date: "4/23/2024"
   license: CC BY-NC-ND 4.0
   favicon: /figs/art/logo.png
   sidebar:
     style: "docked"
     search: true
     logo: /figs/art/logo.png
+    collapse-level: 1
   chapters:
     - index.qmd
-    - 00_glossary.qmd
-    - 01_introduction.qmd
-    - 10_research_paradigm.qmd
-    - 02_methods.qmd
-    - 03_results.qmd
-  appendices:
-    - 11_research_data.qmd
+    - glossary.qmd
+    - intro.qmd
+    - methods.qmd
+    - part: c10-summary.qmd
+      chapters:
+      - c11-intro.qmd
+      - c12-concepts.qmd
+      - c13-methods.qmd
+      - c14-results.qmd
+      - c15-discussion.qmd
+      - c16-conclusion.qmd
+    - part: c20-summary.qmd
+      chapters:
+      - c21-intro.qmd
+      - c22-concepts.qmd
+      - c23-methods.qmd
+      - c24-results.qmd
+      - c25-discussion.qmd
+      - c26-conclusion.qmd
+    - part: c30-summary.qmd
+      chapters:
+      - c31-intro.qmd
+      - c32-concepts.qmd
+      - c33-methods.qmd
+      - c34-results.qmd
+      - c35-discussion.qmd
+      - c36-conclusion.qmd
+    - final.qmd
 
 glossary:
   path: glossary.yml
@@ -43,7 +62,9 @@ format:
     theme: lux
     toc: true
     toc-depth: 4
-    toc-title: Content
+    toc-title: Conteúdo
     reference-location: margin
     mermaid:
       theme: neutral
+
+lightbox: auto

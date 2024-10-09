@@ -4,41 +4,22 @@ toc: false
 
 # Prefácio {.unnumbered}
 
-> *"Observação é criação,*
-> *criação é realidade..."*
->
-> Astral Dawn, Saturnus
+Esse trabalho é fruto de um esforço para desenvolver uma abordagem interdisciplinar sobre a Supressão de Vegetação Natural ({{< glossary "supressão de vegetação natural" display="SVN" >}}). Essa proposta é motivada por um interesse de integrar conhecimentos de diferentes áreas das ciências sobre as causas da SVN, gerando uma perspectiva sobre o tema que não seja limitada apenas pela análise numérica de dados, e que consiga contemplar as pessoas envolvidas na ocorrência desse fenômeno.
 
-Esse trabalho é fruto de um esforço para desenvolver uma abordagem interdisciplinar sobre a Supressão de Vegetação Natural ({{< glossary "supressão de vegetação natural" display="SVN" >}}). Uma abordagem interdisciplinar seria aquela que consegue unir o conhecimento de diversas áreas (como a Sociologia, a Geografia e a Biologia). Caso essa abordagem seja bem sucedida, esperamos que ela possa fornecer uma nova perspectiva sobre um problema complexo (como a SVN), e possívelmente até servir de fomento para a idealização de novas soluções.
-
-Um ponto fundamental no desenvolvimento desse trabalho, é de que a interdisciplinaridade pode ser concretizada a partir do uso de uma base filosófica comum, para a realização de análises de diferentes dimensões da realidade (dimensões sociais e ambientais, por exemplo). Isso é feito através do desenvolvimento de um modelo teórico da {{< glossary "supressão de vegetação natural" display="SVN" >}}, que servirá de base para a condução de análises por métodos de áreas diferentes. Através dessa proposta, espera-se criar uma situação propícia para a integração de conhecimentos, gerados por diferentes métodos de diferentes disciplinas, que a princípio seriam considerados incompatíveis.
-
-Para o desenvolvimento do modelo teórico, utilizarei uma base filosófica conhecida como Realismo Crítico. Essa base filosófica irá ditar a perspectiva de realidade adotada no trabalho, e também na forma em que as ferramentas metodológicas serão aplicadas. No caso desse trabalho, escolhi a Teoria Geral dos Campos desenvolvida por Bourdieu para a realização de uma análise sociológica do problema da {{< glossary "supressão de vegetação natural" display="SVN" >}}, em sua dimensão social. Também adotei Modelagem Estatística de dados espaciais como método de análise da dimensão geográfica, que engloba caracteristicas biofísicas e ambientais da superficie da terra, e de fronteiras políticas.
-
-A motivação das escolhas, feitas para estruturar a metodologia desse trabalho, veio da dificuldade da realização de uma análise aprofundada da SVN apenas através da utilização de métodos quantitativos sobre dados numéricos e estruturados. A {{< glossary "supressão de vegetação natural" display="SVN" >}} é um fenômeno que se materializa por dinâmicas sociais que dificilmente podem ser estimadas numéricamente e descritas por fórmulas matemáticas. Portanto a complementação de conhecimentos gerados por diferentes métodos é algo promissor para um entendimento mais aprofundado do tema.
-
-Para a aplicação do modelo teórico, dois biomas brasileiros foram escolhidos para servir de contexto espacial e temporal. Os biomas são a Amazônia e o Cerrado (Figuras @fig-amazon-hex e @fig-cerrado-hex), ambos extremamente afetados pela SVN nas últimas décadas.
+O recorte desse trabalho são os biomas Amazônia e Cerrado...
 
 ```{r}
-#| label: fig-amazon-hex
-#| fig-cap: Representação do Bioma Amazônia.
 #| echo: false
 #| dev: "ragg_png"
 
-knitr::include_graphics("figs/art/art_amazon.png")
+knitr::include_graphics("figs/art/art.png")
 
 ```
 
-A escolha desses biomas se deu pela oportunidade singular que eles oferecem, apesar de estarem no mesmo país, existem diferenças importantes entre ambos, como o tipo de vegetação e legislação. Portanto, existe uma facilidade de análise por se situarem em um mesmo país, ao mesmo tempo em que existe uma heterogeneidade causada pelas diferenças entre os biomas, algo de extrema importância para a aplicação de um modelo teórico que almeja ser considerado como uma Teoria Geral da {{< glossary "supressão de vegetação natural" display="SVN" >}}.
+O trabalho é baseado na proposição de um modelo teórico, que dita as regras da ocorrência da {{< glossary "supressão de vegetação natural" display="SVN" >}}. Em seguida, esse mecanismo serve como base para aplicações empíricas. As aplicações empíricas são uma analise sociológica baseada na Teoria de Campos de Bourdieu, e uma análise estatística baseada em modelos de aprendizagem estatística...
 
-```{r}
-#| label: fig-cerrado-hex
-#| fig-cap: Representação do Bioma Cerrado.
-#| echo: false
-#| dev: "ragg_png"
+A análise sociológica é responsável por caracterizar as pessoas envolvidas na ocorrência da {{< glossary "supressão de vegetação natural" display="SVN" >}} na Amazônia e no Cerrado, e descrever os conflitos existentes ao redor desse fenômeno...
 
-knitr::include_graphics("figs/art/art_cerrado.png")
+A análise estatística é responsável pela descrição numérica de fatores relacionados com a {{< glossary "supressão de vegetação natural" display="SVN" >}} na Amazônia e no Cerrado...
 
-```
-
-As figuras acima representam a forma desse trabalho, no sentido de que existe uma união entre análises quantitativas usando dados espacialmente estruturados, e análises qualitativas que representam processos qua vão além de números, e incluem pessoas, comunidades, culturas, conflitos e alianças.
+O trabalho é organizado em três capítulos...

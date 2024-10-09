@@ -1,0 +1,161 @@
+# Método {.unnumbered}
+
+O modelo teórico é desenvolvido com base em informações obtidas da literatura técnica e científica e entrevistas realisadas com pesquisadores que atuam no tema da {{< glossary "supressão de vegetação natural" display="SVN" >}} (@fig-theoretical-diagram). Porém, o desenvolvimento desse modelo teórico também é fortemente afetado pelas minhas experiências pessoais, como exposição à noticias, discussões diversas sobre o tema, e reflexões e indagações pessoais. Portanto, o conteúdo gerado nessa parte da pesquisa não pode ser considerado como produto de um método sistemático e reproduzível. Porém, o desenvolvimento do modelo teórico segue uma maneira de se refletir sobre um fenômeno, se inspira em certas proposições metodológicas, e se baseia parcialmente, em uma sistematização de informações.
+
+```{mermaid}
+%%| label: fig-theoretical-diagram
+%%| fig-cap: Fluxo geral do processo de desenvolvimento do modelo teórico.
+%%| fig-responsive: true
+%%| fig-align: center
+
+flowchart TD
+    A[Entrevista] --> B[Dados]
+    C[Questões] --> D[Consulta da Literatura]
+    D --> E[Dados]
+    B --> F[Modelo Teórico]
+    A --> F
+    D --> F
+    F --> C
+    E --> F
+    F --> A
+
+```
+
+A maneira de se refletir sobre um fenômeno, adotada nesse trabalho, é baseada na idéia de retrodução do Realismo Crítico. A retrodução pode ser definida como uma atividade de imaginação em que pensamos nos mecanismos generativos que, se de fato forem reais, irão causar um fenômeno quando tais mecanismos forem manifestados [@bhaskar-2016, p.3]. A prática da retrodução implica em um exercício de imaginação que tenta transitar entre os domínios ontológicos do Realismo Crítico, o domínio do empírico, o domínio do atual e o domínio do real [@akram-2023, p.53-54]. Uma ilustração geral e superficial do exercício de retrodução feita nessa pesquisa pode ser feita da seguinte forma: em um cenário hipotético, acredita-se que os {{< glossary "objeto transitivo" display="objetos transitivos" >}} A e B sejam causadores da {{< glossary "supressão de vegetação natural" display="SVN" >}}; a partir disso, nos questionamos quais seriam as condições necessárias para que essa relação de A com a {{< glossary "supressão de vegetação natural" display="SVN" >}} se manifeste; essas condições são traduzidas como o mecanismo generativo proposto; por consequência, nos questionamos se tal mecanismo generativo consegue explicar a relação de causa de B sobre a {{< glossary "supressão de vegetação natural" display="SVN" >}}. Esse exercício é repetido em qualquer ordem, e a medida que esse processo se sucede, lacunas do mecanismo generativo podem ser identificadas e retificadas, assim como inconsistências podem ser eliminadas, se possível.
+
+O desenvolvimento do modelo teórico também incorpora algumas idéias do método da Teoria Fundamentada [@glaser-1968], e mais especificamente desse método baseado no Realismo Crítico, como proposto por @oliver-2011 e @hoddy-2018. Nesse projeto, a condução de entrevistas e consultas da literatura são sistematizadas em forma de dados qualitativos estruturados, contendo as idéias centrais obtidas a partir desses materiais. Essa sistematização de dados é feita de maneira concomitante com o desenvolvimento do modelo teórico.
+
+O processo de sistematização de informação, na forma de dados qualitativos estruturados em tabela, é baseado nas entrevistas e nas consultas à literatura. As entrevistas são feitas de modo a especular sobre possíveis causas da {{< glossary "supressão de vegetação natural" display="SVN" >}}, de maneira semelhante ao processo de retrodução ilustrado anteriormente. A partir das indagações feitas durante as entrevistas, são desenvolvidas questões que servem de base para buscas na literatura, que por sua vez fornecem mais informações sobre o fenômeno em questão, a {{< glossary "supressão de vegetação natural" display="SVN" >}}.
+
+Os dados, coletados a partir das entrevistas e consultas à literatura, contém as seguintes informações: identificação da fonte da informação (de forma anônima no caso das entrevistas); os {{< glossary "objeto transitivo" display="objetos transitivos" >}} identificados como relacionados a {{< glossary "supressão de vegetação natural" display="SVN" >}}; a descrição da relação entre os  {{< glossary "objeto transitivo" display="objetos transitivos" >}} com a {{< glossary "supressão de vegetação natural" display="SVN" >}}.
+
+O processo de desenvolvimento do modelo teórico não apresenta um ponto final determinado. O modelo teórico pode ser modificado caso haja a descoberta de novos conhecimentos que desafiem a lógica do modelo. Porém, nesse projeto, a etapa de desenvolvimento do modelo teórico é interrompida quando novas informações obtidas não contribuam mais com a descrição ou modificação do modelo teórico.
+
+O modelo teórico é baseado em conceitos do Realismo Crítico, sendo formado sobre especulações da existência de certos {{< glossary "objeto intransitivo" display="objetos intransitivos" >}}, e da existência de interações entre eles, formando um {{< glossary "mecanismo generativo" >}} da {{< glossary "supressão de vegetação natural" display="SVN" >}}. O modelo teórico, e seu {{< glossary "mecanismo generativo" >}}, se situam na camada social da realidade, de acordo com a estratificação da realidade proposta pelo Realismo Crítico.
+
+### Entrevistas
+
+As entrevistas conduzidas nesse projeto, tem o objetivo de obter informações sobre os fatores que afetam a ocorrência da {{< glossary "supressão de vegetação natural" display="SVN" >}}. Essas informações servem de base para o desenvolvimento do modelo teórico da {{< glossary "supressão de vegetação natural" display="SVN" >}}.
+
+O método utilizado é de entrevistas semi-estruturadas. O roteiro das entrevistas é baseado em sugestões propostas por @bearman-2019, em que são priorizadas questões abertas, que incentivam descrições ricas nas respostas dos participantes. Também foram incorporados elementos da metodologia de entrevistas Centradas em Problemas (PCI) [@witzel-2012], em que as entrevistas contém uma estrutura definida e centrada no fenômeno de interesse, mas que apresenta uma flexibilidade para incentivar respostas abertas e profundas [@doringer-2020].
+
+O público alvo para participar nas entrevistas são profissionais, de diferentes áreas, atuantes no tema da {{< glossary "supressão de vegetação natural" display="SVN" >}}. A seleção de candidatos é feita com a identificação de membros de organizações relevantes em relação a SVN, como órgãos públicos, ONGs e associações privadas, em que um membro representativo dessas organizações será selecionado como candidato. As seleção das organizações e seus membros prioriza a máxima variação de perfil dos candidatos [@palinkas-2013], levando em consideração o bioma em que o participante é atuante, e o tipo de organização em que o mesmo participa.
+
+As entrevistas são realizadas a distância, através de vídeo chamadas. Esse meio de entrevista tem sido frequentemente adotado em pesquisas qualitativas, e apesar de apresentarem desvantagens, como falhas técnicas durante as entrevistas, não há evidências claras de que os dados coletados apresentem menor riqueza de informações, em comparação com entrevistas presenciais [@thunberg-2021]. Além disso, o acesso a participantes é mais amplo, devido a falta de necessidade de deslocamento.
+
+O roteiro das entrevistas pode ser dividido em três partes (@tbl-schedule). A parte introdutória da entrevista contém uma exposição sobre o tema e objetivos dessa pesquisa, assim como a motivação para a realização das entrevistas. A parte de desenvolvimento da entrevista contém perguntas inciais que estimulam a criação de uma narrativa por parte dos entrevistados, seguidas por perguntas mais específicas sobre o fenômeno em questão [@witzel-2012]. Por fim, a conclusão dá a oportunidade aos entrevistados de elaborar reflexões sobre o tema [@bearman-2019].
+
+```{r}
+#| label: tbl-schedule
+#| tbl-cap: Roteiro de entrevistas adotado.
+#| echo: false
+
+tibble::tribble(
+  ~id, ~section, ~description, ~sub,
+  1, "Introdução", "Introdução à pesquisa e ao entrevistador", 0,
+  2, "Introdução", "Clarificação dos objetivos da pesquisa", 0,
+  3, "Introdução", "Clarificação da motivação das entrevistas", 0,
+  4, "Introdução", "Checagem de consentimento e do tempo disponível para a entrevista", 0,
+  5, "Desenvolvimento", "Contextualização de experiências prévias do participante com o tema da SVN", 0,
+  5, "Desenvolvimento", "- Quais foram suas experiências mais importantes dentro do tema da SVN?", 1,
+  5, "Desenvolvimento", "- Quais foram as regiões que você desenvolveu projetos dentro do tema da SVN?", 1,
+  6, "Desenvolvimento", "Identificação de objetos que causam a SVN", 0,
+  6, "Desenvolvimento", "- Qual é a sua perspectiva sobre a importância da SVN, em relação a sustentabilidade e desenvolvimento?", 1,
+  6, "Desenvolvimento", "- De acordo com sua experiência, quais são os fatores mais importantes que causam a SVN?", 1,
+  7, "Desenvolvimento", "Identificação das relações entre os objetos e a SVN", 0,
+  7, "Desenvolvimento", "- Quais são as condições necessárias para que tal objeto tenha um impacto importante na SVN?", 1,
+  7, "Desenvolvimento", "- Quais são os grupos de pessoas que participam desse objeto? E como elas acabam afetando a SVN?", 1,
+  8, "Conclusão", "Reflexões sobre a SVN", 0,
+  8, "Conclusão", "- Você acredita na possibilidade de que a SVN seja suprimida a ponto de não ser um problema socioambiental?", 1,
+  8, "Conclusão", "- Na sua opinião, existem condições em que a SVN é justificável apesar de seus impactos?", 1,
+  9, "Conclusão", "Oportunidade para o entrevistado realizar comentários abertos", 0,
+  10, "Conclusão", "Encerramento da entrevista", 0
+) |>
+  gt::gt(groupname_col = c("section")) |>
+  gt::cols_hide(columns = c(id, sub)) |>
+  gt::tab_options(
+    table.font.size = 14,
+    column_labels.hidden = TRUE,
+    table.width = gt::pct(90),
+    quarto.disable_processing = TRUE
+  ) |>
+  gt::tab_style(
+    style = list(
+      gt::cell_text(
+        indent = gt::pct(5),
+        style = "italic"
+      ),
+      gt::cell_fill(color = "#e9e9e9")
+    ),
+    locations = gt::cells_body(
+      columns = c(description),
+      rows = sub %in% c(1)
+    )
+  ) |>
+  gt::tab_style(
+    style = gt::cell_text(weight = "bold"),
+    locations = gt::cells_row_groups()
+  ) |>
+  gt::opt_stylize(style = 1, color = "gray", add_row_striping = FALSE)
+
+```
+
+Cada entrevista irá fornecer informações que servem de conteúdo para a geração de uma tabela de dados. Nessa tabela, são identificados os {{< glossary "objeto transitivo" display="objetos transitivos" >}} associados com a {{< glossary "supressão de vegetação natural" display="SVN" >}}, e são descritas as condições necessárias para que essa associação ocorra.
+
+```{r}
+#| label: tbl-interviewdata
+#| tbl-cap: Ilustração da tabela de dados gerada com base nas informações obtidas através das entrevistas.
+#| echo: false
+
+tibble::tribble(
+  ~id, ~participante, ~objeto, ~condição,
+  1, "Entrevistado 1", "Objeto A", "Condições X, Y e Z",
+  2, "Entrevistado 1", "Objeto B", "Condições W e K",
+  3, "Entrevistado 2", "Objeto A", "Condições P e I"
+) |>
+  gt::gt() |>
+  gt::tab_options(
+    table.font.size = 14,
+    table.width = gt::pct(90),
+    quarto.disable_processing = TRUE
+  ) |>
+  gt::opt_stylize(style = 1, color = "gray", add_row_striping = TRUE)
+
+```
+
+### Consultas à Literatura
+
+Assim como as entrevistas, a consulta à literatura tem o objetivo de obter informações sobre os fatores que afetam a ocorrência da {{< glossary "supressão de vegetação natural" display="SVN" >}}, servindo de base para o desenvolvimento do modelo teórico.
+
+A literatura consultada é de natureza diversa, podem ser artigos publicados em periódicos científicos, livros, documentos técnicos, dissertações e teses, reportagens, documentários e outros materiais audiovisuais, não sendo limitadas entre essas citadas. O motivo para essa abrangência é a de ter amplo acesso a documentos diversos sobre qualquer conteúdo relacionado à {{< glossary "supressão de vegetação natural" display="SVN" >}}.
+
+A busca por tais documentos é feita através das ferramentas de busca da Google e Google Scholar. O processo de buscas se caracteriza como uma revisão crítica [@grant-2009], que tem como o objtivo a interpretação de documentos para a elaboração de um produto considerado como um ponto de partida para avaliação futura. Portanto, a revisão adotada não tem como o objetivo realizar inferências sobre o corpo dos documentos analisados, nem de testar hipóteses associadas à esses materiais. A forma das buscas é baseada em indagações feitas através de informações obtidas nas entrevistas e consultas à literatura anteriores. As buscas também são feitas com bases em citações encontradas em documentos consultados.
+
+As informações obtidas através das consultas são sistematizadas em uma tabela. Isso tem o objetivo de facilitar comparações entre os conteúdos de diferentes fontes. Essa tabela contém informações semelhantes a @tbl-interviewdata, porém, com dados adicionais que permitem a identificação da origem do dado (@tbl-literaturedata).
+
+```{r}
+#| label: tbl-literaturedata
+#| tbl-cap: Ilustração da tabela de dados gerada com base nas informações obtidas através das consultas à literatura.
+#| echo: false
+
+tibble::tribble(
+  ~id, ~doi, ~autor, ~titulo, ~ano, ~local, ~objeto, ~condição,
+  1, "https://doi.org/...1", "Fulano", "Algo sobre algo", "1968", "Lá longe", "Objeto A", "Condições X, Y e Z",
+  2, "https://doi.org/...1", "Fulano", "Algo sobre algo", "1968", "Lá longe", "Objeto B", "Condições W e K",
+  3, "https://doi.org/...2", "Sicrano et al.", "Isto sobre aquilo", "2001", "Logo ali", "Objeto A", "Condições P e I"
+) |>
+  gt::gt() |>
+  gt::tab_options(
+    table.font.size = 14,
+    table.width = gt::pct(90),
+    quarto.disable_processing = TRUE
+  ) |>
+  gt::opt_stylize(style = 1, color = "gray", add_row_striping = TRUE)
+
+```
+
+É importante reforçar que, o desenvolvimento do modelo teórico, não é baseado restritamente aos dados presentes nas tabelas [-@tbl-interviewdata] e [-@tbl-literaturedata]. Isso proporciona uma maior liberdade para o processo de reflexão de desenvolvimento do modelo teórico, que também é afetado pelos métodos de análise adotados.
+
+Além disso, a justificativa para a adoção de um processo flexível de consulta à literatura, se baseia na vantagem de proporcionar maior liberdade de pensamento, mas também na ausência de um motivo forte para a realização de um processo metódico. Por exemplo, caso o objetivo da consulta à literatura fosse identificar as causas da {{< glossary "supressão de vegetação natural" display="SVN" >}} mais citadas na literatura científica, seria então aconselhável adotar um método de revisão sistemática. Esse não é o caso dessa pesquisa.
+
+# Referências {.unnumbered}

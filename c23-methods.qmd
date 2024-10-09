@@ -1,0 +1,23 @@
+# Método {.unnumbered}
+
+## Análise Sociológica
+
+A análise sociológica é feita através da Teoria Geral dos Campos desenvolvida por Bourdieu, aplicada como perspectiva analítica do modelo teórico da {{< glossary "supressão de vegetação natural" display="SVN" >}}. A análise é conduzida através da adaptação de três passos, identificados por @grenfell-2018:
+
+1. Descrever a posição do {{< glossary "campo social" >}} analisado em relação ao {{< glossary "campo do poder" >}}:
+
+    A relação é descrita de forma a estabelecer como a acumulação de poder dentro de um {{< glossary "campo social" >}} influencia na acumulação de poder de forma mais abrangente, dentro do  {{< glossary "campo do poder" >}}. Aqui, poder não é descrito apenas como o {{< glossary "capital" >}}, mas uma forma de legitimação de um {{< glossary "agente social" >}}, e de persistência de sua própria existência.
+
+2. Identificar os principais {{< glossary "agente social" display="agentes sociais" >}} que participam do {{< glossary "campo social" >}} analisado. Descrever as posições que cada um ocupa dentro desse campo. E caracterizar as relações entre cada posição ocupada por cada {{< glossary "agente social" >}}:
+
+   As posições são caracterizadas pelo {{< glossary "capital" >}} de cada {{< glossary "agente social" >}}, pelo objetivo do agente em relação ao fenômeno de interesse, e pela forma como um certo tipo de {{< glossary "capital" >}} influencia o agente a atingir seu objetivo;
+
+3. Caracterizar as disposições dos {{< glossary "agente social" display="agentes sociais" >}} em relação ao fenômeno de interesse, e como essas disposições influênciam as ações tomadas com o objetivo desses agentes. Isso é feito através do conceito de {{< glossary "habitus" >}}:
+
+    As disposições são descritas de acordo com contextos históricos dos {{< glossary "agente social" display="agentes sociais" >}} e de suas posições dentro do {{< glossary "campo social" >}} analisado.
+
+Todas as etapas descritas acima serão feitas com base em informações obtidas das consultas à literatura. Portanto, conceitos como {{< glossary "capital" >}} não serão representados de forma numérica ou como categorias qualitativas, mas de forma abstrata a partir de informações coletadas da literatura. Já o conceito de {{< glossary "habitus" >}} será descrito a partir de informações históricas relacionadas à um certo {{< glossary "agente social" >}}, e não por meio de entrevistas, como é comum de se observar em pesquisas feitas com base na Teoria Geral dos Campos desenvolvida por Bourdieu. Essa forma de análise se justifica pela dificuldade de obtenção de informações de maneiras convencionais, já que o tema da {{< glossary "supressão de vegetação natural" display="SVN" >}} abrange {{< glossary "agente social" display="agentes sociais" >}} de difícil acesso, como fazendeiros envolvidos com a SVN e militares.
+
+A análise sociológica através da Teoria dos Campos de Bourdieu, será informada pelo modelo teórico e seu paradigma filosófico através da centralização da {{< glossary "supressão de vegetação natural" display="SVN" >}} nas disputas dentro do campo social analisado, e como as disposições dos agentes sociais afetam a ocorrência da {{< glossary "supressão de vegetação natural" display="SVN" >}}. A análise sociólogica é responsável pela contextualização histórica da manifestação da {{< glossary "supressão de vegetação natural" display="SVN" >}} de acordo com o modelo teórico.
+
+# Referências {.unnumbered}
